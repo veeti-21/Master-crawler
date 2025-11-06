@@ -1,5 +1,7 @@
 # Master-crawler
 
+Jokaiselle itemille voidaan ottaa pari tekijää, jotka tekevät yhteistyössä tietojen haun
+
 Tiedot mitä halutaan koota crawlattuna:
 
 nettiautosta uusi auto (speksit myöhemmin)
