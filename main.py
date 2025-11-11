@@ -16,7 +16,7 @@ BASE_URL = "https://www.nettimokki.com/vuokramokit/mokit-jarven-rannalla/"
 PARAMS = {
     "item_availability__date_from": "2026-06-01",       # change via params_set_date(a,b)
     "item_availability__date_to": "2026-06-07",         # change via params_set_date(a,b)
-    "page" : "null",                                         # change via params_set_page(a)
+    "page" : "null",                                    # change via params_set_page(a)
     "item__is_payment_ad" : "null",                     # change via params_set_nettimaksu(True)
     "item__avg_overall_rating_4" : "null",              # change via params_set_require_4_stars(True)
     "attr__number_of_bedrooms[0]" : "null",             #
@@ -24,16 +24,23 @@ PARAMS = {
     "attr__number_of_bedrooms[2]" : "null",             # or change via params_set_bedrooms_range(a,b)
     "attr__number_of_bedrooms[3]" : "null",             #
 
-    "attr__type_of_waters[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4506 = Lampi
+    "attr__type_of_waters[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
     "attr__type_of_waters[1]" : "null",                 #
-    "attr__type_of_waters[2]" : "null",                 #
+    "attr__type_of_waters[2]" : "null",                 # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
     "attr__type_of_waters[3]" : "null",                 #
+
+    "attr__type_of_beach[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
+    "attr__type_of_beach[1]" : "null",                 #
+    "attr__type_of_beach[2]" : "null",                 # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
+    "attr__type_of_beach[3]" : "null",                 #
+
+
 
 
 }
 
 # --------------- params / muuttojen funktiot ---------------
-def params_clean(): # PITÄÄ käyttää, muuten "item__is_payment_ad" menee päällä vaikka mikä value olis tilalla
+def params_clean(): # PITÄÄ käyttää, muuten nullit ovat literaaleja
     global PARAMS
 
     PARAMS = {k: v for k, v in PARAMS.items() if v != "null"}
@@ -92,7 +99,7 @@ def params_set_bedrooms(a): # asettaa tarkan haettavan huoneitten määrän, esi
         "attr__number_of_bedrooms[0]": a
     })
 
-def params_set_bedrooms_range(a,b):   # asettaa haettavan numeroalueen makuuhuoneen määrän varten
+def params_set_bedrooms_range(a,b): # asettaa haettavan numeroalueen makuuhuoneen määrän varten, esim 1,4 etsii kaikki paikat jossa on 1-4 huonetta
                                                 # range 1-4
     global PARAMS
     if(a >= 4 or a <= 0 or b >= 4 or b <= 0):   # asettaa range 1-4 
@@ -120,9 +127,12 @@ def params_set_bedrooms_range(a,b):   # asettaa haettavan numeroalueen makuuhuon
                 k : a+i,
             })
 
-def params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False):
+def params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False): # asettaa halutut vesistön tyyppi parametrit
+    
+    global PARAMS
+
     PARAMS.update({ # Tyhjentää vanhat pois 
-        "attr__type_of_waters[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4506 = Lampi
+        "attr__type_of_waters[0]" : "null",                 
         "attr__type_of_waters[1]" : "null",                 
         "attr__type_of_waters[2]" : "null",                 
         "attr__type_of_waters[3]" : "null",                 
@@ -146,6 +156,34 @@ def params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False):
     if(Lampi):
         PARAMS.update({ 
             "attr__type_of_waters[3]" : 4507,                         
+        })
+
+def params_set_beach(Oma = False, Jaettu = False, Käyttöoikeus_rantaan = False, Käyttöoikeus_vesialueisiin = False): # asettaa halutut ranta parametrit
+    global PARAMS
+
+    PARAMS.update({
+        "attr__type_of_beach[0]" : "null",                 
+        "attr__type_of_beach[1]" : "null",                 
+        "attr__type_of_beach[2]" : "null",                 
+        "attr__type_of_beach[3]" : "null", 
+
+    })
+
+    if(Oma):
+        PARAMS.update({
+            "attr__type_of_beach[0]" : "own_beach"
+        })
+    if(Jaettu):
+        PARAMS.update({
+            "attr__type_of_beach[1]" : "shared_beach"
+        })
+    if(Käyttöoikeus_rantaan):
+        PARAMS.update({
+            "attr__type_of_beach[2]" : "permission_to_use_beach"
+        })
+    if(Käyttöoikeus_vesialueisiin):
+        PARAMS.update({
+            "attr__type_of_beach[3]" : "permission_to_use_waterways"
         })
 
 
@@ -177,6 +215,7 @@ def fetch_page(params=PARAMS, base_url=BASE_URL):
 if __name__ == "__main__":
     params_set_water(False,True,False,True)
     params_set_bedrooms_range(1,2)
+    params_set_beach(True,False,True,False)
 
     params_clean()
     fetch_page(PARAMS)
