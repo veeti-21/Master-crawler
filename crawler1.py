@@ -16,7 +16,6 @@ original_size = driver.get_window_size()
 required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
 required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
 driver.set_window_size(required_width, required_height)
-driver.get_screenshot_as_file('asd.png')
 
 element = driver.find_elements(By.CSS_SELECTOR, "li.group")
 for x in range (len(element)):
