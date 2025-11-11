@@ -20,3 +20,5 @@ pip install --upgrade selenium
 
 crawleri ajetaan komennolla:
 python crawler1.py
+
+crawler tallentaa result.json tiedostoon haetun datan
