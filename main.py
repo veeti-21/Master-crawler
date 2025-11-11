@@ -14,30 +14,32 @@ HEADERS = {
 BASE_URL = "https://www.nettimokki.com/vuokramokit/mokit-jarven-rannalla/"
 
 PARAMS = {
-    "item_availability__date_from": "2026-06-01",       # change via params_set_date(a,b)
-    "item_availability__date_to": "2026-06-07",         # change via params_set_date(a,b)
-    "page" : "null",                                    # change via params_set_page(a)
-    "item__is_payment_ad" : "null",                     # change via params_set_nettimaksu(True)
-    "item__avg_overall_rating_4" : "null",              # change via params_set_require_4_stars(True)
-    "attr__number_of_bedrooms[0]" : "null",             #
-    "attr__number_of_bedrooms[1]" : "null",             # change via params_set_bedrooms(a)
-    "attr__number_of_bedrooms[2]" : "null",             # or change via params_set_bedrooms_range(a,b)
-    "attr__number_of_bedrooms[3]" : "null",             #
+    "item_availability__date_from"   : "2026-06-01",       # change via params_set_date(a,b)
+    "item_availability__date_to"     : "2026-06-07",       # change via params_set_date(a,b)
+    "page"                           : "null",             # change via params_set_page(a)
+    "item__is_payment_ad"            : "null",             # change via params_set_nettimaksu(True)
+    "item__avg_overall_rating_4"     : "null",             # change via params_set_require_4_stars(True)
 
-    "attr__type_of_waters[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
-    "attr__type_of_waters[1]" : "null",                 #
-    "attr__type_of_waters[2]" : "null",                 # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
-    "attr__type_of_waters[3]" : "null",                 #
+    "attr__number_of_bedrooms[0]"    : "null",             #
+    "attr__number_of_bedrooms[1]"    : "null",             # change via params_set_bedrooms(a)
+    "attr__number_of_bedrooms[2]"    : "null",             # or change via params_set_bedrooms_range(a,b)
+    "attr__number_of_bedrooms[3]"    : "null",             #
 
-    "attr__type_of_beach[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
-    "attr__type_of_beach[1]" : "null",                 #
-    "attr__type_of_beach[2]" : "null",                 # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
-    "attr__type_of_beach[3]" : "null",                 #
+    "attr__type_of_waters[0]"        : "null",             # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
+    "attr__type_of_waters[1]"        : "null",             #
+    "attr__type_of_waters[2]"        : "null",             # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
+    "attr__type_of_waters[3]"        : "null",             #
 
+    "attr__type_of_beach[0]"         : "null",             # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
+    "attr__type_of_beach[1]"         : "null",             #
+    "attr__type_of_beach[2]"         : "null",             # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
+    "attr__type_of_beach[3]"         : "null",             #
 
-
-
+    "attr__electric_sauna"           : "null",             #
+    "attr__smoke_sauna"              : "null",             # change via params_set_sauna(electric_sauna = False, smoke_sauna = False, wood_sauna = False)
+    "attr__wood_sauna"               : "null",             #
 }
+
 
 # --------------- params / muuttojen funktiot ---------------
 def params_clean(): # PITÄÄ käyttää, muuten nullit ovat literaaleja
@@ -186,6 +188,31 @@ def params_set_beach(Oma = False, Jaettu = False, Käyttöoikeus_rantaan = False
             "attr__type_of_beach[3]" : "permission_to_use_waterways"
         })
 
+def params_set_sauna(electric_sauna = False, smoke_sauna = False, wood_sauna = False):
+    global PARAMS
+
+    PARAMS.update({
+        "attr__electric_sauna"  : "null",
+        "attr__smoke_sauna"     : "null",
+        "attr__wood_sauna"      : "null",
+    })
+
+    if(electric_sauna):
+        PARAMS.update({
+            "attr__electric_sauna"  : "1",
+        })
+
+
+    if(smoke_sauna):
+        PARAMS.update({
+            "attr__smoke_sauna"  : "1",
+        })
+
+
+    if(wood_sauna):
+        PARAMS.update({
+            "attr__wood_sauna"  : "1",
+        })
 
 # ---------------------------------------------------------
 
@@ -216,6 +243,7 @@ if __name__ == "__main__":
     params_set_water(False,True,False,True)
     params_set_bedrooms_range(1,2)
     params_set_beach(True,False,True,False)
+    params_set_sauna(False,False,True)
 
     params_clean()
     fetch_page(PARAMS)
