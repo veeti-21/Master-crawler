@@ -31,8 +31,6 @@ def params_clean(): # PITÄÄ käyttää, muuten "item__is_payment_ad" menee pä
 
     PARAMS = {k: v for k, v in PARAMS.items() if v != "null"}
 
-
-
 def params_set_date(date_from, date_to): # format vvvv-kk-pv
 
     global PARAMS
@@ -73,7 +71,7 @@ def params_set_require_4_stars(a): # tarvii True / False
             "item__avg_overall_rating_4" : "null"
         })
 
-def params_set_exact_number_of_bedrooms(a): # asettaa tarkan haettavan huoneitten määrän, esim 2 on vaan 2 makuuhuonetta ei enemmän ei vähemmän
+def params_set_bedrooms(a): # asettaa tarkan haettavan huoneitten määrän, esim 2 on vaan 2 makuuhuonetta ei enemmän ei vähemmän
     global PARAMS
 
     PARAMS.update({ # Tyhjentää vanhat pois 
@@ -87,7 +85,7 @@ def params_set_exact_number_of_bedrooms(a): # asettaa tarkan haettavan huoneitte
         "attr__number_of_bedrooms[0]": a
     })
 
-def params_set_range_number_of_bedrooms(a,b):   # asettaa haettavan numeroalueen makuuhuoneen määrän varten
+def params_set_bedrooms_range(a,b):   # asettaa haettavan numeroalueen makuuhuoneen määrän varten
                                                 # range 1-4
     global PARAMS
     if(a >= 4 or a <= 0 or b >= 4 or b <= 0):   # asettaa range 1-4 
