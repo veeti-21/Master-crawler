@@ -16,13 +16,20 @@ BASE_URL = "https://www.nettimokki.com/vuokramokit/mokit-jarven-rannalla/"
 PARAMS = {
     "item_availability__date_from": "2026-06-01",       # change via params_set_date(a,b)
     "item_availability__date_to": "2026-06-07",         # change via params_set_date(a,b)
-    "page" : 1,                                         # change via params_set_page(a)
+    "page" : "null",                                         # change via params_set_page(a)
     "item__is_payment_ad" : "null",                     # change via params_set_nettimaksu(True)
-    "item__avg_overall_rating_4" : 1,                   # change via params_set_require_4_stars(True)
+    "item__avg_overall_rating_4" : "null",              # change via params_set_require_4_stars(True)
     "attr__number_of_bedrooms[0]" : "null",             #
     "attr__number_of_bedrooms[1]" : "null",             # change via params_set_bedrooms(a)
     "attr__number_of_bedrooms[2]" : "null",             # or change via params_set_bedrooms_range(a,b)
-    "attr__number_of_bedrooms[3]" : "null"              #
+    "attr__number_of_bedrooms[3]" : "null",             #
+
+    "attr__type_of_waters[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4506 = Lampi
+    "attr__type_of_waters[1]" : "null",                 #
+    "attr__type_of_waters[2]" : "null",                 #
+    "attr__type_of_waters[3]" : "null",                 #
+
+
 }
 
 # --------------- params / muuttojen funktiot ---------------
@@ -113,8 +120,33 @@ def params_set_bedrooms_range(a,b):   # asettaa haettavan numeroalueen makuuhuon
                 k : a+i,
             })
 
+def params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False):
+    PARAMS.update({ # Tyhjentää vanhat pois 
+        "attr__type_of_waters[0]" : "null",                 # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4506 = Lampi
+        "attr__type_of_waters[1]" : "null",                 
+        "attr__type_of_waters[2]" : "null",                 
+        "attr__type_of_waters[3]" : "null",                 
+    })
 
+    if(Järvi):
+        PARAMS.update({ 
+            "attr__type_of_waters[0]" : 4503,                         
+        })
 
+    if(Meri):
+        PARAMS.update({ 
+            "attr__type_of_waters[1]" : 4504,                         
+        })
+
+    if(Joki):
+        PARAMS.update({ 
+            "attr__type_of_waters[2]" : 4505,                         
+        })
+
+    if(Lampi):
+        PARAMS.update({ 
+            "attr__type_of_waters[3]" : 4507,                         
+        })
 
 
 # ---------------------------------------------------------
@@ -143,5 +175,8 @@ def fetch_page(params=PARAMS, base_url=BASE_URL):
 
 
 if __name__ == "__main__":
+    params_set_water(False,True,False,True)
+    params_set_bedrooms_range(1,2)
+
     params_clean()
     fetch_page(PARAMS)
