@@ -20,8 +20,8 @@ PARAMS = {
     "item__is_payment_ad" : "null",                     # change via params_set_nettimaksu(True)
     "item__avg_overall_rating_4" : 1,                   # change via params_set_require_4_stars(True)
     "attr__number_of_bedrooms[0]" : "null",             #
-    "attr__number_of_bedrooms[1]" : "null",             # change via params_set_exact_number_of_bedrooms(a)
-    "attr__number_of_bedrooms[2]" : "null",             # or change via params_set_range_number_of_bedrooms(a,b)
+    "attr__number_of_bedrooms[1]" : "null",             # change via params_set_bedrooms(a)
+    "attr__number_of_bedrooms[2]" : "null",             # or change via params_set_bedrooms_range(a,b)
     "attr__number_of_bedrooms[3]" : "null"              #
 }
 
