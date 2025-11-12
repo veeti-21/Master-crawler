@@ -76,6 +76,8 @@ PARAMS = {
     "attr__paddling"                 : "null",
     "attr__pets_allowed"             : "null",
 
+    "attr__wheel_chair_accessible"   : "null",
+
 }
 
 
@@ -317,6 +319,36 @@ def params_set_sauna(electric_sauna = False, smoke_sauna = False, wood_sauna = F
         })
 
 def params_set_features(hiihtokeskus_lähellä=False, internetyhteys=False, kuivauskaappi=False, kuivausrumpu=False, laituri=False, parvi=False, palju=False, poreamme=False, pyykinpesukone=False, syöttötuoli=False, suihku=False, sähköauton_lataus=False, takka=False, tv=False, uima_allas=False, ulkoporeallas=False, vauvasänky=False, mökkissä_ei_sähköjä=False, sähkö_aurinkopaneeleista=False, kantovesi=False, viilentävä_ilmalämpöpumppu=False, sisä_wc=False, ulko_wc=False, vene=False, kanootti=False, lemmikit_sallittu=False):
+    global PARAMS
+    PARAMS.update({
+        "attr__ski_center_nearby"        : "null",
+        "attr__internet"                 : "null",
+        "attr__drying_cabinet"           : "null",
+        "attr__tumble_dryer"             : "null",
+        "attr__pier"                     : "null",
+        "attr__loft"                     : "null",
+        "attr__outdoor_hot_tub_barrel_style" : "null",
+        "attr__hot_tub"                  : "null",
+        "attr__washing_machine"          : "null",
+        "attr__feeding_chair"            : "null",
+        "attr__shower"                   : "null",
+        "attr__electric_vehicle_charging": "null",
+        "attr__fireplace_decoration"     : "null",
+        "attr__television"               : "null",
+        "attr__swimming_pool"            : "null",
+        "attr__outdoor_hot_tub"          : "null",
+        "attr__baby_crib"                : "null",
+        "attr__no_electricity"           : "null",
+        "attr__solar_panel_electricity"  : "null",
+        "attr__water_carried"            : "null",
+        "attr__ac_unit"                  : "null",
+        "attr__indoor_toilet"            : "null",
+        "attr__outoor_toilet"            : "null",
+        "attr__boat"                     : "null",
+        "attr__paddling"                 : "null",
+        "attr__pets_allowed"             : "null",
+    })
+
     if (hiihtokeskus_lähellä):
         PARAMS.update({"attr_ski_center_nearby": "1"})
     if (internetyhteys):
@@ -370,6 +402,16 @@ def params_set_features(hiihtokeskus_lähellä=False, internetyhteys=False, kuiv
     if (lemmikit_sallittu):
         PARAMS.update({"attr_pets_allowed": "1"})
 
+def params_set_wheelchair_accessibility(wheelchair = False):
+    global PARAMS
+    PARAMS.update({
+        "attr__wheel_chair_accessible"   : "null",
+    })
+
+    if(wheelchair):
+        PARAMS.update({
+            "attr__wheel_chair_accessible"   : "1",
+        })
 
 # ---------------------------------------------------------
 
