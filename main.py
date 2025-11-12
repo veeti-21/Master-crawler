@@ -38,6 +38,44 @@ PARAMS = {
     "attr__electric_sauna"           : "null",             #
     "attr__smoke_sauna"              : "null",             # change via params_set_sauna(electric_sauna = False, smoke_sauna = False, wood_sauna = False)
     "attr__wood_sauna"               : "null",             #
+
+    "attr__dishwater"                : "null",
+    "attr__refridgerator"            : "null",
+    "attr__cooking_possibility"      : "null",
+    "attr__microwave_oven"           : "null",
+    "attr__freezer"                  : "null",
+    "attr__stove"                    : "null",             # change via params_set_kitchen_equipment(astianpesukone = False, jääkaappi = False, keittomahdollisuus = False, mikroaaltouuni = False, pakastin = False, liesi = False, uuni = False, kahvinkeitin = False, grillikota = False, ):
+    "attr__owen"                     : "null",
+    "attr__coffee_maker"             : "null",
+    "attr__barbecue_hut"             : "null",
+
+    "attr__ski_center_nearby"        : "null", # change via def params_set_features(hiihtokeskus_lähellä=False, internetyhteys=False, kuivauskaappi=False, kuivausrumpu=False, laituri=False, parvi=False, palju=False, poreamme=False, pyykinpesukone=False, syöttötuoli=False, suihku=False, sähköauton_lataus=False, takka=False, tv=False, uima_allas=False, ulkoporeallas=False, vauvasänky=False, mökkissä_ei_sähköjä=False, sähkö_aurinkopaneeleista=False, kantovesi=False, viilentävä_ilmalämpöpumppu=False, sisä_wc=False, ulko_wc=False, vene=False, kanootti=False, lemmikit_sallittu=False)
+    "attr__internet"                 : "null",
+    "attr__drying_cabinet"           : "null",
+    "attr__tumble_dryer"             : "null",
+    "attr__pier"                     : "null",
+    "attr__loft"                     : "null",
+    "attr__outdoor_hot_tub_barrel_style" : "null",
+    "attr__hot_tub"                  : "null",
+    "attr__washing_machine"          : "null",
+    "attr__feeding_chair"            : "null",
+    "attr__shower"                   : "null",
+    "attr__electric_vehicle_charging": "null",
+    "attr__fireplace_decoration"     : "null",
+    "attr__television"               : "null",
+    "attr__swimming_pool"            : "null",
+    "attr__outdoor_hot_tub"          : "null",
+    "attr__baby_crib"                : "null",
+    "attr__no_electricity"           : "null",
+    "attr__solar_panel_electricity"  : "null",
+    "attr__water_carried"            : "null",
+    "attr__ac_unit"                  : "null",
+    "attr__indoor_toilet"            : "null",
+    "attr__outoor_toilet"            : "null",
+    "attr__boat"                     : "null",
+    "attr__paddling"                 : "null",
+    "attr__pets_allowed"             : "null",
+
 }
 
 
@@ -129,7 +167,7 @@ def params_set_bedrooms_range(a,b): # asettaa haettavan numeroalueen makuuhuonee
                 k : a+i,
             })
 
-def params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False): # asettaa halutut vesistön tyyppi parametrit
+def params_set_water(järvi = False, meri = False, joki = False, lampi = False): # asettaa halutut vesistön tyyppi parametrit
     
     global PARAMS
 
@@ -140,27 +178,27 @@ def params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False):
         "attr__type_of_waters[3]" : "null",                 
     })
 
-    if(Järvi):
+    if(järvi):
         PARAMS.update({ 
             "attr__type_of_waters[0]" : 4503,                         
         })
 
-    if(Meri):
+    if(meri):
         PARAMS.update({ 
             "attr__type_of_waters[1]" : 4504,                         
         })
 
-    if(Joki):
+    if(joki):
         PARAMS.update({ 
             "attr__type_of_waters[2]" : 4505,                         
         })
 
-    if(Lampi):
+    if(lampi):
         PARAMS.update({ 
             "attr__type_of_waters[3]" : 4507,                         
         })
 
-def params_set_beach(Oma = False, Jaettu = False, Käyttöoikeus_rantaan = False, Käyttöoikeus_vesialueisiin = False): # asettaa halutut ranta parametrit
+def params_set_beach(oma = False, jaettu = False, käyttöoikeus_ranttan = False, käyttöoikeus_vesialueisiin = False): # asettaa halutut ranta parametrit
     global PARAMS
 
     PARAMS.update({
@@ -171,21 +209,85 @@ def params_set_beach(Oma = False, Jaettu = False, Käyttöoikeus_rantaan = False
 
     })
 
-    if(Oma):
+    if(oma):
         PARAMS.update({
             "attr__type_of_beach[0]" : "own_beach"
         })
-    if(Jaettu):
+    if(jaettu):
         PARAMS.update({
             "attr__type_of_beach[1]" : "shared_beach"
         })
-    if(Käyttöoikeus_rantaan):
+    if(käyttöoikeus_ranttan):
         PARAMS.update({
             "attr__type_of_beach[2]" : "permission_to_use_beach"
         })
-    if(Käyttöoikeus_vesialueisiin):
+    if(käyttöoikeus_vesialueisiin):
         PARAMS.update({
             "attr__type_of_beach[3]" : "permission_to_use_waterways"
+        })
+
+def params_set_kitchen_equipment(astianpesukone = False, jääkaappi = False, keittomahdollisuus = False, mikroaaltouuni = False, pakastin = False, liesi = False, uuni = False, kahvinkeitin = False, grillikota = False, ):
+    global PARAMS
+    PARAMS.update({
+        "attr__dishwater"                : "null",
+        "attr__refridgerator"            : "null",
+        "attr__cooking_possibility"      : "null",
+        "attr__microwave_oven"           : "null",
+        "attr__freezer"                  : "null",
+        "attr__stove"                    : "null",
+        "attr__owen"                     : "null",
+        "attr__coffee_maker"             : "null",
+        "attr__barbecue_hut"             : "null",
+    })
+
+    if(astianpesukone):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+    if(jääkaappi):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+    if(keittomahdollisuus):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+    if(mikroaaltouuni):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+
+    if(pakastin):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+
+    if(liesi):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+
+    if(uuni):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+
+    if(kahvinkeitin):
+        PARAMS.update({
+            "attr__dishwater" : "1"
+        })
+
+
+    if(grillikota):
+        PARAMS.update({
+            "attr__dishwater" : "1"
         })
 
 def params_set_sauna(electric_sauna = False, smoke_sauna = False, wood_sauna = False):
@@ -214,6 +316,61 @@ def params_set_sauna(electric_sauna = False, smoke_sauna = False, wood_sauna = F
             "attr__wood_sauna"  : "1",
         })
 
+def params_set_features(hiihtokeskus_lähellä=False, internetyhteys=False, kuivauskaappi=False, kuivausrumpu=False, laituri=False, parvi=False, palju=False, poreamme=False, pyykinpesukone=False, syöttötuoli=False, suihku=False, sähköauton_lataus=False, takka=False, tv=False, uima_allas=False, ulkoporeallas=False, vauvasänky=False, mökkissä_ei_sähköjä=False, sähkö_aurinkopaneeleista=False, kantovesi=False, viilentävä_ilmalämpöpumppu=False, sisä_wc=False, ulko_wc=False, vene=False, kanootti=False, lemmikit_sallittu=False):
+    if (hiihtokeskus_lähellä):
+        PARAMS.update({"attr_ski_center_nearby": "1"})
+    if (internetyhteys):
+        PARAMS.update({"attr_internet": "1"})
+    if (kuivauskaappi):
+        PARAMS.update({"attr_drying_cabinet": "1"})
+    if (kuivausrumpu):
+        PARAMS.update({"attr_tumble_dryer": "1"})
+    if (laituri):
+        PARAMS.update({"attr_pier": "1"})
+    if (parvi):
+        PARAMS.update({"attr_loft": "1"})
+    if (palju):
+        PARAMS.update({"attr_outdoor_hot_tub_barrel_style": "1"})
+    if (poreamme):
+        PARAMS.update({"attr_hot_tub": "1"})
+    if (pyykinpesukone):
+        PARAMS.update({"attr_washing_machine": "1"})
+    if (syöttötuoli):
+        PARAMS.update({"attr_feeding_chair": "1"})
+    if (suihku):
+        PARAMS.update({"attr_shower": "1"})
+    if (sähköauton_lataus):
+        PARAMS.update({"attr_electric_vehicle_charging": "1"})
+    if (takka):
+        PARAMS.update({"attr_fireplace_decoration": "1"})
+    if (tv):
+        PARAMS.update({"attr_television": "1"})
+    if (uima_allas):
+        PARAMS.update({"attr_swimming_pool": "1"})
+    if (ulkoporeallas):
+        PARAMS.update({"attr_outdoor_hot_tub": "1"})
+    if (vauvasänky):
+        PARAMS.update({"attr_baby_crib": "1"})
+    if (mökkissä_ei_sähköjä):
+        PARAMS.update({"attr_no_electricity": "1"})
+    if (sähkö_aurinkopaneeleista):
+        PARAMS.update({"attr_solar_panel_electricity": "1"})
+    if (kantovesi):
+        PARAMS.update({"attr_water_carried": "1"})
+    if (viilentävä_ilmalämpöpumppu):
+        PARAMS.update({"attr_ac_unit": "1"})
+    if (sisä_wc):
+        PARAMS.update({"attr_indoor_toilet": "1"})
+    if (ulko_wc):
+        PARAMS.update({"attr_outoor_toilet": "1"})
+    if (vene):
+        PARAMS.update({"attr_boat": "1"})
+    if (kanootti):
+        PARAMS.update({"attr_paddling": "1"})
+    if (lemmikit_sallittu):
+        PARAMS.update({"attr_pets_allowed": "1"})
+
+
 # ---------------------------------------------------------
 
 
@@ -229,7 +386,7 @@ def fetch_page(params=PARAMS, base_url=BASE_URL):
         url = base_url
     print(f"Fetching URL: {url}")
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=10)
+        resp = requests.get(url, headers=HEADERS, timeout= 10)
         resp.raise_for_status()
         html = resp.text
         with open(FILE_LOCATION, "w", encoding="utf-8") as f:
@@ -240,10 +397,7 @@ def fetch_page(params=PARAMS, base_url=BASE_URL):
 
 
 if __name__ == "__main__":
-    params_set_water(False,True,False,True)
-    params_set_bedrooms_range(1,2)
-    params_set_beach(True,False,True,False)
-    params_set_sauna(False,False,True)
+
 
     params_clean()
     fetch_page(PARAMS)
