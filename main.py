@@ -40,50 +40,25 @@ def human_pause(a=5.6, b=6.6):
 
 def accept_cookies():
     """
-    Try to accept cookie popups or alerts.
-    Handles both:
-      - HTML cookie modals (with 'Hyväksy' button)
-      - JavaScript alert popups (via driver.switch_to.alert)
+    Robustly accept cookie popups on nettimokki.com or similar sites.
+    Waits for dynamically injected modals and clicks the accept button.
     """
     try:
-        # short pause to allow popup to appear
-        human_pause(5, 6.5)
+        accept_btn = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.XPATH, "//button[@title='Hyväksy' or normalize-space()='Hyväksy']"))
+        )
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", accept_btn)
+        time.sleep(0.5)
+        accept_btn.click()
+        print("✅ Clicked 'Hyväksy' cookie button.")
+    except TimeoutException:
+        print("⚠️ Cookie button not found within timeout.")
 
-        # First try normal HTML cookie banner
-        try:
-            accept_btn = WebDriverWait(driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Hyväksy')]"))
-            )
-            driver.execute_script("arguments[0].scrollIntoView(true);", accept_btn)
-            human_pause(0.3, 0.8)
-            ActionChains(driver).move_to_element(accept_btn).pause(0.3).click().perform()
-            print("🍪 Clicked 'Hyväksy' cookie button — waiting for modal to disappear...")
-            try:
-                WebDriverWait(driver, 5).until(EC.invisibility_of_element_located((By.ID, "notice")))
-                print("🍪 Cookie modal disappeared.")
-            except TimeoutException:
-                print("⚠️ Cookie modal didn't disappear by ID, continuing anyway.")
-            human_pause(0.8, 1.5)
-            return
-        except TimeoutException:
-            print("✅ No HTML cookie button found, checking for JS alert...")
 
-        # Fallback: handle browser-level alerts
-        try:
-            alert = driver.switch_to.alert
-            print(f"⚠️ Found browser alert: '{alert.text}' — accepting it now.")
-            alert.accept()
-            human_pause(0.5, 1.0)
-            print("✅ Browser alert accepted.")
-        except Exception:
-            print("✅ No browser alert found.")
-
-    except Exception as e:
-        print(f"⚠️ Cookie/alert handling failed: {e}")
 
 def scroll_page_slowly():
     """Scroll down gradually like a human to load lazy content."""
-    print("🧭 Scrolling page like a human...")
+    print("Scrolling page like a human...")
     # initial small scrolls to trigger renders
     viewport_height = driver.execute_script("return window.innerHeight")
     scroll_position = 0
@@ -107,13 +82,13 @@ def scroll_page_slowly():
     # final scroll to bottom to make sure lazy loads start
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     human_pause(1.0, 2.0)
-    print("✅ Finished human-like scrolling.")
+    print("Finished human-like scrolling.")
     # After scrolling, allow some time for dynamic content (like prices) to render
     human_pause(1.2, 2.5)
 
 # --- SCRAPE LIST PAGE ---
 def scrape_listing_page(url):
-    print(f"\n🌐 Fetching: {url}")
+    print(f"\nFetching: {url}")
     driver.get(url)
 
     # Wait a tiny bit for page core resources (CSS/JS) to start loading
@@ -131,7 +106,7 @@ def scrape_listing_page(url):
     try:
         cards = driver.find_elements(By.CSS_SELECTOR, "li.card-list-box")
     except Exception as e:
-        print(f"❌ Could not find listing cards: {e}")
+        print(f"Could not find listing cards: {e}")
         cards = []
 
     print(f"Found {len(cards)} listings")
@@ -175,15 +150,15 @@ def scrape_listing_page(url):
                 "url": link
             })
         except StaleElementReferenceException:
-            print(f"⚠️ Stale element for card #{idx}, skipping.")
+            print(f"Stale element for card #{idx}, skipping.")
         except Exception as e:
-            print(f"⚠️ Error parsing card #{idx}: {e}")
+            print(f"Error parsing card #{idx}: {e}")
 
     return listings
 
 # --- SCRAPE DETAIL PAGE ---
 def scrape_detail_page(url):
-    print(f"🔍 Fetching details for: {url}")
+    print(f"Fetching details for: {url}")
     try:
         driver.get(url)
         human_pause(0.8, 1.6)
@@ -191,7 +166,7 @@ def scrape_detail_page(url):
         try:
             wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1")))
         except TimeoutException:
-            print("⚠️ h1 not found on detail page within timeout.")
+            print("h1 not found on detail page within timeout.")
 
         title = ""
         location = ""
@@ -216,16 +191,16 @@ def scrape_detail_page(url):
         return {"title": title, "location": location, "price": price, "url": url}
 
     except Exception as e:
-        print(f"❌ Could not fetch details for {url}: {e}")
+        print(f"Could not fetch details for {url}: {e}")
         return {"title": "", "location": "", "price": "", "url": url}
 
 # --- MAIN EXECUTION ---
-print("🚀 Starting fresh crawl for listing links...")
+print("Starting fresh crawl for listing links...")
 new_listings = []
 for page in range(1, 2):  # scrape first page(s)
     page_url = f"{BASE_URL}{PARAMS}&page={page}"
     new_listings.extend(scrape_listing_page(page_url))
-print(f"✅ Collected {len(new_listings)} listings from pages.")
+print(f"Collected {len(new_listings)} listings from pages.")
 
 # --- LOAD EXISTING JSON (if exists) ---
 existing_data = {}
@@ -236,7 +211,7 @@ if os.path.exists(OUTPUT_FILE):
             for row in data:
                 existing_data[row["url"]] = row  # use URL as key
         except json.JSONDecodeError:
-            print("⚠️ JSON file empty or invalid, starting fresh.")
+            print("JSON file empty or invalid, starting fresh.")
 
 
 # --- MERGE NEW LINKS ---
@@ -249,7 +224,7 @@ updated_data = []
 for url, row in existing_data.items():
     # if any core fields are missing, fetch detail page
     if not row.get("title") or not row.get("price") or not row.get("location"):
-        print(f"⚠️ Missing info for {url}, fetching details...")
+        print(f"Missing info for {url}, fetching details...")
         detail = scrape_detail_page(url)
         updated_data.append(detail)
     else:
@@ -260,5 +235,5 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     json.dump(updated_data, f, ensure_ascii=False, indent=2)
 
 
-print(f"\n✅ Done! Saved {len(updated_data)} records to {OUTPUT_FILE}")
+print(f"\nDone! Saved {len(updated_data)} records to {OUTPUT_FILE}")
 driver.quit()
