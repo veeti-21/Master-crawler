@@ -26,3 +26,4 @@ crawleri ajetaan komennolla:
 python crawler1.py
 
 crawler tallentaa result.json tiedostoon haetun datan
+pitää jossain vaiheessa lisätä gitignore jossa result tiedostot pois gitistä
