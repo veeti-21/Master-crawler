@@ -17,11 +17,13 @@ for steamgame in steam_search_results[:50]:
     try:
         title = steamgame.find_element(By.CLASS_NAME, "title").text
         release_date = steamgame.find_element(By.CSS_SELECTOR, ".search_released").text
+        review_score = steamgame.find_element(By.CSS_SELECTOR, ".search_reviewscore").get_attribute("data-tooltip-html")
         price = steamgame.find_element(By.CSS_SELECTOR, ".discount_final_price").text
         
         games.append({
             "title": title,
             "release_date": release_date,
+            "review_score": review_score,
             "price": price
         })
     except:
@@ -38,17 +40,19 @@ for metagame in meta_search_results[:50]:
     try:
         title = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_title").text
         release_date = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_meta").text
+        review_score = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_metascore .c-metascore").text
 
         games.append({
             "title": title,
             "release_date": release_date,
+            "review_score": review_score
         })
     except:
         continue
 #Metacritic
 
 for game in games:
-    print(f"{game['title']} - {game['release_date']}")
+    print(f"{game['title']} - {game['release_date']} - {game.get('review_score', 'N/A')}")
 
 import json
 with open("master_crawler_pelit.json", "w", encoding="utf-8") as f:
