@@ -78,12 +78,6 @@
         "price": "13,49€"
     },
     {
-        "title": "Ambrosia Sky",
-        "release_date": "10 Nov, 2025",
-        "review_score": null,
-        "price": "12,57€"
-    },
-    {
         "title": "Verho - Curse of Faces",
         "release_date": "10 Nov, 2025",
         "review_score": null,
@@ -142,12 +136,6 @@
         "release_date": "6 Nov, 2025",
         "review_score": null,
         "price": "26,99€"
-    },
-    {
-        "title": "Bloodgrounds",
-        "release_date": "5 Nov, 2025",
-        "review_score": null,
-        "price": "14,99€"
     },
     {
         "title": "Europa Universalis V",
@@ -298,5 +286,17 @@
         "release_date": "16 Oct, 2025",
         "review_score": null,
         "price": "17,99€"
+    },
+    {
+        "title": "BALL x PIT",
+        "release_date": "15 Oct, 2025",
+        "review_score": null,
+        "price": "14,99€"
+    },
+    {
+        "title": "Battlefield™ 6",
+        "release_date": "10 Oct, 2025",
+        "review_score": null,
+        "price": "69,99€"
     }
 ]

@@ -52,7 +52,7 @@ for metagame in meta_search_results[:50]:
 #Metacritic
 
 for game in games:
-    print(f"{game['title']} - {game['release_date']} - {game.get('review_score', 'N/A')}")
+    print(f"{game['title']} - {game['release_date']} - {game.get('review_score', 'N/A')} - {game.get('price', 'N/A')}")
 
 import json
 with open("master_crawler_pelit.json", "w", encoding="utf-8") as f:
