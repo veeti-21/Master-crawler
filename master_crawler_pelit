@@ -2,13 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from datetime import datetime, timedelta
-import time
 
 driver = webdriver.Chrome()
-
-milta_ajalta = datetime.now() - timedelta(days=30)
-unix_timestamp = int(milta_ajalta.timestamp())
 
 games = []
 

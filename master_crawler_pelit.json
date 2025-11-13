@@ -25,6 +25,11 @@
         "price": "14,84€"
     },
     {
+        "title": "Duncrush",
+        "release_date": "11 Nov, 2025",
+        "price": "3,59€"
+    },
+    {
         "title": "Swords and Sandals 3 Redux",
         "release_date": "11 Nov, 2025",
         "price": "8,77€"
@@ -40,19 +45,9 @@
         "price": "15,29€"
     },
     {
-        "title": "Windswept",
-        "release_date": "11 Nov, 2025",
-        "price": "16,57€"
-    },
-    {
         "title": "Lead the Way Pack - Battlefield™ 6 and REDSEC",
         "release_date": "11 Nov, 2025",
         "price": "11,99€"
-    },
-    {
-        "title": "Let Them Come: Onslaught",
-        "release_date": "11 Nov, 2025",
-        "price": "6,39€"
     },
     {
         "title": "Lumines Arise",
@@ -65,9 +60,9 @@
         "price": "10,29€"
     },
     {
-        "title": "Surviving Mars: Relaunched",
+        "title": "Into The Grid",
         "release_date": "10 Nov, 2025",
-        "price": "39,99€"
+        "price": "13,49€"
     },
     {
         "title": "Ambrosia Sky",
@@ -98,6 +93,11 @@
         "title": "BattleGroupVR2",
         "release_date": "7 Nov, 2025",
         "price": "20,82€"
+    },
+    {
+        "title": "My Little Puppy",
+        "release_date": "6 Nov, 2025",
+        "price": "19,60€"
     },
     {
         "title": "IdleOn",
@@ -140,19 +140,14 @@
         "price": "21,85€"
     },
     {
-        "title": "Mall Simulator",
-        "release_date": "3 Nov, 2025",
-        "price": "11,03€"
-    },
-    {
         "title": "Bio Goddess : Doomsday Begins",
         "release_date": "2 Nov, 2025",
         "price": "21,16€"
     },
     {
-        "title": "ScootX",
-        "release_date": "30 Oct, 2025",
-        "price": "19,50€"
+        "title": "Flesh Made Fear",
+        "release_date": "31 Oct, 2025",
+        "price": "15,29€"
     },
     {
         "title": "Leaf it Alone",
@@ -180,11 +175,6 @@
         "price": "Free"
     },
     {
-        "title": "Season 1 Battlefield Pro - Battlefield™ 6 and REDSEC",
-        "release_date": "28 Oct, 2025",
-        "price": "24,99€"
-    },
-    {
         "title": "Master of Command",
         "release_date": "27 Oct, 2025",
         "price": "29,99€"
@@ -198,6 +188,11 @@
         "title": "MIMESIS",
         "release_date": "27 Oct, 2025",
         "price": "9,75€"
+    },
+    {
+        "title": "Slots & Daggers",
+        "release_date": "24 Oct, 2025",
+        "price": "7,79€"
     },
     {
         "title": "VEIN",
@@ -248,6 +243,11 @@
         "title": "NINJA GAIDEN 4",
         "release_date": "20 Oct, 2025",
         "price": "69,99€"
+    },
+    {
+        "title": "Croc Legend of the Gobbos",
+        "release_date": "17 Oct, 2025",
+        "price": "28,99€"
     },
     {
         "title": "Casa De Diamantes",
