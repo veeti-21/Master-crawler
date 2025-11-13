@@ -25,11 +25,6 @@
         "price": "14,84€"
     },
     {
-        "title": "Duncrush",
-        "release_date": "11 Nov, 2025",
-        "price": "3,59€"
-    },
-    {
         "title": "Swords and Sandals 3 Redux",
         "release_date": "11 Nov, 2025",
         "price": "8,77€"
@@ -75,6 +70,11 @@
         "price": "39,99€"
     },
     {
+        "title": "Ambrosia Sky",
+        "release_date": "10 Nov, 2025",
+        "price": "12,57€"
+    },
+    {
         "title": "Verho - Curse of Faces",
         "release_date": "10 Nov, 2025",
         "price": "17,99€"
@@ -95,19 +95,9 @@
         "price": "14,99€"
     },
     {
-        "title": "Lone Fungus: Melody of Spores",
-        "release_date": "7 Nov, 2025",
-        "price": "16,57€"
-    },
-    {
         "title": "BattleGroupVR2",
         "release_date": "7 Nov, 2025",
         "price": "20,82€"
-    },
-    {
-        "title": "My Little Puppy",
-        "release_date": "6 Nov, 2025",
-        "price": "19,60€"
     },
     {
         "title": "IdleOn",
@@ -160,6 +150,11 @@
         "price": "21,16€"
     },
     {
+        "title": "ScootX",
+        "release_date": "30 Oct, 2025",
+        "price": "19,50€"
+    },
+    {
         "title": "Leaf it Alone",
         "release_date": "30 Oct, 2025",
         "price": "5,49€"
@@ -210,11 +205,6 @@
         "price": "16,99€"
     },
     {
-        "title": "Walk of Life",
-        "release_date": "24 Oct, 2025",
-        "price": "19,50€"
-    },
-    {
         "title": "Once Upon A KATAMARI",
         "release_date": "23 Oct, 2025",
         "price": "39,99€"
@@ -230,11 +220,6 @@
         "price": "24,99€"
     },
     {
-        "title": "Species: Unknown",
-        "release_date": "23 Oct, 2025",
-        "price": "9,75€"
-    },
-    {
         "title": "Escape the Backrooms",
         "release_date": "23 Oct, 2025",
         "price": "8,19€"
@@ -248,5 +233,116 @@
         "title": "World of Sea Battle",
         "release_date": "21 Oct, 2025",
         "price": "Free"
+    },
+    {
+        "title": "Jurassic World Evolution 3",
+        "release_date": "21 Oct, 2025",
+        "price": "59,99€"
+    },
+    {
+        "title": "RV There Yet?",
+        "release_date": "21 Oct, 2025",
+        "price": "7,79€"
+    },
+    {
+        "title": "NINJA GAIDEN 4",
+        "release_date": "20 Oct, 2025",
+        "price": "69,99€"
+    },
+    {
+        "title": "Casa De Diamantes",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "RENNSPORT",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "AirShooShoo",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Protean Fox",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Okinawa Journal",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Petmancer",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Soba's Gunpaw",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Glassbreakers: Champions of Moss",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Fracturefront",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Little Corners",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Death in the Manor",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Detective Malinowski The Truth Will Be Revealed",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "The Sushi House",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Caemdale",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "That's Not My Kind",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "A Christmas Carol: But With Anime Girls",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Trail of Stars",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Stickman: Waves Of Doom",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "ClickWave",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "The Salesman",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Max Manos 2",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Hunter: The Reckoning - A Time of Monsters",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Hotel Infinity",
+        "release_date": "NOV 13, 2025"
+    },
+    {
+        "title": "Not A Safe Place",
+        "release_date": "NOV 13, 2025"
     }
 ]
