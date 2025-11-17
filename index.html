@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Crawler – Koontisivu</title>
+  <style>
+    /* Eduko color palette */
+    :root {
+      --primary: #0055a5;
+      --secondary: #00a1e0;
+      --bg: #f0f4f8;
+      --white: #ffffff;
+      --gray: #555;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--gray);
+    }
+
+    nav {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .weather {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: var(--secondary);
+      color: var(--white);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.6rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .news h2 {
+      color: var(--primary);
+    }
+
+    .news a {
+      color: var(--secondary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div>Web Crawler Koontisivu</div>
+    <div>
+      <a href="#dataSection">Kerätyt tiedot</a>
+      <a href="#weatherSection">Säätila</a>
+      <a href="#filtersSection">Suodattimet</a>
+      <a href="#newsSection">Uutiset</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Web Crawler – Koontisivu</h1>
+    <p>Täältä löydät kaikki kerätyt tiedot ja projektin tilan</p>
+  </header>
+
+  <main>
+
+    <!-- WEATHER SECTION -->
+    <section id="weatherSection" class="weather">
+      <h2>Nykyinen säätila</h2>
+      <p id="weatherInfo">Ladataan sijaintia...</p>
+    </section>
+
+    <!-- FILTERS SECTION -->
+    <section id="filtersSection" class="filters">
+      <div>
+        <label for="dateFilter">Ajankohta:</label>
+        <input type="date" id="dateFilter">
+      </div>
+      <div>
+        <label for="categoryFilter">Kategoria:</label>
+        <select id="categoryFilter">
+          <option value="">Kaikki</option>
+          <option value="uutiset">Uutiset</option>
+          <option value="teknologia">Teknologia</option>
+          <option value="talous">Talous</option>
+        </select>
+      </div>
+      <button onclick="loadData()">Päivitä</button>
+    </section>
+
+    <!-- DATA TABLE -->
+    <section id="dataSection">
+      <table>
+        <thead>
+          <tr>
+            <th>Päivämäärä</th>
+            <th>Otsikko</th>
+            <th>Kategoria</th>
+            <th>Lähde</th>
+          </tr>
+        </thead>
+        <tbody id="dataBody"></tbody>
+      </table>
+    </section>
+
+    <!-- YLE NEWS -->
+    <section id="newsSection" class="news">
+      <h2>Viisi uusinta YLE Kymenlaakson uutista</h2>
+      <ul id="newsList"><li>Ladataan uutisia...</li></ul>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Web Crawler Group Project — Eduko värimaailma
+  </footer>
+
+  <script>
+    //--------------------------
+    // SAMPLE CRAWLER DATA
+    //--------------------------
+    const data = [
+      { date: "2025-11-10", title: "Uusi tekoälymalli julkaistu", category: "teknologia", source: "yle.fi" },
+      { date: "2025-11-11", title: "Osakemarkkinat nousussa", category: "talous", source: "hs.fi" },
+      { date: "2025-11-12", title: "Paikallisuutiset päivitetty", category: "uutiset", source: "iltalehti.fi" }
+    ];
+
+    function loadData() {
+      const dateFilter = document.getElementById("dateFilter").value;
+      const categoryFilter = document.getElementById("categoryFilter").value;
+      const body = document.getElementById("dataBody");
+      body.innerHTML = "";
+
+      const filtered = data.filter(item =>
+        (!dateFilter || item.date === dateFilter) &&
+        (!categoryFilter || item.category === categoryFilter)
+      );
+
+      filtered.forEach(item => {
+        body.innerHTML += `
+          <tr>
+            <td>${item.date}</td>
+            <td>${item.title}</td>
+            <td>${item.category}</td>
+            <td>${item.source}</td>
+          </tr>`;
+      });
+    }
+
+    loadData();
+
+    //--------------------------
+    // FIXED WEATHER (WORKS WITHOUT API KEY)
+    //--------------------------
+    function getWeather(lat, lon) {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+
+      fetch(url)
+        .then(res => res.json())
+        .then(w => {
+          if (!w.current_weather) throw new Error("Invalid weather data");
+          const temp = w.current_weather.temperature;
+          const wind = w.current_weather.windspeed;
+          document.getElementById("weatherInfo").innerText =
+            `Lämpötila: ${temp}°C · Tuuli: ${wind} m/s`;
+        })
+        .catch(() => {
+          document.getElementById("weatherInfo").innerText = "Säätilaa ei voitu hakea.";
+        });
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        pos => getWeather(pos.coords.latitude, pos.coords.longitude),
+        () => document.getElementById("weatherInfo").innerText = "Sijaintia ei sallittu."
+      );
+    } else {
+      document.getElementById("weatherInfo").innerText = "Sijaintia ei tueta.";
+    }
+
+    //--------------------------
+    // FIXED YLE NEWS (CORS SAFE)
+    //--------------------------
+    async function loadNews() {
+      const url = "https://yle.fi/uutiset/rss/alueet/kymenlaakso";
+      const proxy = "https://api.allorigins.win/get?url=";
+      const newsList = document.getElementById("newsList");
+
+      try {
+        const res = await fetch(proxy + encodeURIComponent(url));
+        const data = await res.json();
+
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, "text/xml");
+
+        const items = [...xml.querySelectorAll("item")].slice(0, 5);
+
+        newsList.innerHTML = "";
+        items.forEach(item => {
+          newsList.innerHTML += `
+            <li><a href="${item.querySelector("link").textContent}" target="_blank">
+            ${item.querySelector("title").textContent}
+            </a></li>`;
+        });
+      } catch (e) {
+        newsList.innerHTML = "<li>Uutisia ei voitu ladata.</li>";
+      }
+    }
+
+    loadNews();
+  </script>
+</body>
+</html>
