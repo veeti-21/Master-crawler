@@ -40,19 +40,55 @@ def human_pause(a=5.6, b=6.6):
 
 def accept_cookies():
     """
-    Robustly accept cookie popups on nettimokki.com or similar sites.
-    Waits for dynamically injected modals and clicks the accept button.
+    Quickly dismiss either the standard Nettimökki cookie button or the Alma CMP iframe.
+    Loops for a short window so we don't block the crawl waiting for the popup to self-dismiss.
     """
+    deadline = time.time() + 12  # give the popup a few seconds to appear
+    while time.time() < deadline:
+        if _dismiss_alma_cmp_iframe():
+            return
+        human_pause(0.2, 0.4)
+
+    print("⚠️ Cookie popups not detected within window, continuing without interaction.")
+    _cleanup_cookie_overlays()
+
+def _dismiss_alma_cmp_iframe():
+    iframe_candidates = driver.find_elements(By.CSS_SELECTOR, "iframe[id^='sp_message_iframe'], iframe[src*='privacy-mgmt']")
+    if not iframe_candidates:
+        return False
+
+    iframe = iframe_candidates[0]
     try:
-        accept_btn = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[@title='Hyväksy' or normalize-space()='Hyväksy']"))
-        )
-        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", accept_btn)
-        time.sleep(0.5)
-        accept_btn.click()
-        print("✅ Clicked 'Hyväksy' cookie button.")
-    except TimeoutException:
-        print("⚠️ Cookie button not found within timeout.")
+        driver.switch_to.frame(iframe)
+        cmp_accept = driver.find_element(By.XPATH, "//button[@title='Hyväksy' or normalize-space()='Hyväksy']")
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", cmp_accept)
+        human_pause(0.05, 0.2)
+        cmp_accept.click()
+        print("✅ Dismissed Alma CMP iframe modal.")
+        return True
+    except NoSuchElementException:
+        return False
+    except Exception as e:
+        print(f"⚠️ Error clicking Alma CMP iframe button: {e}")
+        return False
+    finally:
+        try:
+            driver.switch_to.default_content()
+        except Exception:
+            pass
+        _cleanup_cookie_overlays()
+
+
+def _cleanup_cookie_overlays():
+    try:
+        driver.execute_script("""
+            const modal = document.querySelector('#notice.message.type-modal');
+            if (modal) modal.remove();
+            document.querySelectorAll('.alma-cmp-overlay, #sp_message_container_1371865, .message.type-modal')
+                .forEach(el => el.style.display = 'none');
+        """)
+    except Exception:
+        pass
 
 
 
