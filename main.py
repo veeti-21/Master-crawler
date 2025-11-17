@@ -37,6 +37,8 @@ BASE_URL = "https://www.nettimokki.com/vuokramokit/"
 PARAM = PARAMS.PARAMS
 
 
+
+
 # --- HELPERS ---
 def human_pause(a=5.6, b=6.6):
     """Random short pause to mimic human behavior."""
@@ -199,6 +201,10 @@ def scrape_detail_page(url):
         return {"title": "", "location": "", "price": "", "url": url}
 
 # --- MAIN EXECUTION ---
+
+PARAMS.params_clean()
+PARAMS.params_set_bedrooms_range(1,3)
+
 print("Starting fresh crawl for listing links...")
 new_listings = []
 for page in range(1, 2):  # scrape first page(s)
