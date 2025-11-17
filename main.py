@@ -244,6 +244,8 @@ PARAMS.params_set_beach(True)
 PARAMS.params_set_sauna(False,False,True)
 PARAMS.params_set_features(False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,)
 
+print(PARAM)
+
 
 print("Starting fresh crawl for listing links...")
 new_listings = []

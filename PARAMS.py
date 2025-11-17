@@ -145,7 +145,7 @@ def params_set_bedrooms(a): # asettaa tarkan haettavan huoneitten määrän, esi
 def params_set_bedrooms_range(a,b): # asettaa haettavan numeroalueen makuuhuoneen määrän varten, esim 1,4 etsii kaikki paikat jossa on 1-4 huonetta
                                                 # range 1-4
     global PARAMS
-    if(a >= 4 or a <= 0 or b >= 4 or b <= 0):   # asettaa range 1-4 
+    if(a >= 5 or a <= 0 or b >= 5 or b <= 0):   # asettaa range 1-4 
         return "range is 1-4"
     
     PARAMS.update({                             # Tyhjentää vanhat pois 
