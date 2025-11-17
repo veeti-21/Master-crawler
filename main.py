@@ -15,8 +15,8 @@ import PARAMS
 
 
 # --- CONFIG ---
-OPERA_BINARY = r"C:\Users\Veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
-CHROMEDRIVER_PATH = r"C:\Users\Veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+OPERA_BINARY = r"C:\Users\jani\Downloads\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\Users\jani\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 OUTPUT_FILE = "nettimökki_listings.json"
 
 # --- SETUP SELENIUM ---
@@ -238,7 +238,7 @@ def scrape_detail_page(url):
 # --- MAIN EXECUTION ---
 
 PARAMS.params_clean()
-PARAMS.params_set_bedrooms_range(1,3)
+PARAMS.params_set_bedrooms_range(2,4)
 PARAMS.params_set_water(True,False,False,True)
 PARAMS.params_set_beach(True)
 PARAMS.params_set_sauna(False,False,True)
