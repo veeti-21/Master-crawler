@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -11,14 +10,14 @@ import time
 import random
 import json
 import os
-import shutil
-from datetime import datetime
+
+import PARAMS
+
 
 # --- CONFIG ---
-OPERA_BINARY = r"C:\Users\jani\Downloads\chrome-win64\chrome-win64\chrome.exe"
-CHROMEDRIVER_PATH = r"C:\Users\jani\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+OPERA_BINARY = r"C:\Users\Veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\Users\Veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 OUTPUT_FILE = "nettimökki_listings.json"
-RESET_JSON_EACH_RUN = True
 
 # --- SETUP SELENIUM ---
 options = Options()
@@ -34,7 +33,10 @@ wait = WebDriverWait(driver, 15)  # general wait object
 
 # --- BASE URL ---
 BASE_URL = "https://www.nettimokki.com/vuokramokit/"
-PARAMS = "?attr__number_of_bedrooms[0]=2&attr__number_of_bedrooms[1]=3&attr__number_of_bedrooms[2]=4&attr__type_of_waters[0]=4503&attr__type_of_waters[1]=4507&attr__type_of_beach[0]=own_beach&attr__wood_sauna=1&attr__indoor_toilet=1&item_availability__date_from=2026-07-01&item_availability__date_to=2026-07-07"
+PARAM = PARAMS.PARAMS
+
+
+
 
 # --- HELPERS ---
 def human_pause(a=5.6, b=6.6):
@@ -234,37 +236,27 @@ def scrape_detail_page(url):
         return {"title": "", "location": "", "price": "", "url": url}
 
 # --- MAIN EXECUTION ---
+
+PARAMS.params_clean()
+PARAMS.params_set_bedrooms_range(1,3)
+
 print("Starting fresh crawl for listing links...")
 new_listings = []
 for page in range(1, 2):  # scrape first page(s)
-    page_url = f"{BASE_URL}{PARAMS}&page={page}"
+    page_url = PARAMS.get_url(PARAMS.params_clean(PARAM), BASE_URL)              # Nyt hakee parametreillä oikean urlin
     new_listings.extend(scrape_listing_page(page_url))
 print(f"Collected {len(new_listings)} listings from pages.")
 
 # --- LOAD EXISTING JSON (if exists) ---
 existing_data = {}
 if os.path.exists(OUTPUT_FILE):
-    if RESET_JSON_EACH_RUN:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        backup_path = f"{OUTPUT_FILE}.bak.{timestamp}"
+    with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
         try:
-            shutil.copy2(OUTPUT_FILE, backup_path)
-            print(f"📦 Backed up previous JSON to {backup_path}")
-        except Exception as e:
-            print(f"⚠️ Failed to backup JSON: {e}")
-        else:
-            try:
-                os.remove(OUTPUT_FILE)
-            except Exception:
-                pass
-    else:
-        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-            try:
-                data = json.load(f)
-                for row in data:
-                    existing_data[row["url"]] = row  # use URL as key
-            except json.JSONDecodeError:
-                print("JSON file empty or invalid, starting fresh.")
+            data = json.load(f)
+            for row in data:
+                existing_data[row["url"]] = row  # use URL as key
+        except json.JSONDecodeError:
+            print("JSON file empty or invalid, starting fresh.")
 
 
 # --- MERGE NEW LINKS ---
@@ -283,10 +275,19 @@ for url, row in existing_data.items():
     else:
         updated_data.append(row)
 
+# --- DROP INCOMPLETE RECORDS BEFORE SAVING ---
+complete_data = [
+    r for r in updated_data
+    if r.get("title") and r.get("location") and r.get("price")
+]
+removed_count = len(updated_data) - len(complete_data)
+if removed_count:
+    print(f"Removed {removed_count} listings without full info.")
+
 # --- SAVE FINAL JSON ---
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(updated_data, f, ensure_ascii=False, indent=2)
+    json.dump(complete_data, f, ensure_ascii=False, indent=2)
 
 
-print(f"\nDone! Saved {len(updated_data)} records to {OUTPUT_FILE}")
+print(f"\nDone! Saved {len(complete_data)} complete records to {OUTPUT_FILE}")
 driver.quit()

@@ -1,11 +1,5 @@
 [
   {
-    "title": "Luksushuvila Villa Kiviniemi",
-    "location": "Pyhäntä",
-    "price": "",
-    "url": "https://www.nettimokki.com/pyhanta/luksushuvila-villa-kiviniemi/59347/"
-  },
-  {
     "title": "Huvilarannalla",
     "location": "Sotkamo, Kainuu",
     "price": "2 190 €",
@@ -30,117 +24,153 @@
     "url": "https://www.nettimokki.com/rukatunturi/rukaspirit-kouta/51984/"
   },
   {
-    "title": "Villa Puroranta",
-    "location": "Parkano",
-    "price": "",
-    "url": "https://www.nettimokki.com/parkano/villa-puroranta/52142/"
+    "title": "Levi Ski - Golf Skyview",
+    "location": "Kittilä, Lappi",
+    "price": "1 350 €",
+    "url": "https://www.nettimokki.com/sirkka/levi-ski-golf-skyview/60557/"
   },
   {
-    "title": "Jerisjärven Väärti",
-    "location": "Muonio",
-    "price": "",
-    "url": "https://www.nettimokki.com/muonio/jerisjarven-vaarti/53017/"
+    "title": "Ruka",
+    "location": "Kuusamo, Pohjois-Pohjanmaa",
+    "price": "360 €",
+    "url": "https://www.nettimokki.com/rukatunturi/ruka/51444/"
   },
   {
-    "title": "Hopeapurnu",
-    "location": "Kuusamo",
-    "price": "",
-    "url": "https://www.nettimokki.com/rukatunturi/hopeapurnu/57135/"
+    "title": "Villa Havu A",
+    "location": "Pudasjärvi, Pohjois-Pohjanmaa",
+    "price": "1 090 €",
+    "url": "https://www.nettimokki.com/syote/villa-havu-a/52808/"
   },
   {
-    "title": "Peiponlahden Paratiisi",
-    "location": "Äänekoski",
-    "price": "",
-    "url": "https://www.nettimokki.com/sumiainen/peiponlahden-paratiisi/57216/"
+    "title": "Naavapirtti B",
+    "location": "Kolari, Lappi",
+    "price": "522 €",
+    "url": "https://www.nettimokki.com/akaslompolo/naavapirtti-b/52520/"
   },
   {
-    "title": "Otsola",
-    "location": "Konnevesi",
-    "price": "",
-    "url": "https://www.nettimokki.com/sirkkamaki/otsola/58148/"
+    "title": "Villa Lumia Iso-Syöte",
+    "location": "Pudasjärvi, Pohjois-Pohjanmaa",
+    "price": "1 020 €",
+    "url": "https://www.nettimokki.com/syote/villa-lumia-iso-syote/52860/"
   },
   {
-    "title": "Villa Muru",
-    "location": "Kuopio",
-    "price": "",
-    "url": "https://www.nettimokki.com/tahkovuori/villa-muru/51280/"
+    "title": "Villa Levin Taiga - sisältää Hissilipun",
+    "location": "Kittilä, Lappi",
+    "price": "900 €",
+    "url": "https://www.nettimokki.com/sirkka/villa-levin-taiga-sisaltaa-hissilipun/57044/"
   },
   {
-    "title": "Huvila Kolonkolo",
-    "location": "Padasjoki",
-    "price": "",
-    "url": "https://www.nettimokki.com/nyystola/huvila-kolonkolo/58118/"
+    "title": "Tunturiporo",
+    "location": "Kolari, Lappi",
+    "price": "610 €",
+    "url": "https://www.nettimokki.com/akaslompolo/tunturiporo/52586/"
   },
   {
-    "title": "Villa Aamun Aava",
-    "location": "Siikainen",
-    "price": "",
-    "url": "https://www.nettimokki.com/siikainen/villa-aamun-aava/53690/"
+    "title": "Koutapirtti",
+    "location": "Kittilä, Lappi",
+    "price": "840 €",
+    "url": "https://www.nettimokki.com/sirkka/koutapirtti/50704/"
   },
   {
-    "title": "Kuusela Kesäjärvi",
-    "location": "Kuusamo",
-    "price": "",
-    "url": "https://www.nettimokki.com/rukatunturi/kuusela-kesajarvi/50075/"
+    "title": "Lumisyöte",
+    "location": "Pudasjärvi, Pohjois-Pohjanmaa",
+    "price": "620 €",
+    "url": "https://www.nettimokki.com/syote/lumisyote/52562/"
   },
   {
-    "title": "Villa Maininki - Sulkava Saimaa",
-    "location": "Sulkava",
-    "price": "",
-    "url": "https://www.nettimokki.com/sulkava/villa-maininki-sulkava-saimaa/60608/"
+    "title": "Laanipalon Kaarnikka",
+    "location": "Inari, Lappi",
+    "price": "1 350 €",
+    "url": "https://www.nettimokki.com/saariselka/laanipalon-kaarnikka/53234/"
   },
   {
-    "title": "Villa Paulus",
-    "location": "Padasjoki",
-    "price": "",
-    "url": "https://www.nettimokki.com/padasjoki/villa-paulus/52467/"
+    "title": "Villa Karu - Uusi Rantahuvila Rukalla",
+    "location": "Kuusamo, Pohjois-Pohjanmaa",
+    "price": "1 150 €",
+    "url": "https://www.nettimokki.com/rukatunturi/villa-karu-uusi-rantahuvila-rukalla/57338/"
   },
   {
-    "title": "Villa Koski",
-    "location": "Tervo",
-    "price": "",
-    "url": "https://www.nettimokki.com/tervo/villa-koski/60396/"
+    "title": "Kallioniemi",
+    "location": "Kannonkoski, Keski-Suomi",
+    "price": "800 €",
+    "url": "https://www.nettimokki.com/kannonkoski/kallioniemi/52569/"
   },
   {
-    "title": "Kulakannokka 41",
-    "location": "Lohja",
-    "price": "",
-    "url": "https://www.nettimokki.com/pusula/kulakannokka-41/53960/"
+    "title": "RiihiSpa",
+    "location": "Vihti, Uusimaa",
+    "price": "1 370 €",
+    "url": "https://www.nettimokki.com/vihtijarvi/riihispa/50562/"
   },
   {
-    "title": "Stay North- Koto House-Design-Beach-Pool",
-    "location": "Kemiönsaari",
-    "price": "",
-    "url": "https://www.nettimokki.com/dragsfjard/stay-north-koto-house-design-beach-pool/53833/"
+    "title": "VILLA OTSO",
+    "location": "Kuopio, Pohjois-Savo",
+    "price": "120 €",
+    "url": "https://www.nettimokki.com/tahkovuori/villa-otso/51750/"
   },
   {
-    "title": "Järvisen tila",
-    "location": "Sastamala",
-    "price": "",
-    "url": "https://www.nettimokki.com/sastamala/jarvisen-tila/57112/"
+    "title": "Tupasvilla 2",
+    "location": "Kolari, Lappi",
+    "price": "540 €",
+    "url": "https://www.nettimokki.com/akaslompolo/tupasvilla-2/50536/"
   },
   {
-    "title": "Rytkynranta Village",
-    "location": "Haapavesi",
-    "price": "",
-    "url": "https://www.nettimokki.com/haapavesi/rytkynranta-village/60226/"
+    "title": "Rukaspirit Kelo",
+    "location": "Kuusamo, Pohjois-Pohjanmaa",
+    "price": "1 325 €",
+    "url": "https://www.nettimokki.com/rukatunturi/rukaspirit-kelo/52704/"
   },
   {
-    "title": "Marraskuun mökkitaikaa - Idyllisimmät loppusyksyn mökkilöydöt",
-    "location": "",
-    "price": "",
-    "url": "https://www.nettimokki.com/tietopankki/marraskuun_mokkitaikaa/72"
+    "title": "Kelomaja",
+    "location": "Salla, Lappi",
+    "price": "510 €",
+    "url": "https://www.nettimokki.com/salla/kelomaja/52377/"
   },
   {
-    "title": "Syksyn sykähdyttävät unelmakohteet: 25 upeaa mökkiä lokakuun ruskaan",
-    "location": "",
-    "price": "",
-    "url": "https://www.nettimokki.com/tietopankki/syksyn-sykahdyttavat-unelmakohteet/71"
+    "title": "Cicero Cottage Lappajärvi",
+    "location": "Lappajärvi, Etelä-Pohjanmaa",
+    "price": "1 096 €",
+    "url": "https://www.nettimokki.com/savonkyla/cicero-cottage-lappajarvi/57389/"
   },
   {
-    "title": "Syyskuun rauhaa ruskan väreissä – mökkihelmiä tunnelmalliseen syyskauden mökkeilyyn",
-    "location": "",
-    "price": "",
-    "url": "https://www.nettimokki.com/tietopankki/syyskuun-rauhaa/70"
+    "title": "Ruska 2 - Ylläs-Äkäslompolo",
+    "location": "Kolari, Lappi",
+    "price": "540 €",
+    "url": "https://www.nettimokki.com/akaslompolo/ruska-2-yllas-akaslompolo/54066/"
+  },
+  {
+    "title": "Rukankuulto",
+    "location": "Kuusamo, Pohjois-Pohjanmaa",
+    "price": "370 €",
+    "url": "https://www.nettimokki.com/rukatunturi/rukankuulto/52026/"
+  },
+  {
+    "title": "Ahvenranta Levi",
+    "location": "Kittilä, Lappi",
+    "price": "2 150 €",
+    "url": "https://www.nettimokki.com/sirkka/ahvenranta-levi/50114/"
+  },
+  {
+    "title": "Villa Lokinkärki",
+    "location": "Orivesi, Pirkanmaa",
+    "price": "720 €",
+    "url": "https://www.nettimokki.com/orivesi/villa-lokinkarki/60454/"
+  },
+  {
+    "title": "LOMAPARATIISI 3A",
+    "location": "Kalajoki, Pohjois-Pohjanmaa",
+    "price": "610 €",
+    "url": "https://www.nettimokki.com/kalajoki/lomaparatiisi-3a/53374/"
+  },
+  {
+    "title": "Lännentupa 1B",
+    "location": "Kolari, Lappi",
+    "price": "450 €",
+    "url": "https://www.nettimokki.com/yllasjarvi/lannentupa-1b/53338/"
+  },
+  {
+    "title": "Laplandway Lumikelo mökki 5-henkilölle",
+    "location": "Sodankylä, Lappi",
+    "price": "420 €",
+    "url": "https://www.nettimokki.com/luosto/laplandway-lumikelo-mokki-5-henkilolle/60332/"
   }
 ]
