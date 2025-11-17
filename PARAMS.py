@@ -438,6 +438,20 @@ def fetch_page(params=PARAMS, base_url=BASE_URL):
         print(f"Error fetching {url}: {e}")
 
 
+
+def get_url(params = PARAMS, base_url = BASE_URL):
+
+    if params:
+        query_string = urllib.parse.urlencode(params, safe='/', encoding='utf-8')
+        url = f"{base_url}?{query_string}"
+        return url
+
+    else:
+        url = base_url
+        return url
+
+
+
 if __name__ == "__main__":
 
 

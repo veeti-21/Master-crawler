@@ -12,6 +12,9 @@ import random
 import json
 import os
 
+import PARAMS
+
+
 # --- CONFIG ---
 OPERA_BINARY = r"C:\Users\Veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
 CHROMEDRIVER_PATH = r"C:\Users\Veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
@@ -31,7 +34,8 @@ wait = WebDriverWait(driver, 15)  # general wait object
 
 # --- BASE URL ---
 BASE_URL = "https://www.nettimokki.com/vuokramokit/"
-PARAMS = "?attr__number_of_bedrooms[0]=2&attr__number_of_bedrooms[1]=3&attr__number_of_bedrooms[2]=4&attr__type_of_waters[0]=4503&attr__type_of_waters[1]=4507&attr__type_of_beach[0]=own_beach&attr__wood_sauna=1&attr__indoor_toilet=1&item_availability__date_from=2026-07-01&item_availability__date_to=2026-07-07"
+PARAM = PARAMS.PARAMS
+
 
 # --- HELPERS ---
 def human_pause(a=5.6, b=6.6):
@@ -198,7 +202,7 @@ def scrape_detail_page(url):
 print("Starting fresh crawl for listing links...")
 new_listings = []
 for page in range(1, 2):  # scrape first page(s)
-    page_url = f"{BASE_URL}{PARAMS}&page={page}"
+    page_url = PARAMS.get_url(PARAM, BASE_URL)              # Nyt hakee parametreillä oikean urlin
     new_listings.extend(scrape_listing_page(page_url))
 print(f"Collected {len(new_listings)} listings from pages.")
 
