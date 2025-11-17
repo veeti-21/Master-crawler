@@ -16,8 +16,8 @@ import PARAMS
 
 
 # --- CONFIG ---
-OPERA_BINARY = r"C:\Users\Veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
-CHROMEDRIVER_PATH = r"C:\Users\Veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+OPERA_BINARY = r"C:\Users\jani\Downloads\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\Users\jani\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 OUTPUT_FILE = "nettimökki_listings.json"
 OUTPUT_FILE_BACKUP = "nettimökki_listings.json.bak"
 
@@ -247,6 +247,8 @@ PARAMS.params_set_water(True,False,False,True)
 PARAMS.params_set_beach(True)
 PARAMS.params_set_sauna(False,False,True)
 PARAMS.params_set_features(False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,)
+
+print(PARAM)
 
 
 print("Starting fresh crawl for listing links...")
