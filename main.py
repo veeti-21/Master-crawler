@@ -239,6 +239,11 @@ def scrape_detail_page(url):
 
 PARAMS.params_clean()
 PARAMS.params_set_bedrooms_range(1,3)
+PARAMS.params_set_water(True,False,False,True)
+PARAMS.params_set_beach(True)
+PARAMS.params_set_sauna(False,False,True)
+PARAMS.params_set_features(False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,)
+
 
 print("Starting fresh crawl for listing links...")
 new_listings = []
