@@ -1,33 +1,15 @@
 [
   {
-    "title": "Marraskuun mökkitaikaa - Idyllisimmät loppusyksyn mökkilöydöt",
-    "location": "",
+    "title": "Luksushuvila Villa Kiviniemi",
+    "location": "Pyhäntä",
     "price": "",
-    "url": "https://www.nettimokki.com/tietopankki/marraskuun_mokkitaikaa/72"
+    "url": "https://www.nettimokki.com/pyhanta/luksushuvila-villa-kiviniemi/59347/"
   },
   {
-    "title": "Syksyn sykähdyttävät unelmakohteet: 25 upeaa mökkiä lokakuun ruskaan",
-    "location": "",
-    "price": "",
-    "url": "https://www.nettimokki.com/tietopankki/syksyn-sykahdyttavat-unelmakohteet/71"
-  },
-  {
-    "title": "Syyskuun rauhaa ruskan väreissä – mökkihelmiä tunnelmalliseen syyskauden mökkeilyyn",
-    "location": "",
-    "price": "",
-    "url": "https://www.nettimokki.com/tietopankki/syyskuun-rauhaa/70"
-  },
-  {
-    "title": "Mökki 1 Ulkoporeamme",
-    "location": "Virrat",
-    "price": "",
-    "url": "https://www.nettimokki.com/virrat/mokki-1-ulkoporeamme/50328/"
-  },
-  {
-    "title": "Franginidylli",
-    "location": "Ikaalinen",
-    "price": "",
-    "url": "https://www.nettimokki.com/ikaalinen/franginidylli/58853/"
+    "title": "Huvilarannalla",
+    "location": "Sotkamo, Kainuu",
+    "price": "2 190 €",
+    "url": "https://www.nettimokki.com/vuokatti/huvilarannalla/57636/"
   },
   {
     "title": "Villa Liipi",
@@ -46,12 +28,6 @@
     "location": "Kuusamo, Pohjois-Pohjanmaa",
     "price": "1 050 €",
     "url": "https://www.nettimokki.com/rukatunturi/rukaspirit-kouta/51984/"
-  },
-  {
-    "title": "Huvilarannalla",
-    "location": "Sotkamo, Kainuu",
-    "price": "2 190 €",
-    "url": "https://www.nettimokki.com/vuokatti/huvilarannalla/57636/"
   },
   {
     "title": "Villa Puroranta",
@@ -73,20 +49,20 @@
   },
   {
     "title": "Peiponlahden Paratiisi",
-    "location": "Äänekoski, Keski-Suomi",
-    "price": "1 500 €",
+    "location": "Äänekoski",
+    "price": "",
     "url": "https://www.nettimokki.com/sumiainen/peiponlahden-paratiisi/57216/"
   },
   {
     "title": "Otsola",
-    "location": "Konnevesi, Keski-Suomi",
-    "price": "1 000 €",
+    "location": "Konnevesi",
+    "price": "",
     "url": "https://www.nettimokki.com/sirkkamaki/otsola/58148/"
   },
   {
     "title": "Villa Muru",
-    "location": "Kuopio, Pohjois-Savo",
-    "price": "3 460 €",
+    "location": "Kuopio",
+    "price": "",
     "url": "https://www.nettimokki.com/tahkovuori/villa-muru/51280/"
   },
   {
@@ -103,14 +79,14 @@
   },
   {
     "title": "Kuusela Kesäjärvi",
-    "location": "Kuusamo, Pohjois-Pohjanmaa",
-    "price": "800 €",
+    "location": "Kuusamo",
+    "price": "",
     "url": "https://www.nettimokki.com/rukatunturi/kuusela-kesajarvi/50075/"
   },
   {
     "title": "Villa Maininki - Sulkava Saimaa",
-    "location": "Sulkava, Etelä-Savo",
-    "price": "4 660 €",
+    "location": "Sulkava",
+    "price": "",
     "url": "https://www.nettimokki.com/sulkava/villa-maininki-sulkava-saimaa/60608/"
   },
   {
@@ -133,8 +109,8 @@
   },
   {
     "title": "Stay North- Koto House-Design-Beach-Pool",
-    "location": "Kemiönsaari, Varsinais-Suomi",
-    "price": "4 800 €",
+    "location": "Kemiönsaari",
+    "price": "",
     "url": "https://www.nettimokki.com/dragsfjard/stay-north-koto-house-design-beach-pool/53833/"
   },
   {
@@ -145,32 +121,26 @@
   },
   {
     "title": "Rytkynranta Village",
-    "location": "Haapavesi, Pohjois-Pohjanmaa",
-    "price": "1 900 €",
+    "location": "Haapavesi",
+    "price": "",
     "url": "https://www.nettimokki.com/haapavesi/rytkynranta-village/60226/"
   },
   {
-    "title": "Kuontiranta",
-    "location": "Kuusamo, Pohjois-Pohjanmaa",
-    "price": "1 040 €",
-    "url": "https://www.nettimokki.com/rukatunturi/kuontiranta/50804/"
-  },
-  {
-    "title": "Luksushuvila Villa Kiviniemi",
-    "location": "Pyhäntä",
+    "title": "Marraskuun mökkitaikaa - Idyllisimmät loppusyksyn mökkilöydöt",
+    "location": "",
     "price": "",
-    "url": "https://www.nettimokki.com/pyhanta/luksushuvila-villa-kiviniemi/59347/"
+    "url": "https://www.nettimokki.com/tietopankki/marraskuun_mokkitaikaa/72"
   },
   {
-    "title": "Villa HULLU KETTU",
-    "location": "Ruokolahti, Etelä-Karjala",
-    "price": "1 300 €",
-    "url": "https://www.nettimokki.com/virmutjoki/villa-hullu-kettu/59489/"
-  },
-  {
-    "title": "Villa Lagerlöf",
-    "location": "Asikkala",
+    "title": "Syksyn sykähdyttävät unelmakohteet: 25 upeaa mökkiä lokakuun ruskaan",
+    "location": "",
     "price": "",
-    "url": "https://www.nettimokki.com/vaaksy/villa-lagerlof/50547/"
+    "url": "https://www.nettimokki.com/tietopankki/syksyn-sykahdyttavat-unelmakohteet/71"
+  },
+  {
+    "title": "Syyskuun rauhaa ruskan väreissä – mökkihelmiä tunnelmalliseen syyskauden mökkeilyyn",
+    "location": "",
+    "price": "",
+    "url": "https://www.nettimokki.com/tietopankki/syyskuun-rauhaa/70"
   }
 ]
