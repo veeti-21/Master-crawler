@@ -87,6 +87,8 @@ def params_clean(): # PITÄÄ käyttää, muuten nullit ovat literaaleja
 
     PARAMS = {k: v for k, v in PARAMS.items() if v != "null"}
 
+    return PARAMS
+
 def params_set_date(date_from, date_to): # format vvvv-kk-pv
 
     global PARAMS
