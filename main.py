@@ -15,8 +15,8 @@ import shutil
 from datetime import datetime
 
 # --- CONFIG ---
-OPERA_BINARY = r"C:\Users\Veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
-CHROMEDRIVER_PATH = r"C:\Users\Veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+OPERA_BINARY = r"C:\Users\jani\Downloads\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\Users\jani\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 OUTPUT_FILE = "nettimökki_listings.json"
 RESET_JSON_EACH_RUN = True
 
