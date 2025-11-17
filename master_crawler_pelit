@@ -15,18 +15,18 @@ driver.get(steamurl)
 steam_search_results = driver.find_elements(By.CSS_SELECTOR, "#search_resultsRows a")
 for steamgame in steam_search_results[:50]:
     try:
-        thumbnail = steamgame.find_element(By.CLASS_NAME, "search_capsule").get_attribute("src")
+        image_url = steamgame.find_element(By.CSS_SELECTOR, ".search_capsule img").get_attribute("src")
         title = steamgame.find_element(By.CLASS_NAME, "title").text
         release_date = steamgame.find_element(By.CSS_SELECTOR, ".search_released").text
         review_score = steamgame.find_element(By.CSS_SELECTOR, ".search_reviewscore").get_attribute("data-tooltip-html")
         price = steamgame.find_element(By.CSS_SELECTOR, ".discount_final_price").text
         
         games.append({
-            "thumbnail": thumbnail,
+            "image_url": image_url,
             "title": title,
             "release_date": release_date,
             "review_score": review_score,
-            "price": price
+            "price": price,
         })
     except:
         continue
@@ -40,23 +40,23 @@ driver.get(metaurl)
 meta_search_results = driver.find_elements(By.CSS_SELECTOR, "div.c-finderProductCard")
 for metagame in meta_search_results[:50]:
     try:
-        thumbnail = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_image img").get_attribute("src")
+        image_url = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_img img").get_attribute("src")
         title = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_title").text
         release_date = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_meta").text
         review_score = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_metascore .c-metascore").text
 
         games.append({
-            "thumbnail": thumbnail,
+            "image_url": image_url,
             "title": title,
             "release_date": release_date,
-            "review_score": review_score
+            "review_score": review_score,
         })
     except:
         continue
 #Metacritic
 
 for game in games:
-    print(f"{game.get('thumbnail', 'N/A')} {game['title']} - {game['release_date']} - {game.get('review_score', 'N/A')} - {game.get('price', 'N/A')}")
+    print(f"{game.get('image_url', 'N/A')} - {game['title']} - {game['release_date']} - {game.get('review_score', 'N/A')} - {game.get('price', 'N/A')}")
 
 #json
 import json
@@ -65,4 +65,3 @@ with open("master_crawler_pelit.json", "w", encoding="utf-8") as f:
 #json
 
 driver.quit()
-
