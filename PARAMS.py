@@ -82,8 +82,7 @@ PARAMS = {
 
 
 # --------------- params / muuttojen funktiot ---------------
-def params_clean(): # PITÄÄ käyttää, muuten nullit ovat literaaleja
-    global PARAMS
+def params_clean(PARAMS = PARAMS): # PITÄÄ käyttää, muuten nullit ovat literaaleja
 
     PARAMS = {k: v for k, v in PARAMS.items() if v != "null"}
 
@@ -439,9 +438,7 @@ def fetch_page(params=PARAMS, base_url=BASE_URL):
     except requests.exceptions.RequestException as e:
         print(f"Error fetching {url}: {e}")
 
-
-
-def get_url(params = PARAMS, base_url = BASE_URL):
+def get_url(params = PARAMS, base_url = BASE_URL):  
 
     params_clean()
 
