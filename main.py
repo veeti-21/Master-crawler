@@ -15,8 +15,8 @@ import PARAMS
 
 
 # --- CONFIG ---
-OPERA_BINARY = r"C:\Users\jani\Downloads\chrome-win64\chrome-win64\chrome.exe"
-CHROMEDRIVER_PATH = r"C:\Users\jani\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+OPERA_BINARY = r"C:\Users\Veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\Users\Veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 OUTPUT_FILE = "nettimökki_listings.json"
 
 # --- SETUP SELENIUM ---
@@ -280,10 +280,19 @@ for url, row in existing_data.items():
     else:
         updated_data.append(row)
 
+# --- DROP INCOMPLETE RECORDS BEFORE SAVING ---
+complete_data = [
+    r for r in updated_data
+    if r.get("title") and r.get("location") and r.get("price")
+]
+removed_count = len(updated_data) - len(complete_data)
+if removed_count:
+    print(f"Removed {removed_count} listings without full info.")
+
 # --- SAVE FINAL JSON ---
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(updated_data, f, ensure_ascii=False, indent=2)
+    json.dump(complete_data, f, ensure_ascii=False, indent=2)
 
 
-print(f"\nDone! Saved {len(updated_data)} records to {OUTPUT_FILE}")
+print(f"\nDone! Saved {len(complete_data)} complete records to {OUTPUT_FILE}")
 driver.quit()
