@@ -1,301 +1,351 @@
 [
     {
+        "thumbnail": null,
+        "title": "Chill with You : Lo-Fi Story",
+        "release_date": "16 Nov, 2025",
+        "review_score": null,
+        "price": "9,43€"
+    },
+    {
+        "thumbnail": null,
+        "title": "Where Winds Meet",
+        "release_date": "14 Nov, 2025",
+        "review_score": null,
+        "price": "Free"
+    },
+    {
+        "thumbnail": null,
+        "title": "Dice of Kalma",
+        "release_date": "14 Nov, 2025",
+        "review_score": null,
+        "price": "3,99€"
+    },
+    {
+        "thumbnail": null,
+        "title": "INAZUMA ELEVEN: Victory Road",
+        "release_date": "13 Nov, 2025",
+        "review_score": null,
+        "price": "69,99€"
+    },
+    {
+        "thumbnail": null,
+        "title": "Assetto Corsa Rally",
+        "release_date": "13 Nov, 2025",
+        "review_score": null,
+        "price": "23,99€"
+    },
+    {
+        "thumbnail": null,
         "title": "Anno 117: Pax Romana",
         "release_date": "12 Nov, 2025",
         "review_score": null,
         "price": "59,99€"
     },
     {
+        "thumbnail": null,
         "title": "Winter Burrow",
         "release_date": "12 Nov, 2025",
         "review_score": null,
         "price": "17,09€"
     },
     {
-        "title": "Salt 2: Shores of Gold",
-        "release_date": "12 Nov, 2025",
-        "review_score": null,
-        "price": "13,43€"
-    },
-    {
-        "title": "Tabletop Game Shop Simulator",
-        "release_date": "12 Nov, 2025",
-        "review_score": null,
-        "price": "11,51€"
-    },
-    {
-        "title": "Million Depth",
-        "release_date": "11 Nov, 2025",
-        "review_score": null,
-        "price": "14,84€"
-    },
-    {
-        "title": "Duncrush",
-        "release_date": "11 Nov, 2025",
-        "review_score": null,
-        "price": "3,59€"
-    },
-    {
-        "title": "Swords and Sandals 3 Redux",
-        "release_date": "11 Nov, 2025",
-        "review_score": null,
-        "price": "8,77€"
-    },
-    {
-        "title": "Rue Valley",
-        "release_date": "11 Nov, 2025",
-        "review_score": null,
-        "price": "26,99€"
-    },
-    {
-        "title": "Possessor(s)",
-        "release_date": "11 Nov, 2025",
-        "review_score": null,
-        "price": "15,29€"
-    },
-    {
-        "title": "Lead the Way Pack - Battlefield™ 6 and REDSEC",
-        "release_date": "11 Nov, 2025",
-        "review_score": null,
-        "price": "11,99€"
-    },
-    {
+        "thumbnail": null,
         "title": "Lumines Arise",
         "release_date": "11 Nov, 2025",
         "review_score": null,
         "price": "35,99€"
     },
     {
+        "thumbnail": null,
         "title": "Wall World 2",
         "release_date": "11 Nov, 2025",
         "review_score": null,
         "price": "10,29€"
     },
     {
-        "title": "Into The Grid",
-        "release_date": "10 Nov, 2025",
-        "review_score": null,
-        "price": "13,49€"
-    },
-    {
+        "thumbnail": null,
         "title": "Verho - Curse of Faces",
         "release_date": "10 Nov, 2025",
         "review_score": null,
         "price": "17,99€"
     },
     {
+        "thumbnail": null,
+        "title": "Ghost Janitors",
+        "release_date": "8 Nov, 2025",
+        "review_score": null,
+        "price": "5,99€"
+    },
+    {
+        "thumbnail": null,
         "title": "Voidtrain",
         "release_date": "7 Nov, 2025",
         "review_score": null,
         "price": "19,49€"
     },
     {
-        "title": "Reentry - A Space Flight Simulator",
-        "release_date": "7 Nov, 2025",
-        "review_score": null,
-        "price": "27,19€"
-    },
-    {
+        "thumbnail": null,
         "title": "Restaurats",
         "release_date": "7 Nov, 2025",
         "review_score": null,
         "price": "14,99€"
     },
     {
-        "title": "BattleGroupVR2",
-        "release_date": "7 Nov, 2025",
-        "review_score": null,
-        "price": "20,82€"
-    },
-    {
+        "thumbnail": null,
         "title": "My Little Puppy",
         "release_date": "6 Nov, 2025",
         "review_score": null,
         "price": "19,60€"
     },
     {
+        "thumbnail": null,
         "title": "IdleOn",
         "release_date": "6 Nov, 2025",
         "review_score": null,
         "price": "Free"
     },
     {
-        "title": "Dinocop",
-        "release_date": "6 Nov, 2025",
-        "review_score": null,
-        "price": "13,31€"
-    },
-    {
+        "thumbnail": null,
         "title": "Whiskerwood",
         "release_date": "6 Nov, 2025",
         "review_score": null,
         "price": "23,99€"
     },
     {
+        "thumbnail": null,
         "title": "The Last Caretaker",
         "release_date": "6 Nov, 2025",
         "review_score": null,
-        "price": "26,99€"
+        "price": "29,99€"
     },
     {
+        "thumbnail": null,
         "title": "Europa Universalis V",
         "release_date": "4 Nov, 2025",
         "review_score": null,
         "price": "59,99€"
     },
     {
+        "thumbnail": null,
+        "title": "Bigfoot Life",
+        "release_date": "3 Nov, 2025",
+        "review_score": null,
+        "price": "19,50€"
+    },
+    {
+        "thumbnail": null,
         "title": "Tavern Keeper 🍻",
         "release_date": "3 Nov, 2025",
         "review_score": null,
         "price": "21,85€"
     },
     {
-        "title": "Flesh Made Fear",
-        "release_date": "31 Oct, 2025",
-        "review_score": null,
-        "price": "15,29€"
-    },
-    {
+        "thumbnail": null,
         "title": "Leaf it Alone",
         "release_date": "30 Oct, 2025",
         "review_score": null,
         "price": "5,49€"
     },
     {
+        "thumbnail": null,
         "title": "ARC Raiders - Upgrade to Deluxe Edition",
         "release_date": "30 Oct, 2025",
         "review_score": null,
         "price": "19,99€"
     },
     {
+        "thumbnail": null,
         "title": "ARC Raiders",
         "release_date": "30 Oct, 2025",
         "review_score": null,
         "price": "39,99€"
     },
     {
+        "thumbnail": null,
         "title": "The Outer Worlds 2",
         "release_date": "29 Oct, 2025",
         "review_score": null,
         "price": "69,99€"
     },
     {
+        "thumbnail": null,
         "title": "Battlefield™ REDSEC",
         "release_date": "28 Oct, 2025",
         "review_score": null,
         "price": "Free"
     },
     {
+        "thumbnail": null,
+        "title": "Season 1 Battlefield Pro - Battlefield™ 6 and REDSEC",
+        "release_date": "28 Oct, 2025",
+        "review_score": null,
+        "price": "24,99€"
+    },
+    {
+        "thumbnail": null,
         "title": "Master of Command",
         "release_date": "27 Oct, 2025",
         "review_score": null,
         "price": "29,99€"
     },
     {
+        "thumbnail": null,
         "title": "Escape Simulator 2",
         "release_date": "27 Oct, 2025",
         "review_score": null,
         "price": "16,99€"
     },
     {
-        "title": "Slots & Daggers",
-        "release_date": "24 Oct, 2025",
+        "thumbnail": null,
+        "title": "The Séance of Blake Manor",
+        "release_date": "27 Oct, 2025",
         "review_score": null,
-        "price": "7,79€"
+        "price": "19,50€"
     },
     {
+        "thumbnail": null,
+        "title": "MIMESIS",
+        "release_date": "27 Oct, 2025",
+        "review_score": null,
+        "price": "9,75€"
+    },
+    {
+        "thumbnail": null,
         "title": "VEIN",
         "release_date": "24 Oct, 2025",
         "review_score": null,
         "price": "16,99€"
     },
     {
+        "thumbnail": null,
+        "title": "Super Fantasy Kingdom",
+        "release_date": "24 Oct, 2025",
+        "review_score": null,
+        "price": "14,99€"
+    },
+    {
+        "thumbnail": null,
         "title": "Once Upon A KATAMARI",
         "release_date": "23 Oct, 2025",
         "review_score": null,
         "price": "39,99€"
     },
     {
+        "thumbnail": null,
+        "title": "MISERY",
+        "release_date": "23 Oct, 2025",
+        "review_score": null,
+        "price": "9,74€"
+    },
+    {
+        "thumbnail": null,
         "title": "Farthest Frontier",
         "release_date": "23 Oct, 2025",
         "review_score": null,
         "price": "33,99€"
     },
     {
+        "thumbnail": null,
+        "title": "GODBREAKERS",
+        "release_date": "23 Oct, 2025",
+        "review_score": null,
+        "price": "19,70€"
+    },
+    {
+        "thumbnail": null,
         "title": "PowerWash Simulator 2",
         "release_date": "23 Oct, 2025",
         "review_score": null,
         "price": "24,99€"
     },
     {
+        "thumbnail": null,
+        "title": "Species: Unknown",
+        "release_date": "23 Oct, 2025",
+        "review_score": null,
+        "price": "9,75€"
+    },
+    {
+        "thumbnail": null,
         "title": "Escape the Backrooms",
         "release_date": "23 Oct, 2025",
         "review_score": null,
         "price": "8,19€"
     },
     {
+        "thumbnail": null,
+        "title": "The Jackbox Party Pack 11",
+        "release_date": "22 Oct, 2025",
+        "review_score": null,
+        "price": "29,99€"
+    },
+    {
+        "thumbnail": null,
         "title": "Dispatch",
         "release_date": "22 Oct, 2025",
         "review_score": null,
         "price": "28,99€"
     },
     {
+        "thumbnail": null,
         "title": "World of Sea Battle",
         "release_date": "21 Oct, 2025",
         "review_score": null,
         "price": "Free"
     },
     {
+        "thumbnail": null,
         "title": "Jurassic World Evolution 3",
         "release_date": "21 Oct, 2025",
         "review_score": null,
         "price": "59,99€"
     },
     {
+        "thumbnail": null,
         "title": "RV There Yet?",
         "release_date": "21 Oct, 2025",
         "review_score": null,
         "price": "7,79€"
     },
     {
-        "title": "NINJA GAIDEN 4",
-        "release_date": "20 Oct, 2025",
-        "review_score": null,
-        "price": "69,99€"
-    },
-    {
-        "title": "Croc Legend of the Gobbos",
-        "release_date": "17 Oct, 2025",
-        "review_score": null,
-        "price": "28,99€"
-    },
-    {
+        "thumbnail": null,
         "title": "Necesse",
         "release_date": "16 Oct, 2025",
         "review_score": null,
         "price": "14,99€"
     },
     {
+        "thumbnail": null,
         "title": "Fellowship",
         "release_date": "16 Oct, 2025",
         "review_score": null,
         "price": "24,50€"
     },
     {
+        "thumbnail": null,
         "title": "Escape From Duckov",
         "release_date": "16 Oct, 2025",
         "review_score": null,
         "price": "17,99€"
     },
     {
+        "thumbnail": null,
         "title": "BALL x PIT",
         "release_date": "15 Oct, 2025",
         "review_score": null,
         "price": "14,99€"
     },
     {
+        "thumbnail": null,
         "title": "Battlefield™ 6",
         "release_date": "10 Oct, 2025",
+        "review_score": null,
+        "price": "69,99€"
+    },
+    {
+        "thumbnail": null,
+        "title": "Digimon Story Time Stranger",
+        "release_date": "2 Oct, 2025",
         "review_score": null,
         "price": "69,99€"
     }
