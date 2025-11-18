@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Crawler – Koontisivu</title>
+  
+  <style>
+    /* Eduko color palette */
+    :root {
+      --primary: #0055a5;
+      --secondary: #00a1e0;
+      --bg: #f0f4f8;
+      --white: #ffffff;
+      --gray: #555;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--gray);
+    }
+
+    nav {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .weather {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: var(--secondary);
+      color: var(--white);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .upload-section {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: #e8f4f8;
+      border-radius: 8px;
+      border: 2px dashed var(--secondary);
+    }
+
+    .upload-section input[type="file"] {
+      margin: 0.5rem 0;
+    }
+
+    .upload-section button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+
+    .upload-section button:hover {
+      background-color: var(--secondary);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filters button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .filters button:hover {
+      background-color: var(--secondary);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.6rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .news h2 {
+      color: var(--primary);
+    }
+
+    .news a {
+      color: var(--secondary);
+    }
+
+    .status-message {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border-radius: 4px;
+    }
+
+    .status-success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .status-error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--gray);
+    }
+  </style>
+  
+</head>
+
+<body>
+  <nav>
+    <div>Web Crawler Koontisivu</div>
+    <div>
+      <a href="#uploadSection">Lataa JSON</a>
+      <a href="#dataSection">Kerätyt tiedot</a>
+      <a href="#weatherSection">Säätila</a>
+      <a href="#newsSection">Uutiset</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Web Crawler – Koontisivu</h1>
+    <p>Täältä löydät kaikki kerätyt tiedot ja projektin tilan</p>
+  </header>
+
+  <main>
+
+    </section>
+
+    <!-- WEATHER SECTION -->
+    <section id="weatherSection" class="weather">
+      <h2>Nykyinen säätila</h2>
+      <p id="weatherInfo">Ladataan sijaintia...</p>
+	  
+    </section>
+
+    <!-- FILTERS SECTION -->
+    <section id="filtersSection" class="filters">
+      <div>
+        <label for="dateFilter">Ajankohta:</label>
+        <input type="date" id="dateFilter">
+      </div>
+      <div>
+        <label for="categoryFilter">Kategoria:</label>
+        <select id="categoryFilter">
+          <option value="">Kaikki</option>
+        </select>
+      </div>
+      <div>
+        <label for="sourceFilter">Lähde:</label>
+        <select id="sourceFilter">
+          <option value="">Kaikki</option>
+        </select>
+      </div>
+      <button onclick="loadData()">Päivitä</button>
+	  
+	  <!-- JSON UPLOAD SECTION -->
+    <section id="uploadSection" class="upload-section">
+      <h2>Lataa crawlattu data (JSON)</h2>
+      <p>Valitse JSON-tiedosto, joka sisältää crawlatun datan:</p>
+      <input type="file" id="jsonFile" accept=".json" />
+      <button onclick="loadJSONFile()">Lataa tiedosto</button>
+      <div id="uploadStatus"></div>
+	  
+    </section>
+	
+	 <!-- YLE NEWS -->
+    <section id="newsSection" class="news">
+      <h2>Viisi uusinta YLE Kymenlaakson uutista</h2>
+      <ul id="newsList"><li>Ladataan uutisia...</li></ul>
+    </section>
+
+    <!-- DATA TABLE -->
+    <section id="dataSection">
+      <h2>Crawlattu data (<span id="dataCount">0</span> riviä)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Päivämäärä</th>
+            <th>Otsikko</th>
+            <th>Kategoria</th>
+            <th>Lähde</th>
+          </tr>
+        </thead>
+        <tbody id="dataBody">
+          <tr><td colspan="4" style="text-align:center;">Ei dataa ladattu. Lataa JSON-tiedosto yllä.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Web Crawler Group Project — Eduko värimaailma
+  </footer>
+
+  <script>
+
+    //CRAWLER DATA
+
+    let data = [];
+
+    function loadJSONFile() {
+      const fileInput = document.getElementById("jsonFile");
+      const statusDiv = document.getElementById("uploadStatus");
+      
+      if (!fileInput.files.length) {
+        statusDiv.innerHTML = '<div class="status-message status-error">Valitse ensin tiedosto!</div>';
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        try {
+          const jsonData = JSON.parse(e.target.result);
+          
+          if (Array.isArray(jsonData)) {
+            data = jsonData;
+          } else if (jsonData.data && Array.isArray(jsonData.data)) {
+            data = jsonData.data;
+          } else if (jsonData.items && Array.isArray(jsonData.items)) {
+            data = jsonData.items;
+          } else {
+            throw new Error("JSON pitää olla array tai sisältää 'data' tai 'items' arrayn");
+          }
+
+          statusDiv.innerHTML = `<div class="status-message status-success">✓ Ladattu ${data.length} riviä dataa!</div>`;
+          
+          updateFilters();
+          
+          loadData();
+        } catch (err) {
+          statusDiv.innerHTML = `<div class="status-message status-error">Virhe: ${err.message}</div>`;
+          console.error(err);
+        }
+      };
+
+      reader.onerror = function() {
+        statusDiv.innerHTML = '<div class="status-message status-error">Tiedoston lukeminen epäonnistui!</div>';
+      };
+
+      reader.readAsText(file);
+    }
+
+    function updateFilters() {
+      const categories = [...new Set(data.map(item => item.category).filter(Boolean))];
+      const categoryFilter = document.getElementById("categoryFilter");
+      categoryFilter.innerHTML = '<option value="">Kaikki</option>';
+      categories.forEach(cat => {
+        categoryFilter.innerHTML += `<option value="${cat}">${cat}</option>`;
+      });
+
+      const sources = [...new Set(data.map(item => item.source).filter(Boolean))];
+      const sourceFilter = document.getElementById("sourceFilter");
+      sourceFilter.innerHTML = '<option value="">Kaikki</option>';
+      sources.forEach(src => {
+        sourceFilter.innerHTML += `<option value="${src}">${src}</option>`;
+      });
+    }
+
+    function loadData() {
+      const dateFilter = document.getElementById("dateFilter").value;
+      const categoryFilter = document.getElementById("categoryFilter").value;
+      const sourceFilter = document.getElementById("sourceFilter").value;
+      const body = document.getElementById("dataBody");
+      const countSpan = document.getElementById("dataCount");
+      
+      body.innerHTML = "";
+
+      const filtered = data.filter(item =>
+        (!dateFilter || item.date === dateFilter) &&
+        (!categoryFilter || item.category === categoryFilter) &&
+        (!sourceFilter || item.source === sourceFilter)
+      );
+
+      countSpan.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        body.innerHTML = '<tr><td colspan="4" style="text-align:center;">Ei tuloksia valituilla suodattimilla.</td></tr>';
+        return;
+      }
+
+      filtered.forEach(item => {
+        body.innerHTML += `
+          <tr>
+            <td>${item.date || '-'}</td>
+            <td>${item.title || item.headline || item.text || '-'}</td>
+            <td>${item.category || '-'}</td>
+            <td>${item.source || item.url || '-'}</td>
+          </tr>`;
+      });
+    }
+
+
+    // WEATHER (WORKS WITHOUT API KEY)
+
+    function getWeather(lat, lon) {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+
+      fetch(url)
+        .then(res => res.json())
+        .then(w => {
+          if (!w.current_weather) throw new Error("Invalid weather data");
+          const temp = w.current_weather.temperature;
+          const wind = w.current_weather.windspeed;
+          document.getElementById("weatherInfo").innerText =
+            `Lämpötila: ${temp}°C · Tuuli: ${wind} m/s`;
+        })
+        .catch(() => {
+          document.getElementById("weatherInfo").innerText = "Säätilaa ei voitu hakea.";
+        });
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        pos => getWeather(pos.coords.latitude, pos.coords.longitude),
+        () => document.getElementById("weatherInfo").innerText = "Sijaintia ei sallittu."
+      );
+    } else {
+      document.getElementById("weatherInfo").innerText = "Sijaintia ei tueta.";
+    }
+
+  
+    // YLE NEWS (CORS SAFE)
+    
+    async function loadNews() {
+      const url = "https://yle.fi/uutiset/rss/alueet/kymenlaakso";
+      const proxy = "https://api.allorigins.win/get?url=";
+      const newsList = document.getElementById("newsList");
+
+      try {
+        const res = await fetch(proxy + encodeURIComponent(url));
+        const data = await res.json();
+
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, "text/xml");
+
+        const items = [...xml.querySelectorAll("item")].slice(0, 5);
+
+        newsList.innerHTML = "";
+        items.forEach(item => {
+          newsList.innerHTML += `
+            <li><a href="${item.querySelector("link").textContent}" target="_blank">
+            ${item.querySelector("title").textContent}
+            </a></li>`;
+        });
+      } catch (e) {
+        newsList.innerHTML = "<li>Uutisia ei voitu ladata.</li>";
+      }
+    }
+
+    loadNews();
+  </script>
+</body>
+</html>
