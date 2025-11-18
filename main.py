@@ -5,7 +5,7 @@ import time
 
 OUTPUT_FILE = "näytönohjaimet.txt"
 
-def scrape(url, label, file):
+def scrapegpu(url, label, file):
     opts = Options()
     opts.add_argument("--headless")
     driver = webdriver.Chrome(options=opts)
@@ -44,18 +44,18 @@ def scrape(url, label, file):
 
 def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
-        scrape(
-            "https://www.jimms.fi/fi/Product/List/000-29T/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070",
+        scrapegpu(
+            "https://www.jimms.fi/fi/Product/List/000-29T/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070?ob=4",
             "RTX 5070 Näytönohjainta",
             file
         )
-        scrape(
-            "https://www.jimms.fi/fi/Product/List/000-29S/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070-ti",
+        scrapegpu(
+            "https://www.jimms.fi/fi/Product/List/000-29S/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070-ti?ob=4",
             "RTX 5070 Ti Näytönohjainta",
             file
         )
-        scrape(
-            "https://www.jimms.fi/fi/Product/List/000-29P/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5080",
+        scrapegpu(
+            "https://www.jimms.fi/fi/Product/List/000-29P/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5080?ob=4",
             "RTX 5080 Näytönohjainta",
             file
         )
@@ -64,3 +64,8 @@ def main():
 if __name__ == "__main__":
     main()
     print(f"Tulokset tallennettu tiedostoon: {OUTPUT_FILE}")
+
+
+
+# image_url = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_img img").get_attribute("src")
+# https://www.gigantti.fi/gaming/pelinaytot?sort=ActivePrice.Amount-asc&f=30831%3A2560x1440
