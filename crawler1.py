@@ -25,15 +25,19 @@ driver.set_window_size(required_width, required_height)
 
 elementname = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2) > div:nth-child(3) > div:nth-child(1) > h2:nth-child(2)")
 elementprice = driver.find_elements(By.CSS_SELECTOR, "li.group > a > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)")
+elementlink = driver.find_elements(By.CSS_SELECTOR, '[data-testid="product-card"]')
 
 for x in range (len(elementprice)):
     tmp1 = f"{elementname[x].text}\n"
-    tmp2 = f"{elementprice[x].text}\n\n" # elementprice ottaa väärästä elementistä numeron, jos tuotteella on alennus
+    tmp2 = f"{elementprice[x].text}\n" # elementprice ottaa väärästä elementistä numeron, jos tuotteella on alennus
+    tmp3 = f"{elementlink[x].get_attribute('href')}\n\n"
 
     if "näyttö" in tmp1 and "€" in tmp2: # and "€" saattaa olla turha
             with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset 
                 f.write(tmp1)
                 f.write(tmp2)
+                f.write(tmp3)
     print(tmp2)
     print(tmp1)
+    print(tmp3)
 driver.quit()
