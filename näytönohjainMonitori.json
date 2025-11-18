@@ -1,0 +1,534 @@
+{
+    "========RTX 5070========": [
+        {
+            "name": "Palit GeForce RTX 5070 Infinity 3 -näytönohjain, 12GB GDDR7",
+            "price": 569.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5070 X2 -näytönohjain, 12GB GDDR7",
+            "price": 569.9
+        },
+        {
+            "name": "PNY GeForce RTX 5070 Triple Fan -näytönohjain, 12GB GDDR7",
+            "price": 579.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5070 X2 OC -näytönohjain, 12GB GDDR7",
+            "price": 579.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 WINDFORCE OC SFF -näytönohjain, 12GB GDDR7",
+            "price": 589.9
+        },
+        {
+            "name": "Asus GeForce RTX 5070 PRIME - OC Edition -näytönohjain, 12GB GDDR7",
+            "price": 599.9
+        },
+        {
+            "name": "Asus GeForce RTX 5070 Dual - OC Edition -näytönohjain, 12GB GDDR7",
+            "price": 599.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 VENTUS 2X OC -näytönohjain, 12GB GDDR7",
+            "price": 599.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 GAMING OC -näytönohjain, 12GB GDDR7",
+            "price": 619.9
+        },
+        {
+            "name": "Palit GeForce RTX 5070 White OC -näytönohjain, 12GB GDDR7",
+            "price": 623.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5070 SOLID -näytönohjain, 12GB GDDR7",
+            "price": 633.9
+        },
+        {
+            "name": "PNY GeForce RTX 5070 Overclocked Triple Fan -näytönohjain, 12GB GDDR7",
+            "price": 642.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 EAGLE OC SFF -näytönohjain, 12GB GDDR7",
+            "price": 643.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5070 Twin Edge -näytönohjain, 12GB GDDR7",
+            "price": 647.9
+        },
+        {
+            "name": "Asus (Outlet) GeForce RTX 5070 PRIME - White OC Edition -näytönohjain, 12GB GDDR7",
+            "price": 649.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 VENTUS 2X OC WHITE -näytönohjain, 12GB GDDR7",
+            "price": 659.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 EAGLE OC ICE SFF -näytönohjain, 12GB GDDR7",
+            "price": 666.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5070 X3 OC -näytönohjain, 12GB GDDR7",
+            "price": 668.9
+        },
+        {
+            "name": "Palit GeForce RTX 5070 GamingPro-S OC -näytönohjain, 12GB GDDR7",
+            "price": 668.9
+        },
+        {
+            "name": "Asus GeForce RTX 5070 PRIME - White OC Edition -näytönohjain, 12GB GDDR7",
+            "price": 669.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 VENTUS 3X OC -näytönohjain, 12GB GDDR7",
+            "price": 669.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 INSPIRE 3X OC -näytönohjain, 12GB GDDR7",
+            "price": 679.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5070 Twin Edge OC White Edition -näytönohjain, 12GB GDDR7",
+            "price": 692.9
+        },
+        {
+            "name": "Asus GeForce RTX 5070 TUF - OC Edition -näytönohjain, 12GB GDDR7",
+            "price": 719.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 GAMING TRIO OC -näytönohjain, 12GB GDDR7",
+            "price": 719.9
+        }
+    ],
+    "========RTX 5070 TI========": [
+        {
+            "name": "MSI GeForce RTX 5070 Ti VENTUS 3X OC -näytönohjain, 16GB GDDR7",
+            "price": 809.9
+        },
+        {
+            "name": "PNY GeForce RTX 5070 Ti OC Triple Fan Plus -näytönohjain, 16GB GDDR7",
+            "price": 829.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5070 Ti X3 -näytönohjain, 16GB GDDR7",
+            "price": 829.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5070 Ti X3 OC -näytönohjain, 16GB GDDR7",
+            "price": 839.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 Ti WINDFORCE OC SFF -näytönohjain, 16GB GDDR7",
+            "price": 849.9
+        },
+        {
+            "name": "Palit GeForce RTX 5070 Ti GamingPro-S -näytönohjain, 16GB GDDR7",
+            "price": 877.9
+        },
+        {
+            "name": "Asus GeForce RTX 5070 Ti PRIME - OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 887.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5070 Ti SOLID SFF -näytönohjain, 16GB GDDR7",
+            "price": 899.9
+        },
+        {
+            "name": "PNY GeForce RTX 5070 Ti OC Triple Fan -näytönohjain, 16GB GDDR7",
+            "price": 923.9
+        },
+        {
+            "name": "Asus GeForce RTX 5070 Ti TUF Gaming - OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 939.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 Ti EAGLE OC ICE SFF -näytönohjain, 16GB GDDR7",
+            "price": 949.9
+        },
+        {
+            "name": "MSI (Outlet) GeForce RTX 5070 Ti GAMING TRIO OC PLUS -näytönohjain, 16GB GDDR7",
+            "price": 969.9
+        },
+        {
+            "name": "PNY GeForce RTX 5070 Ti ARGB EPIC-X RGB OC Triple Fan -näytönohjain, 16GB GDDR7",
+            "price": 975.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 Ti GAMING OC -näytönohjain, 16GB GDDR7",
+            "price": 979.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 Ti GAMING TRIO OC -näytönohjain, 16GB GDDR7",
+            "price": 979.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5070 Ti SOLID CORE OC White Edition -näytönohjain, 16GB GDDR7",
+            "price": 985.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 Ti GAMING TRIO OC WHITE -näytönohjain, 16GB GDDR7",
+            "price": 999.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 Ti EAGLE OC SFF -näytönohjain, 16GB GDDR7",
+            "price": 1000.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5070 Ti AMP Extreme INFINITY -näytönohjain, 16GB GDDR7",
+            "price": 1048.9
+        },
+        {
+            "name": "Asus (Outlet) GeForce RTX 5070 Ti TUF Gaming - White OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 1049.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 Ti AORUS MASTER -näytönohjain, 16GB GDDR7",
+            "price": 1069.9
+        },
+        {
+            "name": "MSI GeForce RTX 5070 Ti GAMING TRIO OC PLUS -näytönohjain, 16GB GDDR7",
+            "price": 1069.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5070 Ti AERO OC -näytönohjain, 16GB GDDR7",
+            "price": 1075.9
+        },
+        {
+            "name": "Asus GeForce RTX 5070 Ti TUF Gaming - White OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 1079.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5070 Ti X3 OC WHITE -näytönohjain, 16GB GDDR7",
+            "price": 1099.9
+        }
+    ],
+    "========RTX 5080========": [
+        {
+            "name": "Gigabyte GeForce RTX 5080 WINDFORCE SFF -näytönohjain, 16GB GDDR7",
+            "price": 1069.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5080 WINDFORCE OC SFF -näytönohjain, 16GB GDDR7",
+            "price": 1099.9
+        },
+        {
+            "name": "MSI GeForce RTX 5080 VENTUS 3X OC -näytönohjain, 16GB GDDR7",
+            "price": 1099.9
+        },
+        {
+            "name": "PNY GeForce RTX 5080 ARGB EPIC-X RGB OC Triple Fan -näytönohjain, 16GB GDDR7",
+            "price": 1149.9
+        },
+        {
+            "name": "PNY GeForce RTX 5080 Triple Fan -näytönohjain, 16GB GDDR7",
+            "price": 1149.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5080 X3 -näytönohjain, 16GB GDDR7",
+            "price": 1153.9
+        },
+        {
+            "name": "Asus GeForce RTX 5080 PRIME - OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 1199.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5080 SOLID CORE -näytönohjain, 16GB GDDR7",
+            "price": 1201.9
+        },
+        {
+            "name": "PNY GeForce RTX 5080 OC Triple Fan -näytönohjain, 16GB GDDR7",
+            "price": 1212.0
+        },
+        {
+            "name": "INNO3D GeForce RTX 5080 X3 OC -näytönohjain, 16GB GDDR7",
+            "price": 1248.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5080 X3 OC WHITE -näytönohjain, 16GB GDDR7",
+            "price": 1287.9
+        },
+        {
+            "name": "Asus (Outlet) GeForce RTX 5080 ROG Astral - OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 1319.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5080 X3 GAMING OC -näytönohjain, 16GB GDDR7",
+            "price": 1319.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5080 AERO OC SFF -näytönohjain, 16GB GDDR7",
+            "price": 1349.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5080 AMP Extreme INFINITY -näytönohjain, 16GB GDDR7",
+            "price": 1354.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5080 GAMING OC -näytönohjain, 16GB GDDR7",
+            "price": 1362.9
+        },
+        {
+            "name": "Asus GeForce RTX 5080 TUF Gaming - OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 1369.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5080 iCHILL X3 -näytönohjain, 16GB GDDR7",
+            "price": 1380.9
+        },
+        {
+            "name": "Zotac GeForce RTX 5080 SOLID OC White Edition -näytönohjain, 16GB GDDR7",
+            "price": 1383.9
+        },
+        {
+            "name": "Asus GeForce RTX 5080 ROG Astral - OC Edition -näytönohjain, 16GB GDDR7",
+            "price": 1419.9
+        },
+        {
+            "name": "MSI GeForce RTX 5080 GAMING TRIO OC -näytönohjain, 16GB GDDR7",
+            "price": 1494.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5080 AORUS MASTER -näytönohjain, 16GB GDDR7",
+            "price": 1496.9
+        },
+        {
+            "name": "INNO3D GeForce RTX 5080 iCHILL FROSTBITE -näytönohjain, 16GB GDDR7",
+            "price": 1505.9
+        },
+        {
+            "name": "MSI GeForce RTX 5080 GAMING TRIO OC WHITE -näytönohjain, 16GB GDDR7",
+            "price": 1559.9
+        },
+        {
+            "name": "Gigabyte GeForce RTX 5080 AORUS MASTER ICE -näytönohjain, 16GB GDDR7",
+            "price": 1563.9
+        }
+    ],
+    "========RX 9070 XT========": [
+        {
+            "name": "PowerColor (Outlet) Radeon RX 9070 XT Reaper -näytönohjain, 16GB GDDR6",
+            "price": 679.9
+        },
+        {
+            "name": "Gigabyte (Outlet) Radeon RX 9070 XT GAMING -näytönohjain, 16GB GDDR6",
+            "price": 689.9
+        },
+        {
+            "name": "PowerColor Radeon RX 9070 XT Reaper -näytönohjain, 16GB GDDR6",
+            "price": 699.9
+        },
+        {
+            "name": "ASRock Radeon RX 9070 XT Steel Legend -näytönohjain, 16GB GDDR6",
+            "price": 705.9
+        },
+        {
+            "name": "Gigabyte Radeon RX 9070 XT GAMING -näytönohjain, 16GB GDDR6",
+            "price": 709.9
+        },
+        {
+            "name": "Acer (Outlet) Radeon RX 9070 XT Nitro OC -näytönohjain, 16GB GDDR6",
+            "price": 709.9
+        },
+        {
+            "name": "Sapphire Radeon RX 9070 XT PULSE -näytönohjain, 16GB GDDR6",
+            "price": 719.9
+        },
+        {
+            "name": "XFX Radeon RX 9070 XT Quicksilver Gaming -näytönohjain, 16GB GDDR6",
+            "price": 729.9
+        },
+        {
+            "name": "Sapphire Radeon RX 9070 XT PURE -näytönohjain, 16GB GDDR6",
+            "price": 739.9
+        },
+        {
+            "name": "Gigabyte Radeon RX 9070 XT GAMING OC -näytönohjain, 16GB GDDR6",
+            "price": 739.9
+        },
+        {
+            "name": "Acer Radeon RX 9070 XT Nitro OC -näytönohjain, 16GB GDDR6",
+            "price": 739.9
+        },
+        {
+            "name": "ASRock Radeon RX 9070 XT Steel Legend Dark -näytönohjain, 16GB GDDR6",
+            "price": 739.9
+        },
+        {
+            "name": "Asus Radeon RX 9070 XT PRIME - OC Edition -näytönohjain, 16GB GDDR6",
+            "price": 749.9
+        },
+        {
+            "name": "PowerColor Radeon RX 9070 XT Hellhound -näytönohjain, 16GB GDDR6",
+            "price": 749.9
+        },
+        {
+            "name": "Gigabyte Radeon RX 9070 XT GAMING OC ICE -näytönohjain, 16GB GDDR6",
+            "price": 749.9
+        },
+        {
+            "name": "PowerColor Radeon RX 9070 XT Hellhound Spectral White -näytönohjain, 16GB GDDR6",
+            "price": 759.9
+        },
+        {
+            "name": "PowerColor (Outlet) Radeon RX 9070 XT Red Devil -näytönohjain, 16GB GDDR6",
+            "price": 759.9
+        },
+        {
+            "name": "Acer Radeon RX 9070 XT Predator BiFrost OC -näytönohjain, 16GB GDDR6",
+            "price": 769.9
+        },
+        {
+            "name": "Gigabyte (Outlet) Radeon RX 9070 XT AORUS ELITE -näytönohjain, 16GB GDDR6",
+            "price": 779.9
+        },
+        {
+            "name": "Acer Radeon RX 9070 XT Predator BiFrost OC White -näytönohjain, 16GB GDDR6",
+            "price": 779.9
+        },
+        {
+            "name": "XFX Radeon RX 9070 XT Mercury OC White -näytönohjain, 16GB GDDR6",
+            "price": 779.9
+        },
+        {
+            "name": "ASRock Radeon RX 9070 XT Taichi OC -näytönohjain, 16GB GDDR6",
+            "price": 789.9
+        },
+        {
+            "name": "PowerColor Radeon RX 9070 XT Red Devil -näytönohjain, 16GB GDDR6",
+            "price": 799.9
+        },
+        {
+            "name": "PowerColor Radeon RX 9070 XT Hellhound Reva -näytönohjain, 16GB GDDR6",
+            "price": 799.9
+        },
+        {
+            "name": "Sapphire Radeon RX 9070 XT NITRO+ -näytönohjain, 16GB GDDR6",
+            "price": 813.9
+        }
+    ],
+    "========1440 Monitori========": [
+        {
+            "name": "Lenovo 27\" L27qe, 100Hz QHD-monitori, Raven Black",
+            "price": 186.9
+        },
+        {
+            "name": "Acer 27\" KA272U E, 100Hz WQHD-monitori, musta",
+            "price": 189.9
+        },
+        {
+            "name": "Gigabyte 27\" GS27QA, 180Hz QHD-pelimonitori, musta",
+            "price": 199.9
+        },
+        {
+            "name": "Acer (Outlet) 27\" Nitro XV272U V3, 180Hz WQHD-pelimonitori, musta",
+            "price": 199.9
+        },
+        {
+            "name": "Gigabyte 27\" GS27QCA, kaareva 180Hz QHD-pelimonitori, musta",
+            "price": 219.9
+        },
+        {
+            "name": "AOC (Outlet) 27\" Q27G4X, 180Hz QHD-pelimonitori, musta/punainen",
+            "price": 219.9
+        },
+        {
+            "name": "Acer (Outlet) 27\" Nitro XV272U V3, 180Hz WQHD-pelimonitori, musta",
+            "price": 224.9
+        },
+        {
+            "name": "Arozzi 27\" Nova IPS, 180Hz (OC) QHD -pelimonitori, violetti",
+            "price": 229.9
+        },
+        {
+            "name": "Arozzi 27\" Nova IPS, 180Hz (OC) QHD -pelimonitori, valkoinen",
+            "price": 229.9
+        },
+        {
+            "name": "Arozzi 27\" Nova IPS, 180Hz (OC) QHD -pelimonitori, pinkki",
+            "price": 229.9
+        },
+        {
+            "name": "Arozzi 27\" Nova IPS, 180Hz (OC) QHD -pelimonitori, musta",
+            "price": 229.9
+        },
+        {
+            "name": "Arozzi 27\" Nova IPS, 180Hz (OC) QHD -pelimonitori, metsänvihreä",
+            "price": 229.9
+        },
+        {
+            "name": "Lenovo 27\" Legion 27Q-10, 240Hz QHD-pelimonitori, Raven Black",
+            "price": 237.9
+        },
+        {
+            "name": "Acer 27\" Nitro XZ273UP, kaareva 180Hz QHD-pelimonitori, musta",
+            "price": 239.9
+        },
+        {
+            "name": "Acer (Outlet) 27\" Predator XB273UV3, 180Hz WQHD-pelimonitori, musta",
+            "price": 239.9
+        },
+        {
+            "name": "AOC 27\" Q27G42ZE, 260Hz(OC) QHD-pelimonitori, musta/punainen",
+            "price": 248.9
+        },
+        {
+            "name": "Samsung 27\" Odyssey G55C, kaareva 165Hz QHD-pelimonitori, musta",
+            "price": 249.0
+        },
+        {
+            "name": "Acer 27\" Nitro XV272U V3, 180Hz WQHD-pelimonitori, musta",
+            "price": 249.9
+        },
+        {
+            "name": "Samsung 27\" Odyssey G5 G51C, 165Hz QHD-pelimonitori, musta",
+            "price": 249.9
+        },
+        {
+            "name": "AOC 27\" Q27G2E/BK, 155Hz (OC) QHD-pelimonitori, musta/punainen",
+            "price": 249.9
+        },
+        {
+            "name": "Gigabyte 31,5\" GS32QCA, kaareva 180Hz QHD-pelimonitori, musta",
+            "price": 249.9
+        },
+        {
+            "name": "Samsung 27\" Odyssey G5 G51F, 180Hz QHD-pelimonitori, musta",
+            "price": 249.9
+        },
+        {
+            "name": "AOC 27\" Q27G4XN, 180Hz QHD-pelimonitori, harmaa/musta",
+            "price": 252.9
+        },
+        {
+            "name": "Samsung 32\" Odyssey G5 G51C, 165Hz QHD-pelimonitori, musta",
+            "price": 264.9
+        },
+        {
+            "name": "Asus 31,5\" TUF Gaming VG32WQ3B, kaareva 180Hz (OC) QHD-pelimonitori, musta",
+            "price": 269.9
+        }
+    ],
+    "cheapest": {
+        "========RTX 5070========": {
+            "name": "Palit GeForce RTX 5070 Infinity 3 -näytönohjain, 12GB GDDR7",
+            "price": 569.9
+        },
+        "========RTX 5070 TI========": {
+            "name": "MSI GeForce RTX 5070 Ti VENTUS 3X OC -näytönohjain, 16GB GDDR7",
+            "price": 809.9
+        },
+        "========RTX 5080========": {
+            "name": "Gigabyte GeForce RTX 5080 WINDFORCE SFF -näytönohjain, 16GB GDDR7",
+            "price": 1069.9
+        },
+        "========RX 9070 XT========": {
+            "name": "PowerColor (Outlet) Radeon RX 9070 XT Reaper -näytönohjain, 16GB GDDR6",
+            "price": 679.9
+        },
+        "========1440 Monitori========": {
+            "name": "Lenovo 27\" L27qe, 100Hz QHD-monitori, Raven Black",
+            "price": 186.9
+        }
+    }
+}
