@@ -23,6 +23,9 @@ def crawl(*args):
         opts = Options()
         opts.add_argument("-headless")
         driver = webdriver.Firefox(options=opts)
+        print(f"{z} odotus")
+
+
         driver.get(f'https://www.{webPage[z]}')
         #driver.get("https://www.gigantti.fi/gaming/pelinaytot")
         #driver.get("https://www.gigantti.fi/gaming/pelinaytot/page-2")
@@ -31,32 +34,38 @@ def crawl(*args):
         required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
         required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
         driver.set_window_size(required_width, required_height)
-#        driver.implicitly_wait(10) # odottaa että sivun dynaaminen sisältö on ladannut. 
-#        async_elem_search(driver)
-        elementurl = WebDriverWait(driver, 2).until(crawl)
-        elementname = WebDriverWait(driver, 2).until(crawl)
-        elementprice = WebDriverWait(driver, 2).until(crawl)
+
         
+        elementurl = WebDriverWait(driver, 30).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "li.group > a:nth-child(2)")) #This is a dummy element
+)
+        elementname = WebDriverWait(driver, 30).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "li.group > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)")) #This is a dummy element
+)
+        elementprice = WebDriverWait(driver, 30).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "li.group > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)")) #This is a dummy element
+)
+        
+        elementprice = driver.find_elements(By.CSS_SELECTOR, "li.group > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)")
         elementurl = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2)")
         elementname = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)") # selectorin "div" osasta piti ottaa nth-child pois että se hakee nimen ja hinnan oikein
-        elementprice = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)")
+        driver.save_screenshot(f'screenie{z}.png')
 
         print(webPage[z])
-        for x in range (len(elementurl)):
-        #        print(x)
+        for x in range (len(elementprice)):
+                print(x)
+                tmp1 = f"{elementname[x].get_attribute('textContent')}\n"
+                tmp2 = f"{elementprice[x].text}\n"
+                tmp3 = f"{elementurl[x].get_attribute('href')}\n\n"
 
-            tmp1 = f"{elementname[x].get_attribute('textContent')}\n"
-            tmp2 = f"{elementprice[x].text}\n"
-            tmp3 = f"{elementurl[x].get_attribute('href')}\n\n"
-
-            with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset 
-                f.write(tmp1)
-                f.write(tmp2)
-                f.write(tmp3)
-                print(tmp3)
-                print(tmp2)
-                print(tmp1) 
-            #f.close()
+                with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset 
+                    f.write(tmp1)
+                    f.write(tmp2)
+                    f.write(tmp3)
+                    print(tmp1)
+                    print(tmp2)
+                    print(tmp3)
+                    #f.close()
         # printit testausta varten
             
         driver.quit()
