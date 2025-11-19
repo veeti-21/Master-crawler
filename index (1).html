@@ -229,8 +229,7 @@
           <tr>
             <th>Päivämäärä</th>
             <th>Otsikko</th>
-            <th>Kategoria</th>
-            <th>Lähde</th>
+            <th>Hinta</th>
           </tr>
         </thead>
         <tbody id="dataBody">
@@ -336,10 +335,9 @@
       filtered.forEach(item => {
         body.innerHTML += `
           <tr>
-            <td>${item.date || '-'}</td>
+            <td>${item.release_date || '-'}</td>
             <td>${item.title || item.headline || item.text || '-'}</td>
-            <td>${item.category || '-'}</td>
-            <td>${item.source || item.url || '-'}</td>
+            <td>${item.price || '-'}</td>
           </tr>`;
       });
     }
