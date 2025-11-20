@@ -16,12 +16,11 @@ def clean_price(price_text):
         return None
 
 
-def scrapegpu(url, label):
+def scrapegpu(url):
     opts = Options()
     opts.add_argument("--headless")
     driver = webdriver.Chrome(options=opts)
 
-    print(f"Etsitään: {label}")
     driver.get(url)
     time.sleep(2)
 
@@ -35,29 +34,35 @@ def scrapegpu(url, label):
             break
         last_height = new_height
 
-    names = driver.find_elements(By.CLASS_NAME, "product-box-name")
-    prices = driver.find_elements(By.CLASS_NAME, "price__amount")
+    products = driver.find_elements(By.CLASS_NAME, "product-box")
 
     items = []
-    for name, price in zip(names, prices):
-        n = name.text.strip()
-        p = clean_price(price.text.strip())
-        if p is not None:
-            items.append({
-                "name": n,
-                "price": p
-            })
+    for product in products:
+        try:
+            name = product.find_element(By.CLASS_NAME, "product-box-name").text.strip()
+            price_raw = product.find_element(By.CLASS_NAME, "price__amount").text.strip()
+            price = clean_price(price_raw)
+
+            link = product.find_element(By.CLASS_NAME, "js-gtm-product-link").get_attribute("href")
+
+            if price is not None:
+                items.append({
+                    "name": name,
+                    "price": price,
+                    "link": link
+                })
+        except:
+            continue
 
     driver.quit()
     return items
 
 
-def scrapemonitor(url, label):
+def scrapemonitor(url):
     opts = Options()
     opts.add_argument("--headless")
     driver = webdriver.Chrome(options=opts)
 
-    print(f"Etsitään: {label}")
     driver.get(url)
     time.sleep(2)
 
@@ -71,18 +76,25 @@ def scrapemonitor(url, label):
             break
         last_height = new_height
 
-    names = driver.find_elements(By.CLASS_NAME, "product-box-name")
-    prices = driver.find_elements(By.CLASS_NAME, "price__amount")
+    products = driver.find_elements(By.CLASS_NAME, "product-box")
 
     items = []
-    for name, price in zip(names, prices):
-        n = name.text.strip()
-        p = clean_price(price.text.strip())
-        if p is not None:
-            items.append({
-                "name": n,
-                "price": p
-            })
+    for product in products:
+        try:
+            name = product.find_element(By.CLASS_NAME, "product-box-name").text.strip()
+            price_raw = product.find_element(By.CLASS_NAME, "price__amount").text.strip()
+            price = clean_price(price_raw)
+
+            link = product.find_element(By.CLASS_NAME, "js-gtm-product-link").get_attribute("href")
+
+            if price is not None:
+                items.append({
+                    "name": name,
+                    "price": price,
+                    "link": link
+                })
+        except:
+            continue
 
     driver.quit()
     return items
@@ -92,47 +104,42 @@ def main():
     all_data = {}
 
     all_data["===========RTX 5070==========="] = scrapegpu(
-        "https://www.jimms.fi/fi/Product/List/000-29T/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070?ob=4",
-        "RTX 5070"
+        "https://www.jimms.fi/fi/Product/List/000-29T/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070?ob=4"
     )
 
     all_data["===========RTX 5070 TI==========="] = scrapegpu(
-        "https://www.jimms.fi/fi/Product/List/000-29S/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070-ti?ob=4",
-        "RTX 5070 Ti"
+        "https://www.jimms.fi/fi/Product/List/000-29S/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5070-ti?ob=4"
     )
 
     all_data["===========RTX 5080==========="] = scrapegpu(
-        "https://www.jimms.fi/fi/Product/List/000-29P/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5080?ob=4",
-        "RTX 5080"
+        "https://www.jimms.fi/fi/Product/List/000-29P/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5080?ob=4"
     )
     
     all_data["===========RX 9070 XT==========="] = scrapegpu(
-        "https://www.jimms.fi/fi/Product/List/000-29M/komponentit--naytonohjaimet--amd-radeon--rx-9000-sarja--rx-9070-xt?ob=4",
-        "RX 9070 XT"
+        "https://www.jimms.fi/fi/Product/List/000-29M/komponentit--naytonohjaimet--amd-radeon--rx-9000-sarja--rx-9070-xt?ob=4"
     )
 
     all_data["===========1440 Monitori==========="] = scrapemonitor(
-        "https://www.jimms.fi/fi/Product/List/000-0KJ/oheislaitteet--naytot?ob=4&fq=QHD",
-        "1440 Monitori"
+        "https://www.jimms.fi/fi/Product/List/000-0KJ/oheislaitteet--naytot?ob=4&fq=QHD"
     )
 
-    cheapest = {}
+    halvimmat = {}
     for category, items in all_data.items():
         if items:
-            cheapest_item = min(items, key=lambda x: x["price"])
-            cheapest[category] = cheapest_item
+            halvimmat_item = min(items, key=lambda x: x["price"])
+            halvimmat[category] = halvimmat_item
         else:
-            cheapest[category] = None
+            halvimmat[category] = None
 
-    all_data["cheapest"] = cheapest
+    all_data["halvimmat"] = halvimmat
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(all_data, f, indent=4, ensure_ascii=False)
 
-    print("\n===== 3 HALVINTA TUOTETTA / KATEGORIA =====")
+    print("\n===== 3 Halvinta Tuotetta Jokaisessa Kategoriassa =====")
 
     for category, items in all_data.items():
-        if category == "cheapest":
+        if category == "halvimmat":
             continue
 
         print(f"\n{category}:")
