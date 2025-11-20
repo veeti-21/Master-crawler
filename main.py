@@ -115,6 +115,10 @@ def main():
         "https://www.jimms.fi/fi/Product/List/000-29P/komponentit--naytonohjaimet--geforce-rtx-pelaamiseen--rtx-5080?ob=4"
     )
     
+    all_data["===========RX 9070==========="] = scrapegpu(
+        "https://www.jimms.fi/fi/Product/List/000-29N/komponentit--naytonohjaimet--amd-radeon--rx-9000-sarja--rx-9070?ob=4"
+    )
+    
     all_data["===========RX 9070 XT==========="] = scrapegpu(
         "https://www.jimms.fi/fi/Product/List/000-29M/komponentit--naytonohjaimet--amd-radeon--rx-9000-sarja--rx-9070-xt?ob=4"
     )

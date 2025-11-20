@@ -380,6 +380,73 @@
             "link": "https://www.jimms.fi/fi/Product/Show/208990/gv-n5080aorusm-ice-16gd/gigabyte-geforce-rtx-5080-aorus-master-ice-naytonohjain-16gb-gddr7"
         }
     ],
+    "===========RX 9070===========": [
+        {
+            "name": "PowerColor Radeon RX 9070 Hellhound -näytönohjain, 16GB GDDR6",
+            "price": 639.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208873/rx9070-16g-l-oc/powercolor-radeon-rx-9070-hellhound-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Sapphire Radeon RX 9070 PULSE -näytönohjain, 16GB GDDR6",
+            "price": 649.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208867/11349-03-20g/sapphire-radeon-rx-9070-pulse-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Gigabyte Radeon RX 9070 GAMING OC -näytönohjain, 16GB GDDR6",
+            "price": 659.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/209081/gv-r9070gaming-oc-16gd/gigabyte-radeon-rx-9070-gaming-oc-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Acer Radeon RX 9070 Nitro OC -näytönohjain, 16GB GDDR6",
+            "price": 659.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/212848/dp-z4eww-p01/acer-radeon-rx-9070-nitro-oc-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "ASRock Radeon RX 9070 Steel Legend OC -näytönohjain, 16GB GDDR6",
+            "price": 668.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/210115/rx9070-sl-16go/asrock-radeon-rx-9070-steel-legend-oc-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "PowerColor Radeon RX 9070 Reaper -näytönohjain, 16GB GDDR6",
+            "price": 669.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208874/rx9070-16g-a/powercolor-radeon-rx-9070-reaper-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Sapphire Radeon RX 9070 PURE -näytönohjain, 16GB GDDR6",
+            "price": 669.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208866/11349-02-20g/sapphire-radeon-rx-9070-pure-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Asus Radeon RX 9070 PRIME - OC Edition -näytönohjain, 16GB GDDR6",
+            "price": 689.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208569/prime-rx9070-o16g/asus-radeon-rx-9070-prime-oc-edition-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Sapphire Radeon RX 9070 NITRO+ -näytönohjain, 16GB GDDR6",
+            "price": 700.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208865/11349-01-20g/sapphire-radeon-rx-9070-nitro-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Asus Radeon RX 9070 PRIME EVO - OC Edition -näytönohjain, 16GB GDDR6",
+            "price": 726.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/213135/prime-rx9070-o16g-evo/asus-radeon-rx-9070-prime-evo-oc-edition-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "PowerColor Radeon RX 9070 Red Devil -näytönohjain, 16GB GDDR6",
+            "price": 749.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208872/rx9070-16g-e-oc/powercolor-radeon-rx-9070-red-devil-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "ASRock Radeon RX 9070 Challenger -näytönohjain, 16GB GDDR6",
+            "price": 757.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/210116/rx9070-cl-16g/asrock-radeon-rx-9070-challenger-naytonohjain-16gb-gddr6"
+        },
+        {
+            "name": "Asus Radeon RX 9070 TUF Gaming - OC Edition -näytönohjain, 16GB GDDR6",
+            "price": 842.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208567/tuf-rx9070-o16g-gaming/asus-radeon-rx-9070-tuf-gaming-oc-edition-naytonohjain-16gb-gddr6"
+        }
+    ],
     "===========RX 9070 XT===========": [
         {
             "name": "PowerColor (Outlet) Radeon RX 9070 XT Reaper -näytönohjain, 16GB GDDR6",
@@ -649,6 +716,11 @@
             "name": "Gigabyte GeForce RTX 5080 WINDFORCE SFF -näytönohjain, 16GB GDDR7",
             "price": 1069.9,
             "link": "https://www.jimms.fi/fi/Product/Show/208852/gv-n5080wf3-16gd/gigabyte-geforce-rtx-5080-windforce-sff-naytonohjain-16gb-gddr7"
+        },
+        "===========RX 9070===========": {
+            "name": "PowerColor Radeon RX 9070 Hellhound -näytönohjain, 16GB GDDR6",
+            "price": 639.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208873/rx9070-16g-l-oc/powercolor-radeon-rx-9070-hellhound-naytonohjain-16gb-gddr6"
         },
         "===========RX 9070 XT===========": {
             "name": "PowerColor (Outlet) Radeon RX 9070 XT Reaper -näytönohjain, 16GB GDDR6",
