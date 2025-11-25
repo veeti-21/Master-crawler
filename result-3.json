@@ -1,35 +1,57 @@
-["block0", {"nimi": "Samsung Odyssey G55C LS32CG552EUXEN 32\u201d kaareva VA pelin\u00e4ytt\u00f6", "hinta": "569 \u20ac", "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-49-odyssey-g9-g91f-kaareva-va-naytto/898698"}]["block1", {"nimi": "LG UltraGear 27G411 27/FHD/IPS/144 Hz/1 ms 27\" pelin\u00e4ytt\u00f6", "hinta": "99 \u20ac", "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/lg-ultragear-27g411-27fhdips144-hz1-ms-27-pelinaytto/968899"}]{'nimi': 'Samsung Odyssey G55C LS32CG552EUXEN 32” kaareva VA pelinäyttö', 'hinta': '179 €', 'linkki': 'https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g55c-ls32cg552euxen-32-kaareva-va-pelinaytto/746290'}{'nimi': 'Samsung Odyssey G5 C34G55 34" kaareva pelinäyttö', 'hinta': '249 €', 'linkki': 'https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g5-c34g55-34-kaareva-pelinaytto/253180'}{'nimi': 'Samsung Odyssey G55C LS32CG552EUXEN 32” kaareva VA pelinäyttö', 'hinta': '179 €', 'linkki': 'https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g55c-ls32cg552euxen-32-kaareva-va-pelinaytto/746290'}{
-    "nimi": "Samsung Odyssey G55C LS32CG552EUXEN 32\u201d kaareva VA pelin\u00e4ytt\u00f6",
-    "hinta": "569 \u20ac",
-    "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-49-odyssey-g9-g91f-kaareva-va-naytto/898698"
-}{
-    "nimi": "LG UltraGear 27G411 27/FHD/IPS/144 Hz/1 ms 27\" pelin\u00e4ytt\u00f6",
-    "hinta": "99 \u20ac",
-    "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/lg-ultragear-27g411-27fhdips144-hz1-ms-27-pelinaytto/968899"
-}{
-    "nimi": "Samsung Odyssey G55C LS32CG552EUXEN 32\u201d kaareva VA pelin\u00e4ytt\u00f6",
-    "hinta": "179 \u20ac",
-    "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-345cqr-34-va-kaareva-pelinaytto/774971"
-}{
-    "nimi": "MSI MAG 271QPX 26,5\" QD-OLED E2 pelin\u00e4ytt\u00f6",
-    "hinta": "449 \u20ac",
-    "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-271qpx-265-qd-oled-e2-pelinaytto/774979"
-}{
-    "nimi": "Asus ROG Strix XG27AQDMGZ 27\" pelin\u00e4ytt\u00f6",
-    "hinta": "499 \u20ac",
-    "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-strix-xg27aqdmgz-27-pelinaytto/919720"
-}{
-    "nimi": "AOC AG276QZD2 | QHD | OLED | 240 Hz 27\" pelin\u00e4ytt\u00f6",
-    "hinta": "429 \u20ac",
-    "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-ag276qzd2-qhd-oled-240-hz-27-pelinaytto/918348"
-}{
-    "nimi": "ASUS ROG Swift PG32UCDMZ UHD/OLED/240Hz/0,03ms 32\" pelin\u00e4ytt\u00f6",
-    "hinta": "879 \u20ac",
-    "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-swift-pg32ucdmz-uhdoled240hz003ms-32-pelinaytto/945146"
-}[
-    {
-        "nimi": "Samsung Odyssey G55C LS32CG552EUXEN 32\u201d kaareva VA pelin\u00e4ytt\u00f6",
-        "hinta": "569 \u20ac",
-        "linkki": "https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-49-odyssey-g9-g91f-kaareva-va-naytto/898698"
-    }
-]
+{"objekti0":[{
+    "nimi":"Samsung Odyssey G55C LS32CG552EUXEN 32\u201d kaareva VA pelin\u00e4ytt\u00f6",
+    "hinta":"179 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g55c-ls32cg552euxen-32-kaareva-va-pelinaytto/746290"
+}],"objekti1":[{
+    "nimi":"Samsung Odyssey G5 C34G55 34\" kaareva pelin\u00e4ytt\u00f6",
+    "hinta":"249 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g5-c34g55-34-kaareva-pelinaytto/253180"
+}],"objekti2":[{
+    "nimi":"MSI MAG 345CQR 34\" VA kaareva pelin\u00e4ytt\u00f6",
+    "hinta":"229 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-345cqr-34-va-kaareva-pelinaytto/774971"
+}],"objekti3":[{
+    "nimi":"MSI MAG 271QPX 26,5\" QD-OLED E2 pelin\u00e4ytt\u00f6",
+    "hinta":"449 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-271qpx-265-qd-oled-e2-pelinaytto/774979"
+}],"objekti4":[{
+    "nimi":"Asus ROG Strix XG27AQDMGZ 27\" pelin\u00e4ytt\u00f6",
+    "hinta":"499 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-strix-xg27aqdmgz-27-pelinaytto/919720"
+}],"objekti5":[{
+    "nimi":"AOC AG276QZD2 | QHD | OLED | 240 Hz 27\" pelin\u00e4ytt\u00f6",
+    "hinta":"429 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-ag276qzd2-qhd-oled-240-hz-27-pelinaytto/918348"
+}],"objekti6":[{
+    "nimi":"ASUS ROG Swift PG32UCDMZ UHD/OLED/240Hz/0,03ms 32\" pelin\u00e4ytt\u00f6",
+    "hinta":"879 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-swift-pg32ucdmz-uhdoled240hz003ms-32-pelinaytto/945146"
+}],{"objekti0":[{
+    "nimi":"Samsung Odyssey G55C LS32CG552EUXEN 32\u201d kaareva VA pelin\u00e4ytt\u00f6",
+    "hinta":"179 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g55c-ls32cg552euxen-32-kaareva-va-pelinaytto/746290"
+}],"objekti1":[{
+    "nimi":"Samsung Odyssey G5 C34G55 34\" kaareva pelin\u00e4ytt\u00f6",
+    "hinta":"249 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g5-c34g55-34-kaareva-pelinaytto/253180"
+}],"objekti2":[{
+    "nimi":"MSI MAG 345CQR 34\" VA kaareva pelin\u00e4ytt\u00f6",
+    "hinta":"229 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-345cqr-34-va-kaareva-pelinaytto/774971"
+}],"objekti3":[{
+    "nimi":"MSI MAG 271QPX 26,5\" QD-OLED E2 pelin\u00e4ytt\u00f6",
+    "hinta":"449 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-271qpx-265-qd-oled-e2-pelinaytto/774979"
+}],"objekti4":[{
+    "nimi":"Asus ROG Strix XG27AQDMGZ 27\" pelin\u00e4ytt\u00f6",
+    "hinta":"499 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-strix-xg27aqdmgz-27-pelinaytto/919720"
+}],"objekti5":[{
+    "nimi":"AOC AG276QZD2 | QHD | OLED | 240 Hz 27\" pelin\u00e4ytt\u00f6",
+    "hinta":"429 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-ag276qzd2-qhd-oled-240-hz-27-pelinaytto/918348"
+}],"objekti6":[{
+    "nimi":"ASUS ROG Swift PG32UCDMZ UHD/OLED/240Hz/0,03ms 32\" pelin\u00e4ytt\u00f6",
+    "hinta":"879 \u20ac",
+    "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-swift-pg32ucdmz-uhdoled240hz003ms-32-pelinaytto/945146"
+}],
