@@ -14,7 +14,8 @@ lomamatka kesälle 2026 / hiihtolomalle (vko 9)
 
 # huom.
 
-## firefox webdriver tekee uuden "rust_mozprofile" nimisen tiedoston "C:\Users\username\AppData\Local\Temp" kansioon. driver.quit() pitäisi poistaa ne muttei tunnu toimivan.
+## firefox webdriver tekee uuden "rust_mozprofile" nimisen tiedoston "C:\Users\username\AppData\Local\Temp" kansioon. driver.quit() 
+- pitää tarkastella ettei niitä jää lojumaan, tällä hetkellä sen pitäisi poistaa itsenä mutta jos crawleri kaatuu tai sen ajo keskeytyy se todennäköisesti ei poista itseään.
 
 Varmista että windowsissa on laitettu päälle powershell scriptien ajo
 **windows 11**
