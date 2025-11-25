@@ -1,7 +1,7 @@
-# viety jonin testauksesta :p
+
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.support.ui import WebDriverWait #mun selenium ei toimi oikein D: -lenni
+from selenium.webdriver.support.ui import WebDriverWait 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import io
@@ -13,32 +13,55 @@ import calendar
 currtime = datetime.datetime.now()
 epoch_time = calendar.timegm(currtime.timetuple())
 filename = f'result-{epoch_time}.json'
-
+print("moi")
 opts = Options()
 opts.add_argument("-headless")
 driver = webdriver.Firefox(options=opts)
-driver.get("https://www.nettiauto.com/hakutulokset?haku=P70259705")
+
 original_size = driver.get_window_size()
+webPage = ['https://www.nettiauto.com/hakutulokset?haku=P2578676553', 'https://www.nettiauto.com/hakutulokset?haku=P2578676553&page=2']
 
 required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
 required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
 driver.set_window_size(required_width, required_height)
 
-elementname = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2) > div:nth-child(3) > div:nth-child(1) > h2:nth-child(2)")
-elementprice = driver.find_elements(By.CSS_SELECTOR, "li.group > a > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)")
-elementlink = driver.find_elements(By.CSS_SELECTOR, '[data-testid="product-card"]')
+for z in range(len(webPage)):
+    print("moi2")
+    driver.get(f'{webPage[z]}')
 
-for x in range (len(elementprice)):
-    tmp1 = f"{elementname[x].text}\n"
-    tmp2 = f"{elementprice[x].text}\n"
-    tmp3 = f"{elementlink[x].get_attribute('href')}\n\n"
+    elementname = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > h2")
+    elementprice = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > div:nth-child(2)")
+    elementlink = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new > div > a")
 
-    if "" in tmp1 in tmp2: 
-            with open(filename, 'a', encoding='utf-8') as f: 
-                f.write(tmp1)
-                f.write(tmp2)
-                f.write(tmp3)
-    print(tmp2)
-    print(tmp1)
-    print(tmp3)
+   
+    for x in range (len(elementname)):
+        print("moi3")
+        tmp1 = f"{elementname[x].text}\n"
+        tmp2 = f"{elementprice[x].text}\n"
+        tmp3 = f"{elementlink[x].get_attribute('href')}\n\n"
+
+        testjson = {
+        "nimi": tmp1,
+        "hinta": tmp2,
+        "linkki": tmp3
+         }
+        
+        with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset. pitää vielä formatoida paremmin json/xml/csv muotoon.
+                if x == 0:
+                        f.writelines("{")
+                print(json.dumps(testjson, indent=4, separators=(",", ":")))
+                
+                f.writelines(f'"objekti{x}"')
+                f.writelines(":[")
+                f.writelines(json.dumps(testjson, indent=4, separators=(",", ":")))
+                if x == len(elementname) - 1:
+                        f.writelines("]\n}")
+                else:
+                        f.writelines("],")
+
+                
+                f.close()
+
 driver.quit()
+#jostain syystä ei laita hintaa tai nimeä joillekin tuloksille
+
