@@ -9,10 +9,17 @@ import re
 import datetime
 import calendar
 import time
+import mysql.connector 
+
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="yourusername",
+#   password="yourpassword"
+# )
 
 
 # webpage linkkien tilalla pitäisi toimia mikä tahansa gigantin sivu. 
-webPage = ['gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu' , 'gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu/page-2' , 'gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu/page-3' , 'gigantti.fi/gaming/pelinaytot?f=30831%3A2560x1440%7C3840x2160%7C3440x1440' , 'gigantti.fi/gaming/pelinaytot' , 'gigantti.fi/gaming/pelinaytot/page-2']
+webPage = ['gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu' , 'gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu/page-2' , 'gigantti.fi/gaming/pelinaytot?f=30831%3A2560x1440%7C3840x2160%7C3440x1440' , 'gigantti.fi/gaming/pelinaytot' , 'gigantti.fi/gaming/pelinaytot/page-2']
 element_1_name = "li:nth-child"
 # ottaa ajan, muuntaa sen epoch aikaan ja tallentaa tiedoston muodossa "result-xxxxxxxxxx.json". tiedoston tallennus tapahtuu kansioon jossa crawler on
 currtime = datetime.datetime.now()
@@ -20,12 +27,12 @@ epoch_time = calendar.timegm(currtime.timetuple())
 opts = Options()
 opts.add_argument("--headless=new")
 opts.add_argument('--disable-blink-features=AutomationControlled')
-driver = webdriver.Firefox(options=opts)
 
 
 def crawl(*args):
 
         for z in range(len(webPage)):
+                driver = webdriver.Firefox(options=opts)
 
                 filename = f'result-{z}.json'
                 print(f" crawlaus nro: {z + 1}")
@@ -42,7 +49,6 @@ def crawl(*args):
                         print("gdpr nappia painettu")
                 except:
                         print("no gdpr button here")
-                time.sleep(5)
                 # ilman alempia selenium ei lataa kaikkia sivun elementtejä oikein
                 required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
                 required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
@@ -50,13 +56,15 @@ def crawl(*args):
 
                 #elementprice = driver.find_elements(By.CSS_SELECTOR, "li.group > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)")
                 #elementurl = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2)")
+                time.sleep(5)
                 try:
                         print("elements listan kokeilu onnistui")
-                        elementnames = driver.find_elements(By.CSS_SELECTOR, "li.pt-4 > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)")
+                        elementnames = driver.find_elements(By.CSS_SELECTOR, "li > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)")
 
                 except: 
-                        print("elements listan kokeilussa tuli vastaan virhe")
-                        elementnames = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)")
+                        
+                        print("elements listan kokeilussa tuli vastaan virhe")                        
+                        elementnames = driver.find_elements(By.CSS_SELECTOR, "li > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)")
 
                 # screenshot testausta varten, voi poistaa myöhemmin.
                 #driver.save_screenshot(f'screenie{z}.png')
@@ -70,16 +78,25 @@ def crawl(*args):
                 # ei toimi kaikilla sivuilla koska ensimmäinen elementti on erilainen pelinäyttöjen ja näytönohjainten sivuilla
                         try:
                                 print("yksittäisen elementin kokeilu onnistui")
-                                tmp1 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
+                                tmp1 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x + 1}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
                         except: 
                                 print("yksittäisen elementin kokeilussa tuli vastaan virhe")
-                                tmp1 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x + 1}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
+                                tmp1 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
+                        finally:
+                                pass
                         try:
                                 tmp2 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)").text
                         except:
-                                tmp2 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x + 1}) > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)").text
-                        tmp3 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a:nth-child(2)").get_attribute('href')
-
+                                tmp2 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x}) > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)").text
+                        finally:
+                                pass
+                        try:
+                                tmp3 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a:nth-child(2)").get_attribute('href')
+                        except:
+                                tmp3 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x}) > a:nth-child(2)").get_attribute('href')
+                        finally:
+                                pass
+ 
                         testjson = {
                         "nimi": tmp1,
                         "hinta": tmp2,
@@ -102,15 +119,12 @@ def crawl(*args):
                                 #TODO tietojen muuntaminen json/xml muotoon ja formatointi
                                 #TODO jos crawlerin ajamisen keskeyttää "ctrl + c" se jättää seleniumin firefox prosessin taustalle päälle. ylimääräiset prosessit pitää sulkea tehtävänhallinnasta.
                                 #TODO driver ei sulje itseään looppien välillä, kuluttaa noin 800mb ramia per prosessi, jokaisen loopin alussa alkaa uusi prosessi
-                                
-                                
+                                #TODO firefox webdriver tekee uuden "rust_mozprofile" nimisen tiedoston "C:\Users\username\AppData\Local\Temp" kansioon. driver.quit() pitäisi poistaa ne muttei tunnu toimivan.
+                                #TODO tällä hetkellä jos crawlerin ajaa useaan kertaan json ei ole validia, koska edellisen crawlauksen päätteeksi tiedostoon tulee "[}" pääte. tämä ei haittaa jos tiedot lisätään suoraan tietokantaan.
                                 f.close()
-
-#         driver.quit()
-#         driver.close()
-# except:
+                driver.close()
 
 
+        # driver.quit()
+        # driver.close()
 crawl()
-driver.quit()
-driver.close()

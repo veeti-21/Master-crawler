@@ -1,963 +1,236 @@
 {"objekti0":[{
-    "nimi":"Gigabyte GeForce RTX 5050 OC Low Profile 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-oc-low-profile-8-gb-naytonohjain/995801"
-}],"objekti1":[{
     "nimi":"ASUS GeForce RTX 5060 Ti 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
     "hinta":"398,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-dual-oc-naytonohjain/917763"
-}],"objekti2":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti WINDFORCE 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"474 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-windforce-16g-naytonohjain/916327"
-}],"objekti3":[{
-    "nimi":"ASUS ROG Astral LC GeForce RTX 5090 32 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"2799 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-rog-astral-lc-geforce-rtx-5090-32-gb-oc-naytonohjain/895022"
-}],"objekti4":[{
-    "nimi":"Gigabyte GeForce RTX 5090 Master 32 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"2749 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5090-master-32-gb-naytonohjain/892560"
-}],"objekti5":[{
-    "nimi":"Gigabyte GeForce RTX 5080 Aorus Master 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1484,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-aorus-master-16-gb-naytonohjain/883814"
-}],"objekti6":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti EAGLE OC 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"459 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-eagle-oc-16g-naytonohjain/916329"
-}],"objekti7":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB TUF OC GAMING n\u00e4yt\u00f6nohjain",
-    "hinta":"598,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-tuf-oc-gaming-naytonohjain/917753"
-}],"objekti8":[{
-    "nimi":"PNY GeForce RTX 5070 12 GB ARGB 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"609,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-argb-3x-oc-naytonohjain/900486"
-}],"objekti9":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti AERO OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"465,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-aero-oc-8-gb-naytonohjain/924509"
-}],"objekti10":[{
-    "nimi":"Palit GeForce RTX 5070 Ti Gaming Pro V1 n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"849 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gaming-pro-v1-naytonohjain-16-gb-gddr7/914961"
-}],"objekti11":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti GAMING OC 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"489 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-gaming-oc-16g-naytonohjain/916331"
-}],"objekti12":[{
-    "nimi":"MSI Nvidia GeForce RTX 5060 GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"339,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-nvidia-geforce-rtx-5060-gaming-oc-8-gb-naytonohjain/923094"
-}],"objekti13":[{
-    "nimi":"Gigabyte GeForce RTX 5080 GAMING OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1319 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-gaming-oc-16-gb-naytonohjain/883812"
-}],"objekti14":[{
-    "nimi":"Gigabyte GeForce RTX 5050 WINDFORCE OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"269,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-windforce-oc-8-gb-naytonohjain/995802"
-}],"objekti15":[{
-    "nimi":"MSI GeForce RTX 5080 SUPRIM SOC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1529 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-suprim-soc-16-gb-naytonohjain/884880"
-}],"objekti16":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB PRIME OC n\u00e4yt\u00f6nohjain",
-    "hinta":"568,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-prime-oc-naytonohjain/917755"
-}],"objekti17":[{
-    "nimi":"ASUS GeForce RTX 5070 12 GB TUF OC n\u00e4yt\u00f6nohjain",
-    "hinta":"669,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5070-12-gb-tuf-oc-naytonohjain/905465"
-}],"objekti18":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Windforce n\u00e4yt\u00f6nohjain",
-    "hinta":"619,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-naytonohjain/900452"
-}],"objekti19":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti WINDFORCE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"399,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-windforce-8-gb-naytonohjain/924504"
-}],"objekti20":[{
-    "nimi":"Asus GeForce GT710 n\u00e4yt\u00f6nohjain (2 GB GDDR5)",
-    "hinta":"60,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-gt710-naytonohjain-2-gb-gddr5/438671"
-}],"objekti21":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"448,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-gaming-oc-8-gb-naytonohjain/924508"
-}],"objekti22":[{
-    "nimi":"Gigabyte GeForce RTX 5070 WINDFORCE 12 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"618,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-12-gb-naytonohjain/916260"
-}],"objekti23":[{
-    "nimi":"PALIT RTX5070 Ti GamingPro-S OC n\u00e4yt\u00f6nohjain",
-    "hinta":"888,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-oc-naytonohjain/982151"
-}],"objekti24":[{
-    "nimi":"PALIT RTX5070 Ti GamingPro-S n\u00e4yt\u00f6nohjain",
-    "hinta":"839 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-naytonohjain/982150"
-}],"objekti25":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Ti EAGLE ICE OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"948,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-ti-eagle-ice-oc-16-gb-naytonohjain/924511"
-}],"objekti26":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"429,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-dual-oc-naytonohjain/917757"
-}],"objekti27":[{
-    "nimi":"ASUS GeForce RTX 3050 DUAL OC graphics card (6 GB GDDR6)",
-    "hinta":"191,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-3050-dual-oc-graphics-card-6-gb-gddr6/842813"
-}],"objekti28":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Aorus Master n\u00e4yt\u00f6nohjain",
-    "hinta":"814,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-aorus-master-naytonohjain/900453"
-}],"objekti29":[{
-    "nimi":"MSI GeForce RTX 5070 12 G VENTUS 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"669,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5070-12-g-ventus-3x-oc-naytonohjain/900912"
-}],"objekti30":[{
-    "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC WHITE 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1344 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-white-16-gb-naytonohjain/884884"
-}],"objekti31":[{
-    "nimi":"ASUS GeForce RTX 5080 TUF Gaming 16 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"1299 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5080-tuf-gaming-16-gb-oc-naytonohjain/883821"
-}],"objekti32":[{
-    "nimi":"ASUS Dual Radeon RX9060XT n\u00e4yt\u00f6nohjain (16 GB GDDR6)",
-    "hinta":"399 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060xt-naytonohjain-16-gb-gddr6/972769"
-}],"objekti33":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 8 GB PRIME OC n\u00e4yt\u00f6nohjain",
-    "hinta":"471,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-prime-oc-naytonohjain/917761"
-}],"objekti34":[{
-    "nimi":"ROG Strix Geforce RTX 5070 12 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"789,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/rog-strix-geforce-rtx-5070-12-gb-oc-naytonohjain/925538"
-}],"objekti35":[{
-    "nimi":"Asus PRIME RX 9070 OC n\u00e4yt\u00f6nohjain",
-    "hinta":"699,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx-9070-oc-naytonohjain/883872"
-}],"objekti36":[{
-    "nimi":"PALIT Geforce RTX 5070 Ti GamingPro OC V1 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"899 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gamingpro-oc-v1-16-gb-naytonohjain/926897"
-}],"objekti37":[{
-    "nimi":"Gigabyte AORUS GeForce RTX 5060 ELITE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"369 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-aorus-geforce-rtx-5060-elite-8-gb-naytonohjain/927020"
-}],"objekti38":[{
-    "nimi":"MSI GeForce RTX 5050 8G VENTUS 2X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"264,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-ventus-2x-oc-naytonohjain/945295"
-}],"objekti39":[{
-    "nimi":"ASUS PRIME-RX9060XT-O16G n\u00e4yt\u00f6nohjain",
-    "hinta":"449,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o16g-naytonohjain/933771"
-}],"objekti40":[{
-    "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC ICE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"329,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-ice-8-gb-naytonohjain/927017"
-}],"objekti41":[{
-    "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"328,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-8g-naytonohjain/927016"
-}],"objekti42":[{
-    "nimi":"PNY GeForce RTX 5070 12 GB 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"599,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-3x-oc-naytonohjain/900485"
-}],"objekti43":[{
-    "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-8g-naytonohjain/927014"
-}],"objekti44":[{
-    "nimi":"Gigabyte GeForce RTX 5060 GAMING OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"344,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-gaming-oc-8g-naytonohjain/927018"
-}],"objekti45":[{
-    "nimi":"MSI GeForce RTX 5050 8G GAMING OC n\u00e4yt\u00f6nohjain",
-    "hinta":"289 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-gaming-oc-naytonohjain/945296"
-}],"objekti46":[{
-    "nimi":"PNY GeForce RTX 5060 OC Dual Fan 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"349,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5060-oc-dual-fan-8-gb-naytonohjain/1001091"
-}],"objekti47":[{
-    "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"319 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-oc-8g-naytonohjain/927015"
-}],"objekti48":[{
-    "nimi":"ASUS Dual GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"538,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-oc-naytonohjain-16-gb-gddr7/972771"
-}],"objekti49":[{
-    "nimi":"ASUS Dual Radeon RX9060 n\u00e4yt\u00f6nohjain (16 GB GDDR6, valkoinen)",
-    "hinta":"424,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060-naytonohjain-16-gb-gddr6-valkoinen/972770"
-}],"objekti50":[{
-    "nimi":"ASUS Dual GeForce RTX 5060 8 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-8-gb-gddr7-oc-edition-naytonohjain/925545"
-}],"objekti51":[{
-    "nimi":"ASUS Prime GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (8 GB GDDR7)",
-    "hinta":"398,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-geforce-rtx-5060-oc-naytonohjain-8-gb-gddr7/925543"
-}],"objekti52":[{
-    "nimi":"ASUS GeForce RTX 5050 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"239 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5050-8-gb-dual-oc-naytonohjain/945299"
-}],"objekti53":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Low Profile OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"334,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-low-profile-oc-8g-naytonohjain/927013"
-}],"objekti54":[{
-    "nimi":"ASUS ProArt GeForce RTX 5080 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"1659,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-proart-geforce-rtx-5080-oc-naytonohjain-16-gb-gddr7/972766"
-}],"objekti55":[{
-    "nimi":"ASUS PRIME-RX9060XT-O8G n\u00e4yt\u00f6nohjain",
-    "hinta":"376 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o8g-naytonohjain/933774"
-}],"objekti56":[{
-    "nimi":"ASUS Dual GeForce RTX 5070 12 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
-    "hinta":"529,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5070-12-gb-gddr7-oc-edition-naytonohjain/925535"
-}],"objekti57":[{
-    "nimi":"Gigabyte Radeon RX 9060 XT GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"339,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-radeon-rx-9060-xt-gaming-oc-8-gb-naytonohjain/927021"
-}],"objekti58":[{
-    "nimi":"PALIT GeForce RTX 5060 Dual 8 GB GDDR7 n\u00e4yt\u00f6nohjain",
-    "hinta":"319,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5060-dual-8-gb-gddr7-naytonohjain/926895"
-}],"objekti59":[{
-    "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1479 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-16-gb-naytonohjain/887676"
-}]
-}{"objekti0":[{
-    "nimi":"Gigabyte GeForce RTX 5050 OC Low Profile 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-oc-low-profile-8-gb-naytonohjain/995801"
 }],"objekti1":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"398,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-dual-oc-naytonohjain/917763"
-}],"objekti2":[{
     "nimi":"Gigabyte GeForce RTX 5060 Ti WINDFORCE 16G n\u00e4yt\u00f6nohjain",
     "hinta":"474 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-windforce-16g-naytonohjain/916327"
-}],"objekti3":[{
-    "nimi":"ASUS ROG Astral LC GeForce RTX 5090 32 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"2799 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-rog-astral-lc-geforce-rtx-5090-32-gb-oc-naytonohjain/895022"
-}],"objekti4":[{
-    "nimi":"Gigabyte GeForce RTX 5090 Master 32 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"2749 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5090-master-32-gb-naytonohjain/892560"
-}],"objekti5":[{
-    "nimi":"Gigabyte GeForce RTX 5080 Aorus Master 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1484,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-aorus-master-16-gb-naytonohjain/883814"
-}],"objekti6":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti EAGLE OC 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"459 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-eagle-oc-16g-naytonohjain/916329"
-}],"objekti7":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB TUF OC GAMING n\u00e4yt\u00f6nohjain",
-    "hinta":"598,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-tuf-oc-gaming-naytonohjain/917753"
-}],"objekti8":[{
-    "nimi":"PNY GeForce RTX 5070 12 GB ARGB 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"609,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-argb-3x-oc-naytonohjain/900486"
-}],"objekti9":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti AERO OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"465,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-aero-oc-8-gb-naytonohjain/924509"
-}],"objekti10":[{
-    "nimi":"Palit GeForce RTX 5070 Ti Gaming Pro V1 n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"849 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gaming-pro-v1-naytonohjain-16-gb-gddr7/914961"
-}],"objekti11":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti GAMING OC 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"489 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-gaming-oc-16g-naytonohjain/916331"
-}],"objekti12":[{
-    "nimi":"MSI Nvidia GeForce RTX 5060 GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"339,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-nvidia-geforce-rtx-5060-gaming-oc-8-gb-naytonohjain/923094"
-}],"objekti13":[{
-    "nimi":"Gigabyte GeForce RTX 5080 GAMING OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1319 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-gaming-oc-16-gb-naytonohjain/883812"
-}],"objekti14":[{
-    "nimi":"Gigabyte GeForce RTX 5050 WINDFORCE OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"269,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-windforce-oc-8-gb-naytonohjain/995802"
-}],"objekti15":[{
-    "nimi":"MSI GeForce RTX 5080 SUPRIM SOC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1529 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-suprim-soc-16-gb-naytonohjain/884880"
-}],"objekti16":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB PRIME OC n\u00e4yt\u00f6nohjain",
-    "hinta":"568,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-prime-oc-naytonohjain/917755"
-}],"objekti17":[{
-    "nimi":"ASUS GeForce RTX 5070 12 GB TUF OC n\u00e4yt\u00f6nohjain",
-    "hinta":"669,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5070-12-gb-tuf-oc-naytonohjain/905465"
-}],"objekti18":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Windforce n\u00e4yt\u00f6nohjain",
-    "hinta":"619,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-naytonohjain/900452"
-}],"objekti19":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti WINDFORCE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"399,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-windforce-8-gb-naytonohjain/924504"
-}],"objekti20":[{
-    "nimi":"Asus GeForce GT710 n\u00e4yt\u00f6nohjain (2 GB GDDR5)",
-    "hinta":"60,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-gt710-naytonohjain-2-gb-gddr5/438671"
-}],"objekti21":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"448,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-gaming-oc-8-gb-naytonohjain/924508"
-}],"objekti22":[{
-    "nimi":"Gigabyte GeForce RTX 5070 WINDFORCE 12 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"618,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-12-gb-naytonohjain/916260"
-}],"objekti23":[{
-    "nimi":"PALIT RTX5070 Ti GamingPro-S OC n\u00e4yt\u00f6nohjain",
-    "hinta":"888,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-oc-naytonohjain/982151"
-}],"objekti24":[{
-    "nimi":"PALIT RTX5070 Ti GamingPro-S n\u00e4yt\u00f6nohjain",
-    "hinta":"839 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-naytonohjain/982150"
-}],"objekti25":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Ti EAGLE ICE OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"948,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-ti-eagle-ice-oc-16-gb-naytonohjain/924511"
-}],"objekti26":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"429,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-dual-oc-naytonohjain/917757"
-}],"objekti27":[{
-    "nimi":"ASUS GeForce RTX 3050 DUAL OC graphics card (6 GB GDDR6)",
-    "hinta":"191,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-3050-dual-oc-graphics-card-6-gb-gddr6/842813"
-}],"objekti28":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Aorus Master n\u00e4yt\u00f6nohjain",
-    "hinta":"814,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-aorus-master-naytonohjain/900453"
-}],"objekti29":[{
-    "nimi":"MSI GeForce RTX 5070 12 G VENTUS 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"669,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5070-12-g-ventus-3x-oc-naytonohjain/900912"
-}],"objekti30":[{
-    "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC WHITE 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1344 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-white-16-gb-naytonohjain/884884"
-}],"objekti31":[{
-    "nimi":"ASUS GeForce RTX 5080 TUF Gaming 16 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"1299 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5080-tuf-gaming-16-gb-oc-naytonohjain/883821"
-}],"objekti32":[{
-    "nimi":"ASUS Dual Radeon RX9060XT n\u00e4yt\u00f6nohjain (16 GB GDDR6)",
-    "hinta":"399 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060xt-naytonohjain-16-gb-gddr6/972769"
-}],"objekti33":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 8 GB PRIME OC n\u00e4yt\u00f6nohjain",
-    "hinta":"471,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-prime-oc-naytonohjain/917761"
-}],"objekti34":[{
-    "nimi":"ROG Strix Geforce RTX 5070 12 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"789,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/rog-strix-geforce-rtx-5070-12-gb-oc-naytonohjain/925538"
-}],"objekti35":[{
-    "nimi":"Asus PRIME RX 9070 OC n\u00e4yt\u00f6nohjain",
-    "hinta":"699,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx-9070-oc-naytonohjain/883872"
-}],"objekti36":[{
-    "nimi":"PALIT Geforce RTX 5070 Ti GamingPro OC V1 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"899 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gamingpro-oc-v1-16-gb-naytonohjain/926897"
-}],"objekti37":[{
-    "nimi":"Gigabyte AORUS GeForce RTX 5060 ELITE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"369 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-aorus-geforce-rtx-5060-elite-8-gb-naytonohjain/927020"
-}],"objekti38":[{
-    "nimi":"MSI GeForce RTX 5050 8G VENTUS 2X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"264,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-ventus-2x-oc-naytonohjain/945295"
-}],"objekti39":[{
-    "nimi":"ASUS PRIME-RX9060XT-O16G n\u00e4yt\u00f6nohjain",
-    "hinta":"449,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o16g-naytonohjain/933771"
-}],"objekti40":[{
-    "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC ICE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"329,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-ice-8-gb-naytonohjain/927017"
-}],"objekti41":[{
-    "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"328,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-8g-naytonohjain/927016"
-}],"objekti42":[{
-    "nimi":"PNY GeForce RTX 5070 12 GB 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"599,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-3x-oc-naytonohjain/900485"
-}],"objekti43":[{
-    "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-8g-naytonohjain/927014"
-}],"objekti44":[{
-    "nimi":"Gigabyte GeForce RTX 5060 GAMING OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"344,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-gaming-oc-8g-naytonohjain/927018"
-}],"objekti45":[{
-    "nimi":"MSI GeForce RTX 5050 8G GAMING OC n\u00e4yt\u00f6nohjain",
-    "hinta":"289 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-gaming-oc-naytonohjain/945296"
-}],"objekti46":[{
-    "nimi":"PNY GeForce RTX 5060 OC Dual Fan 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"349,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5060-oc-dual-fan-8-gb-naytonohjain/1001091"
-}],"objekti47":[{
-    "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"319 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-oc-8g-naytonohjain/927015"
-}],"objekti48":[{
-    "nimi":"ASUS Dual GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"538,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-oc-naytonohjain-16-gb-gddr7/972771"
-}],"objekti49":[{
-    "nimi":"ASUS Dual Radeon RX9060 n\u00e4yt\u00f6nohjain (16 GB GDDR6, valkoinen)",
-    "hinta":"424,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060-naytonohjain-16-gb-gddr6-valkoinen/972770"
-}],"objekti50":[{
-    "nimi":"ASUS Dual GeForce RTX 5060 8 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-8-gb-gddr7-oc-edition-naytonohjain/925545"
-}],"objekti51":[{
-    "nimi":"ASUS Prime GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (8 GB GDDR7)",
-    "hinta":"398,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-geforce-rtx-5060-oc-naytonohjain-8-gb-gddr7/925543"
-}],"objekti52":[{
-    "nimi":"ASUS GeForce RTX 5050 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"239 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5050-8-gb-dual-oc-naytonohjain/945299"
-}],"objekti53":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Low Profile OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"334,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-low-profile-oc-8g-naytonohjain/927013"
-}],"objekti54":[{
-    "nimi":"ASUS ProArt GeForce RTX 5080 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"1659,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-proart-geforce-rtx-5080-oc-naytonohjain-16-gb-gddr7/972766"
-}],"objekti55":[{
-    "nimi":"ASUS PRIME-RX9060XT-O8G n\u00e4yt\u00f6nohjain",
-    "hinta":"376 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o8g-naytonohjain/933774"
-}],"objekti56":[{
-    "nimi":"ASUS Dual GeForce RTX 5070 12 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
-    "hinta":"529,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5070-12-gb-gddr7-oc-edition-naytonohjain/925535"
-}],"objekti57":[{
-    "nimi":"Gigabyte Radeon RX 9060 XT GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"339,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-radeon-rx-9060-xt-gaming-oc-8-gb-naytonohjain/927021"
-}],"objekti58":[{
-    "nimi":"PALIT GeForce RTX 5060 Dual 8 GB GDDR7 n\u00e4yt\u00f6nohjain",
-    "hinta":"319,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5060-dual-8-gb-gddr7-naytonohjain/926895"
-}],"objekti59":[{
-    "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1479 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-16-gb-naytonohjain/887676"
-}]
-}{"objekti0":[{
-    "nimi":"Gigabyte GeForce RTX 5050 OC Low Profile 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-oc-low-profile-8-gb-naytonohjain/995801"
-}],"objekti1":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"398,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-dual-oc-naytonohjain/917763"
 }],"objekti2":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti WINDFORCE 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"474 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-windforce-16g-naytonohjain/916327"
-}],"objekti3":[{
     "nimi":"ASUS ROG Astral LC GeForce RTX 5090 32 GB OC n\u00e4yt\u00f6nohjain",
     "hinta":"2799 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-rog-astral-lc-geforce-rtx-5090-32-gb-oc-naytonohjain/895022"
-}],"objekti4":[{
-    "nimi":"Gigabyte GeForce RTX 5090 Master 32 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"2749 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5090-master-32-gb-naytonohjain/892560"
-}],"objekti5":[{
-    "nimi":"Gigabyte GeForce RTX 5080 Aorus Master 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1484,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-aorus-master-16-gb-naytonohjain/883814"
-}],"objekti6":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti EAGLE OC 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"459 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-eagle-oc-16g-naytonohjain/916329"
-}],"objekti7":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB TUF OC GAMING n\u00e4yt\u00f6nohjain",
-    "hinta":"598,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-tuf-oc-gaming-naytonohjain/917753"
-}],"objekti8":[{
-    "nimi":"PNY GeForce RTX 5070 12 GB ARGB 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"609,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-argb-3x-oc-naytonohjain/900486"
-}],"objekti9":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti AERO OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"465,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-aero-oc-8-gb-naytonohjain/924509"
-}],"objekti10":[{
-    "nimi":"Palit GeForce RTX 5070 Ti Gaming Pro V1 n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"849 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gaming-pro-v1-naytonohjain-16-gb-gddr7/914961"
-}],"objekti11":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti GAMING OC 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"489 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-gaming-oc-16g-naytonohjain/916331"
-}],"objekti12":[{
-    "nimi":"MSI Nvidia GeForce RTX 5060 GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"339,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-nvidia-geforce-rtx-5060-gaming-oc-8-gb-naytonohjain/923094"
-}],"objekti13":[{
-    "nimi":"Gigabyte GeForce RTX 5080 GAMING OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1319 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-gaming-oc-16-gb-naytonohjain/883812"
-}],"objekti14":[{
-    "nimi":"Gigabyte GeForce RTX 5050 WINDFORCE OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"269,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-windforce-oc-8-gb-naytonohjain/995802"
-}],"objekti15":[{
-    "nimi":"MSI GeForce RTX 5080 SUPRIM SOC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1529 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-suprim-soc-16-gb-naytonohjain/884880"
-}],"objekti16":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB PRIME OC n\u00e4yt\u00f6nohjain",
-    "hinta":"568,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-prime-oc-naytonohjain/917755"
-}],"objekti17":[{
-    "nimi":"ASUS GeForce RTX 5070 12 GB TUF OC n\u00e4yt\u00f6nohjain",
-    "hinta":"669,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5070-12-gb-tuf-oc-naytonohjain/905465"
-}],"objekti18":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Windforce n\u00e4yt\u00f6nohjain",
-    "hinta":"619,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-naytonohjain/900452"
-}],"objekti19":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti WINDFORCE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"399,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-windforce-8-gb-naytonohjain/924504"
-}],"objekti20":[{
-    "nimi":"Asus GeForce GT710 n\u00e4yt\u00f6nohjain (2 GB GDDR5)",
-    "hinta":"60,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-gt710-naytonohjain-2-gb-gddr5/438671"
-}],"objekti21":[{
-    "nimi":"Gigabyte GeForce RTX 5060Ti GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"448,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-gaming-oc-8-gb-naytonohjain/924508"
-}],"objekti22":[{
-    "nimi":"Gigabyte GeForce RTX 5070 WINDFORCE 12 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"618,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-12-gb-naytonohjain/916260"
-}],"objekti23":[{
-    "nimi":"PALIT RTX5070 Ti GamingPro-S OC n\u00e4yt\u00f6nohjain",
-    "hinta":"888,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-oc-naytonohjain/982151"
-}],"objekti24":[{
-    "nimi":"PALIT RTX5070 Ti GamingPro-S n\u00e4yt\u00f6nohjain",
-    "hinta":"839 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-naytonohjain/982150"
-}],"objekti25":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Ti EAGLE ICE OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"948,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-ti-eagle-ice-oc-16-gb-naytonohjain/924511"
-}],"objekti26":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 16 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"429,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-dual-oc-naytonohjain/917757"
-}],"objekti27":[{
-    "nimi":"ASUS GeForce RTX 3050 DUAL OC graphics card (6 GB GDDR6)",
-    "hinta":"191,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-3050-dual-oc-graphics-card-6-gb-gddr6/842813"
-}],"objekti28":[{
-    "nimi":"Gigabyte GeForce RTX 5070 Aorus Master n\u00e4yt\u00f6nohjain",
-    "hinta":"814,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-aorus-master-naytonohjain/900453"
-}],"objekti29":[{
-    "nimi":"MSI GeForce RTX 5070 12 G VENTUS 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"669,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5070-12-g-ventus-3x-oc-naytonohjain/900912"
-}],"objekti30":[{
-    "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC WHITE 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1344 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-white-16-gb-naytonohjain/884884"
-}],"objekti31":[{
-    "nimi":"ASUS GeForce RTX 5080 TUF Gaming 16 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"1299 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5080-tuf-gaming-16-gb-oc-naytonohjain/883821"
-}],"objekti32":[{
-    "nimi":"ASUS Dual Radeon RX9060XT n\u00e4yt\u00f6nohjain (16 GB GDDR6)",
-    "hinta":"399 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060xt-naytonohjain-16-gb-gddr6/972769"
-}],"objekti33":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 8 GB PRIME OC n\u00e4yt\u00f6nohjain",
-    "hinta":"471,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-prime-oc-naytonohjain/917761"
-}],"objekti34":[{
-    "nimi":"ROG Strix Geforce RTX 5070 12 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"789,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/rog-strix-geforce-rtx-5070-12-gb-oc-naytonohjain/925538"
-}],"objekti35":[{
-    "nimi":"Asus PRIME RX 9070 OC n\u00e4yt\u00f6nohjain",
-    "hinta":"699,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx-9070-oc-naytonohjain/883872"
-}],"objekti36":[{
-    "nimi":"PALIT Geforce RTX 5070 Ti GamingPro OC V1 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"899 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gamingpro-oc-v1-16-gb-naytonohjain/926897"
-}],"objekti37":[{
-    "nimi":"Gigabyte AORUS GeForce RTX 5060 ELITE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"369 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-aorus-geforce-rtx-5060-elite-8-gb-naytonohjain/927020"
-}],"objekti38":[{
-    "nimi":"MSI GeForce RTX 5050 8G VENTUS 2X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"264,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-ventus-2x-oc-naytonohjain/945295"
-}],"objekti39":[{
-    "nimi":"ASUS PRIME-RX9060XT-O16G n\u00e4yt\u00f6nohjain",
-    "hinta":"449,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o16g-naytonohjain/933771"
-}],"objekti40":[{
-    "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC ICE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"329,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-ice-8-gb-naytonohjain/927017"
-}],"objekti41":[{
-    "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"328,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-8g-naytonohjain/927016"
-}],"objekti42":[{
-    "nimi":"PNY GeForce RTX 5070 12 GB 3X OC n\u00e4yt\u00f6nohjain",
-    "hinta":"599,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-3x-oc-naytonohjain/900485"
-}],"objekti43":[{
-    "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-8g-naytonohjain/927014"
-}],"objekti44":[{
-    "nimi":"Gigabyte GeForce RTX 5060 GAMING OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"344,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-gaming-oc-8g-naytonohjain/927018"
-}],"objekti45":[{
-    "nimi":"MSI GeForce RTX 5050 8G GAMING OC n\u00e4yt\u00f6nohjain",
-    "hinta":"289 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-gaming-oc-naytonohjain/945296"
-}],"objekti46":[{
-    "nimi":"PNY GeForce RTX 5060 OC Dual Fan 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"349,99 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5060-oc-dual-fan-8-gb-naytonohjain/1001091"
-}],"objekti47":[{
-    "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"319 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-oc-8g-naytonohjain/927015"
-}],"objekti48":[{
-    "nimi":"ASUS Dual GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"538,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-oc-naytonohjain-16-gb-gddr7/972771"
-}],"objekti49":[{
-    "nimi":"ASUS Dual Radeon RX9060 n\u00e4yt\u00f6nohjain (16 GB GDDR6, valkoinen)",
-    "hinta":"424,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060-naytonohjain-16-gb-gddr6-valkoinen/972770"
-}],"objekti50":[{
-    "nimi":"ASUS Dual GeForce RTX 5060 8 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-8-gb-gddr7-oc-edition-naytonohjain/925545"
-}],"objekti51":[{
-    "nimi":"ASUS Prime GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (8 GB GDDR7)",
-    "hinta":"398,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-geforce-rtx-5060-oc-naytonohjain-8-gb-gddr7/925543"
-}],"objekti52":[{
-    "nimi":"ASUS GeForce RTX 5050 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"239 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5050-8-gb-dual-oc-naytonohjain/945299"
-}],"objekti53":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Low Profile OC 8G n\u00e4yt\u00f6nohjain",
-    "hinta":"334,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-low-profile-oc-8g-naytonohjain/927013"
-}],"objekti54":[{
-    "nimi":"ASUS ProArt GeForce RTX 5080 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
-    "hinta":"1659,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-proart-geforce-rtx-5080-oc-naytonohjain-16-gb-gddr7/972766"
-}],"objekti55":[{
-    "nimi":"ASUS PRIME-RX9060XT-O8G n\u00e4yt\u00f6nohjain",
-    "hinta":"376 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o8g-naytonohjain/933774"
-}],"objekti56":[{
-    "nimi":"ASUS Dual GeForce RTX 5070 12 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
-    "hinta":"529,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5070-12-gb-gddr7-oc-edition-naytonohjain/925535"
-}],"objekti57":[{
-    "nimi":"Gigabyte Radeon RX 9060 XT GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"339,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-radeon-rx-9060-xt-gaming-oc-8-gb-naytonohjain/927021"
-}],"objekti58":[{
-    "nimi":"PALIT GeForce RTX 5060 Dual 8 GB GDDR7 n\u00e4yt\u00f6nohjain",
-    "hinta":"319,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5060-dual-8-gb-gddr7-naytonohjain/926895"
-}],"objekti59":[{
-    "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC 16 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"1479 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-16-gb-naytonohjain/887676"
-}]
-}{"objekti0":[{
-    "nimi":"Gigabyte GeForce RTX 5050 OC Low Profile 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"279,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-oc-low-profile-8-gb-naytonohjain/995801"
-}],"objekti1":[{
-    "nimi":"ASUS GeForce RTX 5060 Ti 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
-    "hinta":"398,90 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-dual-oc-naytonohjain/917763"
-}],"objekti2":[{
-    "nimi":"Gigabyte GeForce RTX 5060 Ti WINDFORCE 16G n\u00e4yt\u00f6nohjain",
-    "hinta":"474 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-windforce-16g-naytonohjain/916327"
 }],"objekti3":[{
-    "nimi":"ASUS ROG Astral LC GeForce RTX 5090 32 GB OC n\u00e4yt\u00f6nohjain",
-    "hinta":"2799 \u20ac",
-    "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-rog-astral-lc-geforce-rtx-5090-32-gb-oc-naytonohjain/895022"
-}],"objekti4":[{
     "nimi":"Gigabyte GeForce RTX 5090 Master 32 GB n\u00e4yt\u00f6nohjain",
     "hinta":"2749 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5090-master-32-gb-naytonohjain/892560"
-}],"objekti5":[{
+}],"objekti4":[{
     "nimi":"Gigabyte GeForce RTX 5080 Aorus Master 16 GB n\u00e4yt\u00f6nohjain",
     "hinta":"1484,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-aorus-master-16-gb-naytonohjain/883814"
-}],"objekti6":[{
+}],"objekti5":[{
     "nimi":"Gigabyte GeForce RTX 5060 Ti EAGLE OC 16G n\u00e4yt\u00f6nohjain",
     "hinta":"459 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-eagle-oc-16g-naytonohjain/916329"
-}],"objekti7":[{
+}],"objekti6":[{
     "nimi":"ASUS GeForce RTX 5060 Ti 16 GB TUF OC GAMING n\u00e4yt\u00f6nohjain",
     "hinta":"598,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-tuf-oc-gaming-naytonohjain/917753"
-}],"objekti8":[{
+}],"objekti7":[{
     "nimi":"PNY GeForce RTX 5070 12 GB ARGB 3X OC n\u00e4yt\u00f6nohjain",
     "hinta":"609,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-argb-3x-oc-naytonohjain/900486"
-}],"objekti9":[{
+}],"objekti8":[{
     "nimi":"Gigabyte GeForce RTX 5060Ti AERO OC 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"465,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-aero-oc-8-gb-naytonohjain/924509"
-}],"objekti10":[{
+}],"objekti9":[{
     "nimi":"Palit GeForce RTX 5070 Ti Gaming Pro V1 n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
     "hinta":"849 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gaming-pro-v1-naytonohjain-16-gb-gddr7/914961"
-}],"objekti11":[{
+}],"objekti10":[{
     "nimi":"Gigabyte GeForce RTX 5060 Ti GAMING OC 16G n\u00e4yt\u00f6nohjain",
     "hinta":"489 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-gaming-oc-16g-naytonohjain/916331"
-}],"objekti12":[{
+}],"objekti11":[{
     "nimi":"MSI Nvidia GeForce RTX 5060 GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"339,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-nvidia-geforce-rtx-5060-gaming-oc-8-gb-naytonohjain/923094"
-}],"objekti13":[{
+}],"objekti12":[{
     "nimi":"Gigabyte GeForce RTX 5080 GAMING OC 16 GB n\u00e4yt\u00f6nohjain",
     "hinta":"1319 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5080-gaming-oc-16-gb-naytonohjain/883812"
-}],"objekti14":[{
+}],"objekti13":[{
     "nimi":"Gigabyte GeForce RTX 5050 WINDFORCE OC 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"269,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5050-windforce-oc-8-gb-naytonohjain/995802"
-}],"objekti15":[{
+}],"objekti14":[{
     "nimi":"MSI GeForce RTX 5080 SUPRIM SOC 16 GB n\u00e4yt\u00f6nohjain",
     "hinta":"1529 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-suprim-soc-16-gb-naytonohjain/884880"
-}],"objekti16":[{
+}],"objekti15":[{
     "nimi":"ASUS GeForce RTX 5060 Ti 16 GB PRIME OC n\u00e4yt\u00f6nohjain",
     "hinta":"568,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-prime-oc-naytonohjain/917755"
-}],"objekti17":[{
+}],"objekti16":[{
     "nimi":"ASUS GeForce RTX 5070 12 GB TUF OC n\u00e4yt\u00f6nohjain",
     "hinta":"669,99 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5070-12-gb-tuf-oc-naytonohjain/905465"
-}],"objekti18":[{
+}],"objekti17":[{
     "nimi":"Gigabyte GeForce RTX 5070 Windforce n\u00e4yt\u00f6nohjain",
     "hinta":"619,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-naytonohjain/900452"
-}],"objekti19":[{
+}],"objekti18":[{
     "nimi":"Gigabyte GeForce RTX 5060Ti WINDFORCE 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"399,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-windforce-8-gb-naytonohjain/924504"
-}],"objekti20":[{
+}],"objekti19":[{
     "nimi":"Asus GeForce GT710 n\u00e4yt\u00f6nohjain (2 GB GDDR5)",
     "hinta":"60,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-gt710-naytonohjain-2-gb-gddr5/438671"
-}],"objekti21":[{
+}],"objekti20":[{
     "nimi":"Gigabyte GeForce RTX 5060Ti GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"448,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060ti-gaming-oc-8-gb-naytonohjain/924508"
-}],"objekti22":[{
+}],"objekti21":[{
     "nimi":"Gigabyte GeForce RTX 5070 WINDFORCE 12 GB n\u00e4yt\u00f6nohjain",
     "hinta":"618,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-windforce-12-gb-naytonohjain/916260"
-}],"objekti23":[{
+}],"objekti22":[{
     "nimi":"PALIT RTX5070 Ti GamingPro-S OC n\u00e4yt\u00f6nohjain",
     "hinta":"888,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-oc-naytonohjain/982151"
-}],"objekti24":[{
+}],"objekti23":[{
     "nimi":"PALIT RTX5070 Ti GamingPro-S n\u00e4yt\u00f6nohjain",
     "hinta":"839 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-rtx5070-ti-gamingpro-s-naytonohjain/982150"
-}],"objekti25":[{
+}],"objekti24":[{
     "nimi":"Gigabyte GeForce RTX 5070 Ti EAGLE ICE OC 16 GB n\u00e4yt\u00f6nohjain",
     "hinta":"948,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-ti-eagle-ice-oc-16-gb-naytonohjain/924511"
-}],"objekti26":[{
+}],"objekti25":[{
     "nimi":"ASUS GeForce RTX 5060 Ti 16 GB DUAL OC n\u00e4yt\u00f6nohjain",
     "hinta":"429,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-16-gb-dual-oc-naytonohjain/917757"
-}],"objekti27":[{
+}],"objekti26":[{
     "nimi":"ASUS GeForce RTX 3050 DUAL OC graphics card (6 GB GDDR6)",
     "hinta":"191,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-3050-dual-oc-graphics-card-6-gb-gddr6/842813"
-}],"objekti28":[{
+}],"objekti27":[{
     "nimi":"Gigabyte GeForce RTX 5070 Aorus Master n\u00e4yt\u00f6nohjain",
     "hinta":"814,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5070-aorus-master-naytonohjain/900453"
-}],"objekti29":[{
+}],"objekti28":[{
     "nimi":"MSI GeForce RTX 5070 12 G VENTUS 3X OC n\u00e4yt\u00f6nohjain",
     "hinta":"669,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5070-12-g-ventus-3x-oc-naytonohjain/900912"
-}],"objekti30":[{
+}],"objekti29":[{
     "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC WHITE 16 GB n\u00e4yt\u00f6nohjain",
     "hinta":"1344 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-white-16-gb-naytonohjain/884884"
-}],"objekti31":[{
+}],"objekti30":[{
     "nimi":"ASUS GeForce RTX 5080 TUF Gaming 16 GB OC n\u00e4yt\u00f6nohjain",
     "hinta":"1299 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5080-tuf-gaming-16-gb-oc-naytonohjain/883821"
-}],"objekti32":[{
+}],"objekti31":[{
     "nimi":"ASUS Dual Radeon RX9060XT n\u00e4yt\u00f6nohjain (16 GB GDDR6)",
     "hinta":"399 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060xt-naytonohjain-16-gb-gddr6/972769"
-}],"objekti33":[{
+}],"objekti32":[{
     "nimi":"ASUS GeForce RTX 5060 Ti 8 GB PRIME OC n\u00e4yt\u00f6nohjain",
     "hinta":"471,99 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5060-ti-8-gb-prime-oc-naytonohjain/917761"
-}],"objekti34":[{
+}],"objekti33":[{
     "nimi":"ROG Strix Geforce RTX 5070 12 GB OC n\u00e4yt\u00f6nohjain",
     "hinta":"789,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/rog-strix-geforce-rtx-5070-12-gb-oc-naytonohjain/925538"
-}],"objekti35":[{
+}],"objekti34":[{
     "nimi":"Asus PRIME RX 9070 OC n\u00e4yt\u00f6nohjain",
     "hinta":"699,99 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx-9070-oc-naytonohjain/883872"
-}],"objekti36":[{
+}],"objekti35":[{
     "nimi":"PALIT Geforce RTX 5070 Ti GamingPro OC V1 16 GB n\u00e4yt\u00f6nohjain",
     "hinta":"899 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5070-ti-gamingpro-oc-v1-16-gb-naytonohjain/926897"
-}],"objekti37":[{
+}],"objekti36":[{
     "nimi":"Gigabyte AORUS GeForce RTX 5060 ELITE 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"369 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-aorus-geforce-rtx-5060-elite-8-gb-naytonohjain/927020"
-}],"objekti38":[{
+}],"objekti37":[{
     "nimi":"MSI GeForce RTX 5050 8G VENTUS 2X OC n\u00e4yt\u00f6nohjain",
     "hinta":"264,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-ventus-2x-oc-naytonohjain/945295"
-}],"objekti39":[{
+}],"objekti38":[{
     "nimi":"ASUS PRIME-RX9060XT-O16G n\u00e4yt\u00f6nohjain",
     "hinta":"449,99 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o16g-naytonohjain/933771"
-}],"objekti40":[{
+}],"objekti39":[{
     "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC ICE 8 GB n\u00e4yt\u00f6nohjain",
-    "hinta":"329,90 \u20ac",
+    "hinta":"309,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-ice-8-gb-naytonohjain/927017"
-}],"objekti41":[{
+}],"objekti40":[{
     "nimi":"Gigabyte GeForce RTX 5060 EAGLE OC 8G n\u00e4yt\u00f6nohjain",
     "hinta":"328,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-eagle-oc-8g-naytonohjain/927016"
-}],"objekti42":[{
+}],"objekti41":[{
     "nimi":"PNY GeForce RTX 5070 12 GB 3X OC n\u00e4yt\u00f6nohjain",
     "hinta":"599,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5070-12-gb-3x-oc-naytonohjain/900485"
-}],"objekti43":[{
+}],"objekti42":[{
     "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE 8G n\u00e4yt\u00f6nohjain",
     "hinta":"279,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-8g-naytonohjain/927014"
-}],"objekti44":[{
+}],"objekti43":[{
     "nimi":"Gigabyte GeForce RTX 5060 GAMING OC 8G n\u00e4yt\u00f6nohjain",
     "hinta":"344,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-gaming-oc-8g-naytonohjain/927018"
-}],"objekti45":[{
+}],"objekti44":[{
     "nimi":"MSI GeForce RTX 5050 8G GAMING OC n\u00e4yt\u00f6nohjain",
     "hinta":"289 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5050-8g-gaming-oc-naytonohjain/945296"
-}],"objekti46":[{
+}],"objekti45":[{
     "nimi":"PNY GeForce RTX 5060 OC Dual Fan 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"349,99 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/pny-geforce-rtx-5060-oc-dual-fan-8-gb-naytonohjain/1001091"
-}],"objekti47":[{
+}],"objekti46":[{
     "nimi":"Gigabyte GeForce RTX 5060 WINDFORCE OC 8G n\u00e4yt\u00f6nohjain",
     "hinta":"319 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-windforce-oc-8g-naytonohjain/927015"
-}],"objekti48":[{
+}],"objekti47":[{
     "nimi":"ASUS Dual GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
     "hinta":"538,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-oc-naytonohjain-16-gb-gddr7/972771"
-}],"objekti49":[{
+}],"objekti48":[{
     "nimi":"ASUS Dual Radeon RX9060 n\u00e4yt\u00f6nohjain (16 GB GDDR6, valkoinen)",
     "hinta":"424,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-radeon-rx9060-naytonohjain-16-gb-gddr6-valkoinen/972770"
-}],"objekti50":[{
+}],"objekti49":[{
     "nimi":"ASUS Dual GeForce RTX 5060 8 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
     "hinta":"279,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5060-8-gb-gddr7-oc-edition-naytonohjain/925545"
-}],"objekti51":[{
+}],"objekti50":[{
     "nimi":"ASUS Prime GeForce RTX 5060 OC n\u00e4yt\u00f6nohjain (8 GB GDDR7)",
     "hinta":"398,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-geforce-rtx-5060-oc-naytonohjain-8-gb-gddr7/925543"
-}],"objekti52":[{
+}],"objekti51":[{
     "nimi":"ASUS GeForce RTX 5050 8 GB DUAL OC n\u00e4yt\u00f6nohjain",
     "hinta":"239 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5050-8-gb-dual-oc-naytonohjain/945299"
-}],"objekti53":[{
+}],"objekti52":[{
     "nimi":"Gigabyte GeForce RTX 5060 Low Profile OC 8G n\u00e4yt\u00f6nohjain",
     "hinta":"334,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-low-profile-oc-8g-naytonohjain/927013"
-}],"objekti54":[{
+}],"objekti53":[{
     "nimi":"ASUS ProArt GeForce RTX 5080 OC n\u00e4yt\u00f6nohjain (16 GB GDDR7)",
     "hinta":"1659,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-proart-geforce-rtx-5080-oc-naytonohjain-16-gb-gddr7/972766"
-}],"objekti55":[{
+}],"objekti54":[{
     "nimi":"ASUS PRIME-RX9060XT-O8G n\u00e4yt\u00f6nohjain",
     "hinta":"376 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-prime-rx9060xt-o8g-naytonohjain/933774"
-}],"objekti56":[{
+}],"objekti55":[{
     "nimi":"ASUS Dual GeForce RTX 5070 12 GB GDDR7 OC Edition n\u00e4yt\u00f6nohjain",
     "hinta":"529,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-dual-geforce-rtx-5070-12-gb-gddr7-oc-edition-naytonohjain/925535"
-}],"objekti57":[{
+}],"objekti56":[{
     "nimi":"Gigabyte Radeon RX 9060 XT GAMING OC 8 GB n\u00e4yt\u00f6nohjain",
     "hinta":"339,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-radeon-rx-9060-xt-gaming-oc-8-gb-naytonohjain/927021"
-}],"objekti58":[{
+}],"objekti57":[{
     "nimi":"PALIT GeForce RTX 5060 Dual 8 GB GDDR7 n\u00e4yt\u00f6nohjain",
     "hinta":"319,90 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/palit-geforce-rtx-5060-dual-8-gb-gddr7-naytonohjain/926895"
-}],"objekti59":[{
+}],"objekti58":[{
     "nimi":"MSI GeForce RTX 5080 VENTUS 3X OC 16 GB n\u00e4yt\u00f6nohjain",
     "hinta":"1479 \u20ac",
     "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5080-ventus-3x-oc-16-gb-naytonohjain/887676"
