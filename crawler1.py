@@ -11,19 +11,19 @@ import calendar
 import time
 import mysql.connector 
 
-# mydb = mysql.connector.connect(
-#   host="localhost",
-#   user="yourusername",
-#   password="yourpassword"
-# )
+mydb = mysql.connector.connect(
+  host="placeholder",
+  user="placeholder",
+  password="placeholder",
+  database="placeholder"
+)
+
 
 
 # webpage linkkien tilalla pitäisi toimia mikä tahansa gigantin sivu. 
-webPage = ['gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu' , 'gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu/page-2' , 'gigantti.fi/gaming/pelinaytot?f=30831%3A2560x1440%7C3840x2160%7C3440x1440' , 'gigantti.fi/gaming/pelinaytot' , 'gigantti.fi/gaming/pelinaytot/page-2']
-element_1_name = "li:nth-child"
-# ottaa ajan, muuntaa sen epoch aikaan ja tallentaa tiedoston muodossa "result-xxxxxxxxxx.json". tiedoston tallennus tapahtuu kansioon jossa crawler on
-currtime = datetime.datetime.now()
-epoch_time = calendar.timegm(currtime.timetuple())
+# crawler1 hakee näyttöjä
+# webPage listaan voi lisätä lisää linkkejä jos tarvitsee
+webPage = ['gigantti.fi/gaming/pelinaytot?f=30831%3A2560x1440%7C3840x2160%7C3440x1440']
 opts = Options()
 opts.add_argument("--headless=new")
 opts.add_argument('--disable-blink-features=AutomationControlled')
@@ -54,58 +54,60 @@ def crawl(*args):
                 required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
                 driver.set_window_size(required_width, required_height)              
 
-                #elementprice = driver.find_elements(By.CSS_SELECTOR, "li.group > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)")
-                #elementurl = driver.find_elements(By.CSS_SELECTOR, "li.group > a:nth-child(2)")
                 time.sleep(5)
                 try:
-                        print("elements listan kokeilu onnistui")
                         elementnames = driver.find_elements(By.CSS_SELECTOR, "li > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)")
-
                 except: 
-                        
-                        print("elements listan kokeilussa tuli vastaan virhe")                        
                         elementnames = driver.find_elements(By.CSS_SELECTOR, "li > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)")
 
-                # screenshot testausta varten, voi poistaa myöhemmin.
-                #driver.save_screenshot(f'screenie{z}.png')
                 print(webPage[z] , "\n\n\n\n\n\n\n")
                 
                 for x in range (len(elementnames)):
-                        # tmp1 = nimi
+                        # nimi= nimi
                         # tpm2 = hinta
-                        # tmp3 = linkki
-                # x + 1 koska gigantin sivun elementtien index alkaa ykkösestä.
-                # ei toimi kaikilla sivuilla koska ensimmäinen elementti on erilainen pelinäyttöjen ja näytönohjainten sivuilla
+                        # linkki = linkki
+                        # x + 1 koska html-elementtien index alkaa ykkösestä.
                         try:
-                                print("yksittäisen elementin kokeilu onnistui")
-                                tmp1 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x + 1}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
+                                nimi= driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x + 1}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
                         except: 
-                                print("yksittäisen elementin kokeilussa tuli vastaan virhe")
-                                tmp1 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
+                                nimi= driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x}) > a:nth-child(2) > div > div:nth-child(1) > h2:nth-child(2)").text 
                         finally:
                                 pass
                         try:
-                                tmp2 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)").text
+                                hinta= driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)").text
                         except:
-                                tmp2 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x}) > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)").text
+                                hinta= driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x}) > a > div > div > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)").text
                         finally:
                                 pass
                         try:
-                                tmp3 = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a:nth-child(2)").get_attribute('href')
+                                linkki = driver.find_element(By.CSS_SELECTOR, f"li.group:nth-child({x + 1}) > a:nth-child(2)").get_attribute('href')
                         except:
-                                tmp3 = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x}) > a:nth-child(2)").get_attribute('href')
+                                linkki = driver.find_element(By.CSS_SELECTOR, f"li.pt-4:nth-child({x}) > a:nth-child(2)").get_attribute('href')
                         finally:
                                 pass
  
-                        testjson = {
-                        "nimi": tmp1,
-                        "hinta": tmp2,
-                        "linkki": tmp3
+
+                        tmp4 = time.strftime('%Y-%m-%d %H:%M')
+                        mycursor = mydb.cursor()
+
+                        sql = "INSERT INTO näytöt (näytöt_nimi, näytöt_hinta, näytöt_linkki, näytöt_aika) VALUES (%s, %s, %s, %s) ON DUPLICATE KEY UPDATE näytöt_nimi=VALUES(näytöt_nimi), näytöt_linkki=VALUES(näytöt_linkki), näytöt_aika=VALUES(näytöt_aika)"
+                        val = (nimi, hinta, linkki, tmp4)
+                        mycursor.execute(sql, val)
+                        mydb.commit()
+
+                        print(mycursor.rowcount, "record inserted.")
+
+                        # alempi kommentoitu koodi tallentaa samat tiedot .json tiedostoon. .json tiedostossa url encoding(ä = %C3%A4, ö = %C3%B6 tyylinen) ja se pitää muuntaa erikseen utf-8 jos sitä haluaa käyttää muuhun kuin testaukseen
+                        """testjson = {
+                        "nimi": nimi,
+                        "hinta": hinta,
+                        "linkki": linkki
                         }
-                        with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset. pitää vielä formatoida paremmin json/xml/csv muotoon.
+
+                        with open(filename, 'a', encoding='utf-8') as f: 
                                 if x == 0:
                                         f.writelines("{")
-                                print(json.dumps(testjson, indent=4, separators=(",", ":")))
+                                print(x)
                                 
                                 f.writelines(f'"objekti{x}"')
                                 f.writelines(":[")
@@ -114,17 +116,6 @@ def crawl(*args):
                                         f.writelines("]\n}")
                                 else:
                                         f.writelines("],")
-                                #TODO kaikki printit ja ylimääräiset importit pitää poistaa kun crawleri toimii
-                                #TODO pitää keksiä miten haetut tiedot siirretään tietokantaan/koontisivulle
-                                #TODO tietojen muuntaminen json/xml muotoon ja formatointi
-                                #TODO jos crawlerin ajamisen keskeyttää "ctrl + c" se jättää seleniumin firefox prosessin taustalle päälle. ylimääräiset prosessit pitää sulkea tehtävänhallinnasta.
-                                #TODO driver ei sulje itseään looppien välillä, kuluttaa noin 800mb ramia per prosessi, jokaisen loopin alussa alkaa uusi prosessi
-                                #TODO firefox webdriver tekee uuden "rust_mozprofile" nimisen tiedoston "C:\Users\username\AppData\Local\Temp" kansioon. driver.quit() pitäisi poistaa ne muttei tunnu toimivan.
-                                #TODO tällä hetkellä jos crawlerin ajaa useaan kertaan json ei ole validia, koska edellisen crawlauksen päätteeksi tiedostoon tulee "[}" pääte. tämä ei haittaa jos tiedot lisätään suoraan tietokantaan.
-                                f.close()
+                                f.close()"""
                 driver.close()
-
-
-        # driver.quit()
-        # driver.close()
 crawl()
