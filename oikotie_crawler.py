@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import json
 import time
 import re  
+
 OUTPUT_FILE = "asunnot_yhdistetty.json"
 
 options = Options()
@@ -20,43 +21,27 @@ options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 wait = WebDriverWait(driver, 10)
 
-
 def accept_cookies():
     try:
         wait.until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, "iframe[src*='consent']")))
         btn = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Hyväksy')]")))
         btn.click()
-        print("✔ Evästeet hyväksytty")
     except:
-        print("ℹ Ei cookie-iframea")
+        pass
     finally:
         driver.switch_to.default_content()
 
 def scrape_oikotie():
-    print("\n=== Haetaan Oikotien 20 uusinta ===")
-    url = (
-        "https://asunnot.oikotie.fi/myytavat-asunnot"
-        "?cardType=100"
-        "&buildingType%5B%5D=2&buildingType%5B%5D=4&buildingType%5B%5D=8"
-        "&buildingType%5B%5D=32&buildingType%5B%5D=128&buildingType%5B%5D=64"
-        "&locations=%5B%5B9,7,%22Kymenlaakso%22%5D%5D"
-        "&price%5Bmax%5D=100000&price%5Bmin%5D=45000"
-        "&size%5Bmin%5D=55"
-    )
-
+    url = "https://asunnot.oikotie.fi/myytavat-asunnot?cardType=100&buildingType%5B%5D=2&buildingType%5B%5D=4&buildingType%5B%5D=8&buildingType%5B%5D=32&buildingType%5B%5D=128&buildingType%5B%5D=64&locations=%5B%5B9,7,%22Kymenlaakso%22%5D%5D&price%5Bmax%5D=100000&price%5Bmin%5D=45000&size%5Bmin%5D=55"
     driver.get(url)
     time.sleep(2)
     accept_cookies()
-
     try:
         wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.cards-v3__card")))
     except:
-        print("❌ Oikotieltä ei löytynyt ilmoituksia")
         return []
-
     listings = driver.find_elements(By.CSS_SELECTOR, "div.cards-v3__card")[:20]
     results = []
-
     for card in listings:
         try:
             link = card.find_element(By.CSS_SELECTOR, "a.ot-card-v3").get_attribute("href")
@@ -67,71 +52,49 @@ def scrape_oikotie():
             results.append({"site": "Oikotie", "title": title, "price": price, "size": size, "link": link})
         except:
             continue
-
-    print(f"✔ Oikotie: haettu {len(results)} ilmoitusta")
     return results
 
 def scrape_etuovi():
-    print("\n=== Haetaan Etuoven 20 uusinta ===")
     url = "https://www.etuovi.com/myytavat-asunnot?haku=M2367606769"
     driver.get(url)
     time.sleep(3)
     accept_cookies()
-
     try:
         wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "a.MuiPaper-root")))
     except:
-        print("❌ Etuovesta ei löytynyt ilmoituksia")
         return []
-
     cards = driver.find_elements(By.CSS_SELECTOR, "a.MuiPaper-root")[:20]
     results = []
-
     for card in cards:
         try:
             link = card.get_attribute("href")
             if "/kohde/" not in link:
                 continue
-
             try:
                 title = card.find_element(By.CSS_SELECTOR, "p.MuiTypography-h6").text.strip()
             except:
                 title = ""
-
             try:
                 price = card.find_element(By.CSS_SELECTOR, "p.MuiTypography-h5").text.strip()
             except:
                 price = ""
-
             size = ""
             for elem in card.find_elements(By.XPATH, ".//*"):
                 txt = elem.text.strip()
-                match = re.search(r'\b\d{1,3}\s?m[²2]\b', txt)
-                if match:
-                    size = match.group(0)
-                    break
-
+                if "m²" in txt or "m2" in txt:
+                    match = re.search(r'\d+(?:[.,]\d+)?\s?m[²2]', txt)
+                    if match:
+                        size = match.group(0).replace(',', '.')
+                        break
             results.append({"site": "Etuovi", "title": title, "price": price, "size": size, "link": link})
-
         except:
             continue
-
-    print(f"✔ Etuovi: haettu {len(results)} ilmoitusta")
     return results
 
 try:
-    oikotie_data = scrape_oikotie()
-    etuovi_data = scrape_etuovi()
-    all_data = oikotie_data + etuovi_data
-
+    all_data = scrape_oikotie() + scrape_etuovi()
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=4)
-
-    print("\n==============================")
-    print(f" Tallennettu yhteensä {len(all_data)} ilmoitusta")
-    print(f" → {OUTPUT_FILE}")
-    print("==============================\n")
-
 finally:
     driver.quit()
 
