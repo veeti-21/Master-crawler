@@ -36,6 +36,9 @@ pitää ajaa nämä komennot poweshellissä, powershelliin voi kopioida molemmat
 python -m pip install --upgrade pip
 pip install --upgrade selenium
 
+mysql ei toimi ilman asennusta:
+python -m pip install mysql-connector-python
+
 crawleri ajetaan komennolla:
 python crawler1.py
 
