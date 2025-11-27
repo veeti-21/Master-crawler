@@ -1,6 +1,97 @@
 [
     {
         "site": "Oikotie",
+        "title": "Kumputie 3, Kouvola",
+        "price": "87 000 €",
+        "size": "66 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23989450"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Nurmelantie 31, Myllykoski, Kouvola",
+        "price": "73 000 €",
+        "size": "90/130 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23987327"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Pahnakalliontie 2, Aittakorpi, Kotka",
+        "price": "90 000 €",
+        "size": "80,5/84,5 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kotka/23981945"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Syrjäkatu 5 C, Rauhala, Kotka",
+        "price": "99 500 €",
+        "size": "89 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kotka/23979494"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Otavankuja 1, Kuusankoski, Kouvola",
+        "price": "75 000 €",
+        "size": "108/138 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23979027"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Soratie 1 K, Tornionmäki, Kouvola",
+        "price": "98 000 €",
+        "size": "93,5 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23972857"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Harjuntie 1647, Hirvikoski, Pyhtää",
+        "price": "86 000 €",
+        "size": "136 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/pyht%C3%A4%C3%A4/23967820"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Riippakoivuntie 12 B, Aittakorpi, Kotka",
+        "price": "49 000 €",
+        "size": "63 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kotka/23965901"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Pihtojantie 6, Inkeroinen, Kouvola",
+        "price": "45 000 €",
+        "size": "85,5 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23965019"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Ravikatu 3 A, Hevoshaka, Hamina",
+        "price": "78 000 €",
+        "size": "75 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/hamina/23964458"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Maurintie 10, Koria, Kouvola",
+        "price": "88 000 €",
+        "size": "104/115 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23955848"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Hirvimäentie 8 A, Niinistö (Valkeala), Kouvola",
+        "price": "61 500 €",
+        "size": "61,5 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23955252"
+    },
+    {
+        "site": "Oikotie",
+        "title": "Haukantie, Kuusankoski, Kouvola",
+        "price": "78 000 €",
+        "size": "107/150 m²",
+        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23949049"
+    },
+    {
+        "site": "Oikotie",
         "title": "Harjustie 12, Harjunranta (Voikkaa), Kouvola",
         "price": "90 000 €",
         "size": "83/110 m²",
@@ -49,101 +140,73 @@
         "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23907570"
     },
     {
-        "site": "Oikotie",
-        "title": "Kukontie 10, Koria, Kouvola",
-        "price": "48 000 €",
-        "size": "79 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23892910"
+        "site": "Etuovi",
+        "title": "Kumputie 3, Kouvola, Kouvola",
+        "price": "87 000 €",
+        "size": "66m²",
+        "link": "https://www.etuovi.com/kohde/2270926?haku=M2367606769"
     },
     {
-        "site": "Oikotie",
-        "title": "Länsikaari 22, Kaunisnurmi, Kouvola",
-        "price": "74 000 €",
-        "size": "159/328 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23888356"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Jaakonkuja 2, Tompurinmäki, Hamina",
-        "price": "69 000 €",
-        "size": "110/180 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/hamina/23887767"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Niittäjänkaari 4, Sarkola, Kouvola",
-        "price": "74 000 €",
-        "size": "93/112 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23453992"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Kulmakatu 7, Keskusta, Kouvola",
-        "price": "95 000 €",
-        "size": "78,5 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23876304"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Askontie 23, Valkeala, Kouvola",
-        "price": "75 000 €",
-        "size": "92/96 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23289871"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Tähtikatu 19 L, Puistomaa, Kouvola",
-        "price": "79 000 €",
-        "size": "85 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23868513"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Nuolihaukantie 4, Siltakylä, Pyhtää",
+        "site": "Etuovi",
+        "title": "Pahnakalliontie 2, Aittakorpi, Kotka",
         "price": "90 000 €",
+        "size": "5 m²",
+        "link": "https://www.etuovi.com/kohde/1405059?haku=M2367606769"
+    },
+    {
+        "site": "Etuovi",
+        "title": "Syrjäkatu 5, Rauhala, Kotka",
+        "price": "99 500 €",
+        "size": "89 m²",
+        "link": "https://www.etuovi.com/kohde/21938175?haku=M2367606769"
+    },
+    {
+        "site": "Etuovi",
+        "title": "Soratie 1 K, Tornionmäki, Kouvola",
+        "price": "98 000 €",
+        "size": "5 m²",
+        "link": "https://www.etuovi.com/kohde/609120?haku=M2367606769"
+    },
+    {
+        "site": "Etuovi",
+        "title": "Kalliokatu 4 B, Kotkansaari, Kotka",
+        "price": "88 000 €",
+        "size": "5 m²",
+        "link": "https://www.etuovi.com/kohde/80445228?haku=M2367606769"
+    },
+    {
+        "site": "Etuovi",
+        "title": "Riippakoivuntie 12 B, Aittakorpi, Kotka",
+        "price": "49 000 €",
+        "size": "63 m²",
+        "link": "https://www.etuovi.com/kohde/80470459?haku=M2367606769"
+    },
+    {
+        "site": "Etuovi",
+        "title": "Sakaristontie 2 B, Kasarminmäki, Kouvola",
+        "price": "59 000 €",
+        "size": "5 m²",
+        "link": "https://www.etuovi.com/kohde/80466149?haku=M2367606769"
+    },
+    {
+        "site": "Etuovi",
+        "title": "Ravikatu 3 A, Hevoshaka, Hamina",
+        "price": "78 000 €",
         "size": "75 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/pyht%C3%A4%C3%A4/23867664"
+        "link": "https://www.etuovi.com/kohde/80470779?haku=M2367606769"
     },
     {
-        "site": "Oikotie",
-        "title": "Pyydystie 14 B, Pyydysmäki, Kouvola",
-        "price": "66 000 €",
-        "size": "55 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23865796"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Mirjantie 5, Summa, Hamina",
-        "price": "55 000 €",
-        "size": "90/120 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/hamina/23861240"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Rättärintie 24 C, Anjala, Kouvola",
-        "price": "59 500 €",
-        "size": "62,5 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kouvola/23861059"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Korsulankatu 22, Käpylä, Kotka",
-        "price": "45 000 €",
-        "size": "76,1/96,1 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kotka/23853854"
-    },
-    {
-        "site": "Oikotie",
-        "title": "Vehkatie 10 A 3, Aittakorpi, Kotka",
-        "price": "84 500 €",
-        "size": "65 m²",
-        "link": "https://asunnot.oikotie.fi/myytavat-asunnot/kotka/23756917"
+        "site": "Etuovi",
+        "title": "Hirvimäentie 8, Niinistö, (Valkeala) Kouvola",
+        "price": "61 500 €",
+        "size": "5 m²",
+        "link": "https://www.etuovi.com/kohde/21163235?haku=M2367606769"
     },
     {
         "site": "Etuovi",
         "title": "Ahventie 1 A, Lehtomäki, Kouvola",
         "price": "49 000 €",
-        "size": "74,5 m²",
+        "size": "5 m²",
         "link": "https://www.etuovi.com/kohde/80466616?haku=M2367606769"
     },
     {
@@ -185,14 +248,14 @@
         "site": "Etuovi",
         "title": "Sammonkatu 24, Helilä, Kotka",
         "price": "49 000 €",
-        "size": "76,5 m²",
+        "size": "5 m²",
         "link": "https://www.etuovi.com/kohde/1404850?haku=M2367606769"
     },
     {
         "site": "Etuovi",
         "title": "Puutarhakatu 8 A, Kotkansaari, Kotka",
         "price": "68 000 €",
-        "size": "63,8 m²",
+        "size": "8 m²",
         "link": "https://www.etuovi.com/kohde/599009?haku=M2367606769"
     },
     {
@@ -213,70 +276,7 @@
         "site": "Etuovi",
         "title": "Östringinkatu 10, Metsäkulma, Kotka",
         "price": "99 500 €",
-        "size": "1 602 / 1 731 m²",
+        "size": "731 m²",
         "link": "https://www.etuovi.com/kohde/2269961?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Tapiontie 1 as 1, Ravikylä, Kouvola",
-        "price": "69 000 €",
-        "size": "74,5 m²",
-        "link": "https://www.etuovi.com/kohde/608402?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Pirttikatu 7, Metsäkulma, Kotka",
-        "price": "95 000 €",
-        "size": "89 m²",
-        "link": "https://www.etuovi.com/kohde/1388251?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Ruotsulantie 35 B, Kaunisnurmi, Kouvola",
-        "price": "69 500 €",
-        "size": "55 m²",
-        "link": "https://www.etuovi.com/kohde/80463542?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Kulmakatu 7, Keskusta, Kouvola",
-        "price": "95 000 €",
-        "size": "78,5 m²",
-        "link": "https://www.etuovi.com/kohde/1404453?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Tähtikatu 19 L, Puistomaa, Kouvola",
-        "price": "79 000 €",
-        "size": "85 m²",
-        "link": "https://www.etuovi.com/kohde/80457769?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Nuolihaukantie 4, Siltakylä, Pyhtää",
-        "price": "90 000 €",
-        "size": "75 m²",
-        "link": "https://www.etuovi.com/kohde/1403577?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Pyydystie 14 B, Pyydysmäki, Kouvola",
-        "price": "66 000 €",
-        "size": "55 m²",
-        "link": "https://www.etuovi.com/kohde/80464393?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Satamakatu 3, Linnoitus, Hamina",
-        "price": "62 000 €",
-        "size": "61 m²",
-        "link": "https://www.etuovi.com/kohde/1404589?haku=M2367606769"
-    },
-    {
-        "site": "Etuovi",
-        "title": "Kumputie 12, Kouvola, Kouvola",
-        "price": "93 000 €",
-        "size": "72,5 m²",
-        "link": "https://www.etuovi.com/kohde/2270459?haku=M2367606769"
     }
 ]
