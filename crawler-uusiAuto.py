@@ -19,7 +19,7 @@ opts.add_argument("-headless")
 driver = webdriver.Firefox(options=opts)
 
 original_size = driver.get_window_size()
-webPage = ['https://www.nettiauto.com/hakutulokset?haku=P70259705', 'https://www.nettiauto.com/hakutulokset?haku=P70259705&page=2']
+webPage = ['https://www.nettiauto.com/hakutulokset?haku=P62829718', 'https://www.nettiauto.com/hakutulokset?haku=P62829718&page=2']
 
 required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
 required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
