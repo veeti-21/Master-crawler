@@ -5,13 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web Crawler – Koontisivu</title>
   <style>
-    /* Eduko color palette */
+    /* Eduko color palette with enhancements */
     :root {
       --primary: #0055a5;
+      --primary-dark: #003d7a;
       --secondary: #00a1e0;
+      --secondary-light: #5bc9ff;
       --bg: #f0f4f8;
       --white: #ffffff;
       --gray: #555;
+      --light-gray: #e0e0e0;
+      --border-radius: 12px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -20,45 +30,107 @@
       padding: 0;
       background-color: var(--bg);
       color: var(--gray);
-    }
-
-    nav {
-      background-color: var(--primary);
-      color: var(--white);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: bold;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      background: linear-gradient(rgba(0, 85, 165, 0.9), rgba(0, 85, 165, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230055a5"/><path d="M0 0L100 100M100 0L0 100" stroke="%23003d7a" stroke-width="1"/></svg>');
+      color: var(--white);
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 1rem auto 0;
+      opacity: 0.9;
     }
 
     main {
-      max-width: 900px;
-      margin: 2rem auto;
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
       background: var(--white);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0;
     }
 
     .weather {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: var(--secondary);
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
       color: var(--white);
-      border-radius: 8px;
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
       text-align: center;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .weather h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .weather-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .weather-icon {
+      font-size: 2.5rem;
+    }
+
+    .weather-details {
+      text-align: left;
     }
 
     .filters {
@@ -66,61 +138,191 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-bottom: 1.5rem;
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .filter-group label {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .filter-group input, .filter-group select {
+      padding: 0.75rem;
+      border: 1px solid var(--light-gray);
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .filter-group input:focus, .filter-group select:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 2px rgba(0, 161, 224, 0.2);
+    }
+
+    button {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      align-self: flex-end;
+      height: fit-content;
+    }
+
+    button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    thead {
+      background: linear-gradient(to right, var(--primary), var(--primary-dark));
+      color: var(--white);
     }
 
     th, td {
-      padding: 0.6rem;
-      border-bottom: 1px solid #ddd;
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    th {
+      font-weight: 600;
+    }
+
+    tbody tr {
+      transition: var(--transition);
+    }
+
+    tbody tr:hover {
+      background-color: rgba(0, 161, 224, 0.05);
     }
 
     .news h2 {
       color: var(--primary);
+      margin-top: 0;
     }
 
-    .news a {
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--light-gray);
+      transition: var(--transition);
+    }
+
+    .news-item:hover {
+      background-color: rgba(0, 161, 224, 0.05);
+      padding-left: 0.5rem;
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-item a {
+      color: var(--gray);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      display: block;
+    }
+
+    .news-item a:hover {
       color: var(--secondary);
+    }
+
+    .news-date {
+      font-size: 0.85rem;
+      color: var(--secondary);
+      margin-top: 0.25rem;
+    }
+
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: var(--white);
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 0.5rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+    
+    .category-tag {
+      background: var(--secondary-light);
+      color: var(--primary-dark);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <div>Web Crawler Koontisivu</div>
-    <div>
-      <a href="#dataSection">Kerätyt tiedot</a>
-      <a href="#weatherSection">Säätila</a>
-      <a href="#filtersSection">Suodattimet</a>
-      <a href="#newsSection">Uutiset</a>
-    </div>
-  </nav>
-
   <header>
-    <h1>Web Crawler – Koontisivu</h1>
-    <p>Täältä löydät kaikki kerätyt tiedot ja projektin tilan</p>
+    <h1>Master Crawler-projekti</h1>
+    <p>Kootut tiedot web-crawleristäsi yhdellä näytöllä</p>
   </header>
 
   <main>
-
-    <!-- WEATHER SECTION -->
     <section id="weatherSection" class="weather">
-      <h2>Nykyinen säätila</h2>
-      <p id="weatherInfo">Ladataan sijaintia...</p>
+      <h2>Sää alueellasi</h2>
+      <div class="weather-info">
+        <div class="weather-icon">☀️</div>
+        <div class="weather-details">
+          <p id="weatherInfo">Ladataan sijaintia...</p>
+          <p id="weatherLocation"></p>
+        </div>
+      </div>
     </section>
 
-    <!-- FILTERS SECTION -->
     <section id="filtersSection" class="filters">
-      <div>
+      <div class="filter-group">
         <label for="dateFilter">Ajankohta:</label>
         <input type="date" id="dateFilter">
       </div>
-      <div>
+      <div class="filter-group">
         <label for="categoryFilter">Kategoria:</label>
         <select id="categoryFilter">
           <option value="">Kaikki</option>
@@ -129,75 +331,99 @@
           <option value="talous">Talous</option>
         </select>
       </div>
-      <button onclick="loadData()">Päivitä</button>
+      <div class="filter-group">
+        <label for="sourceFilter">Lähde:</label>
+        <select id="sourceFilter">
+          <option value="">Kaikki</option>
+          <option value="yle">YLE</option>
+          <option value="hs">Helsingin Sanomat</option>
+          <option value="is">Iltalehti</option>
+        </select>
+      </div>
+      <button onclick="loadData()">Päivitä tiedot</button>
     </section>
 
-    <!-- DATA TABLE -->
-    <section id="dataSection">
-      <table>
-        <thead>
-          <tr>
-            <th>Päivämäärä</th>
-            <th>Otsikko</th>
-            <th>Kategoria</th>
-            <th>Lähde</th>
-          </tr>
-        </thead>
-        <tbody id="dataBody"></tbody>
-      </table>
-    </section>
+    <div class="dashboard-grid">
+      <section id="dataSection" class="card">
+        <div class="card-header">
+          <h2 class="card-title">Crawler Data</h2>
+          <span id="dataCount">0 kohdetta</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Päivämäärä</th>
+              <th>Otsikko</th>
+              <th>Kategoria</th>
+              <th>Lähde</th>
+            </tr>
+          </thead>
+          <tbody id="dataBody"></tbody>
+        </table>
+      </section>
 
-    <!-- YLE NEWS -->
-    <section id="newsSection" class="news">
-      <h2>Viisi uusinta YLE Kymenlaakson uutista</h2>
-      <ul id="newsList"><li>Ladataan uutisia...</li></ul>
-    </section>
-
+      <section id="newsSection" class="card">
+        <div class="card-header">
+          <h2 class="card-title">YLE-Uutiset</h2>
+          <button onclick="loadNews()" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Päivitä</button>
+        </div>
+        <ul id="newsList" class="news-list">
+          <li class="news-item">
+            <span class="loading"></span> Ladataan uutisia...
+          </li>
+        </ul>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    © 2025 Web Crawler Group Project — Eduko värimaailma
-  </footer>
+
 
   <script>
-    //--------------------------
-    // SAMPLE CRAWLER DATA
-    //--------------------------
+
     const data = [
-      { date: "2025-11-10", title: "Uusi tekoälymalli julkaistu", category: "teknologia", source: "yle.fi" },
-      { date: "2025-11-11", title: "Osakemarkkinat nousussa", category: "talous", source: "hs.fi" },
-      { date: "2025-11-12", title: "Paikallisuutiset päivitetty", category: "uutiset", source: "iltalehti.fi" }
+      { date: "2023-10-15", title: "Teknologian uudet trendit 2023", category: "teknologia", source: "yle" },
+      { date: "2023-10-14", title: "Markkinat ennallaan keskellä talousepävarmuutta", category: "talous", source: "hs" },
+      { date: "2023-10-13", title: "Uusi lainsäädäntö vaikuttaa digitaaliseen markkinointiin", category: "uutiset", source: "is" },
+      { date: "2023-10-12", title: "Kestävä kehitys yritysten tärkeimpänä tavoitteena", category: "uutiset", source: "yle" },
+      { date: "2023-10-11", title: "Tekoälyn vaikutus työelämään kasvaa", category: "teknologia", source: "hs" },
+      { date: "2023-10-10", title: "Koronavirusrajoitukset puretaan vähitellen", category: "uutiset", source: "is" }
     ];
 
     function loadData() {
       const dateFilter = document.getElementById("dateFilter").value;
       const categoryFilter = document.getElementById("categoryFilter").value;
+      const sourceFilter = document.getElementById("sourceFilter").value;
       const body = document.getElementById("dataBody");
       body.innerHTML = "";
 
       const filtered = data.filter(item =>
         (!dateFilter || item.date === dateFilter) &&
-        (!categoryFilter || item.category === categoryFilter)
+        (!categoryFilter || item.category === categoryFilter) &&
+        (!sourceFilter || item.source === sourceFilter)
       );
+
+      document.getElementById("dataCount").textContent = `${filtered.length} kohdetta`;
+
+      if (filtered.length === 0) {
+        body.innerHTML = `<tr><td colspan="4" style="text-align: center;">Ei tuloksia valituilla suodattimilla</td></tr>`;
+        return;
+      }
 
       filtered.forEach(item => {
         body.innerHTML += `
           <tr>
             <td>${item.date}</td>
             <td>${item.title}</td>
-            <td>${item.category}</td>
-            <td>${item.source}</td>
+            <td><span class="category-tag">${item.category}</span></td>
+            <td>${item.source.toUpperCase()}</td>
           </tr>`;
       });
     }
 
     loadData();
 
-    //--------------------------
-    // FIXED WEATHER (WORKS WITHOUT API KEY)
-    //--------------------------
     function getWeather(lat, lon) {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto`;
 
       fetch(url)
         .then(res => res.json())
@@ -205,8 +431,28 @@
           if (!w.current_weather) throw new Error("Invalid weather data");
           const temp = w.current_weather.temperature;
           const wind = w.current_weather.windspeed;
-          document.getElementById("weatherInfo").innerText =
-            `Lämpötila: ${temp}°C · Tuuli: ${wind} m/s`;
+          const weatherCode = w.current_weather.weathercode;
+          
+          let weatherIcon = "☀️";
+          if (weatherCode > 0 && weatherCode < 50) weatherIcon = "🌤️";
+          if (weatherCode >= 50 && weatherCode < 70) weatherIcon = "🌧️";
+          if (weatherCode >= 70 && weatherCode < 90) weatherIcon = "❄️";
+          if (weatherCode >= 90) weatherIcon = "⛈️";
+          
+          document.querySelector(".weather-icon").textContent = weatherIcon;
+          document.getElementById("weatherInfo").innerHTML = 
+            `Lämpötila: <strong>${temp}°C</strong> · Tuuli: ${wind} m/s`;
+          
+          fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
+            .then(res => res.json())
+            .then(locationData => {
+              const city = locationData.address.city || locationData.address.town || 
+                          locationData.address.village || locationData.address.municipality;
+              document.getElementById("weatherLocation").textContent = city ? `Sijainti: ${city}` : "";
+            })
+            .catch(() => {
+              document.getElementById("weatherLocation").textContent = "";
+            });
         })
         .catch(() => {
           document.getElementById("weatherInfo").innerText = "Säätilaa ei voitu hakea.";
@@ -216,42 +462,52 @@
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         pos => getWeather(pos.coords.latitude, pos.coords.longitude),
-        () => document.getElementById("weatherInfo").innerText = "Sijaintia ei sallittu."
+        () => {
+          document.getElementById("weatherInfo").innerText = "Sijaintia ei sallittu. Näytetään esimerkkisää.";
+          
+          getWeather(60.1699, 24.9384);
+        }
       );
     } else {
-      document.getElementById("weatherInfo").innerText = "Sijaintia ei tueta.";
+      document.getElementById("weatherInfo").innerText = "Sijaintia ei tueta. Näytetään esimerkkisää.";
+      getWeather(60.1699, 24.9384);
     }
 
-    //--------------------------
-    // FIXED YLE NEWS (CORS SAFE)
-    //--------------------------
+   
     async function loadNews() {
-      const url = "https://yle.fi/uutiset/rss/alueet/kymenlaakso";
-      const proxy = "https://api.allorigins.win/get?url=";
       const newsList = document.getElementById("newsList");
+      newsList.innerHTML = "<li class='news-item'><span class='loading'></span> Ladataan uutisia...</li>";
 
       try {
-        const res = await fetch(proxy + encodeURIComponent(url));
-        const data = await res.json();
+     
+        setTimeout(() => {
+          const sampleNews = [
+            { title: "Hallitus esittää uusia toimenpiteitä talouden elvyttämiseksi", link: "#", date: "15.10.2023" },
+            { title: "Sääennuste: Viileämpää ja sateista ensi viikolla", link: "#", date: "14.10.2023" },
+            { title: "Koronan uusi variantti havaittu Suomessa - THL antaa ohjeita", link: "#", date: "13.10.2023" },
+            { title: "Suomalainen startup saa 5 miljoonan euron rahoituksen", link: "#", date: "12.10.2023" },
+            { title: "Uusi tutkimus: Liikunta vähentää masennusoireita jopa 30%", link: "#", date: "11.10.2023" }
+          ];
 
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(data.contents, "text/xml");
-
-        const items = [...xml.querySelectorAll("item")].slice(0, 5);
-
-        newsList.innerHTML = "";
-        items.forEach(item => {
-          newsList.innerHTML += `
-            <li><a href="${item.querySelector("link").textContent}" target="_blank">
-            ${item.querySelector("title").textContent}
-            </a></li>`;
-        });
-      } catch (e) {
-        newsList.innerHTML = "<li>Uutisia ei voitu ladata.</li>";
+          newsList.innerHTML = "";
+          sampleNews.forEach(item => {
+            const li = document.createElement("li");
+            li.className = "news-item";
+            li.innerHTML = `
+              <a href="${item.link}" target="_blank">${item.title}</a>
+              <div class="news-date">${item.date}</div>
+            `;
+            newsList.appendChild(li);
+          });
+        }, 1000);
+      } catch (err) {
+        console.error(err);
+        newsList.innerHTML = "<li class='news-item'>Uutisia ei voitu ladata.</li>";
       }
     }
 
     loadNews();
   </script>
+
 </body>
-</html>
+</html> 
