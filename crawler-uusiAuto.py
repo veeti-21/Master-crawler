@@ -19,23 +19,21 @@ opts.add_argument("-headless")
 driver = webdriver.Firefox(options=opts)
 
 original_size = driver.get_window_size()
-webPage = ['https://www.nettiauto.com/hakutulokset?haku=P2578676553', 'https://www.nettiauto.com/hakutulokset?haku=P2578676553&page=2']
+webPage = ['https://www.nettiauto.com/hakutulokset?haku=P70259705', 'https://www.nettiauto.com/hakutulokset?haku=P70259705&page=2']
 
 required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
 required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
 driver.set_window_size(required_width, required_height)
 
 for z in range(len(webPage)):
-    print("moi2")
     driver.get(f'{webPage[z]}')
 
     elementname = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > h2")
     elementprice = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > div:nth-child(2)")
     elementlink = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new > div > a")
-
+    
    
     for x in range (len(elementname)):
-        print("moi3")
         tmp1 = f"{elementname[x].text}\n"
         tmp2 = f"{elementprice[x].text}\n"
         tmp3 = f"{elementlink[x].get_attribute('href')}\n\n"
@@ -43,7 +41,7 @@ for z in range(len(webPage)):
         testjson = {
         "nimi": tmp1,
         "hinta": tmp2,
-        "linkki": tmp3
+        "linkki": tmp3,
          }
         
         with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset. pitää vielä formatoida paremmin json/xml/csv muotoon.
