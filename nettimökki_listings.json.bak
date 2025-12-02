@@ -1,104 +1,166 @@
 [
   {
-    "title": "MÖKKI 3 Ulkoporeamme",
-    "location": "Parkano, Pirkanmaa",
-    "price": "810 €",
-    "url": "https://www.nettimokki.com/kovesjoki/mokki-3-ulkoporeamme/50809/"
+    "url": "https://www.nettimokki.com/tammela/suutari-kallion-mokki/53198/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "930 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "930 €"
+      }
+    },
+    "title": "Suutari Kallion mökki",
+    "location": "Tammela",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53101_53200/53198_1f7b6250ccc825a4_360X270.jpg"
   },
   {
-    "title": "Villa HULLU KETTU",
-    "location": "Ruokolahti, Etelä-Karjala",
-    "price": "1 880 €",
-    "url": "https://www.nettimokki.com/virmutjoki/villa-hullu-kettu/59489/"
+    "url": "https://www.nettimokki.com/liedenpohja/toisveden-alppi/52889/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "4 990 €"
+      },
+      "8": {
+        "week": "2-8",
+        "days": 7,
+        "price": "4 990 €"
+      }
+    },
+    "title": "Toisveden Alppi",
+    "location": "Virrat",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/52801_52900/52889_b6924c6fecffdfaf_360X270.jpg"
   },
   {
-    "title": "Rukaspirit Kiuta",
-    "location": "Kuusamo, Pohjois-Pohjanmaa",
-    "price": "1 050 €",
-    "url": "https://www.nettimokki.com/rukatunturi/rukaspirit-kiuta/51983/"
+    "url": "https://www.nettimokki.com/ranua/villa-liipi/53555/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 400 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 400 €"
+      }
+    },
+    "title": "Villa Liipi",
+    "location": "Ranua",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53501_53600/53555_1a0eef2f2f62e95a_360X270.jpg"
   },
   {
+    "url": "https://www.nettimokki.com/rukatunturi/villa-karu-uusi-rantahuvila-rukalla/57338/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 650 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 240 €"
+      }
+    },
     "title": "Villa Karu - Uusi Rantahuvila Rukalla",
-    "location": "Kuusamo, Pohjois-Pohjanmaa",
-    "price": "1 150 €",
-    "url": "https://www.nettimokki.com/rukatunturi/villa-karu-uusi-rantahuvila-rukalla/57338/"
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57301_57400/57338_047f2e071a4223b0_360X270.jpg"
   },
   {
-    "title": "Kallioniemi",
-    "location": "Kannonkoski, Keski-Suomi",
-    "price": "800 €",
-    "url": "https://www.nettimokki.com/kannonkoski/kallioniemi/52569/"
+    "url": "https://www.nettimokki.com/rukatunturi/rukaspirit-kiuta/51983/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      },
+      "8": null
+    },
+    "title": "Rukaspirit Kiuta",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51901_52000/51983_a73904fc7ec71a10_360X270.jpg"
   },
   {
+    "url": "https://www.nettimokki.com/savonkyla/cicero-cottage-lappajarvi/57389/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 414 €"
+      },
+      "8": {
+        "week": "21-27",
+        "days": 7,
+        "price": "1 414 €"
+      }
+    },
     "title": "Cicero Cottage Lappajärvi",
-    "location": "Lappajärvi, Etelä-Pohjanmaa",
-    "price": "1 096 €",
-    "url": "https://www.nettimokki.com/savonkyla/cicero-cottage-lappajarvi/57389/"
+    "location": "Lappajärvi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57301_57400/57389_34819af02f431dae_360X270.jpg"
   },
   {
+    "url": "https://www.nettimokki.com/yli-ullava/huhtisaari/53036/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "960 €"
+      },
+      "8": {
+        "week": "2-8",
+        "days": 7,
+        "price": "960 €"
+      }
+    },
     "title": "Huhtisaari",
-    "location": "Kokkola, Keski-Pohjanmaa",
-    "price": "765 €",
-    "url": "https://www.nettimokki.com/yli-ullava/huhtisaari/53036/"
+    "location": "Kokkola",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53001_53100/53036_d271c426c970b85b_360X270.jpg"
   },
   {
+    "url": "https://www.nettimokki.com/iittala/upea-aurinkorinne-lempiharjun-laella/58030/",
+    "prices_per_month": {
+      "6": null,
+      "8": null
+    },
     "title": "Upea Aurinkorinne Lempiharjun laella",
-    "location": "Hämeenlinna, Kanta-Häme",
-    "price": "1 240 €",
-    "url": "https://www.nettimokki.com/iittala/upea-aurinkorinne-lempiharjun-laella/58030/"
+    "location": "Hämeenlinna",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/58001_58100/58030_df7e4e7ac2e4e7b8_360X270.jpg"
   },
   {
+    "url": "https://www.nettimokki.com/liedenpohja/toisveden-alppi/52889/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "4 990 €"
+      },
+      "8": {
+        "week": "2-8",
+        "days": 7,
+        "price": "4 990 €"
+      }
+    },
+    "title": "Toisveden Alppi",
+    "location": "Virrat",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/52801_52900/52889_b6924c6fecffdfaf_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/rukatunturi/rukaspirit-kouta/51984/",
+    "prices_per_month": {
+      "6": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      },
+      "8": null
+    },
     "title": "Rukaspirit Kouta",
-    "location": "Kuusamo, Pohjois-Pohjanmaa",
-    "price": "1 050 €",
-    "url": "https://www.nettimokki.com/rukatunturi/rukaspirit-kouta/51984/"
-  },
-  {
-    "title": "Puntari",
-    "location": "Ylöjärvi, Pirkanmaa",
-    "price": "1 440 €",
-    "url": "https://www.nettimokki.com/parkkuu/puntari/51193/"
-  },
-  {
-    "title": "Tuohitupa",
-    "location": "Hattula, Kanta-Häme",
-    "price": "600 €",
-    "url": "https://www.nettimokki.com/hattula/tuohitupa/51254/"
-  },
-  {
-    "title": "Ilvesjärvi",
-    "location": "Virrat, Pirkanmaa",
-    "price": "760 €",
-    "url": "https://www.nettimokki.com/kotala/ilvesjarvi/51395/"
-  },
-  {
-    "title": "Aurinkovilla",
-    "location": "Luhanka, Keski-Suomi",
-    "price": "890 €",
-    "url": "https://www.nettimokki.com/luhanka/aurinkovilla/52602/"
-  },
-  {
-    "title": "Hobittila",
-    "location": "Lapinjärvi, Uusimaa",
-    "price": "970 €",
-    "url": "https://www.nettimokki.com/porlammi/hobittila/56993/"
-  },
-  {
-    "title": "Iltarusko",
-    "location": "Sodankylä, Lappi",
-    "price": "600 €",
-    "url": "https://www.nettimokki.com/sodankyla/iltarusko/58572/"
-  },
-  {
-    "title": "Lehminiemi rantamökki",
-    "location": "Kittilä, Lappi",
-    "price": "440 €",
-    "url": "https://www.nettimokki.com/rautusjarvi/lehminiemi-rantamokki/53722/"
-  },
-  {
-    "title": "Hopeapurnu",
-    "location": "Kuusamo, Pohjois-Pohjanmaa",
-    "price": "1 050 €",
-    "url": "https://www.nettimokki.com/rukatunturi/hopeapurnu/57135/"
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51901_52000/51984_a7ea9cfc333a3cc5_360X270.jpg"
   }
 ]

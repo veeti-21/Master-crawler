@@ -6,3 +6,6 @@
 .vs/ProjectSettings.json
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
+sivu.html
+__pycache__/
+test.py

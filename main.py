@@ -10,18 +10,20 @@ import random
 import json
 import os
 import shutil
-from datetime import datetime
 import PARAMS
 
 
 
 # --- CONFIG ---
-OPERA_BINARY = r"C:\Users\jani\Downloads\chrome-win64\chrome-win64\chrome.exe"
-CHROMEDRIVER_PATH = r"C:\Users\jani\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+OPERA_BINARY = r"C:\Users\veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\Users\veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 OUTPUT_FILE = "nettimökki_listings.json"
 OUTPUT_FILE_BACKUP = "nettimökki_listings.json.bak"
 
 RESET_JSON_EACH_RUN = True
+
+# Add a limit for how many listings to scrape after collecting links
+MAX_LISTINGS_TO_SCRAPE = 10
 # --- SETUP SELENIUM ---
 options = Options()
 options.binary_location = OPERA_BINARY
@@ -33,6 +35,9 @@ options.add_argument("--window-size=1920,1080")
 service = Service(CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
 wait = WebDriverWait(driver, 15)  # general wait object
+
+# Fast cookie handling flag (avoid re-checking after first successful attempt)
+COOKIE_HANDLED = False
 
 # --- BASE URL ---
 BASE_URL = "https://www.nettimokki.com/vuokramokit/"
@@ -47,17 +52,20 @@ def human_pause(a=5.6, b=6.6):
     time.sleep(random.uniform(a, b))
 
 def accept_cookies():
-    """
-    Quickly dismiss either the standard Nettimökki cookie button or the Alma CMP iframe.
-    Loops for a short window so we don't block the crawl waiting for the popup to self-dismiss.
-    """
+    global COOKIE_HANDLED
+    if COOKIE_HANDLED:
+        return
+
     deadline = time.time() + 12  # give the popup a few seconds to appear
     while time.time() < deadline:
         if _dismiss_alma_cmp_iframe():
+            COOKIE_HANDLED = True
             return
         human_pause(0.2, 0.4)
 
-    print("⚠️ Cookie popups not detected within window, continuing without interaction.")
+    # If nothing detected within window, mark as handled to avoid repeated checks
+    COOKIE_HANDLED = True
+    print("Cookie popups not detected within window, continuing without interaction.")
     _cleanup_cookie_overlays()
 
 def _dismiss_alma_cmp_iframe():
@@ -72,12 +80,12 @@ def _dismiss_alma_cmp_iframe():
         driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", cmp_accept)
         human_pause(0.05, 0.2)
         cmp_accept.click()
-        print("✅ Dismissed Alma CMP iframe modal.")
+        print("Dismissed Alma CMP iframe modal.")
         return True
     except NoSuchElementException:
         return False
     except Exception as e:
-        print(f"⚠️ Error clicking Alma CMP iframe button: {e}")
+        print(f"Error clicking Alma CMP iframe button: {e}")
         return False
     finally:
         try:
@@ -100,209 +108,281 @@ def _cleanup_cookie_overlays():
 
 
 
-def scroll_page_slowly():
-    """Scroll down gradually like a human to load lazy content."""
-    print("Scrolling page like a human...")
-    # initial small scrolls to trigger renders
-    viewport_height = driver.execute_script("return window.innerHeight")
-    scroll_position = 0
-    last_height = driver.execute_script("return document.body.scrollHeight")
-    attempts = 0
 
-    while scroll_position < last_height and attempts < 50:
-        step = random.randint(int(viewport_height * 0.25), int(viewport_height * 0.9))
-        scroll_position += step
-        driver.execute_script(f"window.scrollTo(0, {scroll_position});")
-        human_pause(0.6, 1.4)
-        # small jitter scrolls
-        if random.random() < 0.4:
-            driver.execute_script(f"window.scrollBy(0, {random.randint(-40, 40)});")
-            human_pause(0.1, 0.4)
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height > last_height:
-            last_height = new_height
-        attempts += 1
-
-    # final scroll to bottom to make sure lazy loads start
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    human_pause(1.0, 2.0)
-    print("Finished human-like scrolling.")
-    # After scrolling, allow some time for dynamic content (like prices) to render
-    human_pause(1.2, 2.5)
 
 # --- SCRAPE LIST PAGE ---
-def scrape_listing_page(url):
-    print(f"\nFetching: {url}")
+def get_listing_urls(url):
+    """
+    Goes to a search result page and quickly scrapes all the listing URLs and main image URLs.
+    Returns list of dicts: { "url": "...", "image": "..." }
+    """
+    print(f"\nFetching listing URLs from: {url}")
     driver.get(url)
-
-    # Wait a tiny bit for page core resources (CSS/JS) to start loading
     human_pause(0.6, 1.2)
+    accept_cookies()  # first call will handle, later calls return immediately
 
-    # Try to accept cookies if a modal shows up
-    accept_cookies()
-
-    # Now scroll like a human to trigger lazy loading
-    scroll_page_slowly()
-
-    listings = []
-
-    # Re-locate cards after the page has settled
     try:
-        cards = driver.find_elements(By.CSS_SELECTOR, "li.card-list-box")
-    except Exception as e:
-        print(f"Could not find listing cards: {e}")
-        cards = []
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "li.card-list-box a.content-wrapper")))
+    except TimeoutException:
+        print("Could not find listing cards on the page.")
+        return []
 
-    print(f"Found {len(cards)} listings")
+    link_elements = driver.find_elements(By.CSS_SELECTOR, "li.card-list-box a.content-wrapper")
+    results = []
+    for el in link_elements:
+        href = el.get_attribute("href")
+        if not href or "tietopankki" in href.lower():
+            continue
 
-    for idx, card in enumerate(cards, start=1):
+        # try to find an img within the card and get its src
+        img_src = None
         try:
-            # Use inner find to reduce chance of stale references: find elements fresh for each card
-            title_tag = card.find_element(By.CSS_SELECTOR, "div.card-list-title")
-            full_html = title_tag.get_attribute("outerHTML")
-            print(f"\n[{idx}] --- FULL div.card-list-title HTML ---")
-            print(full_html)
-            print("--------------------------------------")
-            title = title_tag.text.strip() if title_tag else ""
+            img_el = el.find_element(By.CSS_SELECTOR, "img")
+            img_src = img_el.get_attribute("src")
+        except Exception:
+            img_src = None
 
-            # location (may not exist for some cards)
+        results.append({"url": href, "image": img_src})
+
+    print(f"Found {len(results)} listing items (filtered).")
+    return results
+
+# --- LOGIC PORTED FROM TEST.PY ---
+
+MONTHS_FI = {
+    "tammikuu": 1, "helmikuu": 2, "maaliskuu": 3, "huhtikuu": 4,
+    "toukokuu": 5, "kesäkuu": 6, "heinäkuu": 7, "elokuu": 8,
+    "syyskuu": 9, "lokakuu": 10, "marraskuu": 11, "joulukuu": 12
+}
+
+def find_first_available_range(calendar_id, preferred_lengths=(7, 8)):
+    """
+    Scans the given datepicker (one month) and finds the first available
+    consecutive date span. Accepts 7 or 8 days.
+    Works even when the month is split into two <table> elements.
+    """
+
+    try:
+        # Get all <td> that contain an <a> (bookable and clickable)
+        day_cells = driver.find_elements(
+            By.XPATH,
+            f"//div[@id='{calendar_id}']//td[a and contains(@class, 'bookable-day')]"
+        )
+
+        days = []
+        for cell in day_cells:
             try:
-                location_tag = card.find_element(By.CSS_SELECTOR, "div.card-list-location")
-                location = location_tag.text.strip()
-            except NoSuchElementException:
-                location = ""
+                # Inner <a> contains the visible day number
+                day_num = int(cell.find_element(By.TAG_NAME, "a").text.strip())
+                days.append(day_num)
+            except:
+                continue
 
-            # price (may be loaded asynchronously)
-            try:
-                price_tag = card.find_element(By.CSS_SELECTOR, "div.card-list-calculated-price")
-                # sometimes the price is rendered inside child nodes; get text after small pause
-                human_pause(0.05, 0.2)
-                price = price_tag.text.strip()
-            except NoSuchElementException:
-                price = ""
+        print(f"[DEBUG] Days found in order: {days}")
 
-            # link
-            try:
-                link = card.find_element(By.CSS_SELECTOR, "a.content-wrapper").get_attribute("href")
-            except NoSuchElementException:
-                link = ""
+        # Try each desired length (7 first, then 8)
+        for length in preferred_lengths:
+            for i in range(len(days)):
+                start_day = days[i]
+                needed = list(range(start_day, start_day + length))
 
-            listings.append({
-                "title": title,
-                "location": location,
-                "price": price,
-                "url": link
-            })
-        except StaleElementReferenceException:
-            print(f"Stale element for card #{idx}, skipping.")
-        except Exception as e:
-            print(f"Error parsing card #{idx}: {e}")
+                # Check if all needed days appear in "days" and in correct order
+                if all(d in days for d in needed):
+                    # Also confirm the order matches
+                    indices = [days.index(d) for d in needed]
+                    if indices == list(range(indices[0], indices[0] + length)):
+                        end_day = start_day + length - 1
+                        print(f"[DEBUG] Found consecutive {length}-day period: {start_day}-{end_day}")
+                        return start_day, end_day, length
 
-    return listings
+        print("[DEBUG] No valid 7- or 8-day span found")
+        return None
 
-# --- SCRAPE DETAIL PAGE ---
-def scrape_detail_page(url):
-    print(f"Fetching details for: {url}")
+    except Exception as e:
+        print(f"[DEBUG] Error scanning range: {e}")
+        return None
+
+
+def find_week_in_month_and_get_price(target_year, target_month_num):
+    """
+    Navigate to the target month, find a 7- or 8-day available range
+    using the FROM calendar, then select the matching TO end date
+    and capture the price.
+
+    Returns:
+        { "week": "start-end", "days": 7/8, "price": "xxx" }
+        or None if no valid span exists.
+    """
+
+    try:
+        # Wait until datepicker is loaded
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".ui-datepicker-month")))
+        human_pause(0.5, 1.0)
+
+        # --- Navigate to the correct month ---
+        for _ in range(24):  # safety limit
+            year_str = driver.find_element(By.CSS_SELECTOR, ".ui-datepicker-year").text.strip()
+            month_str = driver.find_element(By.CSS_SELECTOR, ".ui-datepicker-month").text.strip()
+
+            current_year = int(year_str)
+            current_month_num = MONTHS_FI.get(month_str.lower(), -1)
+
+            if current_year == target_year and current_month_num == target_month_num:
+                break
+
+            # If we overshoot → nothing to select
+            if current_year > target_year or (current_year == target_year and current_month_num > target_month_num):
+                return None
+
+            driver.find_element(By.CSS_SELECTOR, "a.ui-datepicker-next").click()
+            time.sleep(0.4)
+        else:
+            # loop exhausted
+            return None
+
+        human_pause(0.3, 0.6)
+
+        # --- FIND FIRST FREE RANGE (7 or 8 days) ---
+        found = find_first_available_range("ad_detail_from_datepicker")
+        if not found:
+            print("  -> No 7/8-day span found in FROM calendar")
+            return None
+
+        start_day, end_day, days_needed = found
+        print(f"  -> Found free {days_needed}-day span: {start_day}-{end_day}")
+
+        # --- SELECT START DAY ---
+        from_xpath = f"//div[@id='ad_detail_from_datepicker']//td[a[text()='{start_day}']]"
+        from_btn = wait.until(EC.element_to_be_clickable((By.XPATH, from_xpath)))
+        from_btn.click()
+        human_pause(0.5, 0.9)
+
+        # --- WAIT FOR TO CALENDAR ---
+        wait.until(EC.visibility_of_element_located((By.ID, "ad_detail_to_datepicker")))
+        human_pause(0.3, 0.6)
+
+        # --- FIND END DAY IN TO CALENDAR ---
+        to_found = find_first_available_range("ad_detail_to_datepicker", preferred_lengths=(days_needed,))
+        if not to_found:
+            print(f"  -> End date not available in TO calendar (need {days_needed} days)")
+            return None
+
+        _, to_end_day, _ = to_found
+
+        # --- SELECT END DAY ---
+        to_xpath = f"//div[@id='ad_detail_to_datepicker']//td[a[text()='{to_end_day}']]"
+        to_click = wait.until(EC.element_to_be_clickable((By.XPATH, to_xpath)))
+        to_click.click()
+        human_pause(0.7, 1.3)
+
+        # --- GET PRICE ---
+        price_element = wait.until(EC.presence_of_element_located((By.ID, "base_price")))
+        if (price_element is None):
+            to_xpath = f"//div[@id='ad_detail_to_datepicker']//td[a[text()='{to_end_day+1}']]"
+            to_click = wait.until(EC.element_to_be_clickable((By.XPATH, to_xpath)))
+            to_click.click()
+            human_pause(0.7, 1.3)
+            
+            price_element = wait.until(EC.presence_of_element_located((By.ID, "base_price")))
+        time.sleep(1.0)  # wait for JS computation
+
+        price = price_element.text.strip()
+        if not price or "lasketaan" in price.lower():
+            print("  -> Price invalid or still loading")
+            return None
+
+        print(f"  -> Price OK: {price}")
+
+        return {
+            "week": f"{start_day}-{end_day}",
+            "days": days_needed,
+            "price": price
+        }
+
+    except Exception as e:
+        print(f"  -> ERROR in find_week_in_month_and_get_price: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+
+
+def scrape_details_and_prices(url, months_to_check, year_to_check):
+    """
+    Scrapes all details for a single listing, including finding available weeks
+    and prices for the specified months.
+    """
+    print(f"\nScraping details for: {url}")
+    base_data = {"url": url, "prices_per_month": {}}
+    
     try:
         driver.get(url)
-        human_pause(0.8, 1.6)
-        # ensure main header and price are present
-        try:
-            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1")))
-        except TimeoutException:
-            print("h1 not found on detail page within timeout.")
+        accept_cookies()
+        human_pause(0.8, 1.2)
 
-        title = ""
-        location = ""
-        price = ""
-        try:
-            title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
-        except Exception:
-            title = ""
-
-        try:
-            location_el = driver.find_elements(By.CSS_SELECTOR, ".breadcrumb li:last-child")
-            location = location_el[0].text.strip() if location_el else ""
-        except Exception:
-            location = ""
-
-        try:
-            price_el = driver.find_elements(By.CSS_SELECTOR, ".price-tag, .ad-price-value")
-            price = price_el[0].text.strip() if price_el else ""
-        except Exception:
-            price = ""
-
-        return {"title": title, "location": location, "price": price, "url": url}
-
+        # --- Scrape static data (title, location) ---
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1")))
+        base_data["title"] = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+        location_el = driver.find_elements(By.CSS_SELECTOR, ".breadcrumb li:last-child")
+        base_data["location"] = location_el[0].text.strip() if location_el else ""
     except Exception as e:
-        print(f"Could not fetch details for {url}: {e}")
-        return {"title": "", "location": "", "price": "", "url": url}
+        print(f"  -> Could not scrape base details for {url}: {e}")
+        return base_data # Return what we have
+
+    # --- Find prices for each requested month ---
+    for month_num in months_to_check:
+        print(f"--- Searching for available week in month: {month_num}/{year_to_check} ---")
+        price_result = find_week_in_month_and_get_price(year_to_check, month_num)
+        base_data["prices_per_month"][month_num] = price_result
+        
+        # Reload page to reset the calendar state for the next search
+        print("  -> Reloading page to reset calendar...")
+        driver.get(url)
+        human_pause(0.5, 1.0)
+    
+    return base_data
 
 # --- MAIN EXECUTION ---
 
-
+# 1. Set parameters and get listing URLs
 PARAMS.params_clean()
 PARAMS.params_set_bedrooms_range(2,4)
 PARAMS.params_set_water(True,False,False,True)
 PARAMS.params_set_beach(True)
 PARAMS.params_set_sauna(False,False,True)
-PARAMS.params_set_features(False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,)
 
-print(PARAM)
+print("Getting listing URLs from the first page...")
+page_url = PARAMS.get_url(PARAMS.params_clean(PARAM), BASE_URL)
+listing_urls = get_listing_urls(page_url)
 
+# Limit the number of listings to scrape (e.g., first 10)
+if listing_urls:
+    original_count = len(listing_urls)
+    listing_urls = listing_urls[:MAX_LISTINGS_TO_SCRAPE]
+    print(f"Collected {original_count} links, limiting to first {len(listing_urls)} for scraping.")
+# 2. Scrape details for each listing
+complete_data = []
+months_to_check = [6, 8]  # June and August
+year_to_check = 2026
 
-print("Starting fresh crawl for listing links...")
-new_listings = []
-for page in range(1, 2):  # scrape first page(s)
-    page_url = PARAMS.get_url(PARAMS.params_clean(PARAM), BASE_URL)              # Nyt hakee parametreillä oikean urlin
-    new_listings.extend(scrape_listing_page(page_url))
-print(f"Collected {len(new_listings)} listings from pages.")
-# --- LOAD EXISTING JSON (if exists) ---
-existing_data = {}
-if RESET_JSON_EACH_RUN:
-        backup_path = OUTPUT_FILE_BACKUP
-        shutil.copy2(OUTPUT_FILE, OUTPUT_FILE_BACKUP)
-        print(f"📦 Backed up previous JSON to {OUTPUT_FILE_BACKUP}")
-else:
-        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-            try:
-                data = json.load(f)
-                for row in data:
-                    existing_data[row["url"]] = row  # use URL as key
-            except json.JSONDecodeError:
-                print("JSON file empty or invalid, starting fresh.")
+for i, item in enumerate(listing_urls):
+    print(f"\n--- Processing listing {i+1}/{len(listing_urls)} ---")
+    if not item or not item.get("url"):
+        continue
+    
+    url = item.get("url")
+    listing_data = scrape_details_and_prices(url, months_to_check, year_to_check)
 
+    # attach image URL discovered on listing card
+    listing_data["image"] = item.get("image")
+    complete_data.append(listing_data)
 
+# 3. Save results to JSON
+if RESET_JSON_EACH_RUN and os.path.exists(OUTPUT_FILE):
+    shutil.copy2(OUTPUT_FILE, OUTPUT_FILE_BACKUP)
+    print(f"\nBacked up previous JSON to {OUTPUT_FILE_BACKUP}")
 
-# --- MERGE NEW LINKS ---
-for item in new_listings:
-    if item["url"] not in existing_data:
-        existing_data[item["url"]] = item
-
-# --- FILL IN MISSING INFO ---
-updated_data = []
-for url, row in existing_data.items():
-    # if any core fields are missing, fetch detail page
-    if not row.get("title") or not row.get("price") or not row.get("location"):
-        print(f"Missing info for {url}, fetching details...")
-        detail = scrape_detail_page(url)
-        updated_data.append(detail)
-    else:
-        updated_data.append(row)
-
-# --- DROP INCOMPLETE RECORDS BEFORE SAVING ---
-complete_data = [
-    r for r in updated_data
-    if r.get("title") and r.get("location") and r.get("price")
-]
-removed_count = len(updated_data) - len(complete_data)
-if removed_count:
-    print(f"Removed {removed_count} listings without full info.")
-
-# --- SAVE FINAL JSON ---
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     json.dump(complete_data, f, ensure_ascii=False, indent=2)
-
 
 print(f"\nDone! Saved {len(complete_data)} complete records to {OUTPUT_FILE}")
 driver.quit()
