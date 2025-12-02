@@ -477,6 +477,73 @@ def params_set_none():
 
     "attr__wheel_chair_accessible"   : "null",})
 
+def params_set_all():
+
+    PARAMS.update({
+    "item_availability__date_from"   : "1",       # change via params_set_date(a,b)
+    "item_availability__date_to"     : "1",       # change via params_set_date(a,b)
+    "page"                           : "1",             # change via params_set_page(a)
+    "item__is_payment_ad"            : "1",             # change via params_set_nettimaksu(True)
+    "item__avg_overall_rating_4"     : "1",             # change via params_set_require_4_stars(True)
+
+    "attr__number_of_bedrooms[0]"    : "1",             #
+    "attr__number_of_bedrooms[1]"    : "1",             # change via params_set_bedrooms(a)
+    "attr__number_of_bedrooms[2]"    : "1",             # or change via params_set_bedrooms_range(a,b)
+    "attr__number_of_bedrooms[3]"    : "1",             #
+
+    "attr__type_of_waters[0]"        : "1",             # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
+    "attr__type_of_waters[1]"        : "1",             #
+    "attr__type_of_waters[2]"        : "1",             # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
+    "attr__type_of_waters[3]"        : "1",             #
+
+    "attr__type_of_beach[0]"         : "1",             # 4503 = Järvi, 4504 = Meri, 4505 = Joki, 4507 = Lampi (???)
+    "attr__type_of_beach[1]"         : "1",             #
+    "attr__type_of_beach[2]"         : "1",             # change via params_set_water(Järvi = False, Meri = False, Joki = False, Lampi = False)
+    "attr__type_of_beach[3]"         : "1",             #
+
+    "attr__electric_sauna"           : "1",             #
+    "attr__smoke_sauna"              : "1",             # change via params_set_sauna(electric_sauna = False, smoke_sauna = False, wood_sauna = False)
+    "attr__wood_sauna"               : "1",             #
+
+    "attr__dishwater"                : "1",
+    "attr__refridgerator"            : "1",
+    "attr__cooking_possibility"      : "1",
+    "attr__microwave_oven"           : "1",
+    "attr__freezer"                  : "1",
+    "attr__stove"                    : "1",             # change via params_set_kitchen_equipment(astianpesukone = False, jääkaappi = False, keittomahdollisuus = False, mikroaaltouuni = False, pakastin = False, liesi = False, uuni = False, kahvinkeitin = False, grillikota = False, ):
+    "attr__owen"                     : "1",
+    "attr__coffee_maker"             : "1",
+    "attr__barbecue_hut"             : "1",
+
+    "attr__ski_center_nearby"        : "1",             # change via def params_set_features(hiihtokeskus_lähellä=False, internetyhteys=False, kuivauskaappi=False, kuivausrumpu=False, laituri=False, parvi=False, palju=False, poreamme=False, pyykinpesukone=False, syöttötuoli=False, suihku=False, sähköauton_lataus=False, takka=False, tv=False, uima_allas=False, ulkoporeallas=False, vauvasänky=False, mökkissä_ei_sähköjä=False, sähkö_aurinkopaneeleista=False, kantovesi=False, viilentävä_ilmalämpöpumppu=False, sisä_wc=False, ulko_wc=False, vene=False, kanootti=False, lemmikit_sallittu=False)
+    "attr__internet"                 : "1",
+    "attr__drying_cabinet"           : "1",
+    "attr__tumble_dryer"             : "1",
+    "attr__pier"                     : "1",
+    "attr__loft"                     : "1",
+    "attr__outdoor_hot_tub_barrel_style" : "1",
+    "attr__hot_tub"                  : "1",
+    "attr__washing_machine"          : "1",
+    "attr__feeding_chair"            : "1",
+    "attr__shower"                   : "1",
+    "attr__electric_vehicle_charging": "1",
+    "attr__fireplace_decoration"     : "1",
+    "attr__television"               : "1",
+    "attr__swimming_pool"            : "1",
+    "attr__outdoor_hot_tub"          : "1",
+    "attr__baby_crib"                : "1",
+    "attr__no_electricity"           : "1",
+    "attr__solar_panel_electricity"  : "1",
+    "attr__water_carried"            : "1",
+    "attr__ac_unit"                  : "1",
+    "attr__indoor_toilet"            : "1",
+    "attr__outoor_toilet"            : "1",
+    "attr__boat"                     : "1",
+    "attr__paddling"                 : "1",
+    "attr__pets_allowed"             : "1",
+
+    "attr__wheel_chair_accessible"   : "1",})
+
 # ---------------------------------------------------------
 
 
@@ -517,7 +584,6 @@ def get_url(params = PARAMS, base_url = BASE_URL):
 
 
 if __name__ == "__main__":
-    params_set_require_4_stars(True)
 
     params_clean()
     fetch_page(PARAMS)
