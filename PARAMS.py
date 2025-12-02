@@ -10,7 +10,6 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; VeetiBot/1.0; +https://example.com)"
 }
 
-
 BASE_URL = "https://www.nettimokki.com/vuokramokit/mokit-jarven-rannalla/"
 
 PARAMS = {
@@ -49,7 +48,7 @@ PARAMS = {
     "attr__coffee_maker"             : "null",
     "attr__barbecue_hut"             : "null",
 
-    "attr__ski_center_nearby"        : "null", # change via def params_set_features(hiihtokeskus_lähellä=False, internetyhteys=False, kuivauskaappi=False, kuivausrumpu=False, laituri=False, parvi=False, palju=False, poreamme=False, pyykinpesukone=False, syöttötuoli=False, suihku=False, sähköauton_lataus=False, takka=False, tv=False, uima_allas=False, ulkoporeallas=False, vauvasänky=False, mökkissä_ei_sähköjä=False, sähkö_aurinkopaneeleista=False, kantovesi=False, viilentävä_ilmalämpöpumppu=False, sisä_wc=False, ulko_wc=False, vene=False, kanootti=False, lemmikit_sallittu=False)
+    "attr__ski_center_nearby"        : "null",             # change via def params_set_features(hiihtokeskus_lähellä=False, internetyhteys=False, kuivauskaappi=False, kuivausrumpu=False, laituri=False, parvi=False, palju=False, poreamme=False, pyykinpesukone=False, syöttötuoli=False, suihku=False, sähköauton_lataus=False, takka=False, tv=False, uima_allas=False, ulkoporeallas=False, vauvasänky=False, mökkissä_ei_sähköjä=False, sähkö_aurinkopaneeleista=False, kantovesi=False, viilentävä_ilmalämpöpumppu=False, sisä_wc=False, ulko_wc=False, vene=False, kanootti=False, lemmikit_sallittu=False)
     "attr__internet"                 : "null",
     "attr__drying_cabinet"           : "null",
     "attr__tumble_dryer"             : "null",
