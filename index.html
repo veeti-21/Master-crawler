@@ -3,67 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Crawler – Koontisivu</title>
+
   <style>
-    /* Eduko color palette with enhancements */
+    /* Minimalistic color palette */
     :root {
       --primary: #0055a5;
-      --primary-dark: #003d7a;
+      --primary-light: #e8f2ff;
       --secondary: #00a1e0;
-      --secondary-light: #5bc9ff;
-      --bg: #f0f4f8;
+      --bg: #f8fafc;
       --white: #ffffff;
-      --gray: #555;
-      --light-gray: #e0e0e0;
-      --border-radius: 12px;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
-      --transition: all 0.3s ease;
+      --gray: #4a5568;
+      --light-gray: #e2e8f0;
+      --border-radius: 8px;
+      --shadow: 0 2px 4px rgba(0,0,0,0.05);
+      --transition: all 0.2s ease;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--gray);
-      line-height: 1.6;
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     header {
       text-align: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(rgba(0, 85, 165, 0.9), rgba(0, 85, 165, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230055a5"/><path d="M0 0L100 100M100 0L0 100" stroke="%23003d7a" stroke-width="1"/></svg>');
-      color: var(--white);
       margin-bottom: 2rem;
+      padding: 2rem 0;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 1rem auto 0;
-      opacity: 0.9;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto 3rem;
-      padding: 0 1.5rem;
+      color: var(--gray);
+      font-size: 1rem;
     }
 
     .dashboard-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+      gap: 2rem;
       margin-bottom: 2rem;
     }
 
@@ -78,436 +74,905 @@
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
       padding: 1.5rem;
-      transition: var(--transition);
+      border: 1px solid var(--light-gray);
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .card h2 {
+      font-size: 1.25rem;
+      color: var(--primary);
       margin-bottom: 1.5rem;
+      font-weight: 600;
       padding-bottom: 0.75rem;
       border-bottom: 1px solid var(--light-gray);
     }
 
-    .card-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin: 0;
+    /* Weather Section Styles */
+    .weather-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: end;
     }
 
-    .weather {
+    .weather-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .weather-group label {
+      font-size: 0.875rem;
+      color: var(--gray);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    select {
+      padding: 0.75rem;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      background: var(--white);
+      color: var(--gray);
+      transition: var(--transition);
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 161, 224, 0.1);
+    }
+
+    .weather-btn {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .weather-btn:hover {
+      background: #004494;
+    }
+
+    .weather-display {
       background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
       color: var(--white);
       border-radius: var(--border-radius);
       padding: 1.5rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      box-shadow: var(--shadow);
-    }
-
-    .weather h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
-    }
-
-    .weather-info {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
       margin-top: 1rem;
+      text-align: center;
+    }
+
+    .weather-card {
+      text-align: center;
     }
 
     .weather-icon {
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .temperature {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .weather-location {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1rem;
     }
 
     .weather-details {
-      text-align: left;
-    }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      background: var(--white);
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-    }
-
-    .filter-group {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      min-width: 150px;
-    }
-
-    .filter-group label {
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: var(--primary);
-    }
-
-    .filter-group input, .filter-group select {
-      padding: 0.75rem;
-      border: 1px solid var(--light-gray);
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: var(--transition);
-    }
-
-    .filter-group input:focus, .filter-group select:focus {
-      outline: none;
-      border-color: var(--secondary);
-      box-shadow: 0 0 0 2px rgba(0, 161, 224, 0.2);
-    }
-
-    button {
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      border-radius: 6px;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition);
-      align-self: flex-end;
-      height: fit-content;
-    }
-
-    button:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-
-    thead {
-      background: linear-gradient(to right, var(--primary), var(--primary-dark));
-      color: var(--white);
-    }
-
-    th, td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    th {
-      font-weight: 600;
-    }
-
-    tbody tr {
-      transition: var(--transition);
-    }
-
-    tbody tr:hover {
-      background-color: rgba(0, 161, 224, 0.05);
-    }
-
-    .news h2 {
-      color: var(--primary);
-      margin-top: 0;
-    }
-
-    .news-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .news-item {
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--light-gray);
-      transition: var(--transition);
-    }
-
-    .news-item:hover {
-      background-color: rgba(0, 161, 224, 0.05);
-      padding-left: 0.5rem;
-    }
-
-    .news-item:last-child {
-      border-bottom: none;
-    }
-
-    .news-item a {
-      color: var(--gray);
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
-      display: block;
-    }
-
-    .news-item a:hover {
-      color: var(--secondary);
-    }
-
-    .news-date {
-      font-size: 0.85rem;
-      color: var(--secondary);
-      margin-top: 0.25rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.9);
+      margin-top: 0.5rem;
     }
 
     .loading {
       display: inline-block;
       width: 20px;
       height: 20px;
-      border: 3px solid rgba(255,255,255,.3);
+      border: 2px solid rgba(255,255,255,.3);
       border-radius: 50%;
       border-top-color: var(--white);
       animation: spin 1s ease-in-out infinite;
-      margin-right: 0.5rem;
     }
 
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
 
-    footer {
+    /* JSON Viewer Styles */
+    .drop-zone {
+      border: 2px dashed var(--light-gray);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      background: var(--bg);
+    }
+
+    .drop-zone:hover,
+    .drop-zone.dragover {
+      border-color: var(--secondary);
+      background: var(--primary-light);
+    }
+
+    .drop-zone p {
+      color: var(--gray);
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .drop-zone small {
+      color: var(--gray);
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .json-controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+
+    .json-input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+    }
+
+    .json-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+
+    .json-btn {
+      background: var(--secondary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .json-btn:hover {
+      background: #0090c7;
+    }
+
+    .json-viewer {
+      background: #f8f9fa;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      max-height: 400px;
+      overflow-y: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.75rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .json-key {
+      color: #0055a5;
+      font-weight: bold;
+    }
+
+    .json-string {
+      color: #22863a;
+    }
+
+    .json-number {
+      color: #d73a49;
+    }
+
+    .json-boolean {
+      color: #6f42c1;
+    }
+
+    .json-null {
+      color: #6a737d;
+    }
+
+    .error {
+      background: #fee;
+      border: 1px solid #fcc;
+      color: #c00;
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .success {
+      background: #dfd;
+      border: 1px solid #afa;
+      color: #080;
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .info {
+      background: var(--primary-light);
+      border: 1px solid var(--secondary);
+      color: var(--primary);
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .location-btn {
+      background: #4CAF50;
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .location-btn:hover {
+      background: #45a049;
+    }
+
+    .location-btn:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+    }
+
+    .json-stats {
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background: rgba(0,0,0,0.03);
+      border-radius: 4px;
+    }
+
+    .toggle-btn {
       background: var(--primary);
       color: var(--white);
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      margin-left: 0.5rem;
     }
-    
-    .category-tag {
-      background: var(--secondary-light);
-      color: var(--primary-dark);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: 500;
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      color: var(--gray);
+      font-size: 0.75rem;
+      border-top: 1px solid var(--light-gray);
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <header>
+      <p>Tarkastele säätä ja JSON-tiedostoja</p>
+    </header>
 
-  <header>
-    <h1>Master Crawler-projekti</h1>
-    <p>Kootut tiedot web-crawleristäsi yhdellä näytöllä</p>
-  </header>
+    <main>
+      <div class="dashboard-grid">
+        <!-- Weather Section -->
+        <section class="card">
+          <h2>Sään haku</h2>
+          
+          <div class="weather-controls">
+            <div class="weather-group">
+              <label for="countrySelect">Maa</label>
+              <select id="countrySelect">
+                <option value="">Valitse maa...</option>
+                <option value="finland">Suomi</option>
+                <option value="sweden">Ruotsi</option>
+                <option value="norway">Norja</option>
+                <option value="denmark">Tanska</option>
+                <option value="germany">Saksa</option>
+                <option value="france">Ranska</option>
+                <option value="spain">Espanja</option>
+                <option value="italy">Italia</option>
+                <option value="uk">Iso-Britannia</option>
+                <option value="usa">USA</option>
+                <option value="canada">Kanada</option>
+                <option value="japan">Japani</option>
+                <option value="australia">Australia</option>
+              </select>
+            </div>
+            
+            <div class="weather-group">
+              <label for="citySelect">Kaupunki</label>
+              <select id="citySelect" disabled>
+                <option value="">Valitse ensin maa</option>
+              </select>
+            </div>
+            
+            <button class="weather-btn" onclick="fetchWeather()">Hae sää</button>
+          </div>
+          
+          <div id="weatherResults" class="weather-display">
+            <div class="weather-card">
+              <div class="weather-icon">🌤️</div>
+              <div class="temperature">- °C</div>
+              <div class="weather-location">Valitse maa ja kaupunki</div>
+              <div class="weather-details">
+                <div>Tuuli: -</div>
+                <div>Kosteus: -</div>
+              </div>
+            </div>
+          </div>
 
-  <main>
-    <section id="weatherSection" class="weather">
-      <h2>Sää alueellasi</h2>
-      <div class="weather-info">
-        <div class="weather-icon">☀️</div>
-        <div class="weather-details">
-          <p id="weatherInfo">Ladataan sijaintia...</p>
-          <p id="weatherLocation"></p>
-        </div>
+          <button class="location-btn" onclick="getDeviceLocation()">
+            Näytä nykyisen sijainnin sää
+          </button>
+
+          <div id="currentLocationWeather" style="display: none;">
+            <!-- Device location weather will appear here -->
+          </div>
+        </section>
+
+        <!-- JSON Viewer Section -->
+        <section class="card">
+          <h2>Tarkista JSON-tiedostoja</h2>
+          
+          <div class="drop-zone" id="dropZone">
+            <p>Vedä ja pudota JSON-tiedosto</p>
+            <small>Tai valitse tiedosto</small>
+            <input type="file" id="fileInput" accept=".json" style="display: none;">
+          </div>
+
+        
+
+          <div id="jsonStats" class="json-stats">
+            Ei ladattua JSON-tiedostoa
+          </div>
+
+          <div id="jsonViewer" class="json-viewer">
+            Lataa tiedosto ja tiedot näkyvät tässä
+          </div>
+
+          <div class="json-controls" style="justify-content: space-between; margin-top: 1rem;">
+            <button class="json-btn" onclick="copyJSON()" style="background: #666;">Kopioi</button>
+            <button class="json-btn" onclick="downloadJSON()" style="background: #666;">Lataa</button>
+            <button class="json-btn" onclick="clearJSON()" style="background: #dc3545;">Tyhjennä</button>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <section id="filtersSection" class="filters">
-      <div class="filter-group">
-        <label for="dateFilter">Ajankohta:</label>
-        <input type="date" id="dateFilter">
-      </div>
-      <div class="filter-group">
-        <label for="categoryFilter">Kategoria:</label>
-        <select id="categoryFilter">
-          <option value="">Kaikki</option>
-          <option value="uutiset">Uutiset</option>
-          <option value="teknologia">Teknologia</option>
-          <option value="talous">Talous</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label for="sourceFilter">Lähde:</label>
-        <select id="sourceFilter">
-          <option value="">Kaikki</option>
-          <option value="yle">YLE</option>
-          <option value="hs">Helsingin Sanomat</option>
-          <option value="is">Iltalehti</option>
-        </select>
-      </div>
-      <button onclick="loadData()">Päivitä tiedot</button>
-    </section>
-
-    <div class="dashboard-grid">
-      <section id="dataSection" class="card">
-        <div class="card-header">
-          <h2 class="card-title">Crawler Data</h2>
-          <span id="dataCount">0 kohdetta</span>
-        </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Päivämäärä</th>
-              <th>Otsikko</th>
-              <th>Kategoria</th>
-              <th>Lähde</th>
-            </tr>
-          </thead>
-          <tbody id="dataBody"></tbody>
-        </table>
-      </section>
-
-      <section id="newsSection" class="card">
-        <div class="card-header">
-          <h2 class="card-title">YLE-Uutiset</h2>
-          <button onclick="loadNews()" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Päivitä</button>
-        </div>
-        <ul id="newsList" class="news-list">
-          <li class="news-item">
-            <span class="loading"></span> Ladataan uutisia...
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
+    </main>
 
 
+  </div>
 
   <script>
+    // Country and city database
+    const countryDatabase = {
+      "finland": {
+        name: "Suomi",
+        cities: {
+          "Helsinki": { lat: 60.1699, lon: 24.9384 },
+          "Tampere": { lat: 61.4978, lon: 23.7610 },
+          "Turku": { lat: 60.4518, lon: 22.2666 },
+          "Oulu": { lat: 65.0121, lon: 25.4651 },
+          "Rovaniemi": { lat: 66.5039, lon: 25.7294 }
+        }
+      },
+      "sweden": {
+        name: "Ruotsi",
+        cities: {
+          "Tukholma": { lat: 59.3293, lon: 18.0686 },
+          "Göteborg": { lat: 57.7089, lon: 11.9746 },
+          "Malmö": { lat: 55.6050, lon: 13.0038 }
+        }
+      },
+      "norway": {
+        name: "Norja",
+        cities: {
+          "Oslo": { lat: 59.9139, lon: 10.7522 },
+          "Bergen": { lat: 60.3913, lon: 5.3221 },
+          "Trondheim": { lat: 63.4305, lon: 10.3951 }
+        }
+      },
+      "denmark": {
+        name: "Tanska",
+        cities: {
+          "Kööpenhamina": { lat: 55.6761, lon: 12.5683 },
+          "Aarhus": { lat: 56.1629, lon: 10.2039 }
+        }
+      },
+      "germany": {
+        name: "Saksa",
+        cities: {
+          "Berliini": { lat: 52.5200, lon: 13.4050 },
+          "München": { lat: 48.1351, lon: 11.5820 },
+          "Hampuri": { lat: 53.5511, lon: 9.9937 }
+        }
+      },
+      "france": {
+        name: "Ranska",
+        cities: {
+          "Pariisi": { lat: 48.8566, lon: 2.3522 },
+          "Marseille": { lat: 43.2965, lon: 5.3698 },
+          "Lyon": { lat: 45.7640, lon: 4.8357 }
+        }
+      },
+      "spain": {
+        name: "Espanja",
+        cities: {
+          "Madrid": { lat: 40.4168, lon: -3.7038 },
+          "Barcelona": { lat: 41.3851, lon: 2.1734 },
+          "Sevilla": { lat: 37.3891, lon: -5.9845 }
+        }
+      },
+      "italy": {
+        name: "Italia",
+        cities: {
+          "Rooma": { lat: 41.9028, lon: 12.4964 },
+          "Milano": { lat: 45.4642, lon: 9.1900 },
+          "Venetsia": { lat: 45.4408, lon: 12.3155 }
+        }
+      },
+      "uk": {
+        name: "Iso-Britannia",
+        cities: {
+          "Lontoo": { lat: 51.5074, lon: -0.1278 },
+          "Manchester": { lat: 53.4808, lon: -2.2426 }
+        }
+      },
+      "usa": {
+        name: "USA",
+        cities: {
+          "New York": { lat: 40.7128, lon: -74.0060 },
+          "Los Angeles": { lat: 34.0522, lon: -118.2437 },
+          "Chicago": { lat: 41.8781, lon: -87.6298 }
+        }
+      },
+      "canada": {
+        name: "Kanada",
+        cities: {
+          "Toronto": { lat: 43.6532, lon: -79.3832 },
+          "Vancouver": { lat: 49.2827, lon: -123.1207 }
+        }
+      },
+      "japan": {
+        name: "Japani",
+        cities: {
+          "Tokio": { lat: 35.6762, lon: 139.6503 },
+          "Osaka": { lat: 34.6937, lon: 135.5023 }
+        }
+      },
+      "australia": {
+        name: "Australia",
+        cities: {
+          "Sydney": { lat: -33.8688, lon: 151.2093 },
+          "Melbourne": { lat: -37.8136, lon: 144.9631 }
+        }
+      }
+    };
 
-    const data = [
-      { date: "2023-10-15", title: "Teknologian uudet trendit 2023", category: "teknologia", source: "yle" },
-      { date: "2023-10-14", title: "Markkinat ennallaan keskellä talousepävarmuutta", category: "talous", source: "hs" },
-      { date: "2023-10-13", title: "Uusi lainsäädäntö vaikuttaa digitaaliseen markkinointiin", category: "uutiset", source: "is" },
-      { date: "2023-10-12", title: "Kestävä kehitys yritysten tärkeimpänä tavoitteena", category: "uutiset", source: "yle" },
-      { date: "2023-10-11", title: "Tekoälyn vaikutus työelämään kasvaa", category: "teknologia", source: "hs" },
-      { date: "2023-10-10", title: "Koronavirusrajoitukset puretaan vähitellen", category: "uutiset", source: "is" }
-    ];
+    // Current loaded JSON data
+    let currentJSONData = null;
 
-    function loadData() {
-      const dateFilter = document.getElementById("dateFilter").value;
-      const categoryFilter = document.getElementById("categoryFilter").value;
-      const sourceFilter = document.getElementById("sourceFilter").value;
-      const body = document.getElementById("dataBody");
-      body.innerHTML = "";
+    // DOM Elements
+    const countrySelect = document.getElementById('countrySelect');
+    const citySelect = document.getElementById('citySelect');
+    const weatherResults = document.getElementById('weatherResults');
+    const currentLocationWeather = document.getElementById('currentLocationWeather');
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const jsonUrlInput = document.getElementById('jsonUrl');
+    const jsonViewer = document.getElementById('jsonViewer');
+    const jsonStats = document.getElementById('jsonStats');
 
-      const filtered = data.filter(item =>
-        (!dateFilter || item.date === dateFilter) &&
-        (!categoryFilter || item.category === categoryFilter) &&
-        (!sourceFilter || item.source === sourceFilter)
-      );
+    // Initialize country selection
+    countrySelect.addEventListener('change', function() {
+      const countryId = this.value;
+      citySelect.disabled = !countryId;
+      
+      // Clear previous city selection
+      citySelect.innerHTML = '<option value="">Valitse kaupunki</option>';
+      
+      if (countryId && countryDatabase[countryId]) {
+        // Add cities for selected country
+        Object.keys(countryDatabase[countryId].cities).forEach(city => {
+          const option = document.createElement('option');
+          option.value = city;
+          option.textContent = city;
+          citySelect.appendChild(option);
+        });
+      }
+    });
 
-      document.getElementById("dataCount").textContent = `${filtered.length} kohdetta`;
+    // Set default values
+    countrySelect.value = 'finland';
+    countrySelect.dispatchEvent(new Event('change'));
+    setTimeout(() => {
+      citySelect.value = 'Helsinki';
+    }, 100);
 
-      if (filtered.length === 0) {
-        body.innerHTML = `<tr><td colspan="4" style="text-align: center;">Ei tuloksia valituilla suodattimilla</td></tr>`;
+    // Weather fetching function
+    async function fetchWeather() {
+      const countryId = countrySelect.value;
+      const city = citySelect.value;
+      
+      if (!countryId || !city) {
+        showMessage(weatherResults, 'Valitse maa ja kaupunki', 'error');
         return;
       }
+      
+      const location = countryDatabase[countryId].cities[city];
+      
+      if (!location) {
+        showMessage(weatherResults, 'Kaupungin koordinaatteja ei löytynyt', 'error');
+        return;
+      }
+      
+      // Show loading
+      weatherResults.innerHTML = `
+        <div class="weather-card">
+          <div class="weather-icon"><span class="loading"></span></div>
+          <div class="temperature">Ladataan...</div>
+          <div class="weather-location">${city}, ${countryDatabase[countryId].name}</div>
+        </div>
+      `;
+      
+      try {
+        const weatherData = await getWeatherData(location.lat, location.lon);
+        displayWeather(weatherResults, city, countryDatabase[countryId].name, weatherData);
+      } catch (error) {
+        showMessage(weatherResults, 'Säätietojen haku epäonnistui', 'error');
+      }
+    }
 
-      filtered.forEach(item => {
-        body.innerHTML += `
-          <tr>
-            <td>${item.date}</td>
-            <td>${item.title}</td>
-            <td><span class="category-tag">${item.category}</span></td>
-            <td>${item.source.toUpperCase()}</td>
-          </tr>`;
+    // Get device location weather
+    function getDeviceLocation() {
+      const button = document.querySelector('.location-btn');
+      const originalText = button.textContent;
+      button.textContent = 'Haetaan sijaintia...';
+      button.disabled = true;
+      
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            try {
+              const weatherData = await getWeatherData(position.coords.latitude, position.coords.longitude);
+              const cityName = await getCityName(position.coords.latitude, position.coords.longitude);
+              
+              // Show in main weather display
+              displayWeather(weatherResults, cityName, 'Nykyinen sijainti', weatherData);
+              
+              // Also show in separate section
+              displayWeather(currentLocationWeather, cityName, 'Laitteen sijainti', weatherData);
+              currentLocationWeather.style.display = 'block';
+              
+              button.textContent = originalText;
+              button.disabled = false;
+            } catch (error) {
+              showMessage(weatherResults, 'Säätietojen haku epäonnistui', 'error');
+              button.textContent = originalText;
+              button.disabled = false;
+            }
+          },
+          (error) => {
+            showMessage(weatherResults, `Sijaintitietojen haku epäonnistui: ${error.message}`, 'error');
+            button.textContent = originalText;
+            button.disabled = false;
+          }
+        );
+      } else {
+        showMessage(weatherResults, 'Sijaintituki ei ole saatavilla selaimessasi', 'error');
+        button.textContent = originalText;
+        button.disabled = false;
+      }
+    }
+
+    // Get city name from coordinates
+    async function getCityName(lat, lon) {
+      try {
+        const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=10`);
+        const data = await response.json();
+        return data.address.city || data.address.town || data.address.village || data.address.municipality || 'Tuntematon sijainti';
+      } catch (error) {
+        return 'Nykyinen sijainti';
+      }
+    }
+
+    // Get weather data
+    async function getWeatherData(lat, lon) {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=relativehumidity_2m&timezone=auto`;
+      
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('API error');
+      return await response.json();
+    }
+
+    // Display weather
+    function displayWeather(element, city, country, weatherData) {
+      const current = weatherData.current_weather;
+      const icon = getWeatherIcon(current.weathercode);
+      const temp = Math.round(current.temperature);
+      const humidity = weatherData.hourly ? weatherData.hourly.relativehumidity_2m[0] : '?';
+      const windSpeed = Math.round(current.windspeed * 3.6); // Convert to km/h
+      
+      element.innerHTML = `
+        <div class="weather-card">
+          <div class="weather-icon">${icon}</div>
+          <div class="temperature">${temp}°C</div>
+          <div class="weather-location">${city}, ${country}</div>
+          <div class="weather-details">
+            <div>Tuuli: ${windSpeed} km/h</div>
+            <div>Kosteus: ${humidity}%</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Weather icon helper
+    function getWeatherIcon(code) {
+      if (code === 0) return "☀️";
+      if (code <= 3) return "🌤️";
+      if (code <= 48) return "🌫️";
+      if (code <= 67) return "🌧️";
+      if (code <= 77) return "❄️";
+      if (code <= 99) return "⛈️";
+      return "🌤️";
+    }
+
+    // Show message
+    function showMessage(element, message, type) {
+      element.innerHTML = `
+        <div class="${type}">
+          ${message}
+        </div>
+      `;
+    }
+
+    // JSON File Drag & Drop
+    dropZone.addEventListener('click', () => fileInput.click());
+    
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        loadJSONFile(file);
+      }
+    });
+
+    // Drag and drop events
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, unhighlight, false);
+    });
+
+    function highlight() {
+      dropZone.classList.add('dragover');
+    }
+
+    function unhighlight() {
+      dropZone.classList.remove('dragover');
+    }
+
+    dropZone.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      const file = dt.files[0];
+      if (file && file.name.endsWith('.json')) {
+        loadJSONFile(file);
+      } else {
+        showJSONMessage('Vain JSON-tiedostot ovat sallittuja', 'error');
+      }
+    });
+
+    // Load JSON from file
+    function loadJSONFile(file) {
+      const reader = new FileReader();
+      
+      reader.onload = function(e) {
+        try {
+          const jsonData = JSON.parse(e.target.result);
+          processJSONData(jsonData, file.name);
+        } catch (error) {
+          showJSONMessage(`Virhe JSON-tiedoston käsittelyssä: ${error.message}`, 'error');
+        }
+      };
+      
+      reader.onerror = function() {
+        showJSONMessage('Virhe tiedoston lukemisessa', 'error');
+      };
+      
+      reader.readAsText(file);
+    }
+
+    // Load JSON from URL
+    async function loadJSONFromURL() {
+      const url = jsonUrlInput.value.trim();
+      
+      if (!url) {
+        showJSONMessage('Syötä JSON-tiedoston URL', 'error');
+        return;
+      }
+      
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('URL haku epäonnistui');
+        
+        const jsonData = await response.json();
+        processJSONData(jsonData, `URL: ${url}`);
+      } catch (error) {
+        showJSONMessage(`Virhe URL:n latauksessa: ${error.message}`, 'error');
+      }
+    }
+
+    // Process JSON data
+    function processJSONData(jsonData, source) {
+      currentJSONData = jsonData;
+      
+      // Display formatted JSON
+      displayFormattedJSON(jsonData);
+      
+      // Update stats
+      updateJSONStats(jsonData, source);
+      
+      showJSONMessage(`JSON-tiedosto ladattu onnistuneesti: ${source}`, 'success');
+    }
+
+    // Display formatted JSON with syntax highlighting
+    function displayFormattedJSON(data) {
+      const jsonString = JSON.stringify(data, null, 2);
+      let html = jsonString;
+      
+      // Simple syntax highlighting
+      html = html.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?)/g, (match) => {
+        let cls = 'json-number';
+        if (/^"/.test(match)) {
+          if (/:$/.test(match)) {
+            cls = 'json-key';
+          } else {
+            cls = 'json-string';
+          }
+        } else if (/true|false/.test(match)) {
+          cls = 'json-boolean';
+        } else if (/null/.test(match)) {
+          cls = 'json-null';
+        }
+        return `<span class="${cls}">${match}</span>`;
+      });
+      
+      jsonViewer.innerHTML = html;
+    }
+
+    // Update JSON stats
+    function updateJSONStats(data, source) {
+      const dataType = Array.isArray(data) ? 'Array' : 'Object';
+      const size = new Blob([JSON.stringify(data)]).size;
+      const sizeKB = (size / 1024).toFixed(2);
+      
+      let itemCount = 0;
+      if (Array.isArray(data)) {
+        itemCount = data.length;
+      } else if (typeof data === 'object') {
+        itemCount = Object.keys(data).length;
+      }
+      
+      jsonStats.innerHTML = `
+        <strong>JSON-tiedoston tiedot:</strong><br>
+        Lähde: ${source}<br>
+        Tyyppi: ${dataType}<br>
+        Koko: ${sizeKB} KB<br>
+        ${itemCount > 0 ? `Kohteita: ${itemCount}` : ''}
+      `;
+    }
+
+    // Show JSON message
+    function showJSONMessage(message, type) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = type;
+      messageDiv.innerHTML = message;
+      messageDiv.style.marginBottom = '1rem';
+      
+      jsonStats.parentNode.insertBefore(messageDiv, jsonStats);
+      
+      // Remove message after 5 seconds
+      setTimeout(() => {
+        if (messageDiv.parentNode) {
+          messageDiv.parentNode.removeChild(messageDiv);
+        }
+      }, 5000);
+    }
+
+    // Copy JSON to clipboard
+    function copyJSON() {
+      if (!currentJSONData) {
+        showJSONMessage('Ei kopioitavaa JSON-dataa', 'error');
+        return;
+      }
+      
+      const jsonString = JSON.stringify(currentJSONData, null, 2);
+      navigator.clipboard.writeText(jsonString).then(() => {
+        showJSONMessage('JSON kopioitu leikepöydälle', 'success');
+      }).catch(err => {
+        showJSONMessage('Kopiointi epäonnistui', 'error');
       });
     }
 
-    loadData();
-
-    function getWeather(lat, lon) {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto`;
-
-      fetch(url)
-        .then(res => res.json())
-        .then(w => {
-          if (!w.current_weather) throw new Error("Invalid weather data");
-          const temp = w.current_weather.temperature;
-          const wind = w.current_weather.windspeed;
-          const weatherCode = w.current_weather.weathercode;
-          
-          let weatherIcon = "☀️";
-          if (weatherCode > 0 && weatherCode < 50) weatherIcon = "🌤️";
-          if (weatherCode >= 50 && weatherCode < 70) weatherIcon = "🌧️";
-          if (weatherCode >= 70 && weatherCode < 90) weatherIcon = "❄️";
-          if (weatherCode >= 90) weatherIcon = "⛈️";
-          
-          document.querySelector(".weather-icon").textContent = weatherIcon;
-          document.getElementById("weatherInfo").innerHTML = 
-            `Lämpötila: <strong>${temp}°C</strong> · Tuuli: ${wind} m/s`;
-          
-          fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
-            .then(res => res.json())
-            .then(locationData => {
-              const city = locationData.address.city || locationData.address.town || 
-                          locationData.address.village || locationData.address.municipality;
-              document.getElementById("weatherLocation").textContent = city ? `Sijainti: ${city}` : "";
-            })
-            .catch(() => {
-              document.getElementById("weatherLocation").textContent = "";
-            });
-        })
-        .catch(() => {
-          document.getElementById("weatherInfo").innerText = "Säätilaa ei voitu hakea.";
-        });
-    }
-
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        pos => getWeather(pos.coords.latitude, pos.coords.longitude),
-        () => {
-          document.getElementById("weatherInfo").innerText = "Sijaintia ei sallittu. Näytetään esimerkkisää.";
-          
-          getWeather(60.1699, 24.9384);
-        }
-      );
-    } else {
-      document.getElementById("weatherInfo").innerText = "Sijaintia ei tueta. Näytetään esimerkkisää.";
-      getWeather(60.1699, 24.9384);
-    }
-
-   
-    async function loadNews() {
-      const newsList = document.getElementById("newsList");
-      newsList.innerHTML = "<li class='news-item'><span class='loading'></span> Ladataan uutisia...</li>";
-
-      try {
-     
-        setTimeout(() => {
-          const sampleNews = [
-            { title: "Hallitus esittää uusia toimenpiteitä talouden elvyttämiseksi", link: "#", date: "15.10.2023" },
-            { title: "Sääennuste: Viileämpää ja sateista ensi viikolla", link: "#", date: "14.10.2023" },
-            { title: "Koronan uusi variantti havaittu Suomessa - THL antaa ohjeita", link: "#", date: "13.10.2023" },
-            { title: "Suomalainen startup saa 5 miljoonan euron rahoituksen", link: "#", date: "12.10.2023" },
-            { title: "Uusi tutkimus: Liikunta vähentää masennusoireita jopa 30%", link: "#", date: "11.10.2023" }
-          ];
-
-          newsList.innerHTML = "";
-          sampleNews.forEach(item => {
-            const li = document.createElement("li");
-            li.className = "news-item";
-            li.innerHTML = `
-              <a href="${item.link}" target="_blank">${item.title}</a>
-              <div class="news-date">${item.date}</div>
-            `;
-            newsList.appendChild(li);
-          });
-        }, 1000);
-      } catch (err) {
-        console.error(err);
-        newsList.innerHTML = "<li class='news-item'>Uutisia ei voitu ladata.</li>";
+    // Download JSON
+    function downloadJSON() {
+      if (!currentJSONData) {
+        showJSONMessage('Ei ladattavaa JSON-dataa', 'error');
+        return;
       }
+      
+      const jsonString = JSON.stringify(currentJSONData, null, 2);
+      const blob = new Blob([jsonString], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'data.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
 
-    loadNews();
-  </script>
+    // Clear JSON
+    function clearJSON() {
+      currentJSONData = null;
+      jsonViewer.innerHTML = 'Lataa JSON-tiedosto nähdäksesi sisällön...';
+      jsonStats.innerHTML = 'Ei ladattua JSON-tiedostoa';
+      jsonUrlInput.value = '';
+      fileInput.value = '';
+    }
 
+    // Example JSON URLs for quick testing
+    const exampleURLs = [
+      'https://jsonplaceholder.typicode.com/posts',
+      'https://jsonplaceholder.typicode.com/users',
+      'https://raw.githubusercontent.com/jdorfman/awesome-json-datasets/master/package.json'
+    ];
+
+    // Set first example URL as placeholder
+    jsonUrlInput.placeholder = `Tai syötä JSON-URL (esim. ${exampleURLs[0]})`;
+
+  </script>
 </body>
-</html> 
+</html>
