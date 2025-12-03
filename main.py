@@ -127,38 +127,24 @@ def main():
         "https://www.jimms.fi/fi/Product/List/000-0KJ/oheislaitteet--naytot?ob=4&fq=QHD"
     )
 
+    # --- Find cheapest items per category ---
     halvimmat = {}
     for category, items in all_data.items():
         if items:
-            halvimmat_item = min(items, key=lambda x: x["price"])
-            halvimmat[category] = halvimmat_item
+            halvimmat[category] = min(items, key=lambda x: x["price"])
         else:
             halvimmat[category] = None
 
-    all_data["halvimmat"] = halvimmat
+    # --- Put cheapest items FIRST in the JSON output ---
+    reordered = {"halvimmat": halvimmat}
+    reordered.update(all_data)
 
+    # --- Save JSON ---
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(all_data, f, indent=4, ensure_ascii=False)
-
-    print("\n===== 3 Halvinta Tuotetta Jokaisessa Kategoriassa =====")
-
-    for category, items in all_data.items():
-        if category == "halvimmat":
-            continue
-
-        print(f"\n{category}:")
-
-        if not items:
-            print("  Ei tuotteita")
-            continue
-
-        sorted_items = sorted(items, key=lambda x: x["price"])
-
-        for i, item in enumerate(sorted_items[:3], start=1):
-            print(f"  {i}. {item['name']} — {item['price']} €")
+        json.dump(reordered, f, indent=4, ensure_ascii=False)
 
 
 if __name__ == "__main__":
     main()
     
-#
+

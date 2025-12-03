@@ -1,4 +1,36 @@
 {
+    "halvimmat": {
+        "===========RTX 5070===========": {
+            "name": "Palit GeForce RTX 5070 Infinity 3 -näytönohjain, 12GB GDDR7",
+            "price": 569.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/212676/ne75070019k9-gb2050s/palit-geforce-rtx-5070-infinity-3-naytonohjain-12gb-gddr7"
+        },
+        "===========RTX 5070 TI===========": {
+            "name": "MSI GeForce RTX 5070 Ti VENTUS 3X OC -näytönohjain, 16GB GDDR7",
+            "price": 809.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/209292/rtx-5070-ti-16g-ventus-3x-oc/msi-geforce-rtx-5070-ti-ventus-3x-oc-naytonohjain-16gb-gddr7"
+        },
+        "===========RTX 5080===========": {
+            "name": "Gigabyte GeForce RTX 5080 WINDFORCE SFF -näytönohjain, 16GB GDDR7",
+            "price": 1069.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208852/gv-n5080wf3-16gd/gigabyte-geforce-rtx-5080-windforce-sff-naytonohjain-16gb-gddr7"
+        },
+        "===========RX 9070===========": {
+            "name": "PowerColor Radeon RX 9070 Reaper -näytönohjain, 16GB GDDR6",
+            "price": 579.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208874/rx9070-16g-a/powercolor-radeon-rx-9070-reaper-naytonohjain-16gb-gddr6"
+        },
+        "===========RX 9070 XT===========": {
+            "name": "Asus Radeon RX 9070 XT PRIME - OC Edition -näytönohjain, 16GB GDDR6",
+            "price": 679.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/208568/prime-rx9070xt-o16g/asus-radeon-rx-9070-xt-prime-oc-edition-naytonohjain-16gb-gddr6"
+        },
+        "===========1440 Monitori===========": {
+            "name": "Lenovo 27\" L27qe, 100Hz QHD-monitori, Raven Black",
+            "price": 186.9,
+            "link": "https://www.jimms.fi/fi/Product/Show/213913/68c8gac3eu/lenovo-27-l27qe-100hz-qhd-monitori-raven-black"
+        }
+    },
     "===========RTX 5070===========": [
         {
             "name": "Palit GeForce RTX 5070 Infinity 3 -näytönohjain, 12GB GDDR7",
@@ -700,37 +732,5 @@
             "price": 269.9,
             "link": "https://www.jimms.fi/fi/Product/Show/195372/tuf-gaming-vg32aqa1a/asus-31-5-tuf-gaming-vg32aqa1a-170hz-oc-qhd-pelimonitori-musta"
         }
-    ],
-    "halvimmat": {
-        "===========RTX 5070===========": {
-            "name": "Palit GeForce RTX 5070 Infinity 3 -näytönohjain, 12GB GDDR7",
-            "price": 569.9,
-            "link": "https://www.jimms.fi/fi/Product/Show/212676/ne75070019k9-gb2050s/palit-geforce-rtx-5070-infinity-3-naytonohjain-12gb-gddr7"
-        },
-        "===========RTX 5070 TI===========": {
-            "name": "MSI GeForce RTX 5070 Ti VENTUS 3X OC -näytönohjain, 16GB GDDR7",
-            "price": 809.9,
-            "link": "https://www.jimms.fi/fi/Product/Show/209292/rtx-5070-ti-16g-ventus-3x-oc/msi-geforce-rtx-5070-ti-ventus-3x-oc-naytonohjain-16gb-gddr7"
-        },
-        "===========RTX 5080===========": {
-            "name": "Gigabyte GeForce RTX 5080 WINDFORCE SFF -näytönohjain, 16GB GDDR7",
-            "price": 1069.9,
-            "link": "https://www.jimms.fi/fi/Product/Show/208852/gv-n5080wf3-16gd/gigabyte-geforce-rtx-5080-windforce-sff-naytonohjain-16gb-gddr7"
-        },
-        "===========RX 9070===========": {
-            "name": "PowerColor Radeon RX 9070 Reaper -näytönohjain, 16GB GDDR6",
-            "price": 579.9,
-            "link": "https://www.jimms.fi/fi/Product/Show/208874/rx9070-16g-a/powercolor-radeon-rx-9070-reaper-naytonohjain-16gb-gddr6"
-        },
-        "===========RX 9070 XT===========": {
-            "name": "Asus Radeon RX 9070 XT PRIME - OC Edition -näytönohjain, 16GB GDDR6",
-            "price": 679.9,
-            "link": "https://www.jimms.fi/fi/Product/Show/208568/prime-rx9070xt-o16g/asus-radeon-rx-9070-xt-prime-oc-edition-naytonohjain-16gb-gddr6"
-        },
-        "===========1440 Monitori===========": {
-            "name": "Lenovo 27\" L27qe, 100Hz QHD-monitori, Raven Black",
-            "price": 186.9,
-            "link": "https://www.jimms.fi/fi/Product/Show/213913/68c8gac3eu/lenovo-27-l27qe-100hz-qhd-monitori-raven-black"
-        }
-    }
+    ]
 }
