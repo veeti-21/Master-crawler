@@ -12,10 +12,10 @@ import time
 import mysql.connector 
 
 mydb = mysql.connector.connect(
-  host="placeholder",
-  user="placeholder",
-  password="placeholder",
-  database="placeholder"
+  host="mc.koudata.fi",
+  user="protoadmin",
+  password="nakkikastike123",
+  database="prototyyppi"
 )
 
 

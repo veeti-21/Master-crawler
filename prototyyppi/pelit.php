@@ -28,7 +28,7 @@ mysqli_close($con);
     <title>Koontisivu vimm peleille</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="sorting()">
   
     <script src="index.js"></script>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
@@ -78,6 +78,25 @@ function myFunction() {
     }
   }
 }
+
+// Source - https://stackoverflow.com/a
+// Posted by Nick Grealy, modified by community. See post 'Timeline' for change history
+// Retrieved 2025-12-03, License - CC BY-SA 4.0
+function sorting(){
+  const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+  const comparer = (idx, asc) => (a, b) => ((v1, v2) => 
+      v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+      )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+  // do the work...
+  document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+      const table = th.closest('table');
+      Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+          .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+          .forEach(tr => table.appendChild(tr) );
+})))};
+
 </script>
 </body>
 </html>
