@@ -12,7 +12,7 @@ import calendar
 
 currtime = datetime.datetime.now()
 epoch_time = calendar.timegm(currtime.timetuple())
-filename = f'Auto-result-{epoch_time}.json'
+filename = f'Auto-result.json'
 opts = Options()
 opts.add_argument("--headless=new")
 driver = webdriver.Firefox(options=opts)
@@ -23,6 +23,9 @@ driver.set_window_size(required_width, required_height)
 
 webPage = ["https://www.nettiauto.com/hakutulokset?haku=P62829718&page=1", "https://www.nettiauto.com/hakutulokset?haku=P62829718&page=2"]
 
+with open(filename, 'w', encoding='utf-8') as f:# tekee tyhjän tai tyhjentää tiedoston
+        f.writelines("")
+f.close()
 
 for z in range(len(webPage)):
         driver.get(f"{webPage[z]}")
@@ -43,20 +46,20 @@ for z in range(len(webPage)):
                 "linkki": tmp3,
                 }
 
-                with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset. pitää vielä formatoida paremmin json/xml/csv muotoon.
-                                if x == 0 and z == 0:
-                                        f.writelines("{")
+                with open(filename, 'a', encoding='utf-8') as f: # lisää tulokset.
+                        if x == 0 and z == 0:
+                                f.writelines("{")
                                         
                                         
-                                print(json.dumps(testjson, indent=4, separators=(",", ":")))
+                        print(json.dumps(testjson, indent=4, separators=(",", ":")))
                                         
-                                f.writelines(f'"objekti{x}-{z}"')
-                                f.writelines(":[")
-                                f.writelines(json.dumps(testjson, indent=4, separators=(",", ":")))
-                                if x == len(elementname) - 1 and z == 1:
-                                        f.writelines("]\n}")
-                                else:
-                                        f.writelines("],")
+                        f.writelines(f'"objekti{x}-{z}"')
+                        f.writelines(":[")
+                        f.writelines(json.dumps(testjson, indent=4, separators=(",", ":")))
+                        if x == len(elementname) - 1 and z == 1:
+                                f.writelines("]\n}")
+                        else:
+                                f.writelines("],")
                                 
                 
                 f.close()
