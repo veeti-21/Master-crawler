@@ -1,0 +1,370 @@
+/* Minimalistic color palette */
+    :root {
+      --primary: #0055a5;
+      --primary-light: #e8f2ff;
+      --secondary: #00a1e0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --gray: #4a5568;
+      --light-gray: #e2e8f0;
+      --border-radius: 8px;
+      --shadow: 0 2px 4px rgba(0,0,0,0.05);
+      --transition: all 0.2s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--gray);
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 2rem 0;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      border: 1px solid var(--light-gray);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    /* Weather Section Styles */
+    .weather-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: end;
+    }
+
+    .weather-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .weather-group label {
+      font-size: 0.875rem;
+      color: var(--gray);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    select {
+      padding: 0.75rem;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      background: var(--white);
+      color: var(--gray);
+      transition: var(--transition);
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 161, 224, 0.1);
+    }
+
+    .weather-btn {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .weather-btn:hover {
+      background: #004494;
+    }
+
+    .weather-display {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      color: var(--white);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .weather-card {
+      text-align: center;
+    }
+
+    .weather-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .temperature {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .weather-location {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1rem;
+    }
+
+    .weather-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.9);
+      margin-top: 0.5rem;
+    }
+
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: var(--white);
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* JSON Viewer Styles */
+    .drop-zone {
+      border: 2px dashed var(--light-gray);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      background: var(--bg);
+    }
+
+    .drop-zone:hover,
+    .drop-zone.dragover {
+      border-color: var(--secondary);
+      background: var(--primary-light);
+    }
+
+    .drop-zone p {
+      color: var(--gray);
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .drop-zone small {
+      color: var(--gray);
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .json-controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+
+    .json-input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+    }
+
+    .json-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+
+    .json-btn {
+      background: var(--secondary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .json-btn:hover {
+      background: #0090c7;
+    }
+
+    .json-viewer {
+      background: #f8f9fa;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      max-height: 400px;
+      overflow-y: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.75rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .json-key {
+      color: #0055a5;
+      font-weight: bold;
+    }
+
+    .json-string {
+      color: #22863a;
+    }
+
+    .json-number {
+      color: #d73a49;
+    }
+
+    .json-boolean {
+      color: #6f42c1;
+    }
+
+    .json-null {
+      color: #6a737d;
+    }
+
+    .error {
+      background: #fee;
+      border: 1px solid #fcc;
+      color: #c00;
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .success {
+      background: #dfd;
+      border: 1px solid #afa;
+      color: #080;
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .info {
+      background: var(--primary-light);
+      border: 1px solid var(--secondary);
+      color: var(--primary);
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .location-btn {
+      background: #4CAF50;
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .location-btn:hover {
+      background: #45a049;
+    }
+
+    .location-btn:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+    }
+
+    .json-stats {
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background: rgba(0,0,0,0.03);
+      border-radius: 4px;
+    }
+
+    .toggle-btn {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      color: var(--gray);
+      font-size: 0.75rem;
+      border-top: 1px solid var(--light-gray);
+    }
