@@ -29,12 +29,12 @@ for z in range(len(webPage)):
         elementname = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new.total-upsell-ad > div > div.product-card__body > div.product-card__info > h2")
         elementprice = driver.find_elements(By.CSS_SELECTOR, '#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > div:nth-child(2) > div')
         elementlink = driver.find_elements(By.CSS_SELECTOR, '#listingData > div.grid-x.cell.list-body-new > div > a')
-        
+       
         
         for x in range(len(elementname)):
                 
-                tmp1 = f"{elementname[x].text}\n"
-                tmp2 = f"{elementprice[x].text}\n"
+                tmp1 = f"{elementname[x].get_attribute("textContent")}\n"
+                tmp2 = f"{elementprice[x].get_attribute("innerText")}\n"
                 tmp3 = f"{elementlink[x].get_attribute('href')}\n\n"
                 
                 testjson = {
