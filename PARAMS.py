@@ -412,6 +412,7 @@ def params_set_wheelchair_accessibility(wheelchair = False):
         })
 
 def params_set_none():
+    global PARAMS
     PARAMS.update({
     "item_availability__date_from"   : "null",       # change via params_set_date(a,b)
     "item_availability__date_to"     : "null",       # change via params_set_date(a,b)
@@ -478,6 +479,7 @@ def params_set_none():
     "attr__wheel_chair_accessible"   : "null",})
 
 def params_set_all():
+    global PARAMS
 
     PARAMS.update({
     "item_availability__date_from"   : "1",       # change via params_set_date(a,b)
@@ -584,6 +586,6 @@ def get_url(params = PARAMS, base_url = BASE_URL):
 
 
 if __name__ == "__main__":
-
-    params_clean()
-    fetch_page(PARAMS)
+    params_set_none()
+    params_set_require_4_stars(True)
+    fetch_page(params_clean(PARAMS))
