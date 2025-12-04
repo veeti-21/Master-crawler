@@ -36,8 +36,8 @@ for z in range(len(webPage)):# etsii tulokset sivustosta
         
         for x in range(len(elementname)):# ottaa tulokset
                 
-                tmp1 = f"{elementname[x].get_attribute("textContent")}\n"
-                tmp2 = f"{elementprice[x].get_attribute("innerText")}\n"
+                tmp1 = f"{elementname[x].get_attribute("textContent")}\n" 
+                tmp2 = f"{elementprice[x].get_attribute("innerText").replace("\u00a0", " ")}\n"
                 tmp3 = f"{elementlink[x].get_attribute('href')}\n\n"
                 
                 testjson = {
