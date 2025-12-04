@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nettimökki Listings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: gray;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .card-location {
+            color: #666;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .prices {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .price-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .month {
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        .price {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .no-price {
+            color: #999;
+            font-style: italic;
+        }
+        
+        .view-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        
+        .view-btn:hover {
+            background: #5568d3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid" id="listings"></div>
+    </div>
+
+    <script>
+    async function getData() {
+        const res = await fetch("nettimökki_listings.json");
+        return await res.json();
+    }
+
+    async function init() {
+        const data = await getData();
+        console.log(data);
+
+        const listingsContainer = document.getElementById('listings');
+
+        data.forEach(cottage => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.onclick = () => window.open(cottage.url, '_blank');
+
+            let pricesHTML = '';
+          if (
+              cottage.prices_per_month['1'] || cottage.prices_per_month['2'] ||
+              cottage.prices_per_month['3'] || cottage.prices_per_month['4'] ||
+              cottage.prices_per_month['5'] || cottage.prices_per_month['6'] ||
+              cottage.prices_per_month['7'] || cottage.prices_per_month['8'] ||
+              cottage.prices_per_month['9'] || cottage.prices_per_month['10'] ||
+              cottage.prices_per_month['11'] || cottage.prices_per_month['12']
+          ) {
+              pricesHTML = '<div class="prices">';
+
+              if (cottage.prices_per_month['1']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Tammikuu:</span>
+                          <span class="price">${cottage.prices_per_month['1'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['2']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Helmikuu:</span>
+                          <span class="price">${cottage.prices_per_month['2'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['3']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Maaliskuu:</span>
+                          <span class="price">${cottage.prices_per_month['3'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['4']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Huhtikuu:</span>
+                          <span class="price">${cottage.prices_per_month['4'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['5']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Toukokuu:</span>
+                          <span class="price">${cottage.prices_per_month['5'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['6']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Kesäkuu:</span>
+                          <span class="price">${cottage.prices_per_month['6'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['7']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Heinäkuu:</span>
+                          <span class="price">${cottage.prices_per_month['7'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['8']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Elokuu:</span>
+                          <span class="price">${cottage.prices_per_month['8'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['9']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Syyskuu:</span>
+                          <span class="price">${cottage.prices_per_month['9'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['10']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Lokakuu:</span>
+                          <span class="price">${cottage.prices_per_month['10'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['11']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Marraskuu:</span>
+                          <span class="price">${cottage.prices_per_month['11'].price}</span>
+                      </div>`;
+              }
+
+              if (cottage.prices_per_month['12']) {
+                  pricesHTML += `
+                      <div class="price-row">
+                          <span class="month">Joulukuu:</span>
+                          <span class="price">${cottage.prices_per_month['12'].price}</span>
+                      </div>`;
+              }
+
+              pricesHTML += '</div>';
+          } else {
+              pricesHTML = '<div class="prices"><span class="no-price">Hintaa ei löytynyt</span></div>';
+          }
+
+
+            card.innerHTML = `
+                <img src="${cottage.image}" alt="${cottage.title}" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">${cottage.title}</h2>
+                    <div class="card-location">${cottage.location}</div>
+                    ${pricesHTML}
+                    <a href="${cottage.url}" class="view-btn" target="_blank" onclick="event.stopPropagation()">Näytä tiedot</a>
+                </div>
+            `;
+
+            listingsContainer.appendChild(card);
+        });
+    }
+
+    init();
+</script>
+
+</body>
+</html>
