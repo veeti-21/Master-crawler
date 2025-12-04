@@ -17,8 +17,8 @@ import PARAMS
 # --- CONFIG ---
 OPERA_BINARY = r"C:\Users\veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
 CHROMEDRIVER_PATH = r"C:\Users\veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
-OUTPUT_FILE = "nettimökki_listings.json"
-OUTPUT_FILE_BACKUP = "nettimökki_listings.json.bak"
+OUTPUT_FILE = "nettimokki_listings.json"
+OUTPUT_FILE_BACKUP = "nettimokki_listings.json.bak"
 
 RESET_JSON_EACH_RUN = True
 
