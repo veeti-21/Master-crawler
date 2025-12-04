@@ -1,0 +1,67 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver = webdriver.Chrome()
+
+games = []
+
+#Steam
+steamurl = f"https://store.steampowered.com/search/?filter=popularnew&start=0&sort_by=Released_DESC&os=win&hidef=1"
+
+driver.get(steamurl)
+
+steam_search_results = driver.find_elements(By.CSS_SELECTOR, "#search_resultsRows a")
+for steamgame in steam_search_results[:50]:
+    try:
+        image_url = steamgame.find_element(By.CSS_SELECTOR, ".search_capsule img").get_attribute("src")
+        title = steamgame.find_element(By.CLASS_NAME, "title").text
+        release_date = steamgame.find_element(By.CSS_SELECTOR, ".search_released").text
+        review_score = steamgame.find_element(By.CSS_SELECTOR, ".search_reviewscore").get_attribute("data-tooltip-html")
+        price = steamgame.find_element(By.CSS_SELECTOR, ".discount_final_price").text
+        
+        games.append({
+            "image_url": image_url,
+            "title": title,
+            "release_date": release_date,
+            "review_score": review_score,
+            "price": price,
+        })
+    except:
+        continue
+#Steam
+
+#Metacritic
+metaurl = f"https://www.metacritic.com/browse/game/all/all/current-year/new/?page=1"
+
+driver.get(metaurl)
+
+meta_search_results = driver.find_elements(By.CSS_SELECTOR, "div.c-finderProductCard")
+for metagame in meta_search_results[:50]:
+    try:
+        image_url = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_img img").get_attribute("src")
+        title = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_title").text
+        release_date = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_meta").text
+        review_score = metagame.find_element(By.CSS_SELECTOR, ".c-finderProductCard_metascore .c-metascore").text
+
+        games.append({
+            "image_url": image_url,
+            "title": title,
+            "release_date": release_date,
+            "review_score": review_score,
+        })
+    except:
+        continue
+#Metacritic
+
+for game in games:
+    print(f"{game.get('image_url', 'N/A')} - {game['title']} - {game['release_date']} - {game.get('review_score', 'N/A')} - {game.get('price', 'N/A')}")
+
+#json
+import json
+with open("master_crawler_pelit.json", "w", encoding="utf-8") as f:
+    json.dump(games, f, ensure_ascii=False, indent=4)
+#json
+
+driver.quit()
