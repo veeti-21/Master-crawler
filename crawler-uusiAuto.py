@@ -53,7 +53,7 @@ for z in range(len(webPage)):# etsii tulokset sivustosta
                                         
                         print(json.dumps(testjson, indent=4, separators=(",", ":")))
                                         
-                        f.writelines(f'"objekti{x}-{z}"')
+                        f.writelines(f'Auto{x}-{z}"')
                         f.writelines(":[")
                         f.writelines(json.dumps(testjson, indent=4, separators=(",", ":")))
                         if x == len(elementname) - 1 and z == 1:
