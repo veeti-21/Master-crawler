@@ -12,7 +12,7 @@ import calendar
 
 currtime = datetime.datetime.now()
 epoch_time = calendar.timegm(currtime.timetuple())
-filename = f'result-{epoch_time}.json'
+filename = f'Auto-result-{epoch_time}.json'
 opts = Options()
 opts.add_argument("--headless=new")
 driver = webdriver.Firefox(options=opts)
