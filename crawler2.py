@@ -9,38 +9,26 @@ import re
 import datetime
 import calendar
 import time
-import mysql.connector 
-
-mydb = mysql.connector.connect(
-  host="placeholder",
-  user="placeholder",
-  password="placeholder",
-  database="placeholder"
-)
-
 
 
 # webpage linkkien tilalla pitäisi toimia mikä tahansa gigantin sivu. 
 # crawler2 hakee näytönohjaimia
 # webPage listaan voi lisätä lisää linkkejä jos tarvitsee
 
-webPage = ['gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu?f=31620%3A%255B16%252C32%255D&f=30831%3A7680%2520x%25204320&f=33706%3AGeForce%2520RTX%252050%2520Series']
-# ottaa ajan, muuntaa sen epoch aikaan ja tallentaa tiedoston muodossa "result-xxxxxxxxxx.json". tiedoston tallennus tapahtuu kansioon jossa crawler on
-currtime = datetime.datetime.now()
-epoch_time = calendar.timegm(currtime.timetuple())
+webPage = ['https://www.gigantti.fi/gaming/tietokonekomponentit/naytonohjaimet-gpu?f=31620%3A%255B16%252C32%255D&f=33706%3AGeForce%2520RTX%252050%2520Series']
 opts = Options()
 opts.add_argument("--headless=new")
 opts.add_argument('--disable-blink-features=AutomationControlled')
 
+items = []
 
 def crawl(*args):
 
         for z in range(len(webPage)):
                 driver = webdriver.Firefox(options=opts)
 
-                filename = f'result-{z}.json'
                 print(f" crawlaus nro: {z + 1}")
-                driver.get(f'https://www.{webPage[z]}')
+                driver.get(f'{webPage[z]}')
 
                 # odottaa että eväste banner latautuu sivulle, TODO tekeekö elementurl mitään?
                 elementurl = WebDriverWait(driver, 30).until(
@@ -92,37 +80,23 @@ def crawl(*args):
                         finally:
                                 pass
  
-
-                        tmp4 = time.strftime('%Y-%m-%d %H:%M')
-                        mycursor = mydb.cursor()
-
-                        sql = "INSERT INTO gpu (gpu_nimi, gpu_hinta, gpu_linkki, gpu_aika) VALUES (%s, %s, %s, %s) ON DUPLICATE KEY UPDATE gpu_nimi=VALUES(gpu_nimi), gpu_linkki=VALUES(gpu_linkki), gpu_aika=VALUES(gpu_aika)"
-                        val = (nimi, hinta, linkki, tmp4)
-                        mycursor.execute(sql, val)
-                        mydb.commit()
-
-                        print(mycursor.rowcount, "record inserted.")
                        
-                        # alempi kommentoitu koodi tallentaa samat tiedot .json tiedostoon. .json tiedostossa url encoding(ä = %C3%A4, ö = %C3%B6 tyylinen) ja se pitää muuntaa erikseen utf-8 jos sitä haluaa käyttää muuhun kuin testaukseen
-                        """testjson = {
+                        # alempi koodi tallentaa samat tiedot .json tiedostoon. .json tiedostossa url encoding(ä = %C3%A4, ö = %C3%B6 tyylinen) ja se pitää muuntaa erikseen utf-8 jos sitä haluaa käyttää muuhun kuin testaukseen
+                        testjson = {
                         "nimi": nimi,
                         "hinta": hinta,
                         "linkki": linkki
                         }
-                        with open(filename, 'a', encoding='utf-8') as f: # tekee tiedoston ja lisää siihen tulokset. pitää vielä formatoida paremmin json/xml/csv muotoon.
-                                if x == 0:
-                                        f.writelines("{")
-                                print(x)
-                                
-                                f.writelines(f'"objekti{x}"')
-                                f.writelines(":[")
-                                f.writelines(json.dumps(testjson, indent=4, separators=(",", ":")))
-                                if x == len(elementnames) - 1:
-                                        f.writelines("]\n}")
-                                else:
-                                        f.writelines("],")
+                        items.append(
+                                testjson
+                        )
+                
+                
+                with open("result-2.json", 'w', encoding='utf-8') as f: 
 
-                                f.close()"""
+                        f.writelines(json.dumps(items, ensure_ascii=False, indent=4, separators=(",", ":")))
+
+                        f.close()
                 driver.close()
 
 

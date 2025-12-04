@@ -9,34 +9,26 @@ import re
 import datetime
 import calendar
 import time
-import mysql.connector 
-
-mydb = mysql.connector.connect(
-  host="placeholder",
-  user="placeholder",
-  password="placeholder",
-  database="placeholder"
-)
 
 
 
 # webpage linkkien tilalla pitäisi toimia mikä tahansa gigantin sivu. 
 # crawler1 hakee näyttöjä
 # webPage listaan voi lisätä lisää linkkejä jos tarvitsee
-webPage = ['gigantti.fi/gaming/pelinaytot?f=30831%3A2560x1440%7C3840x2160%7C3440x1440']
+webPage = ['https://www.gigantti.fi/gaming/pelinaytot?f=30831%3A2560x1440%7C3840x2160%7C3440x1440']
 opts = Options()
 opts.add_argument("--headless=new")
 opts.add_argument('--disable-blink-features=AutomationControlled')
 
+items = []
 
 def crawl(*args):
 
         for z in range(len(webPage)):
                 driver = webdriver.Firefox(options=opts)
 
-                filename = f'result-{z}.json'
                 print(f" crawlaus nro: {z + 1}")
-                driver.get(f'https://www.{webPage[z]}')
+                driver.get(f'{webPage[z]}')
 
                 # odottaa että eväste banner latautuu sivulle, TODO tekeekö elementurl mitään?
                 elementurl = WebDriverWait(driver, 30).until(
@@ -87,35 +79,21 @@ def crawl(*args):
                                 pass
  
 
-                        tmp4 = time.strftime('%Y-%m-%d %H:%M')
-                        mycursor = mydb.cursor()
-
-                        sql = "INSERT INTO näytöt (näytöt_nimi, näytöt_hinta, näytöt_linkki, näytöt_aika) VALUES (%s, %s, %s, %s) ON DUPLICATE KEY UPDATE näytöt_nimi=VALUES(näytöt_nimi), näytöt_linkki=VALUES(näytöt_linkki), näytöt_aika=VALUES(näytöt_aika)"
-                        val = (nimi, hinta, linkki, tmp4)
-                        mycursor.execute(sql, val)
-                        mydb.commit()
-
-                        print(mycursor.rowcount, "record inserted.")
-
-                        # alempi kommentoitu koodi tallentaa samat tiedot .json tiedostoon. .json tiedostossa url encoding(ä = %C3%A4, ö = %C3%B6 tyylinen) ja se pitää muuntaa erikseen utf-8 jos sitä haluaa käyttää muuhun kuin testaukseen
-                        """testjson = {
+                        # alempi koodi tallentaa samat tiedot .json tiedostoon. .json tiedostossa url encoding(ä = %C3%A4, ö = %C3%B6 tyylinen) ja se pitää muuntaa erikseen utf-8 jos sitä haluaa käyttää muuhun kuin testaukseen
+                        testjson = {
                         "nimi": nimi,
                         "hinta": hinta,
                         "linkki": linkki
                         }
+                        items.append(
+                                testjson
+                        )
+                
+                
+                with open("result-1.json", 'w', encoding='utf-8') as f: 
 
-                        with open(filename, 'a', encoding='utf-8') as f: 
-                                if x == 0:
-                                        f.writelines("{")
-                                print(x)
-                                
-                                f.writelines(f'"objekti{x}"')
-                                f.writelines(":[")
-                                f.writelines(json.dumps(testjson, indent=4, separators=(",", ":")))
-                                if x == len(elementnames) - 1:
-                                        f.writelines("]\n}")
-                                else:
-                                        f.writelines("],")
-                                f.close()"""
+                        f.writelines(json.dumps(items, ensure_ascii=False, indent=4, separators=(",", ":")))
+
+                        f.close()
                 driver.close()
 crawl()
