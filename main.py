@@ -17,13 +17,14 @@ import PARAMS
 # --- CONFIG ---
 OPERA_BINARY = r"C:\Users\veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
 CHROMEDRIVER_PATH = r"C:\Users\veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
-OUTPUT_FILE = "nettimokki_listings.json"
-OUTPUT_FILE_BACKUP = "nettimokki_listings.json.bak"
+OUTPUT_FILE = r"nettisivu\nettimokki_listings.json"
+
+
 
 RESET_JSON_EACH_RUN = True
 
 # Add a limit for how many listings to scrape after collecting links
-MAX_LISTINGS_TO_SCRAPE = 10
+MAX_LISTINGS_TO_SCRAPE = 20
 # --- SETUP SELENIUM ---
 options = Options()
 options.binary_location = OPERA_BINARY
@@ -44,6 +45,13 @@ BASE_URL = "https://www.nettimokki.com/vuokramokit/"
 PARAM = PARAMS.PARAMS
 
 
+def has_none(obj):
+    """Return True if obj (dict/list/tree) contains any None value."""
+    if isinstance(obj, dict):
+        return any(has_none(v) for v in obj.values())
+    if isinstance(obj, list):
+        return any(has_none(v) for v in obj)
+    return obj is None
 
 
 # --- HELPERS ---
@@ -155,52 +163,41 @@ MONTHS_FI = {
     "syyskuu": 9, "lokakuu": 10, "marraskuu": 11, "joulukuu": 12
 }
 
-def find_first_available_range(calendar_id, preferred_lengths=(7, 8)):
-    """
-    Scans the given datepicker (one month) and finds the first available
-    consecutive date span. Accepts 7 or 8 days.
-    Works even when the month is split into two <table> elements.
-    """
+def find_first_available_range(calendar_id, preferred_lengths=(7,8)):
 
     try:
-        # Get all <td> that contain an <a> (bookable and clickable)
-        day_cells = driver.find_elements(
+        bookable_cells = driver.find_elements(
             By.XPATH,
             f"//div[@id='{calendar_id}']//td[a and contains(@class, 'bookable-day')]"
         )
 
         days = []
-        for cell in day_cells:
+        for cell in bookable_cells:
             try:
-                # Inner <a> contains the visible day number
                 day_num = int(cell.find_element(By.TAG_NAME, "a").text.strip())
                 days.append(day_num)
             except:
                 continue
 
-        print(f"[DEBUG] Days found in order: {days}")
+        days = sorted(days)  # VERY IMPORTANT
+        print(f"[DEBUG] Bookable days: {days}")
 
-        # Try each desired length (7 first, then 8)
         for length in preferred_lengths:
             for i in range(len(days)):
-                start_day = days[i]
-                needed = list(range(start_day, start_day + length))
+                start = days[i]
+                end = start + length - 1
+                needed = list(range(start, end + 1))
 
-                # Check if all needed days appear in "days" and in correct order
+                # Check if all needed days exist
                 if all(d in days for d in needed):
-                    # Also confirm the order matches
-                    indices = [days.index(d) for d in needed]
-                    if indices == list(range(indices[0], indices[0] + length)):
-                        end_day = start_day + length - 1
-                        print(f"[DEBUG] Found consecutive {length}-day period: {start_day}-{end_day}")
-                        return start_day, end_day, length
+                    return start, end, length
 
-        print("[DEBUG] No valid 7- or 8-day span found")
         return None
 
     except Exception as e:
-        print(f"[DEBUG] Error scanning range: {e}")
+        print(f"Range scan error: {e}")
         return None
+
 
 
 def find_week_in_month_and_get_price(target_year, target_month_num):
@@ -208,19 +205,14 @@ def find_week_in_month_and_get_price(target_year, target_month_num):
     Navigate to the target month, find a 7- or 8-day available range
     using the FROM calendar, then select the matching TO end date
     and capture the price.
-
-    Returns:
-        { "week": "start-end", "days": 7/8, "price": "xxx" }
-        or None if no valid span exists.
     """
 
     try:
-        # Wait until datepicker is loaded
         wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".ui-datepicker-month")))
         human_pause(0.5, 1.0)
 
-        # --- Navigate to the correct month ---
-        for _ in range(24):  # safety limit
+        # --- Navigate to the month ---
+        for _ in range(24):
             year_str = driver.find_element(By.CSS_SELECTOR, ".ui-datepicker-year").text.strip()
             month_str = driver.find_element(By.CSS_SELECTOR, ".ui-datepicker-month").text.strip()
 
@@ -230,26 +222,24 @@ def find_week_in_month_and_get_price(target_year, target_month_num):
             if current_year == target_year and current_month_num == target_month_num:
                 break
 
-            # If we overshoot → nothing to select
             if current_year > target_year or (current_year == target_year and current_month_num > target_month_num):
                 return None
 
             driver.find_element(By.CSS_SELECTOR, "a.ui-datepicker-next").click()
             time.sleep(0.4)
         else:
-            # loop exhausted
             return None
 
         human_pause(0.3, 0.6)
 
-        # --- FIND FIRST FREE RANGE (7 or 8 days) ---
+        # --- FIND A 7/8 DAY RANGE IN FROM CALENDAR ---
         found = find_first_available_range("ad_detail_from_datepicker")
         if not found:
-            print("  -> No 7/8-day span found in FROM calendar")
+            print("  -> No 7/8-day span found")
             return None
 
         start_day, end_day, days_needed = found
-        print(f"  -> Found free {days_needed}-day span: {start_day}-{end_day}")
+        print(f"  -> Span found: {start_day}-{end_day} ({days_needed} days)")
 
         # --- SELECT START DAY ---
         from_xpath = f"//div[@id='ad_detail_from_datepicker']//td[a[text()='{start_day}']]"
@@ -257,34 +247,46 @@ def find_week_in_month_and_get_price(target_year, target_month_num):
         from_btn.click()
         human_pause(0.5, 0.9)
 
-        # --- WAIT FOR TO CALENDAR ---
+        # --- OPEN TO CALENDAR ---
         wait.until(EC.visibility_of_element_located((By.ID, "ad_detail_to_datepicker")))
         human_pause(0.3, 0.6)
 
-        # --- FIND END DAY IN TO CALENDAR ---
-        to_found = find_first_available_range("ad_detail_to_datepicker", preferred_lengths=(days_needed,))
-        if not to_found:
-            print(f"  -> End date not available in TO calendar (need {days_needed} days)")
-            return None
+        # --- CLICK END DAY (no scanning, no to_end_day) ---
+        to_xpath = f"//div[@id='ad_detail_to_datepicker']//td[a[text()='{end_day}']]"
 
-        _, to_end_day, _ = to_found
+                # --- CLICK END DAY (fallback to next day if needed) ---
+        def try_click(day):
+            xpath = f"//div[@id='ad_detail_to_datepicker']//td[a[text()='{day}']]"
+            try:
+                elem = wait.until(EC.element_to_be_clickable((By.XPATH, xpath)))
+                elem.click()
+                return True
+            except:
+                return False
 
-        # --- SELECT END DAY ---
-        to_xpath = f"//div[@id='ad_detail_to_datepicker']//td[a[text()='{to_end_day}']]"
-        to_click = wait.until(EC.element_to_be_clickable((By.XPATH, to_xpath)))
-        to_click.click()
+        print(f"  -> Attempting to click end day {end_day}")
+
+        # Try main end_day
+        if not try_click(end_day):
+
+            print(f"  -> End day {end_day} failed, trying fallback {end_day + 1}")
+
+            # Try fallback one day forward
+            fallback_day = end_day + 1
+            if not try_click(fallback_day):
+                print(f"  -> Fallback day {fallback_day} also failed")
+                return None
+            
+            # If fallback worked, update end_day and days_needed
+            end_day = fallback_day
+            days_needed += 1
+
         human_pause(0.7, 1.3)
+
 
         # --- GET PRICE ---
         price_element = wait.until(EC.presence_of_element_located((By.ID, "base_price")))
-        if (price_element is None):
-            to_xpath = f"//div[@id='ad_detail_to_datepicker']//td[a[text()='{to_end_day+1}']]"
-            to_click = wait.until(EC.element_to_be_clickable((By.XPATH, to_xpath)))
-            to_click.click()
-            human_pause(0.7, 1.3)
-            
-            price_element = wait.until(EC.presence_of_element_located((By.ID, "base_price")))
-        time.sleep(1.0)  # wait for JS computation
+        time.sleep(1.0)
 
         price = price_element.text.strip()
         if not price or "lasketaan" in price.lower():
@@ -304,6 +306,7 @@ def find_week_in_month_and_get_price(target_year, target_month_num):
         import traceback
         traceback.print_exc()
         return None
+
 
 
 def scrape_details_and_prices(url, months_to_check, year_to_check):
@@ -377,12 +380,14 @@ for i, item in enumerate(listing_urls):
     complete_data.append(listing_data)
 
 # 3. Save results to JSON
-if RESET_JSON_EACH_RUN and os.path.exists(OUTPUT_FILE):
-    shutil.copy2(OUTPUT_FILE, OUTPUT_FILE_BACKUP)
-    print(f"\nBacked up previous JSON to {OUTPUT_FILE_BACKUP}")
+# Remove any listings that contain None anywhere
+filtered_data = [listing for listing in complete_data if not has_none(listing)]
+
+print(f"Filtered out {len(complete_data) - len(filtered_data)} listings containing nulls.")
 
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(complete_data, f, ensure_ascii=False, indent=2)
+    json.dump(filtered_data, f, ensure_ascii=False, indent=2)
+
 
 print(f"\nDone! Saved {len(complete_data)} complete records to {OUTPUT_FILE}")
 driver.quit()
