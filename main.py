@@ -127,7 +127,7 @@ def main():
         "https://www.jimms.fi/fi/Product/List/000-0KJ/oheislaitteet--naytot?ob=4&fq=QHD"
     )
 
-    # --- Find cheapest items per category ---
+
     halvimmat = {}
     for category, items in all_data.items():
         if items:
@@ -135,11 +135,11 @@ def main():
         else:
             halvimmat[category] = None
 
-    # --- Put cheapest items FIRST in the JSON output ---
+
     reordered = {"halvimmat": halvimmat}
     reordered.update(all_data)
 
-    # --- Save JSON ---
+
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(reordered, f, indent=4, ensure_ascii=False)
 
