@@ -24,7 +24,7 @@ OUTPUT_FILE = r"nettisivu\nettimokki_listings.json"
 RESET_JSON_EACH_RUN = True
 
 # Add a limit for how many listings to scrape after collecting links
-MAX_LISTINGS_TO_SCRAPE = 20
+LISTINGS_TO_SCRAPE = 50
 # --- SETUP SELENIUM ---
 options = Options()
 options.binary_location = OPERA_BINARY
@@ -346,48 +346,70 @@ def scrape_details_and_prices(url, months_to_check, year_to_check):
 
 # --- MAIN EXECUTION ---
 
-# 1. Set parameters and get listing URLs
+# 1. Set parameters
 PARAMS.params_clean()
 PARAMS.params_set_bedrooms_range(2,4)
 PARAMS.params_set_water(True,False,False,True)
 PARAMS.params_set_beach(True)
 PARAMS.params_set_sauna(False,False,True)
 
-print("Getting listing URLs from the first page...")
-page_url = PARAMS.get_url(PARAMS.params_clean(PARAM), BASE_URL)
-listing_urls = get_listing_urls(page_url)
+# How many valid listings we want
+TARGET_VALID_LISTINGS = LISTINGS_TO_SCRAPE
+MAX_PAGES = 30  # safety cap to avoid infinite pagination
 
-# Limit the number of listings to scrape (e.g., first 10)
-if listing_urls:
-    original_count = len(listing_urls)
-    listing_urls = listing_urls[:MAX_LISTINGS_TO_SCRAPE]
-    print(f"Collected {original_count} links, limiting to first {len(listing_urls)} for scraping.")
-# 2. Scrape details for each listing
-complete_data = []
-months_to_check = [6, 8]  # June and August
+print(f"Collecting up to {TARGET_VALID_LISTINGS} valid listings (skips with missing data will trigger paging)...")
+
+# base search page URL (page 1)
+base_page_url = PARAMS.get_url(PARAMS.params_clean(PARAM), BASE_URL)
+
+months_to_check = [7, 8]
 year_to_check = 2026
 
-for i, item in enumerate(listing_urls):
-    print(f"\n--- Processing listing {i+1}/{len(listing_urls)} ---")
-    if not item or not item.get("url"):
-        continue
-    
-    url = item.get("url")
-    listing_data = scrape_details_and_prices(url, months_to_check, year_to_check)
+valid_listings = []
+seen_urls = set()
+page_num = 1
 
-    # attach image URL discovered on listing card
-    listing_data["image"] = item.get("image")
-    complete_data.append(listing_data)
+while len(valid_listings) < TARGET_VALID_LISTINGS and page_num <= MAX_PAGES:
+    # construct page URL (page 1 = base, subsequent pages add &page=N)
+    page_url = base_page_url if page_num == 1 else f"{base_page_url}&page={page_num}"
+    print(f"\n--- Fetching search results page {page_num}: {page_url} ---")
+    cards = get_listing_urls(page_url)
+    if not cards:
+        print("  -> No listings returned from this page; stopping pagination.")
+        break
 
-# 3. Save results to JSON
-# Remove any listings that contain None anywhere
-filtered_data = [listing for listing in complete_data if not has_none(listing)]
+    for card in cards:
+        if len(valid_listings) >= TARGET_VALID_LISTINGS:
+            break
 
-print(f"Filtered out {len(complete_data) - len(filtered_data)} listings containing nulls.")
+        url = card.get("url")
+        if not url or url in seen_urls:
+            continue
+        seen_urls.add(url)
 
+        print(f"\n--- Processing listing {len(valid_listings)+1}/{TARGET_VALID_LISTINGS}: {url} ---")
+        listing_data = scrape_details_and_prices(url, months_to_check, year_to_check)
+        listing_data["image"] = card.get("image")
+
+        if has_none(listing_data):
+            print("  -> Listing missing data; skipping and continuing to next listing/page.")
+            # continue to next card (we'll keep paging until we reach TARGET_VALID_LISTINGS)
+            continue
+
+        valid_listings.append(listing_data)
+        # polite pause between listings
+        human_pause(0.4, 0.9)
+
+    page_num += 1
+    # small pause between pages
+    human_pause(0.8, 1.4)
+
+if len(valid_listings) < TARGET_VALID_LISTINGS:
+    print(f"\nWarning: only collected {len(valid_listings)} valid listings after paging to {page_num-1}.")
+
+# Save results
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(filtered_data, f, ensure_ascii=False, indent=2)
+    json.dump(valid_listings, f, ensure_ascii=False, indent=2)
 
-
-print(f"\nDone! Saved {len(complete_data)} complete records to {OUTPUT_FILE}")
+print(f"\nDone! Saved {len(valid_listings)} valid records to {OUTPUT_FILE}")
 driver.quit()

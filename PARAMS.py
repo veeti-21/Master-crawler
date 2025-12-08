@@ -11,8 +11,8 @@ HEADERS = {
 BASE_URL = "https://www.nettimokki.com/vuokramokit/mokit-jarven-rannalla/"
 
 PARAMS = {
-    "item_availability__date_from"   : "2026-06-01",       # change via params_set_date(a,b)
-    "item_availability__date_to"     : "2026-06-07",       # change via params_set_date(a,b)
+    "item_availability__date_from"   : "2026-07-01",       # change via params_set_date(a,b)
+    "item_availability__date_to"     : "2026-07-07",       # change via params_set_date(a,b)
     "page"                           : "null",             # change via params_set_page(a)
     "item__is_payment_ad"            : "null",             # change via params_set_nettimaksu(True)
     "item__avg_overall_rating_4"     : "null",             # change via params_set_require_4_stars(True)
