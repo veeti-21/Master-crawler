@@ -1,0 +1,464 @@
+body {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  font-family: "Courier New", monospace;
+  background-color: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: blue;
+  transition-duration: 0.2s;
+  font-family: "Courier New", monospace;
+}
+a:hover {
+  color: white;
+  cursor: pointer;
+}
+p {
+  font-family: "Courier New", monospace;
+}
+h1 {
+  font-family: "Courier New", monospace;
+}
+h3 {
+  font-family: "Courier New", monospace;
+}
+input {
+  width: 60%;
+}
+button {
+  font-family: "Courier New", monospace;
+}
+.navNappi {
+  font-weight: bold;
+  font-size: 15px;
+  color: #423a24;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #e1bb80;
+  border: 2px;
+  border-style: solid;
+  border-color: #e1bb80;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  width: 140px;
+}
+.navNappi:hover {
+  font-size: 15px;
+  color: #e1bb80;
+  background-color: #423a24;
+  border: 4px;
+  border-style: solid;
+  transition-duration: 0.3s;
+}
+.navBar {
+  font-weight: bold;
+  width: 100%;
+  background-color: #423a24;
+  height: 100px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonRow {
+  border-width: 4px;
+  border-color: black;
+  padding: 10px;
+}
+.login {
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+.loginNappi {
+  font-weight: bold;
+  font-size: 15px;
+  color: #423a24;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #e1bb80;
+  border: 2px;
+  border-style: solid;
+  border-color: #e1bb80;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin-top: 16px;
+  margin-right: 10px;
+}
+.loginNappi:hover {
+  color: #e1bb80;
+  background-color: #423a24;
+  border: 4px;
+  border-style: solid;
+}
+.background {
+  background-color: #f9e4bc;
+}
+
+.logoutBtn {
+  display: block;
+}
+#loginBtn {
+  display: inline-block;
+}
+.btnRed {
+  transition-duration: 0.3s;
+  width: 150px;
+  margin-top: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #423a24;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #e1bb80;
+  border: 2px;
+  border-style: solid;
+  border-color: #e1bb80;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  justify-content: center;
+  position-anchor: unset;
+}
+.btnRedLeft {
+  transition-duration: 0.3s;
+  width: 150px;
+  margin-top: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #423a24;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #fdedce;
+  border: 2px;
+  border-style: solid;
+  border-color: #e1bb80;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  justify-content: center;
+  position-anchor: unset;
+}
+.btnRedFixed {
+  transition-duration: 0.3s;
+  margin-top: 16px;
+  margin-right: 10px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 15px;
+  color: #423a24;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #e1bb80;
+  border: 2px;
+  border-style: solid;
+  border-color: #e1bb80;
+  border-radius: 10px;
+  justify-content: center;
+  position-anchor: unset;
+}
+.btnRedFixed:hover {
+  color: #e1bb80;
+  background-color: #423a24;
+}
+.btnRed:hover {
+  font-size: 15px;
+  color: #e1bb80;
+  background-color: #423a24;
+  border: 4px;
+  border-style: solid;
+  border-color: #e1bb80;
+}
+.btnRedLeft:hover {
+  color: #e1bb80;
+  padding-bottom: 12px;
+  background-color: #423a24;
+  border: 4px;
+  border-style: solid;
+  border-color: #e1bb80;
+}
+.register {
+  position: relative;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 4%;
+  margin-bottom: 10%;
+  padding: 10px;
+  min-width: 33%;
+  background-color: #423a28;
+  min-height: 330px;
+  color: #e1bb80;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.registerDiv {
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 66%;
+  text-align: center;
+}
+.regBtn {
+  text-align: center;
+  background-color: #e1bb80;
+  color: #423a24;
+  border: 2px solid;
+  border-color: #e1bb80;
+  border-radius: 10px;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  margin-left: 40%;
+}
+.regHdr {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+}
+.submitBtn {
+  position: absolute;
+  top: 75%;
+  right: 40%;
+  text-align: center;
+  background-color: #e1bb80;
+  color: #423a24;
+  border: 2px solid;
+  border-color: #e1bb80;
+  border-radius: 10px;
+  height: 35px;
+  width: 80px;
+  cursor: pointer;
+}
+.submitBtn:hover {
+  color: #e1bb80;
+  background-color: #423a24;
+  border-style: solid;
+  transition-duration: 0.3s;
+}
+.confLogOut {
+  border-radius: 20px;
+  text-align: center;
+  background-color: #423a24;
+  border-color: #423a24;
+  border: 3px solid;
+  color: #e1bb80;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+.footer {
+  min-height: 200px;
+  height: 200px;
+  background-color: #e1bb80;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: solid;
+  border-width: 2px;
+  border-color: #e1bb80;
+  bottom: 0;
+  clear: both;
+}
+.footerDiv {
+  /*tähän footer sisällä olevan divin tyyli*/
+  max-width: 20%;
+  min-width: 20%;
+  height: 200px;
+  background-color: #e1bb80;
+  text-align: left;
+}
+.footerHeader {
+  text-align: center;
+  font-weight: bold;
+  color: #423a24;
+}
+.loginDiv {
+  position: relative;
+  top: 35%;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  min-width: 400px;
+  background-color: #423a24;
+  height: 330px;
+  color: #e1bb80;
+  border-radius: 20px;
+  margin-left: 33%;
+  margin-top: 4%;
+}
+.ostoForm {
+  flex: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1bb80;
+  width: 18%;
+  border-color: #423a24;
+  border: 4px;
+  border-radius: 20px;
+  text-align: right;
+  padding: 15px;
+  justify-items: center;
+  margin-top: 10%;
+  margin-left: 40%;
+  margin-bottom: 9%;
+}
+::backdrop {
+  background-color: black;
+  opacity: 0.5;
+}
+.radioDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.adminContent {
+  overflow: hidden;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: sticky; /*pitää tarkistaa miltä vaihtoehdot näyttävät*/
+  left: 17%;
+  flex-wrap: wrap;
+  max-height: 600px;
+  display: table;
+}
+.adminDiv {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  float: left;
+  background-color: #423a28;
+  color: #e1bb80;
+  margin: 10px;
+  padding: 10px;
+  height: 80%;
+  margin-top: 5%;
+  max-height: 600px;
+  width: 80%;
+  border-radius: 10px;
+  overflow: auto;
+}
+td {
+  background-color: #423a24;
+  border: 1px solid #e1bb80;
+  font-weight: lighter;
+  max-width: 300px;
+}
+
+th,
+td {
+  font-weight: bold;
+  border: 3px solid #e1bb80;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 300px;
+}
+table {
+  margin: 0 auto;
+  font-size: large;
+  border: 1px solid #e1bb80;
+  border-radius: 10px;
+}
+.testausContentL {
+  width: 70%;
+  float: left;
+  background-color: #e1bb80;
+  margin: 2%;
+  border-radius: 30px;
+  padding: 50px;
+  border: solid;
+  border-width: 2px;
+  border-color: #fdedce;
+  align-self: flex-start;
+}
+.testausContentR {
+  width: 70%;
+  float: right;
+  background-color: #fdedce;
+  margin: 1%;
+  border-radius: 30px;
+  padding: 30px;
+  border: solid;
+  border-width: 2px;
+  border-color: #e1bb80;
+  align-self: flex-end;
+}
+.profileBtn {
+  position: relative;
+  margin-right: 100px;
+  bottom: 1;
+  border-radius: 100%;
+  color: #423a24;
+  border: solid;
+  margin-left: 90px;
+  border-width: 2px;
+  border-color: #e1bb80;
+  background-color: #e1bb80;
+  height: 70px;
+  min-width: 70px;
+  width: auto;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+.product {
+  border: solid;
+  border-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  grid-gap: 20px;
+  justify-content: left;
+  align-items: center;
+  width: 1000px;
+  flex-direction: row;
+}
+.shopDiv {
+  margin: 10px;
+  padding: 10px;
+  background-color: lightsteelblue;
+  width: 70%;
+  align-self: left;
+}
+.tuoteKuva {
+  height: 110px;
+  /*background-color: yellowgreen;*/
+}
+.hintaVarastoDiv {
+  display: inline-block;
+  border: solid;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nimiKuvaHintaDiv {
+  display: inline-block;
+  border: solid;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+#grad {
+  background-image: linear-gradient(to bottom right, #ebe9dc, #539f81);
+}
