@@ -355,7 +355,7 @@ PARAMS.params_set_sauna(False,False,True)
 
 # How many valid listings we want
 TARGET_VALID_LISTINGS = LISTINGS_TO_SCRAPE
-MAX_PAGES = 30  # safety cap to avoid infinite pagination
+MAX_PAGES = 24  # safety cap to avoid infinite pagination
 
 print(f"Collecting up to {TARGET_VALID_LISTINGS} valid listings (skips with missing data will trigger paging)...")
 
