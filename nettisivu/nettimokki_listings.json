@@ -1,0 +1,902 @@
+[
+  {
+    "url": "https://www.nettimokki.com/vaskivesi/villa-kanerva/50599/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 450 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 500 €"
+      }
+    },
+    "title": "Villa Kanerva",
+    "location": "Virrat",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/50501_50600/50599_666eb205e6e05a07_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/pusula/kulakannokka-41/53960/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "980 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "980 €"
+      }
+    },
+    "title": "Kulakannokka 41",
+    "location": "Lohja",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53901_54000/53960_199adb68cf4b9cfe_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/dragsfjard/stay-north-koto-house-design-beach-pool/53833/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "4 800 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "4 800 €"
+      }
+    },
+    "title": "Stay North- Koto House-Design-Beach-Pool",
+    "location": "Kemiönsaari",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53801_53900/53833_b68997238e7d8c1a_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/hirvensalmi/verkkoranta-saarimokki-ja-veneet/59536/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 300 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 300 €"
+      }
+    },
+    "title": "Verkkoranta Saarimökki ja veneet",
+    "location": "Hirvensalmi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/59501_59600/59536_6f42c34540994b66_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/someenjarvi/vanha-rantatila-ristiina/59281/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "500 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "500 €"
+      }
+    },
+    "title": "Vanha Rantatila - Ristiina",
+    "location": "Mikkeli",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/59201_59300/59281_bbd5497ace89041f_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/utsjoki/villa-luhpu/60264/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 400 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 200 €"
+      }
+    },
+    "title": "Villa Luhpu",
+    "location": "Utsjoki",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60201_60300/60264_c6e1dda03b5334e4_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/sarvela/lomakivisto-3-saunan-lomakohde/50794/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      }
+    },
+    "title": "Lomakivistö 3 saunan lomakohde",
+    "location": "Karvia",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/50701_50800/50794_7da801927eb69d0a_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kuusamo/honkalinna-1-2/59593/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 300 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 250 €"
+      }
+    },
+    "title": "Honkalinna 1-2",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/59501_59600/59593_ccad17075508d60d_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kuusamo/luksushuvila-petajalinna/59563/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "10 944 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "10 944 €"
+      }
+    },
+    "title": "Luksushuvila Petäjälinna",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/59501_59600/59563_a0e193b77712ea41_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/lavia/villa-karhijarvi/53787/",
+    "prices_per_month": {
+      "7": {
+        "week": "21-28",
+        "days": 8,
+        "price": "1 450 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 080 €"
+      }
+    },
+    "title": "Villa Karhijärvi",
+    "location": "Pori",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53701_53800/53787_bc68191d08173729_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/murole/villa-jalokari/59654/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "5 600 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "5 700 €"
+      }
+    },
+    "title": "Villa Jalokari",
+    "location": "Ruovesi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/59601_59700/59654_a1126738360f9bf6_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kuusa/villa-vilkama-2-mokkia-jarvenrannalla/60106/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "4 200 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "3 900 €"
+      }
+    },
+    "title": "Villa Vilkama - 2 mökkiä järvenrannalla",
+    "location": "Laukaa",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60101_60200/60106_4cd9e63f72eca8a8_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/rutalahti/talasniemi/57016/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "750 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "675 €"
+      }
+    },
+    "title": "Talasniemi",
+    "location": "Joutsa",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57001_57100/57016_ae8202eff48128d0_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kuusamo/honkaranta-kuusamo-oulanka-ruka/51158/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "950 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "950 €"
+      }
+    },
+    "title": "Honkaranta - Kuusamo - Oulanka - Ruka",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51101_51200/51158_c635d93ab604516f_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kuusamo/ruka-oulanka-juuma/51565/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "960 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "960 €"
+      }
+    },
+    "title": "Ruka Oulanka Juuma",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51501_51600/51565_7a3b13a3805b3177_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/ivalo/villa-sarmi/54026/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 800 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 400 €"
+      }
+    },
+    "title": "Villa Sarmi",
+    "location": "Inari",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/54001_54100/54026_3f528b6b8e2d15e5_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kuusamo/oulanka-spirit-suuri-majatalo/58999/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 570 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 560 €"
+      }
+    },
+    "title": "Oulanka Spirit suuri majatalo",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/58901_59000/58999_757d2eaf5d826f0f_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/lappajarvi/willasunset/53383/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "4 200 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "4 200 €"
+      }
+    },
+    "title": "WillaSunset",
+    "location": "Lappajärvi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53301_53400/53383_a82a80e0b5441c6e_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/vaskivesi/villa-puolukka/50907/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 470 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 500 €"
+      }
+    },
+    "title": "Villa Puolukka",
+    "location": "Virrat",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/50901_51000/50907_39aac42a68f66c1e_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kivijarvi/villa-hietikko/60596/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 250 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 250 €"
+      }
+    },
+    "title": "Villa Hietikko",
+    "location": "Kivijärvi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60501_60600/60596_574c95feb77ec450_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/heimari/stay-north-worlds-end-2-luxury-villas/53779/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "7 200 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "7 200 €"
+      }
+    },
+    "title": "Stay North -Worlds End - 2 Luxury Villas",
+    "location": "Mikkeli",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53701_53800/53779_c6e2fc441d67eb6b_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/heinola-kk/mokki-1-kaijanniementie-247b-heinola/51859/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "850 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      }
+    },
+    "title": "Mökki 1 Kaijanniementie 247B Heinola",
+    "location": "Heinola",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51801_51900/51859_53338d77d813b300_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/lukana/upea-hirsimokki-ulkoporealtaalla/57316/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 260 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 140 €"
+      }
+    },
+    "title": "Upea hirsimökki ulkoporealtaalla",
+    "location": "Hämeenlinna",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57301_57400/57316_82caa2d19fb32b7e_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kuusamo/lomaniemi/60089/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "390 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "390 €"
+      }
+    },
+    "title": "Lomaniemi",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60001_60100/60089_999ad7f2d9d8e778_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/sonkajarvi/pennela/51388/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "760 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "750 €"
+      }
+    },
+    "title": "Pennelä",
+    "location": "Sonkajärvi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51301_51400/51388_8070c37be87bf73a_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/karstula/villa-saartoranta/60093/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 240 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 400 €"
+      }
+    },
+    "title": "Villa Saartoranta",
+    "location": "Karstula",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60001_60100/60093_4ef819770f6949ba_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/evijarvi/villa-keloniemi/59475/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 800 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 400 €"
+      }
+    },
+    "title": "Villa Keloniemi",
+    "location": "Evijärvi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/59401_59500/59475_dc698eae8e1fb2d9_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/luumaki/villa-karhuranta/57122/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 000 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 650 €"
+      }
+    },
+    "title": "Villa Karhuranta",
+    "location": "Luumäki",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57101_57200/57122_0180eec177caa0fb_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/sonkajarvi/koivuranta/51818/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 200 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 200 €"
+      }
+    },
+    "title": "Koivuranta",
+    "location": "Sonkajärvi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51801_51900/51818_8dbd2d28b7b48abe_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/muurame/mokki-muurame-golfin-vieressa/60215/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "700 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "700 €"
+      }
+    },
+    "title": "Mökki Muurame golfin vieressä",
+    "location": "Muurame",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60201_60300/60215_02af672193b16d66_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/inari/eramokki-ronkajarven-rannalla/60367/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 010 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "840 €"
+      }
+    },
+    "title": "Erämökki Ronkajärven rannalla",
+    "location": "Inari",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60301_60400/60367_a15a94065cc39c88_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/maakeski/paijanteen-kelo/60037/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 340 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 100 €"
+      }
+    },
+    "title": "Päijänteen Kelo",
+    "location": "Padasjoki",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60001_60100/60037_5a2e303237b9d5e6_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/uurainen/mokki-tolkku/58279/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "520 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "520 €"
+      }
+    },
+    "title": "Mökki Tolkku",
+    "location": "Uurainen",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/58201_58300/58279_b66121bcd492d501_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/sirkkamaki/raakanniemi/51399/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "930 €"
+      },
+      "8": {
+        "week": "15-21",
+        "days": 7,
+        "price": "780 €"
+      }
+    },
+    "title": "Rääkänniemi",
+    "location": "Konnevesi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51301_51400/51399_d525f5d4bfc7198e_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/joutsa/maijala/52431/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "630 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "630 €"
+      }
+    },
+    "title": "Maijala",
+    "location": "Joutsa",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/52401_52500/52431_c0047001440e70db_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/orivesi/villa-lokinkarki/60454/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 560 €"
+      },
+      "8": {
+        "week": "9-15",
+        "days": 7,
+        "price": "1 530 €"
+      }
+    },
+    "title": "Villa Lokinkärki",
+    "location": "Orivesi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60401_60500/60454_5085d03e1f90c80a_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/telakanava/villa-wanda/60090/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 400 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 400 €"
+      }
+    },
+    "title": "Villa Wanda",
+    "location": "Sulkava",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60001_60100/60090_9f0e7d1560ae7feb_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kallo/kallon-lappee/57469/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "750 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "750 €"
+      }
+    },
+    "title": "Kallon Lappee",
+    "location": "Kittilä",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57401_57500/57469_de7bb060f8bdee36_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/risulahti/kervila/51472/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      }
+    },
+    "title": "Kervilä",
+    "location": "Juva",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51401_51500/51472_3b171c6b41e315a6_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/palkane/toyraniemi-kustaantahti/53235/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 500 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "2 460 €"
+      }
+    },
+    "title": "Töyräniemi KustaanTähti",
+    "location": "Pälkäne",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53201_53300/53235_0491476d17abbe41_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kiihtelysvaara/tasokas-huvila-omalla-paljulla/53942/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 260 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 260 €"
+      }
+    },
+    "title": "Tasokas huvila omalla paljulla",
+    "location": "Joensuu",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53901_54000/53942_95ba319af7c89f2e_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/piispajarvi/mantyniemi/51071/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "780 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "780 €"
+      }
+    },
+    "title": "Mäntyniemi",
+    "location": "Suomussalmi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/51001_51100/51071_2399c17f17ebf95b_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/huhmari/jarvenrantamokki-kaikilla-mukavuuksilla/53644/",
+    "prices_per_month": {
+      "7": {
+        "week": "19-26",
+        "days": 8,
+        "price": "1 390 €"
+      },
+      "8": {
+        "week": "9-16",
+        "days": 8,
+        "price": "1 390 €"
+      }
+    },
+    "title": "Järvenrantamökki kaikilla mukavuuksilla",
+    "location": "Vihti",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/53601_53700/53644_90ba244cca32cc97_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/rukatunturi/rukajarven-villa-valo/57072/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 080 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 080 €"
+      }
+    },
+    "title": "Rukajärven Villa Valo",
+    "location": "Kuusamo",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57001_57100/57072_5505388228b3615b_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/keitele/kalliorannan-lomapirtti/58760/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "860 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "840 €"
+      }
+    },
+    "title": "Kalliorannan lomapirtti",
+    "location": "Keitele",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/58701_58800/58760_0acf1c82b5a9a601_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/ita-aure/mokki-suviranta/60196/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-8",
+        "days": 8,
+        "price": "650 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "650 €"
+      }
+    },
+    "title": "Mökki Suviranta",
+    "location": "Ylöjärvi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/60101_60200/60196_b521556e3fd587ee_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/jokijarvi/metsatahti-hirviniemessa/54084/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 000 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "900 €"
+      }
+    },
+    "title": "Metsätähti Hirviniemessä",
+    "location": "Pielavesi",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/54001_54100/54084_2eee0bcefd113aa6_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/kivisuo/tahtitalvikki/52430/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "1 355 €"
+      },
+      "8": {
+        "week": "9-16",
+        "days": 8,
+        "price": "1 410 €"
+      }
+    },
+    "title": "Tähtitalvikki",
+    "location": "Joutsa",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/52401_52500/52430_36ff9b79f408bb3c_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/savuniemi/villa-tyrni/59659/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "840 €"
+      },
+      "8": {
+        "week": "1-7",
+        "days": 7,
+        "price": "840 €"
+      }
+    },
+    "title": "Villa Tyrni",
+    "location": "Joroinen",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/59601_59700/59659_84422a18e8bff2ff_360X270.jpg"
+  },
+  {
+    "url": "https://www.nettimokki.com/siuro/villa-jokisjarvi/57162/",
+    "prices_per_month": {
+      "7": {
+        "week": "1-7",
+        "days": 7,
+        "price": "3 200 €"
+      },
+      "8": {
+        "week": "1-8",
+        "days": 8,
+        "price": "1 800 €"
+      }
+    },
+    "title": "Villa Jokisjärvi",
+    "location": "Nokia",
+    "image": "https://cdn.nettimokki.com/live/uploads/image/57101_57200/57162_45e4b3fffa2151ef_360X270.jpg"
+  }
+]
