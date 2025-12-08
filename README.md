@@ -10,6 +10,7 @@ verkkokaupoista uusi näytönohjain (nykyinen 3070) + uusi 1440p näyttö
 vuokralle lomamökki kesälle 2026 viikoksi
 lomamatka kesälle 2026 / hiihtolomalle (vko 9)
 
+
 # Testaus-crawler
 
 # huom.
@@ -44,3 +45,6 @@ python crawler1.py
 
 crawler tallentaa result.json tiedostoon haetun datan
 pitää jossain vaiheessa lisätä gitignore jossa result tiedostot pois gitistä
+
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
