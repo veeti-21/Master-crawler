@@ -28,7 +28,7 @@ LISTINGS_TO_SCRAPE = 50
 # --- SETUP SELENIUM ---
 options = Options()
 options.binary_location = OPERA_BINARY
-# options.add_argument("--headless=new")  # run headless if you want
+options.add_argument("--headless=new")  # run headless if you want
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--window-size=1920,1080")
