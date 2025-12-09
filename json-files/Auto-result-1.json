@@ -1,0 +1,162 @@
+[
+    {
+        "nimi":"Nissan Note",
+        "hinta":"7 400 €",
+        "linkki":"https://www.nettiauto.com/nissan/note/15223959"
+    },
+    {
+        "nimi":"Honda Civic",
+        "hinta":"7 490 €",
+        "linkki":"https://www.nettiauto.com/honda/civic/15425123"
+    },
+    {
+        "nimi":"Volkswagen Golf",
+        "hinta":"2 700 €",
+        "linkki":"https://www.nettiauto.com/volkswagen/golf/15298173"
+    },
+    {
+        "nimi":"Honda Jazz",
+        "hinta":"2 700 €",
+        "linkki":"https://www.nettiauto.com/honda/jazz/15450402"
+    },
+    {
+        "nimi":"Smart Forfour",
+        "hinta":"2 700 €",
+        "linkki":"https://www.nettiauto.com/smart/forfour/15458244"
+    },
+    {
+        "nimi":"Chevrolet Captiva",
+        "hinta":"2 750 €",
+        "linkki":"https://www.nettiauto.com/chevrolet/captiva/15454823"
+    },
+    {
+        "nimi":"Volkswagen Bora",
+        "hinta":"2 790 €",
+        "linkki":"https://www.nettiauto.com/volkswagen/bora/15450232"
+    },
+    {
+        "nimi":"Smart Fortwo",
+        "hinta":"2 800 €",
+        "linkki":"https://www.nettiauto.com/smart/fortwo/15354755"
+    },
+    {
+        "nimi":"Hyundai Getz",
+        "hinta":"2 860 €",
+        "linkki":"https://www.nettiauto.com/hyundai/getz/15422056"
+    },
+    {
+        "nimi":"Chevrolet Aveo",
+        "hinta":"2 899 €",
+        "linkki":"https://www.nettiauto.com/chevrolet/aveo/15419091"
+    },
+    {
+        "nimi":"Chrysler Neon",
+        "hinta":"2 950 €",
+        "linkki":"https://www.nettiauto.com/chrysler/neon/15350726"
+    },
+    {
+        "nimi":"Volvo 340",
+        "hinta":"2 990 €",
+        "linkki":"https://www.nettiauto.com/volvo/340/15068446"
+    },
+    {
+        "nimi":"Smart Fortwo",
+        "hinta":"2 990 €",
+        "linkki":"https://www.nettiauto.com/smart/fortwo/15388688"
+    },
+    {
+        "nimi":"Smart Fortwo",
+        "hinta":"2 999 €",
+        "linkki":"https://www.nettiauto.com/smart/fortwo/15442540"
+    },
+    {
+        "nimi":"Ford Scorpio",
+        "hinta":"3 000 €",
+        "linkki":"https://www.nettiauto.com/ford/scorpio/15329382"
+    },
+    {
+        "nimi":"Ford Fiesta",
+        "hinta":"3 000 €",
+        "linkki":"https://www.nettiauto.com/ford/fiesta/15430225"
+    },
+    {
+        "nimi":"Smart Fortwo",
+        "hinta":"3 190 €",
+        "linkki":"https://www.nettiauto.com/smart/fortwo/15115423"
+    },
+    {
+        "nimi":"Toyota Yaris",
+        "hinta":"3 240 €",
+        "linkki":"https://www.nettiauto.com/toyota/yaris/15429397"
+    },
+    {
+        "nimi":"Hyundai Elantra",
+        "hinta":"3 250 €",
+        "linkki":"https://www.nettiauto.com/hyundai/elantra/15273981"
+    },
+    {
+        "nimi":"Opel Omega",
+        "hinta":"3 300 €",
+        "linkki":"https://www.nettiauto.com/opel/omega/15084903"
+    },
+    {
+        "nimi":"Saab 9-3",
+        "hinta":" 3 300 €",
+        "linkki":"https://www.nettiauto.com/saab/9-3/15410513"
+    },
+    {
+        "nimi":"Fiat 500",
+        "hinta":"3 300 €",
+        "linkki":"https://www.nettiauto.com/fiat/500/15422809"
+    },
+    {
+        "nimi":"Saab 9-3",
+        "hinta":"3 400 €",
+        "linkki":"https://www.nettiauto.com/saab/9-3/15188947"
+    },
+    {
+        "nimi":"Volkswagen Touran",
+        "hinta":" 3 499 €",
+        "linkki":"https://www.nettiauto.com/volkswagen/touran/15430241"
+    },
+    {
+        "nimi":"Mazda 3",
+        "hinta":"3 550 €",
+        "linkki":"https://www.nettiauto.com/mazda/3/15432721"
+    },
+    {
+        "nimi":"Volvo 940",
+        "hinta":"3 600 €",
+        "linkki":"https://www.nettiauto.com/volvo/940/15401612"
+    },
+    {
+        "nimi":"Volkswagen Jetta",
+        "hinta":"3 600 €",
+        "linkki":"https://www.nettiauto.com/volkswagen/jetta/15432994"
+    },
+    {
+        "nimi":"BMW 316",
+        "hinta":"3 650 €",
+        "linkki":"https://www.nettiauto.com/bmw/316/15446417"
+    },
+    {
+        "nimi":"Nissan Almera",
+        "hinta":"3 700 €",
+        "linkki":"https://www.nettiauto.com/nissan/almera/15434172"
+    },
+    {
+        "nimi":"Nissan Primera",
+        "hinta":"3 890 €",
+        "linkki":"https://www.nettiauto.com/nissan/primera/15440606"
+    },
+    {
+        "nimi":"Opel Astra",
+        "hinta":"3 900 €",
+        "linkki":"https://www.nettiauto.com/opel/astra/15387859"
+    },
+    {
+        "nimi":"Opel Ampera",
+        "hinta":"3 900 €",
+        "linkki":"https://www.nettiauto.com/opel/ampera/15452022"
+    }
+]

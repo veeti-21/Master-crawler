@@ -12,7 +12,7 @@ import calendar
 
 currtime = datetime.datetime.now()
 epoch_time = calendar.timegm(currtime.timetuple())
-filename = f'Auto-result.json'
+filename = f'json-files/Auto-result.json'
 opts = Options()
 opts.add_argument("--headless=new")
 driver = webdriver.Firefox(options=opts)
@@ -23,14 +23,13 @@ driver.set_window_size(required_width, required_height)
 # nettisivu
 webPage = ["https://www.nettiauto.com/hakutulokset?haku=P62829718&page=1", "https://www.nettiauto.com/hakutulokset?haku=P62829718&page=2"]
 
-items = []
-with open(filename, 'w', encoding='utf-8') as f:# tekee tyhjän tai tyhjentää tiedoston
-        f.writelines("")
-f.close()
+
 print("autojen haku")
 for z in range(len(webPage)):# etsii tulokset sivustosta
-        print(f"autojen haku nro: {z + 1}")
+        items = []
 
+        print(f"autojen haku nro: {z + 1}")
+        filename = f'json-files/Auto-result-{z + 1}.json'
         driver.get(f"{webPage[z]}")
         elementname = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new.total-upsell-ad > div > div.product-card__body > div.product-card__info > h2")
         elementprice = driver.find_elements(By.CSS_SELECTOR, '#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > div:nth-child(2) > div')
@@ -39,9 +38,9 @@ for z in range(len(webPage)):# etsii tulokset sivustosta
         
         for x in range(len(elementname)):# ottaa tulokset
                 
-                tmp1 = f"{elementname[x].get_attribute("textContent")}\n" 
-                tmp2 = f"{elementprice[x].get_attribute("innerText").replace("\u00a0", " ")}\n"
-                tmp3 = f"{elementlink[x].get_attribute('href')}\n\n"
+                tmp1 = f"{elementname[x].get_attribute("textContent")}" 
+                tmp2 = f"{elementprice[x].get_attribute("innerText").replace("\u00a0", " ")}"
+                tmp3 = f"{elementlink[x].get_attribute('href')}"
                 
                 testjson = {
                 "nimi": tmp1,
@@ -53,14 +52,7 @@ for z in range(len(webPage)):# etsii tulokset sivustosta
                         testjson
                 )
         with open(filename, 'w', encoding='utf-8') as f: # lisää tulokset.
-
-
-
-                print(json.dumps(testjson, indent=4, separators=(",", ":")))
-
                 f.writelines(json.dumps(items, ensure_ascii=False, indent=4, separators=(",", ":")))
-
-
 
                 f.close()
 

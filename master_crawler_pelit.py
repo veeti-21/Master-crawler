@@ -60,7 +60,7 @@ for game in games:
 
 #json
 import json
-with open("master_crawler_pelit.json", "w", encoding="utf-8") as f:
+with open("json-files/master_crawler_pelit.json", "w", encoding="utf-8") as f:
     json.dump(games, f, ensure_ascii=False, indent=4)
 #json
 

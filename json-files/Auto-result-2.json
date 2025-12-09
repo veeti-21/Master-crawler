@@ -1,0 +1,162 @@
+[
+    {
+        "nimi":"Fiat 500E",
+        "hinta":"7 900 €",
+        "linkki":"https://www.nettiauto.com/fiat/500e/14877658"
+    },
+    {
+        "nimi":"Honda Civic",
+        "hinta":"7 490 €",
+        "linkki":"https://www.nettiauto.com/honda/civic/15425123"
+    },
+    {
+        "nimi":"Nissan Almera Tino",
+        "hinta":"3 900 €",
+        "linkki":"https://www.nettiauto.com/nissan/almera-tino/15455892"
+    },
+    {
+        "nimi":"Jaguar S-Type",
+        "hinta":"3 910 €",
+        "linkki":"https://www.nettiauto.com/jaguar/s-type/15355835"
+    },
+    {
+        "nimi":"Skoda Fabia",
+        "hinta":"3 950 €",
+        "linkki":"https://www.nettiauto.com/skoda/fabia/15442769"
+    },
+    {
+        "nimi":"Smart Fortwo",
+        "hinta":"3 980 €",
+        "linkki":"https://www.nettiauto.com/smart/fortwo/14790017"
+    },
+    {
+        "nimi":"Alfa Romeo 147",
+        "hinta":"3 990 €",
+        "linkki":"https://www.nettiauto.com/alfa-romeo/147/14866304"
+    },
+    {
+        "nimi":"Volvo 440",
+        "hinta":"3 990 €",
+        "linkki":"https://www.nettiauto.com/volvo/440/15122429"
+    },
+    {
+        "nimi":"Opel Vectra",
+        "hinta":"3 990 €",
+        "linkki":"https://www.nettiauto.com/opel/vectra/15144544"
+    },
+    {
+        "nimi":"Mazda 3",
+        "hinta":"3 990 €",
+        "linkki":"https://www.nettiauto.com/mazda/3/15355219"
+    },
+    {
+        "nimi":"Volkswagen Golf Plus",
+        "hinta":"3 990 €",
+        "linkki":"https://www.nettiauto.com/volkswagen/golf-plus/15426343"
+    },
+    {
+        "nimi":"Toyota Yaris",
+        "hinta":"3 990 €",
+        "linkki":"https://www.nettiauto.com/toyota/yaris/15451052"
+    },
+    {
+        "nimi":"Volkswagen Golf",
+        "hinta":"3 990 €",
+        "linkki":"https://www.nettiauto.com/volkswagen/golf/15452242"
+    },
+    {
+        "nimi":"Smart Fortwo",
+        "hinta":"4 000 €",
+        "linkki":"https://www.nettiauto.com/smart/fortwo/15415767"
+    },
+    {
+        "nimi":"Nissan Note",
+        "hinta":"4 000 €",
+        "linkki":"https://www.nettiauto.com/nissan/note/15416138"
+    },
+    {
+        "nimi":"Ford Thunderbird",
+        "hinta":"4 000 €",
+        "linkki":"https://www.nettiauto.com/ford/thunderbird/15428116"
+    },
+    {
+        "nimi":"Hyundai Sonata",
+        "hinta":"4 000 €",
+        "linkki":"https://www.nettiauto.com/hyundai/sonata/15453444"
+    },
+    {
+        "nimi":"Chrysler PT Cruiser",
+        "hinta":"4 000 €",
+        "linkki":"https://www.nettiauto.com/chrysler/pt-cruiser/15454317"
+    },
+    {
+        "nimi":"Opel Rekord",
+        "hinta":"4 050 €",
+        "linkki":"https://www.nettiauto.com/opel/rekord/15241673"
+    },
+    {
+        "nimi":"Mercedes-Benz A",
+        "hinta":"4 190 €",
+        "linkki":"https://www.nettiauto.com/mercedes-benz/a/15369597"
+    },
+    {
+        "nimi":"Honda Jazz",
+        "hinta":"4 190 €",
+        "linkki":"https://www.nettiauto.com/honda/jazz/15437835"
+    },
+    {
+        "nimi":"Buick Skylark",
+        "hinta":"4 200 €",
+        "linkki":"https://www.nettiauto.com/buick/skylark/15422559"
+    },
+    {
+        "nimi":"Honda Civic",
+        "hinta":"4 200 €",
+        "linkki":"https://www.nettiauto.com/honda/civic/15458259"
+    },
+    {
+        "nimi":"Mercedes-Benz B",
+        "hinta":"4 250 €",
+        "linkki":"https://www.nettiauto.com/mercedes-benz/b/15319380"
+    },
+    {
+        "nimi":"Nissan Micra",
+        "hinta":"4 290 €",
+        "linkki":"https://www.nettiauto.com/nissan/micra/15433076"
+    },
+    {
+        "nimi":"BMW Z3",
+        "hinta":"4 290 €",
+        "linkki":"https://www.nettiauto.com/bmw/z3/15455061"
+    },
+    {
+        "nimi":"Mitsubishi Galant",
+        "hinta":"4 350 €",
+        "linkki":"https://www.nettiauto.com/mitsubishi/galant/14874650"
+    },
+    {
+        "nimi":"Volkswagen Golf",
+        "hinta":"4 350 €",
+        "linkki":"https://www.nettiauto.com/volkswagen/golf/15451773"
+    },
+    {
+        "nimi":"Mercedes-Benz SLK",
+        "hinta":" 4 370 €",
+        "linkki":"https://www.nettiauto.com/mercedes-benz/slk/15456412"
+    },
+    {
+        "nimi":"Toyota Aygo",
+        "hinta":"4 400 €",
+        "linkki":"https://www.nettiauto.com/toyota/aygo/15454091"
+    },
+    {
+        "nimi":"Mercedes-Benz A",
+        "hinta":"4 450 €",
+        "linkki":"https://www.nettiauto.com/mercedes-benz/a/15429528"
+    },
+    {
+        "nimi":"Mercedes-Benz S",
+        "hinta":"4 490 €",
+        "linkki":"https://www.nettiauto.com/mercedes-benz/s/13023619"
+    }
+]

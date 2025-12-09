@@ -9,7 +9,7 @@ import json
 import time
 import re  
 
-OUTPUT_FILE = "asunnot_yhdistetty.json"
+OUTPUT_FILE = "json-files/asunnot_yhdistetty.json"
 OPERA_BINARY = r"C:\selenium_drive\chrome-win64\chrome-win64\chrome.exe"
 CHROMEDRIVER_PATH = r"C:\selenium_drive\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 

@@ -165,11 +165,6 @@
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-321up-315-qd-oled-pelinaytto/774977"
     },
     {
-        "nimi":"Arozzi Nova QHD | IPS | 180 Hz | 27\" pelinäyttö (vaaleanpunainen)",
-        "hinta":"229,99 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/arozzi-nova-qhd-ips-180-hz-27-pelinaytto-vaaleanpunainen/968395"
-    },
-    {
         "nimi":"ASUS ROG Strix XG27ACS 27/QHD/IPS/180Hz/HAS",
         "hinta":"347 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-strix-xg27acs-27qhdips180hzhas/770540"
@@ -318,5 +313,10 @@
         "nimi":"LG UltraGear 45GX900 45\" kaareva pelinäyttö",
         "hinta":"1799 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/lg-ultragear-45gx900-45-kaareva-pelinaytto/968901"
+    },
+    {
+        "nimi":"AOC CU34G2XP 34/QHD/VA/180Hz/1ms",
+        "hinta":"399 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-cu34g2xp-34qhdva180hz1ms/819147"
     }
 ]

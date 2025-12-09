@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
 
-OUTPUT_FILE = "NäytönohjainMonitori.json"
+OUTPUT_FILE = "json-files/NäytönohjainMonitori.json"
 
 
 def clean_price(price_text):

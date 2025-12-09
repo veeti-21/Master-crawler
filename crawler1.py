@@ -90,7 +90,7 @@ def crawl(*args):
                         )
                 
                 
-                with open("result-1.json", 'w', encoding='utf-8') as f: 
+                with open("json-files/result-1.json", 'w', encoding='utf-8') as f: 
 
                         f.writelines(json.dumps(items, ensure_ascii=False, indent=4, separators=(",", ":")))
 
