@@ -7,11 +7,25 @@
         "price": "11,99€"
     },
     {
+        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3376250/ec613fd58d146e679f1368fcbe9ce280a065f404/capsule_231x87.jpg?t=1764914352",
+        "title": "Nine-Ball Roulette",
+        "release_date": "4.12.2025",
+        "review_score": null,
+        "price": "3,19€"
+    },
+    {
         "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2780810/931380e22dc2a0ee6d489ee2ffb8bd7c201bbb01/capsule_231x87.jpg?t=1764346665",
         "title": "Euro Truck Simulator 2 - Nordic Horizons",
         "release_date": "27.11.2025",
         "review_score": null,
         "price": "17,99€"
+    },
+    {
+        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2105620/44dd4ae67d73015091b88ecfacc2fa734800e48a/capsule_231x87.jpg?t=1763737382",
+        "title": "Sektori",
+        "release_date": "18.11.2025",
+        "review_score": null,
+        "price": "14,79€"
     },
     {
         "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208570/705f9c4945ea048b2000e84a5e3f47f7e8d3167b/capsule_231x87.jpg?t=1764692331",
@@ -54,13 +68,6 @@
         "release_date": "17.1.2025",
         "review_score": null,
         "price": "419,00€"
-    },
-    {
-        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2537590/c992a0851b2714fdeaa65469ba5e7b8e60c06a96/capsule_231x87.jpg?t=1747324291",
-        "title": "Microsoft Flight Simulator 2024",
-        "release_date": "19.11.2024",
-        "review_score": null,
-        "price": "79,99€"
     },
     {
         "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1723780/142c203bb7e1f7b76eea63959c6cea5048cbb8cb/capsule_231x87.jpg?t=1757864210",
@@ -161,18 +168,11 @@
         "price": "Ilmainen"
     },
     {
-        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/244850/646e71604640d5a9ae973d6187e0afb6312db080/capsule_231x87.jpg?t=1764755549",
-        "title": "Space Engineers",
-        "release_date": "28.2.2019",
+        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1059550/capsule_231x87.jpg?t=1645043939",
+        "title": "Valve Index -ohjaimet",
+        "release_date": "28.6.2019",
         "review_score": null,
-        "price": "16,99€"
-    },
-    {
-        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/588030/capsule_231x87.jpg?t=1763467635",
-        "title": "Derail Valley",
-        "release_date": "25.1.2019",
-        "review_score": null,
-        "price": "38,99€"
+        "price": "299,00€"
     },
     {
         "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/993090/19863a9088f82aeab3d7033d5a632a229e4919a5/capsule_231x87.jpg?t=1762179586",
@@ -238,6 +238,13 @@
         "price": "14,79€"
     },
     {
+        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/305620/capsule_231x87.jpg?t=1765217095",
+        "title": "The Long Dark",
+        "release_date": "1.8.2017",
+        "review_score": null,
+        "price": "15,98€"
+    },
+    {
         "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/444200/c3dbe20d5e807b603ad130c059442ba90efc8dde/capsule_231x87_alt_assets_14.jpg?t=1764628724",
         "title": "World of Tanks Blitz",
         "release_date": "9.11.2016",
@@ -266,6 +273,13 @@
         "price": "28,99€"
     },
     {
+        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/298110/capsule_231x87.jpg?t=1764168324",
+        "title": "Far Cry® 4",
+        "release_date": "17.11.2014",
+        "review_score": null,
+        "price": "29,99€"
+    },
+    {
         "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/108600/capsule_231x87.jpg?t=1762369969",
         "title": "Project Zomboid",
         "release_date": "8.11.2013",
@@ -285,6 +299,13 @@
         "release_date": "12.10.2012",
         "review_score": null,
         "price": "4,99€"
+    },
+    {
+        "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620/capsule_231x87.jpg?t=1745363004",
+        "title": "Portal 2",
+        "release_date": "18.4.2011",
+        "review_score": null,
+        "price": "9,75€"
     },
     {
         "image_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/capsule_231x87.jpg?t=1757348372",

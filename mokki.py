@@ -17,7 +17,7 @@ import PARAMS
 # --- CONFIG ---
 OPERA_BINARY = r"C:\selenium_drive\chrome-win64\chrome-win64\chrome.exe"
 CHROMEDRIVER_PATH = r"C:\selenium_drive\chromedriver-win64\chromedriver-win64\chromedriver.exe"
-OUTPUT_FILE = r"nettisivu\nettimokki_listings.json"
+OUTPUT_FILE = r"C:\crawlers\Master-crawler\json-files\nettimokki_listings.json"
 
 
 
@@ -91,6 +91,7 @@ def _dismiss_alma_cmp_iframe():
         print("Dismissed Alma CMP iframe modal.")
         return True
     except NoSuchElementException:
+        print("no such element")
         return False
     except Exception as e:
         print(f"Error clicking Alma CMP iframe button: {e}")

@@ -29,7 +29,7 @@ for z in range(len(webPage)):# etsii tulokset sivustosta
         items = []
 
         print(f"autojen haku nro: {z + 1}")
-        filename = f'json-files/Auto-result-{z + 1}.json'
+        filename = rf'C:\crawlers\Master-crawler\json-files\autot-{z + 1}.json'
         driver.get(f"{webPage[z]}")
         elementname = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new.total-upsell-ad > div > div.product-card__body > div.product-card__info > h2")
         elementprice = driver.find_elements(By.CSS_SELECTOR, '#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > div:nth-child(2) > div')

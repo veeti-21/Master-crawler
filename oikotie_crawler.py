@@ -9,11 +9,12 @@ import json
 import time
 import re  
 
-OUTPUT_FILE = "json-files/asunnot_yhdistetty.json"
+OUTPUT_FILE = r"C:\crawlers\Master-crawler\json-files\asunnot_yhdistetty.json"
 OPERA_BINARY = r"C:\selenium_drive\chrome-win64\chrome-win64\chrome.exe"
 CHROMEDRIVER_PATH = r"C:\selenium_drive\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 
 options = Options()
+options.add_argument("--headless=new")
 options.add_argument("--disable-gpu")
 options.add_argument("--window-size=1920,1080")
 options.add_argument("--disable-blink-features=AutomationControlled")
@@ -23,7 +24,7 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service(CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
 wait = WebDriverWait(driver, 10)
-
+print("oikotien crawlaus")
 def accept_cookies():
     try:
         wait.until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, "iframe[src*='consent']")))
