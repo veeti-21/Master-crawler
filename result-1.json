@@ -1,23 +1,38 @@
 [
     {
-        "nimi":"Asus TUF Gaming VG34VQL3A 34\" kaareva pelinäyttö",
-        "hinta":"309 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-tuf-gaming-vg34vql3a-34-kaareva-pelinaytto/770537"
-    },
-    {
-        "nimi":"Samsung 27\" Odyssey OLED G8 G81SF QD-OLED näyttö",
-        "hinta":"699 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-27-odyssey-oled-g8-g81sf-qd-oled-naytto/896181"
-    },
-    {
         "nimi":"Samsung G5-2024 27/QHD/VA/165Hz/1ms/CV",
         "hinta":"159 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-g5-2024-27qhdva165hz1mscv/746288"
     },
     {
+        "nimi":"Asus TUF Gaming VG34VQL3A 34\" kaareva pelinäyttö",
+        "hinta":"309 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-tuf-gaming-vg34vql3a-34-kaareva-pelinaytto/770537"
+    },
+    {
         "nimi":"TCL 34R83Q WQHD QD-Mini LED monitor",
         "hinta":"619 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/tcl-34r83q-wqhd-qd-mini-led-monitor/772314"
+    },
+    {
+        "nimi":"AOC Q27G3XMN/BK 27\" QHD/MLED/180Hz/1ms/HAS pelinäyttö",
+        "hinta":"279 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-q27g3xmnbk-27-qhdmled180hz1mshas-pelinaytto/918353"
+    },
+    {
+        "nimi":"TCL 27G64 | MINI-LED | QHD | 180 Hz | 1ms",
+        "hinta":"599,99 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/tcl-27g64-mini-led-qhd-180-hz-1ms/907583"
+    },
+    {
+        "nimi":"Samsung Odyssey G6 S27DG612S 27\" pelinäyttö",
+        "hinta":"529 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g6-s27dg612s-27-pelinaytto/876145"
+    },
+    {
+        "nimi":"Arozzi Nova UWQHD | VA | 165 Hz | 34\" pelinäyttö (vihreä)",
+        "hinta":"309 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/arozzi-nova-uwqhd-va-165-hz-34-pelinaytto-vihrea/968380"
     },
     {
         "nimi":"Arozzi Nova UWQHD | VA | 165 Hz | 34\" pelinäyttö (vihreä)",
@@ -28,16 +43,6 @@
         "nimi":"Arozzi Nova UWQHD | VA | 165 Hz | 34\" pelinäyttö (musta)",
         "hinta":"309 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/arozzi-nova-uwqhd-va-165-hz-34-pelinaytto-musta/968379"
-    },
-    {
-        "nimi":"Samsung Odyssey G6 S27DG612S 27\" pelinäyttö",
-        "hinta":"529 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g6-s27dg612s-27-pelinaytto/876145"
-    },
-    {
-        "nimi":"Samsung Odyssey G6 S27DG612S 27\" pelinäyttö",
-        "hinta":"529 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g6-s27dg612s-27-pelinaytto/876145"
     },
     {
         "nimi":"Denver MOC-3400 34/QHD/VA/165Hz/1ms/HAS",
@@ -65,14 +70,19 @@
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/arozzi-nova-uwqhd-va-165-hz-34-pelinaytto-valkoinen/968382"
     },
     {
+        "nimi":"Samsung G5-2024 32/QHD/VA/Curved/165Hz",
+        "hinta":"279 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-g5-2024-32qhdvacurved165hz/746290"
+    },
+    {
         "nimi":"Samsung Odyssey G5 34/WQHD/VA/165Hz/1ms/CV",
         "hinta":"449 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g5-34wqhdva165hz1mscv/253180"
     },
     {
-        "nimi":"Samsung G5-2024 32/QHD/VA/Curved/165Hz",
-        "hinta":"279 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-g5-2024-32qhdvacurved165hz/746290"
+        "nimi":"Asus ROG Strix XG27AQDMGZ 27\" pelinäyttö",
+        "hinta":"799 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-strix-xg27aqdmgz-27-pelinaytto/919720"
     },
     {
         "nimi":"MSI MAG 271QPX 26,5\" QD-OLED E2 pelinäyttö",
@@ -80,14 +90,9 @@
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-mag-271qpx-265-qd-oled-e2-pelinaytto/774979"
     },
     {
-        "nimi":"AOC AG276QZD2 | QHD | OLED | 240 Hz 27\" pelinäyttö",
-        "hinta":"699 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-ag276qzd2-qhd-oled-240-hz-27-pelinaytto/918348"
-    },
-    {
-        "nimi":"Asus ROG Strix XG27AQDMGZ 27\" pelinäyttö",
-        "hinta":"799 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-strix-xg27aqdmgz-27-pelinaytto/919720"
+        "nimi":"Samsung 27\" Odyssey OLED G8 G81SF QD-OLED näyttö",
+        "hinta":"908 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-27-odyssey-oled-g8-g81sf-qd-oled-naytto/896181"
     },
     {
         "nimi":"ASUS ROG Swift PG32UCDMZ UHD/OLED/240Hz/0,03ms 32\" pelinäyttö",
@@ -106,7 +111,7 @@
     },
     {
         "nimi":"Sony Inzone M9II 27\" 4K IPS pelinäyttö",
-        "hinta":"1199 €",
+        "hinta":"1158 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/sony-inzone-m9ii-27-4k-ips-pelinaytto/830697"
     },
     {
@@ -130,18 +135,13 @@
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-q27g42xe-qhd-ips-180-hz-1-ms-27-pelinaytto/918354"
     },
     {
-        "nimi":"Arozzi Nova QHD | IPS | 180 Hz | 27\" pelinäyttö (musta)",
-        "hinta":"229,99 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/arozzi-nova-qhd-ips-180-hz-27-pelinaytto-musta/968390"
-    },
-    {
         "nimi":"ASUS ROG Swift PG27AQDP 27\" OLED pelinäyttö",
-        "hinta":"1099 €",
+        "hinta":"1079 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-rog-swift-pg27aqdp-27-oled-pelinaytto/814927"
     },
     {
         "nimi":"ASUS TUF VG27AQL5A 27/QHD/IPS/200Hz/0,3ms",
-        "hinta":"239 €",
+        "hinta":"399 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-tuf-vg27aql5a-27qhdips200hz03ms/919719"
     },
     {
@@ -205,6 +205,11 @@
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/asus-xg27acdng-265-pelinaytto/913472"
     },
     {
+        "nimi":"AOC AG276QZD2 | QHD | OLED | 240 Hz 27\" pelinäyttö",
+        "hinta":"699 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-ag276qzd2-qhd-oled-240-hz-27-pelinaytto/918348"
+    },
+    {
         "nimi":"Sony Inzone M10S 27\" QHD OLED pelinäyttö",
         "hinta":"1499 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/sony-inzone-m10s-27-qhd-oled-pelinaytto/830698"
@@ -228,11 +233,6 @@
         "nimi":"LG UltraGear 27GS60QC 27/QHD/VA/180Hz/1ms",
         "hinta":"299 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/lg-ultragear-27gs60qc-27qhdva180hz1ms/775691"
-    },
-    {
-        "nimi":"AOC Q27G3XMN/BK 27\" QHD/MLED/180Hz/1ms/HAS pelinäyttö",
-        "hinta":"389 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/aoc-q27g3xmnbk-27-qhdmled180hz1mshas-pelinaytto/918353"
     },
     {
         "nimi":"LG UltraGear 32GX850A-B 32/QHD/OLED/165 Hz/0,03 ms 32\" pelinäyttö",
@@ -276,13 +276,8 @@
     },
     {
         "nimi":"Samsung Odyssey G5 S27DG502 27\" pelinäyttö",
-        "hinta":"269 €",
+        "hinta":"347 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-odyssey-g5-s27dg502-27-pelinaytto/763547"
-    },
-    {
-        "nimi":"TCL 27G64 | MINI-LED | QHD | 180 Hz | 1ms",
-        "hinta":"599,99 €",
-        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/tcl-27g64-mini-led-qhd-180-hz-1ms/907583"
     },
     {
         "nimi":"Samsung Odyssey G5 27/QHD/OLED/180 Hz/0,03 ms pelinäyttö",
@@ -316,7 +311,12 @@
     },
     {
         "nimi":"Samsung G5-2024 32/QHD/IPS/180Hz/HAS",
-        "hinta":"369 €",
+        "hinta":"359 €",
         "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/samsung-g5-2024-32qhdips180hzhas/763548"
+    },
+    {
+        "nimi":"LG UltraGear 45GX900 45\" kaareva pelinäyttö",
+        "hinta":"1799 €",
+        "linkki":"https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/lg-ultragear-45gx900-45-kaareva-pelinaytto/968901"
     }
 ]

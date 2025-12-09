@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+# from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import json
@@ -10,6 +10,8 @@ import time
 import re  
 
 OUTPUT_FILE = "asunnot_yhdistetty.json"
+OPERA_BINARY = r"C:\selenium_drive\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\selenium_drive\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 
 options = Options()
 options.add_argument("--disable-gpu")
@@ -18,7 +20,8 @@ options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+service = Service(CHROMEDRIVER_PATH)
+driver = webdriver.Chrome(service=service, options=options)
 wait = WebDriverWait(driver, 10)
 
 def accept_cookies():

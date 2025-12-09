@@ -21,7 +21,7 @@ opts.add_argument("--headless=new")
 opts.add_argument('--disable-blink-features=AutomationControlled')
 
 items = []
-
+print("gigantin näyttöjen haku")
 def crawl(*args):
 
         for z in range(len(webPage)):

@@ -21,6 +21,7 @@ opts.add_argument("--headless=new")
 opts.add_argument('--disable-blink-features=AutomationControlled')
 
 items = []
+print("gigantin näytönohjainten haku")
 
 def crawl(*args):
 

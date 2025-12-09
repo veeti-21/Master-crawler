@@ -11,7 +11,7 @@ games = []
 steamurl = f"https://store.steampowered.com/search/?filter=popularnew&start=0&sort_by=Released_DESC&os=win&hidef=1"
 
 driver.get(steamurl)
-
+print("steam pelien haku")
 steam_search_results = driver.find_elements(By.CSS_SELECTOR, "#search_resultsRows a")
 for steamgame in steam_search_results[:50]:
     try:

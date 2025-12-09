@@ -15,8 +15,8 @@ import PARAMS
 
 
 # --- CONFIG ---
-OPERA_BINARY = r"C:\Users\veeti\Downloads\chrome-win64\chrome-win64\chrome.exe"
-CHROMEDRIVER_PATH = r"C:\Users\veeti\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+OPERA_BINARY = r"C:\selenium_drive\chrome-win64\chrome-win64\chrome.exe"
+CHROMEDRIVER_PATH = r"C:\selenium_drive\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 OUTPUT_FILE = r"nettisivu\nettimokki_listings.json"
 
 

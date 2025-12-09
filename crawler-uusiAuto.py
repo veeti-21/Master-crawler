@@ -23,11 +23,14 @@ driver.set_window_size(required_width, required_height)
 # nettisivu
 webPage = ["https://www.nettiauto.com/hakutulokset?haku=P62829718&page=1", "https://www.nettiauto.com/hakutulokset?haku=P62829718&page=2"]
 
+items = []
 with open(filename, 'w', encoding='utf-8') as f:# tekee tyhjän tai tyhjentää tiedoston
         f.writelines("")
 f.close()
-
+print("autojen haku")
 for z in range(len(webPage)):# etsii tulokset sivustosta
+        print(f"autojen haku nro: {z + 1}")
+
         driver.get(f"{webPage[z]}")
         elementname = driver.find_elements(By.CSS_SELECTOR, "#listingData > div.grid-x.cell.list-body-new.total-upsell-ad > div > div.product-card__body > div.product-card__info > h2")
         elementprice = driver.find_elements(By.CSS_SELECTOR, '#listingData > div.grid-x.cell.list-body-new > div > div.product-card__body > div.product-card__info > div:nth-child(2) > div')
@@ -46,22 +49,19 @@ for z in range(len(webPage)):# etsii tulokset sivustosta
                 "linkki": tmp3,
                 }
 
-                with open(filename, 'a', encoding='utf-8') as f: # lisää tulokset.
-                        if x == 0 and z == 0:
-                                f.writelines("{")
-                                        
-                                        
-                        print(json.dumps(testjson, indent=4, separators=(",", ":")))
-                                        
-                        f.writelines(f'Auto{x}-{z}"')
-                        f.writelines(":[")
-                        f.writelines(json.dumps(testjson, indent=4, separators=(",", ":")))
-                        if x == len(elementname) - 1 and z == 1:
-                                f.writelines("]\n}")
-                        else:
-                                f.writelines("],")
-                                
-                
+                items.append(
+                        testjson
+                )
+        with open(filename, 'w', encoding='utf-8') as f: # lisää tulokset.
+
+
+
+                print(json.dumps(testjson, indent=4, separators=(",", ":")))
+
+                f.writelines(json.dumps(items, ensure_ascii=False, indent=4, separators=(",", ":")))
+
+
+
                 f.close()
 
 driver.quit()
