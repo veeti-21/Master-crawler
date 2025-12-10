@@ -41,7 +41,7 @@
     },
     {
         "nimi":"MSI GeForce RTX 5060 Ti 16G VENTUS 3X OC näytönohjain",
-        "hinta":"520,05 €",
+        "hinta":"517,45 €",
         "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5060-ti-16g-ventus-3x-oc-naytonohjain/916339"
     },
     {
@@ -66,7 +66,7 @@
     },
     {
         "nimi":"MSI GeForce RTX 5070 Ti 16 G SHADOW 3X OC näytönohjain",
-        "hinta":"919 €",
+        "hinta":"847 €",
         "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5070-ti-16-g-shadow-3x-oc-naytonohjain/909398"
     },
     {
@@ -76,7 +76,7 @@
     },
     {
         "nimi":"MSI GeForce RTX 5060 Ti 16G GAMING TRIO OC näytönohjain",
-        "hinta":"569 €",
+        "hinta":"568,90 €",
         "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5060-ti-16g-gaming-trio-oc-naytonohjain/916341"
     },
     {
@@ -91,13 +91,18 @@
     },
     {
         "nimi":"MSI GeForce RTX 5070 Ti GAMING TRIO OC 16 GB näytönohjain (valkoinen)",
-        "hinta":"949,90 €",
+        "hinta":"971,08 €",
         "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5070-ti-gaming-trio-oc-16-gb-naytonohjain-valkoinen/918265"
     },
     {
         "nimi":"Gigabyte GeForce RTX 5060 Ti WINDFORCE 16G näytönohjain",
         "hinta":"474 €",
         "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-windforce-16g-naytonohjain/916327"
+    },
+    {
+        "nimi":"MSI GeForce RTX 5070 Ti GAMING TRIO OC 16 GB näytönohjain",
+        "hinta":"999,99 €",
+        "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/msi-geforce-rtx-5070-ti-gaming-trio-oc-16-gb-naytonohjain/918263"
     },
     {
         "nimi":"Gigabyte GeForce RTX 5060 Ti EAGLE OC 16G näytönohjain",
@@ -120,8 +125,13 @@
         "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-geforce-rtx-5060-ti-gaming-oc-16g-naytonohjain/916331"
     },
     {
+        "nimi":"Gigabyte RTX 5090 AORUS MASTER ICE 32 GB näytönohjain",
+        "hinta":"2799 €",
+        "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/gigabyte-rtx-5090-aorus-master-ice-32-gb-naytonohjain/911398"
+    },
+    {
         "nimi":"ASUS GeForce RTX 5080 ROG ASTRAL Gaming 16 GB OC näytönohjain",
-        "hinta":"1419,90 €",
+        "hinta":"1499 €",
         "linkki":"https://www.gigantti.fi/product/gaming/tietokonekomponentit/naytonohjaimet-gpu/asus-geforce-rtx-5080-rog-astral-gaming-16-gb-oc-naytonohjain/883820"
     },
     {
